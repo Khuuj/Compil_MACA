@@ -13,30 +13,34 @@ type :  ID_CLASS
 	|'string'
 	;
 
-method_decl : 'method' ID_OTHERS '(' method_args* ')' '{' var_decl* instr+ '}'
-	      |'method' ID_OTHERS '(' method_args* ')' ':' type '{' var_decl* instr+ '}'
-	      ;
+method_decl : 'method' ID_OTHERS '('  method_args* ')' M;
+
+M  	:'{' var_decl* instr+ '}'
+	| ':' type '{' var_decl* instr+ '}'
+	;
+
 
 method_args : ID_OTHERS ':' type (',' ID_OTHERS ':' type)*;
 
-instr : ID_OTHERS ':=' expr ';'
-        |ID_OTHERS ':=' 'nil'';'
+instr : ID_OTHERS ':=' I
 	|'if' expr 'then' instr ('else' instr)? 'fi'
 	|'for' ID_OTHERS 'in' expr '..' expr 'do' instr+ 'end'
 	|'{' var_decl* instr+ '}'
 	|'do' expr '.' ID_OTHERS '(' expr (',' expr)* ')'';'
 	|print
 	|read
-	|return
+	|retourne
+	|NEWLINE
       ;
 
-print : 'write' expr
-	| 'write' STRING
-	;
+I : expr ';' | nil ';' ;
+
+print : 'write' P;
+P : expr | STRING;
 
 read : 'read' ID_OTHERS ';';
 
-return : 'return' '(' expr ')'';';
+retourne : 'return' '(' expr ')'';';
 
 expr : expr_begin expr_end;
 
@@ -44,14 +48,15 @@ expr_begin : ID_OTHERS
 	     |'this'
 	     |'super'
 	     |INT 
-                           |'new' ID_CLASS
+             |'new' ID_CLASS
 	     |'(' expr')'
              |'-' expr
            ;
 
 expr_end : expr_middle expr_end 
 	|
-	   ;
+	;
+
 expr_middle :'.'ID_OTHERS '(' expr (','expr)* ')'
 	     | oper expr
             ;
