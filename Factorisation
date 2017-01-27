@@ -1,0 +1,42 @@
+METHOD_DECL 
+	: method idf ( METHOD_ARGS* ) M
+	;
+
+M  	:'{' VAR_DECL* INSTRUCTION+ '}'
+	| ':' TYPE '{' VAR_DECL* INSTRUCTION+ '}'
+	;
+
+INSTRUCTION : idf ':=' I
+	| 'if' EXPRESSION 'then' INSTRUCTION '[else' INSTRUCTION']' 'fi' 
+	| 'for' idf 'in' EXPRESSION '..' EXPRESSION 'do' INSTRUCTION+ 'end'
+	| '{' VAR_DECL* INSTRUCTION+ '}'
+	| 'do' EXPRESSION '.' idf '(' EXPRESSION {',' EXPRESSION}* ');'
+	| PRINT
+	| READ
+	| RETURN
+
+I : EXPRESSION ';' | nil ';' ;
+
+PRINT : 'write' P; /* P ajouté pour factorisé PRINT*/
+
+P : EXPRESSION ';'|cste_chaine ';';
+
+
+
+
+EXPRESSION
+	: idf E
+	| 'this' E
+	| 'super' E
+	| ste_ent E
+	| 'new' Idf E
+	| '(' EXPRESSION ')' E
+	| '-' EXPRESSION E
+	;
+
+E : '.' idf '(' EXPRESSION {',' EXPRESSION}* )
+	|OPER EXPRESSION
+	|
+	;
+
+
