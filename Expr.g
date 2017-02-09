@@ -52,10 +52,10 @@ expr
 	| INT e
 	| 'new' ID_CLASS e
 	| '(' expr ')' e
-	| '-' expr e
+	| '-' expr 
 	;
 
-e : '.' ID_OTHERS '(' expr (',' expr )* ')'
+e : '.' ID_OTHERS '(' expr (',' expr )* ')' e
 	|OPER expr
 	|
 	;
