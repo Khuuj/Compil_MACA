@@ -1,9 +1,8 @@
 grammar Expr;
 
 options {
-k=1; /** vérification pour que la grammaire soit LL(1) */
+k=1; /* vérification pour que la grammaire soit LL(1) */
 }
-
 prog :  class_decl* var_decl* instr+;
 
 class_decl : 'class' ID_CLASS ('inherit' ID_CLASS)? '=' '(' class_item_decl ')' ;
@@ -17,16 +16,16 @@ type :  ID_CLASS
 	|'string'
 	;
 
-method_decl : 'method' ID_OTHERS '('  method_args* ')' M;
+method_decl : 'method' ID_OTHERS '('  method_args* ')' m;
 
-M  	:'{' var_decl* instr+ '}'
+m  	:'{' var_decl* instr+ '}'
 	| ':' type '{' var_decl* instr+ '}'
 	;
 
 
 method_args : ID_OTHERS ':' type (',' ID_OTHERS ':' type)*;
 
-instr : ID_OTHERS ':=' I
+instr : ID_OTHERS ':=' i
 	|'if' expr 'then' instr ('else' instr)? 'fi'
 	|'for' ID_OTHERS 'in' expr '..' expr 'do' instr+ 'end'
 	|'{' var_decl* instr+ '}'
@@ -34,38 +33,37 @@ instr : ID_OTHERS ':=' I
 	|print
 	|read
 	|retourne
-	|NEWLINE
       ;
 
-I : expr ';' | nil ';' ;
+i : expr ';' | 'nil' ';' ;
 
-print : 'write' P;
-P : expr | STRING;
+print : 'write' p ';';
+
+p : expr  | STRING;
 
 read : 'read' ID_OTHERS ';';
 
 retourne : 'return' '(' expr ')'';';
 
-expr : expr_begin expr_end;
+expr
+	: ID_OTHERS e
+	| 'this' e
+	| 'super' e
+	| INT e
+	| 'new' ID_CLASS e
+	| '(' expr ')' e
+	| '-' expr e
+	;
 
-expr_begin : ID_OTHERS
-	     |'this'
-	     |'super'
-	     |INT 
-             |'new' ID_CLASS
-	     |'(' expr')'
-             |'-' expr
-           ;
-
-expr_end : expr_middle expr_end 
+e : '.' ID_OTHERS '(' expr (',' expr )* ')'
+	|OPER expr
 	|
 	;
 
-expr_middle :'.'ID_OTHERS '(' expr (','expr)* ')'
-	     | oper expr
-            ;
 
-oper 
+
+
+/*oper 
 	:  operplus;
 
 operplus 
@@ -80,20 +78,12 @@ opermult
 
 opercomp 
 	:OPERCOMP
-	;
-	
-
-
-
+	;*/
 INT : '0'..'9'+ ;
 STRING :   '"' (' '..'~')+ '"' ;
-OPERPLUS : '+'|'-';
-OPERMULT :	'*';
-OPERCOMP :	'-'|'<'|'<='|'>'|'>='|'=='|'!=';
+OPER : '+'|'*'|'-'|'<'|'<='|'>'|'>='|'=='|'!=';
 ID_CLASS : 'A'..'Z' ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
 ID_OTHERS : 'a'..'z' ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
 COMMENTS : '/*' .* '*/' {$channel=HIDDEN;};
-NEWLINE:'\r'? '\n';
+NEWLINE:'\r'? '\n'{$channel=HIDDEN;};
 WS : (' ')+ {$channel=HIDDEN;};
-
-
