@@ -1,5 +1,9 @@
 grammar Expr;
 
+options {
+k=1; /** vérification pour que la grammaire soit LL(1) */
+}
+
 prog :  class_decl* var_decl* instr+;
 
 class_decl : 'class' ID_CLASS ('inherit' ID_CLASS)? '=' '(' class_item_decl ')' ;
