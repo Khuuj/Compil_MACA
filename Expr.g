@@ -29,7 +29,7 @@ instr : ID_OTHERS ':=' i
 	|'if' expr 'then' instr ('else' instr)? 'fi'
 	|'for' ID_OTHERS 'in' expr '..' expr 'do' instr+ 'end'
 	|'{' var_decl* instr+ '}'
-	|'do' expr '.' ID_OTHERS '(' expr (',' expr)* ')'';'
+	|'do' expr ';'
 	|print
 	|read
 	|retourne
@@ -55,12 +55,10 @@ expr
 	| '-' expr 
 	;
 
-e : '.' ID_OTHERS '(' expr (',' expr )* ')' e
-	|OPER expr
+e 	: OPER expr
+	|'.' ID_OTHERS '(' expr (',' expr )* ')' e
 	|
 	;
-
-
 
 
 /*oper 
