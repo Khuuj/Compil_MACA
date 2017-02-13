@@ -50,13 +50,14 @@ expr
 	| 'this' e
 	| 'super' e
 	| INT e
+	| STRING e
 	| 'new' ID_CLASS e
 	| '(' expr ')' e
 	| '-' expr 
 	;
 
 e 	: OPER expr
-	|'.' ID_OTHERS '(' expr (',' expr )* ')' e
+	|'.' ID_OTHERS '(' (expr (',' expr )*)? ')' e
 	|
 	;
 
@@ -78,7 +79,7 @@ opercomp
 	:OPERCOMP
 	;*/
 INT : '0'..'9'+ ;
-STRING :   '"' (' '..'~')+ '"' ;
+STRING :   '"' (' '..'!' | '#'..'~')+ '"' ;
 OPER : '+'|'*'|'-'|'<'|'<='|'>'|'>='|'=='|'!=';
 ID_CLASS : 'A'..'Z' ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
 ID_OTHERS : 'a'..'z' ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
