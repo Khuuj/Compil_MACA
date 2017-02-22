@@ -11,6 +11,11 @@ DEC_CLASS;
 DEC_VAR;
 AFFECT;
 RETURN;
+FOR;
+IF;
+BODY;
+METHOD;
+ARGS;
 }
 
 prog :  	class_decl* var_decl* instr+ 
@@ -19,9 +24,12 @@ prog :  	class_decl* var_decl* instr+
 
 
 class_decl : 'class' ID_CLASS ('inherit' ID_CLASS)? '=' '(' class_item_decl ')'
+	->^(DEC_CLASS (ID_CLASS)?  class_item_decl)
 	;
 	
-class_item_decl : var_decl* method_decl*;
+class_item_decl : var_decl* method_decl*
+	->^(BODY var_decl* method_decl*)
+	;
 
 var_decl : 
 	'var' ID_OTHERS ':' type ';'
@@ -35,35 +43,40 @@ type :
 	|'string'
 	;
 
-method_decl : 'method' ID_OTHERS '('  method_args* ')' m;
+method_decl : 
+	'method' ID_OTHERS '('  method_args ')' m
+	->^(METHOD ID_OTHERS   method_args  m )
+	;
 
-m  	:'{' var_decl* instr+ '}'
-	| ':' type '{' var_decl* instr+ '}'
+m  :
+	'{' var_decl* instr+ '}' ->^(BODY  var_decl* instr+ )
+	| ':' type '{' var_decl* instr+ '}' -> type ^(BODY  var_decl* instr+ )
 	;
 
 
-method_args : ID_OTHERS ':' type (',' ID_OTHERS ':' type)*;
+method_args : ID_OTHERS ':' type (',' ID_OTHERS ':' type)*
+	->^(ARGS  ^(DEC_VAR ID_OTHERS  type)* )
+	;
 
 instr : 
-	ID_OTHERS ':=' i
-	->^(AFFECT ID_OTHERS i)
-	|'if' expr 'then' instr ('else' instr)? 'fi'
-	|'for' ID_OTHERS 'in' expr '..' expr 'do' instr+ 'end' -> ^('for' ^('in' ID_OTHERS ^('..' expr expr)) instr+)
-	|'{' var_decl* instr+ '}'
+	ID_OTHERS ':=' i -> ^(AFFECT ID_OTHERS i)
+	|'if' expr 'then' instr ('else' instr)? 'fi'  -> ^(IF expr instr instr?)
+	|'for' ID_OTHERS 'in' expr '..' expr 'do' instr+ 'end' -> ^(FOR ID_OTHERS expr expr instr+)// -> ^(FOR ^('in' ID_OTHERS ^('..' expr expr)) instr+)
+	|'{' var_decl* instr+ '}' ->^(BODY  var_decl* instr+ )
 	|'do' expr ';'
 	|print
 	|read
 	|retourne
-      ;
+     	;
 
 i : 
 	expr ';' -> expr
 	| 'nil' ';' -> 'nil' //pas sur
 	;
 
-print : 'write' expr ';';
+print : 'write' expr ';' -> ^('write' expr );
 
-read : 'read' ID_OTHERS ';';
+read : 'read' ID_OTHERS ';' -> ^('read' ID_OTHERS);
 
 retourne :
 	'return' '(' expr ')'';'
@@ -82,7 +95,7 @@ expr
 	;
 
 e 	: oper//OPER expr //-> ^(OPER expr) mais noeud unaire
-	|'.' ID_OTHERS '(' (expr (',' expr )*)? ')' e
+	|'.' ID_OTHERS '(' (expr (',' expr )*)? ')' e //-> ^(ID_OTHERS (expr expr*)? ) e marche pas avec le e à la fin et pas très clair pour le point
 	|
 	;
 
