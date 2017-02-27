@@ -28,7 +28,7 @@ class_decl : 'class' ID_CLASS ('inherit' ID_CLASS)? '=' '(' class_item_decl ')'
 	;
 	
 class_item_decl : var_decl* method_decl*
-	->^(BODY var_decl* method_decl*)
+
 	;
 
 var_decl : 
@@ -44,8 +44,8 @@ type :
 	;
 
 method_decl : 
-	'method' ID_OTHERS '('  method_args ')' m
-	->^(METHOD ID_OTHERS   method_args  m )
+	'method' ID_OTHERS '('  method_args? ')' m
+	->^(METHOD ID_OTHERS   method_args?  m )
 	;
 
 m  :
@@ -134,5 +134,5 @@ ID_CLASS : 'A'..'Z' ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
 ID_OTHERS : 'a'..'z' ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
 
 COMMENTS : '/*' .* '*/' {$channel=HIDDEN;};
-NEWLINE:'\r'? '\n'{$channel=HIDDEN;};
-WS : (' ')+ {$channel=HIDDEN;};
+NEWLINE:'\r'? '\n' {$channel=HIDDEN;};
+WS : (' '|'\t')+  {$channel=HIDDEN;};
