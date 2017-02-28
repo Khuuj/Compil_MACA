@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g 2017-02-22 15:59:17
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g 2017-02-28 19:42:43
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -762,10 +762,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:126:5: ( ( '0' .. '9' )+ )
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:126:7: ( '0' .. '9' )+
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:125:5: ( ( '0' .. '9' )+ )
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:125:7: ( '0' .. '9' )+
             {
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:126:7: ( '0' .. '9' )+
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:125:7: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -779,7 +779,7 @@ public class ExprLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:126:7: '0' .. '9'
+            	    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:125:7: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -811,11 +811,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:127:8: ( '\"' ( ' ' .. '!' | '#' .. '~' )* '\"' )
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:127:12: '\"' ( ' ' .. '!' | '#' .. '~' )* '\"'
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:126:8: ( '\"' ( ' ' .. '!' | '#' .. '~' )* '\"' )
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:126:12: '\"' ( ' ' .. '!' | '#' .. '~' )* '\"'
             {
             match('\"'); 
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:127:16: ( ' ' .. '!' | '#' .. '~' )*
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:126:16: ( ' ' .. '!' | '#' .. '~' )*
             loop2:
             do {
                 int alt2=2;
@@ -865,7 +865,7 @@ public class ExprLexer extends Lexer {
         try {
             int _type = OPERCONDITION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:129:14: ( '<' | '<=' | '>' | '>=' | '==' | '!=' )
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:128:14: ( '<' | '<=' | '>' | '>=' | '==' | '!=' )
             int alt3=6;
             switch ( input.LA(1) ) {
             case '<':
@@ -909,14 +909,14 @@ public class ExprLexer extends Lexer {
 
             switch (alt3) {
                 case 1 :
-                    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:129:15: '<'
+                    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:128:15: '<'
                     {
                     match('<'); 
 
                     }
                     break;
                 case 2 :
-                    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:129:19: '<='
+                    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:128:19: '<='
                     {
                     match("<="); 
 
@@ -924,14 +924,14 @@ public class ExprLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:129:24: '>'
+                    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:128:24: '>'
                     {
                     match('>'); 
 
                     }
                     break;
                 case 4 :
-                    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:129:28: '>='
+                    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:128:28: '>='
                     {
                     match(">="); 
 
@@ -939,7 +939,7 @@ public class ExprLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:129:33: '=='
+                    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:128:33: '=='
                     {
                     match("=="); 
 
@@ -947,7 +947,7 @@ public class ExprLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:129:38: '!='
+                    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:128:38: '!='
                     {
                     match("!="); 
 
@@ -969,7 +969,7 @@ public class ExprLexer extends Lexer {
         try {
             int _type = OPERPLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:130:10: ( '+' | '-' )
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:129:10: ( '+' | '-' )
             // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:
             {
             if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
@@ -997,7 +997,7 @@ public class ExprLexer extends Lexer {
         try {
             int _type = OPERMULT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:131:9: ( '*' | '/' )
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:130:9: ( '*' | '/' )
             // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:
             {
             if ( input.LA(1)=='*'||input.LA(1)=='/' ) {
@@ -1025,11 +1025,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = ID_CLASS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:133:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:133:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:132:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:132:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             matchRange('A','Z'); 
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:133:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:132:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop4:
             do {
                 int alt4=2;
@@ -1078,11 +1078,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = ID_OTHERS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:134:11: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:134:13: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:133:11: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:133:13: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             matchRange('a','z'); 
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:134:22: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:133:22: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop5:
             do {
                 int alt5=2;
@@ -1131,12 +1131,12 @@ public class ExprLexer extends Lexer {
         try {
             int _type = COMMENTS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:136:10: ( '/*' ( . )* '*/' )
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:136:12: '/*' ( . )* '*/'
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:135:10: ( '/*' ( . )* '*/' )
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:135:12: '/*' ( . )* '*/'
             {
             match("/*"); 
 
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:136:17: ( . )*
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:135:17: ( . )*
             loop6:
             do {
                 int alt6=2;
@@ -1161,7 +1161,7 @@ public class ExprLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:136:17: .
+            	    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:135:17: .
             	    {
             	    matchAny(); 
 
@@ -1192,10 +1192,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = NEWLINE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:137:8: ( ( '\\r' )? '\\n' )
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:137:9: ( '\\r' )? '\\n'
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:136:8: ( ( '\\r' )? '\\n' )
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:136:9: ( '\\r' )? '\\n'
             {
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:137:9: ( '\\r' )?
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:136:9: ( '\\r' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1204,7 +1204,7 @@ public class ExprLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:137:9: '\\r'
+                    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:136:9: '\\r'
                     {
                     match('\r'); 
 
@@ -1231,26 +1231,34 @@ public class ExprLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:138:4: ( ( ' ' )+ )
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:138:6: ( ' ' )+
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:137:4: ( ( ' ' | '\\t' )+ )
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:137:6: ( ' ' | '\\t' )+
             {
-            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:138:6: ( ' ' )+
+            // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:137:6: ( ' ' | '\\t' )+
             int cnt8=0;
             loop8:
             do {
                 int alt8=2;
                 int LA8_0 = input.LA(1);
 
-                if ( (LA8_0==' ') ) {
+                if ( (LA8_0=='\t'||LA8_0==' ') ) {
                     alt8=1;
                 }
 
 
                 switch (alt8) {
             	case 1 :
-            	    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:138:7: ' '
+            	    // /home/clement/Documents/TP_Compil/Compil_MACA/Expr.g:
             	    {
-            	    match(' '); 
+            	    if ( input.LA(1)=='\t'||input.LA(1)==' ' ) {
+            	        input.consume();
+
+            	    }
+            	    else {
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;}
+
 
             	    }
             	    break;
@@ -1600,7 +1608,7 @@ public class ExprLexer extends Lexer {
     static final String DFA9_eofS =
         "\166\uffff";
     static final String DFA9_minS =
-        "\1\12\1\154\1\146\1\75\2\uffff\1\141\1\75\1\uffff\1\164\1\145\3"+
+        "\1\11\1\154\1\146\1\75\2\uffff\1\141\1\75\1\uffff\1\164\1\145\3"+
         "\uffff\1\150\1\154\1\151\1\56\1\157\1\145\1\162\1\145\5\uffff\1"+
         "\52\5\uffff\1\141\2\60\1\uffff\1\162\2\uffff\1\162\1\160\1\164\1"+
         "\145\1\163\1\144\1\60\1\162\2\uffff\1\60\1\154\1\167\1\151\1\141"+
@@ -1629,11 +1637,11 @@ public class ExprLexer extends Lexer {
     static final String DFA9_specialS =
         "\166\uffff}>";
     static final String[] DFA9_transitionS = {
-            "\1\37\2\uffff\1\37\22\uffff\1\40\1\31\1\30\5\uffff\1\4\1\5\1"+
-            "\36\1\32\1\15\1\26\1\21\1\33\12\27\1\7\1\10\1\31\1\3\1\31\2"+
-            "\uffff\32\34\6\uffff\2\35\1\1\1\22\1\17\1\20\2\35\1\2\3\35\1"+
-            "\12\1\23\3\35\1\25\1\11\1\16\1\35\1\6\1\24\3\35\1\13\1\uffff"+
-            "\1\14",
+            "\1\40\1\37\2\uffff\1\37\22\uffff\1\40\1\31\1\30\5\uffff\1\4"+
+            "\1\5\1\36\1\32\1\15\1\26\1\21\1\33\12\27\1\7\1\10\1\31\1\3\1"+
+            "\31\2\uffff\32\34\6\uffff\2\35\1\1\1\22\1\17\1\20\2\35\1\2\3"+
+            "\35\1\12\1\23\3\35\1\25\1\11\1\16\1\35\1\6\1\24\3\35\1\13\1"+
+            "\uffff\1\14",
             "\1\41",
             "\1\43\7\uffff\1\42",
             "\1\31",

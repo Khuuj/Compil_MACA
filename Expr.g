@@ -18,22 +18,21 @@ METHOD;
 ARGS;
 }
 
-prog :  	class_decl* var_decl* instr+ 
-	-> ^(ROOT class_decl* var_decl* instr+)
+prog :  	
+	class_decl* var_decl* instr+ -> ^(ROOT class_decl* var_decl* instr+)
 	;
 
 
-class_decl : 'class' ID_CLASS ('inherit' ID_CLASS)? '=' '(' class_item_decl ')'
-	->^(DEC_CLASS (ID_CLASS)?  class_item_decl)
+class_decl :
+	 'class' ID_CLASS ('inherit' ID_CLASS)? '=' '(' class_item_decl ')' ->^(DEC_CLASS (ID_CLASS)?  class_item_decl)
 	;
 	
-class_item_decl : var_decl* method_decl*
-
+class_item_decl : 
+	var_decl* method_decl*
 	;
 
 var_decl : 
-	'var' ID_OTHERS ':' type ';'
-	->^(DEC_VAR type ID_OTHERS )
+	'var' ID_OTHERS ':' type ';' ->^(DEC_VAR type ID_OTHERS )
 	;
 	
 
@@ -44,8 +43,7 @@ type :
 	;
 
 method_decl : 
-	'method' ID_OTHERS '('  method_args? ')' m
-	->^(METHOD ID_OTHERS   method_args?  m )
+	'method' ID_OTHERS '('  method_args? ')' m -> ^(METHOD ID_OTHERS   method_args?  m )
 	;
 
 m  :
@@ -54,8 +52,8 @@ m  :
 	;
 
 
-method_args : ID_OTHERS ':' type (',' ID_OTHERS ':' type)*
-	->^(ARGS  ^(DEC_VAR ID_OTHERS  type)* )
+method_args : 
+	ID_OTHERS ':' type (',' ID_OTHERS ':' type)* ->^(ARGS  ^(DEC_VAR ID_OTHERS  type)* )
 	;
 
 instr : 
@@ -63,7 +61,7 @@ instr :
 	|'if' expr 'then' instr ('else' instr)? 'fi'  -> ^(IF expr instr instr?)
 	|'for' ID_OTHERS 'in' expr '..' expr 'do' instr+ 'end' -> ^(FOR ID_OTHERS expr expr instr+)// -> ^(FOR ^('in' ID_OTHERS ^('..' expr expr)) instr+)
 	|'{' var_decl* instr+ '}' ->^(BODY  var_decl* instr+ )
-	|'do' expr ';'
+	|'do' expr ';'  -> ^('do'expr )
 	|print
 	|read
 	|retourne
@@ -74,17 +72,20 @@ i :
 	| 'nil' ';' -> 'nil' //pas sur
 	;
 
-print : 'write' expr ';' -> ^('write' expr );
+print :
+	 'write' expr ';' -> ^('write' expr )
+	 ;
 
-read : 'read' ID_OTHERS ';' -> ^('read' ID_OTHERS);
+read : 
+	'read' ID_OTHERS ';' -> ^('read' ID_OTHERS)
+	;
 
 retourne :
-	'return' '(' expr ')'';'
- 	-> ^(RETURN expr)
+	'return' '(' expr ')'';' -> ^(RETURN expr)
  	;
 
-expr
-	: oper e//ID_OTHERS e
+expr:
+	 oper e//ID_OTHERS e
 	| 'this' e
 	| 'super' e
 	//| INT e
@@ -94,25 +95,22 @@ expr
 	| '-' expr 
 	;
 
-e 	: oper//OPER expr //-> ^(OPER expr) mais noeud unaire
-	|'.' ID_OTHERS '(' (expr (',' expr )*)? ')' e //-> ^(ID_OTHERS (expr expr*)? ) e marche pas avec le e à la fin et pas très clair pour le point
+e :
+	 oper
+	|'.' ID_OTHERS '(' (expr (',' expr )*)? ')' e -> ^(ID_OTHERS expr* ) e?
 	|
 	;
 
-oper
-	:condition
+oper:
+	 exprplus( OPERCONDITION^ exprplus )?
 	;
 
-condition
-	: exprplus( OPERCONDITION^ exprplus )?
+exprplus: 
+	exprmult ( OPERPLUS^ exprmult)*
 	;
 
-exprplus
-	: exprmult ( OPERPLUS^ exprmult)*
-	;
-
-exprmult
-	: atom (OPERMULT^ atom)*
+exprmult:
+	 atom (OPERMULT^ atom)*
 	;
 
 atom: 
