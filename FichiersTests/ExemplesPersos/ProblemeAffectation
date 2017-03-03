@@ -1,0 +1,78 @@
+class Double=()
+
+
+class CalculProba =
+(
+	var moyenne : Double;
+	var variance: Double;
+	var ecarttype: Double;
+
+	method getvariance():Double
+	{
+		return (this.variance);
+	}
+
+	method getmoyenne():Double
+	{
+		return (this.moyenne)
+	}
+
+	method calculecarac() 
+	{
+		moyenne:=this.calculmoyenne();
+		variance:=this.calculvariance();
+		ecarttype:=this.getvariance().sqrt();
+	}
+
+)
+
+
+class LoiExponentielle inherit CalculProba =
+(
+	var lambda : Double;
+
+	method initparam(a: Double)
+	{
+		lambda:=a;
+	}
+
+	method calculmoyenne()
+	{
+		moyenne:=inverse(lambda);
+	}
+
+	method calculvariance()
+	{
+		variance:=inverse(lambda*lambda);
+	}
+)
+
+
+class LoiPoisson inherit CalculProba =
+(
+	var lambda : Double;
+
+	method initparam(a: Double)
+	{
+		lambda:=a;
+	}
+
+	method calculmoyenne()
+	{
+		moyenne:=lambda;
+	}
+
+	method calculvariance()
+	{
+		variance:=lambda;
+	}
+)
+
+var m : CalculProba;
+var a : int;
+m:=new LoiPoisson;
+do m.intiparam(5);
+do m.calculecarac();
+a:=-m.getmoyenne();
+write "Perte Moyenne";
+wrtie a; 

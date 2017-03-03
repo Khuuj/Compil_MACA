@@ -1,0 +1,66 @@
+class Math =
+(
+	method trie (a:int , b:int, c:int)
+	{
+		if a>=b
+		then
+			if a<=c
+			then
+				{
+				a:=a+b;
+				b:=a-b;
+				a:=a-b;
+				}
+			else
+				{
+				a:=a+c;
+				c:=a-c;
+				a:=a-c;
+				if b<=c
+				then
+					{
+					b:=b+c;
+					c:=b-c;
+					b:=b-c;
+					}
+				fi
+				}
+			fi
+		fi
+
+		if b>=c
+		then
+			{
+			b:=b+c;
+			c:=b-c;
+			b:=b-c;
+			if c<=a
+			then
+				{
+				a:=a+c;
+				c:=a-c;
+				a:=a-c;
+				}
+			else
+				write " azer ";
+			fi
+			}
+		fi
+
+	}
+)
+
+var a : int;
+var b :int;
+var c :int;
+
+var m: Math;
+
+m:=new Math;
+
+a:=15;
+b:=37;
+c:=-b;
+
+
+do m.trie(a,b,c);
