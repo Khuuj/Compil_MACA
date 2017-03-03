@@ -99,9 +99,11 @@ expr:
 
 e :
 	// oper e
-	'.' ID_OTHERS '(' (expr (',' expr )*)? ')' e -> ^(APPELMETHODE ID_OTHERS expr* ) e?
+	'.' ID_OTHERS f -> ^(APPELMETHODE ID_OTHERS f )
 	|
 	;
+	
+f  	:  '(' (expr (',' expr )*)? ')' e -> ^(ARGS expr*) e?;
 
 oper:
 
