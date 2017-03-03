@@ -16,6 +16,8 @@ IF;
 BODY;
 METHOD;
 ARGS;
+OPPOSE;
+APPELMETHODE;
 }
 
 prog :  	
@@ -24,7 +26,7 @@ prog :
 
 
 class_decl :
-	 'class' ID_CLASS ('inherit' ID_CLASS)? '=' '(' class_item_decl ')' ->^(DEC_CLASS (ID_CLASS)?  class_item_decl)
+	 'class' ID_CLASS ('inherit' ID_CLASS)? '=' '(' class_item_decl ')' ->^(DEC_CLASS (ID_CLASS)?  class_item_decl?)
 	;
 	
 class_item_decl : 
@@ -85,24 +87,26 @@ retourne :
  	;
 
 expr:
-	 oper e//ID_OTHERS e
+	 oper e //ID_OTHERS e
 	| 'this' e
 	| 'super' e
 	//| INT e
 	| STRING e
 	| 'new' ID_CLASS e
 	//| '(' expr ')' e
-	| '-' expr 
+	//|'-'expr e
 	;
 
 e :
-	 oper
-	|'.' ID_OTHERS '(' (expr (',' expr )*)? ')' e -> ^(ID_OTHERS expr* ) e?
+	 oper e
+	|'.' ID_OTHERS '(' (expr (',' expr )*)? ')' e -> ^(APPELMETHODE ID_OTHERS expr* ) e?
 	|
 	;
 
 oper:
+
 	 exprplus( OPERCONDITION^ exprplus )?
+	 
 	;
 
 exprplus: 
@@ -116,7 +120,9 @@ exprmult:
 atom: 
 	ID_OTHERS
 	| INT
-	| '('oper')'
+	| '('expr')'
+
+	//|'-' atom -> ^(OPPOSE atom)
 	;
 
 
@@ -125,7 +131,7 @@ INT : '0'..'9'+ ;
 STRING :   '"' (' '..'!' | '#'..'~')* '"' ;
 
 OPERCONDITION:'<'|'<='|'>'|'>='|'=='|'!=';
-OPERPLUS : '+'|'-';
+OPERPLUS : '-'|'+';
 OPERMULT:	'*'|'/';
 
 ID_CLASS : 'A'..'Z' ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
