@@ -98,19 +98,20 @@ expr:
 	;
 
 e :
-	 oper e
-	|'.' ID_OTHERS '(' (expr (',' expr )*)? ')' e -> ^(APPELMETHODE ID_OTHERS expr* ) e?
+	// oper e
+	'.' ID_OTHERS '(' (expr (',' expr )*)? ')' e -> ^(APPELMETHODE ID_OTHERS expr* ) e?
 	|
 	;
 
 oper:
 
 	 exprplus( OPERCONDITION^ exprplus )?
-	 
+	// |'-'exprplus
 	;
 
 exprplus: 
 	exprmult ( OPERPLUS^ exprmult)*
+
 	;
 
 exprmult:
@@ -121,8 +122,7 @@ atom:
 	ID_OTHERS
 	| INT
 	| '('expr')'
-
-	//|'-' atom -> ^(OPPOSE atom)
+//	|UNARY atom -> ^(OPPOSE atom)
 	;
 
 
@@ -133,6 +133,7 @@ STRING :   '"' (' '..'!' | '#'..'~')* '"' ;
 OPERCONDITION:'<'|'<='|'>'|'>='|'=='|'!=';
 OPERPLUS : '-'|'+';
 OPERMULT:	'*'|'/';
+//UNARY	:'-';
 
 ID_CLASS : 'A'..'Z' ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
 ID_OTHERS : 'a'..'z' ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*;
