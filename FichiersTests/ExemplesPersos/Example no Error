@@ -73,6 +73,6 @@ var a : int;
 m:=new LoiPoisson;
 do m.intiparam(5);
 do m.calculecarac();
-a:=-m.getmoyenne();
+a:=m.getmoyenne();
 write "Perte Moyenne";
-wrtie a;
+write a;
