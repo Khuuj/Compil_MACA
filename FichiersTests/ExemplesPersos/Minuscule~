@@ -1,9 +1,9 @@
 class Double=()
 
 
-class CalcùlProba =
+class CalculProba =
 (
-	var moyenne : Double;
+	var Moyenne : Double;
 	var variance: Double;
 	var ecarttype: Double;
 
@@ -14,7 +14,7 @@ class CalcùlProba =
 
 	method getmoyenne():Double
 	{
-		return (this.moyenne);
+		return (this.moyenne)
 	}
 
 	method calculecarac() 
@@ -38,12 +38,12 @@ class LoiExponentielle inherit CalculProba =
 
 	method calculmoyenne()
 	{
-		moyenne:=this.inverse(lambda);
+		moyenne:=inverse(lambda);
 	}
 
 	method calculvariance()
 	{
-		variance:=this.inverse(lambda*lambda);
+		variance:=inverse(lambda*lambda);
 	}
 )
 

@@ -14,7 +14,7 @@ class CalculProba =
 
 	method getmoyenne():Double
 	{
-		return (this.moyenne)
+		return (this.moyenne);
 	}
 
 	method calculecarac() 
@@ -38,12 +38,12 @@ class LoiExponentielle inherit CalculProba =
 
 	method calculmoyenne()
 	{
-		moyenne:=inverse(lambda);
+		moyenne:=mdr.inverse(lambda);
 	}
 
 	method calculvariance()
 	{
-		variance:=inverse(lambda*lambda);
+		variance:=this.inverse(lambda*lambda);
 	}
 )
 
