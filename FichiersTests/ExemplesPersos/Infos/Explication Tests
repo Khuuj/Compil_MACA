@@ -1,0 +1,15 @@
+Example no Error : inherit... fonctionne
+
+ProblemeAffectation: dernière ligne 
+					' wrtie a ' donne une affectation
+
+ProblemeWrite: dernière ligne
+					' write (a+a) ' est autorisé et donne ' (a+a) '
+
+VarPostMethode: la grammaire n'accepte pas de déclarer des variables après avoir écrit des instructions
+
+Accents: la grammaire n'accepte pas les accents : elle élimine tout ce qui vient après jusqu'au prochain espace
+
+Majuscule: le nom d'une classe doit commencer par une majuscule
+
+Minuscule: Variable et methodes doivent etre en minusculues pour etre reconnus
