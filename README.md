@@ -26,3 +26,5 @@ Règles de portée des arguments et variables locales comme dans Java.
 La portée d'une variable locale commence à la fin de sa déclaration et et termine à la fin du bloc englobant cette même déclaration.
 
 Les contrôles de typages doivent tenir compte de l'héritage.
+
+Lien pour la TDS : http://henri-garreta.developpez.com/tutoriels/techniques-outils-compilation/?page=page_4
