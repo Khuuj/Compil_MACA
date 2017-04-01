@@ -3,22 +3,38 @@ package tableInstances;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+
+/**
+ * Classe représentant une TDS d'éléments instanciés.
+ *
+ */
 @SuppressWarnings("serial")
 public class Table extends HashMap<Integer,ArrayList<Element>>{
 	
-	
+	/**
+	 * Constructeur permettant d'instancier une TDS.
+	 */
 	public Table()
 	{
 	}
 	
-	//ajoute un élément et retourne si l'ajout a bien pu être fait ou non.
+	/**
+	 * Ajoute un élément dans la TDS.
+	 * 
+	 * @param element : l'élément a être ajouté dans la TDS.
+	 */
 	public void addElement(Element element)
 	{
 		int clé = hash(element);
 		this.get(clé).add(element);
 	}
 	
-	//Fonction qui calcule la clé d'un élément en fonction de son id
+	/**
+	 * Fonction qui calcule la clé d'un élément dans la TDS en fonction de son id.
+	 * 
+	 * @param element : l'élément dont la clé doit être calculée.
+	 * @return la clé de l'élément dans la TDS.
+	 */
 	public int hash(Element element)
 	{
 		int tailleId = element.id.length();

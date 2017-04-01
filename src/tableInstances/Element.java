@@ -1,10 +1,22 @@
 package tableInstances;
 
-
+/**
+ * 
+ * Classe abstraite représentant un élément d'une TDS d'éléments instanciés.
+ * 
+ *
+ */
 public abstract class Element {
-	public String id; //identificateur de l'élément
+	/**
+	 * Identificateur de l'élément.
+	 */
+	public String id;
 	
-	//Si l'élément est une classe
+	/**
+	 * Instancie l'élément à stocker en gardant son id.
+	 * 
+	 * @param id : identificateur de l'élément à stocker.
+	 */
 	public Element(String id)
 	{
 		this.id = id;

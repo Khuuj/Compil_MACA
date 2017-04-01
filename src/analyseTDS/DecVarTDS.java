@@ -12,6 +12,6 @@ public class DecVarTDS {
 		String id = node.getChild(0).getText();
 		String type = node.getChild(1).getText();
 		
-		ParcoursArbre.GLOBAL_TDS.addClassType(new Var(id,type));
+		ParcoursArbre.INSTANCE_TDS.addElement(new Var(id,type));
 	}
 }

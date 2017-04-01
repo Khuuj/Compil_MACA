@@ -5,9 +5,18 @@ import java.util.HashMap;
 
 import tableInstances.Element;
 
+/**
+ * Classe représentant la TDS des classes définies.
+ *
+ */
+@SuppressWarnings("serial")
 public class TableClass extends HashMap<Integer,ArrayList<Element>>{
 	
-		//ajoute un élément et retourne si l'jout a bien pu être fait ou non.
+		/**
+		 * Ajoute un élément et retourne si l'ajout a bien pu être fait ou non.
+		 * 
+		 * @param classType
+		 */
 		public void addClassType(Element classType)
 		{
 			int clé = hash(classType);
