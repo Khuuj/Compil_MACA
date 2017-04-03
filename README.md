@@ -1,11 +1,20 @@
 # Compil_MACA
 
+Ajouter les librairies à la racine pour que ça marche:
+-> Clique droit sur JRE System Library
+-> Build Path
+-> Configure Build Path
+-> Add JAR -> "antlr-3.3-complete.jar"
+-> ok
+
+....................................................................
+
 TDS: --> Regarder 
 
 Dès que l'on rencontre "var_decl", la tds doit stocker l'identifiant et le type, etal portée:
     var n : int; --> cette instruction doit automatiquement stocker ('n';'var';'int')
 
-....
+...................................................................
 
 Contrôles sémantiques:
 
@@ -26,3 +35,7 @@ Règles de portée des arguments et variables locales comme dans Java.
 La portée d'une variable locale commence à la fin de sa déclaration et et termine à la fin du bloc englobant cette même déclaration.
 
 Les contrôles de typages doivent tenir compte de l'héritage.
+
+Lien pour la TDS : http://henri-garreta.developpez.com/tutoriels/techniques-outils-compilation/?page=page_4
+
+...............................................................
