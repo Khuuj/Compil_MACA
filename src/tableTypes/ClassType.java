@@ -7,8 +7,8 @@ import tableInstances.Var;
 public class ClassType {
 	
 	public String id; // identificateur de la classe
-	String supClassId; // identificateur de la classe dont elle hérite éventuellement
-	ArrayList<ClassItem> items;//attributs et méthodes de la classe
+	public String supClassId; // identificateur de la classe dont elle hérite éventuellement
+	public ArrayList<ClassItem> items;//attributs et méthodes de la classe
 	
 	public ClassType(String id)
 	{

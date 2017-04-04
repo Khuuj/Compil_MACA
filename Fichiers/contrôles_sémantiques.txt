@@ -1,6 +1,6 @@
 Contrôles sémantiques à réaliser : (à sépare entre statique et dynamique probablement)
 1- Toute variable doit être déclarée avent d'être utilisée (lue ou affectée)
-2- Le programme ne doit pas contenir de doubles déclarations
+2- FAIT NON TESTE - Le programme ne doit pas contenir de doubles déclarations
 3- Les types doivent être cohérents lors des opérations
 4- Les paramètres passés à une fonction doivent être de même type que que ceux définis lors de la déclaration de la fonction
 5- Si une classe hérite, la classe doit être déjà définie.

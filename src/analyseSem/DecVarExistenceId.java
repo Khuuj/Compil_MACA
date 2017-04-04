@@ -13,10 +13,11 @@ import tableInstances.Table;
  * Vérifie si une variable déclarée n'existe pas déjà dans la TDS locale.
  *
  */
-public class DecIntExistenceId 
+public class DecVarExistenceId 
 {
 
-	public DecIntExistenceId(Tree node) {
+	public DecVarExistenceId(Tree node) 
+	{
 		
 		boolean alreadyExists = false;
 		

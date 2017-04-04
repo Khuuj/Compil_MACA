@@ -2,7 +2,9 @@ package actions;
 
 import org.antlr.runtime.tree.Tree;
 
+import analyseSem.DecClassSem;
 import analyseSem.DecIntSem;
+import analyseSem.DecStringSem;
 import analyseTDS.DecVarTDS;
 
 /**
@@ -26,9 +28,11 @@ public class DecVar {
 				break;
 			//Si c'est une chaîne de caractères
 			case "string" :
+				new DecStringSem(node);
 				break;
 			//Si c'est une instance de classe
 			default:
+				new DecClassSem(node);
 				break;
 		}
 		

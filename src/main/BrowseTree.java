@@ -122,10 +122,12 @@ public class BrowseTree {
 			//cas de déclaration de classe.
 			case "DEC_CLASS":
 				break;
+				
 			//cas de déclaration de variable.
 			case "DEC_VAR" :
 				new DecVar(node);
 				break;
+				
 			default:
 				break;
 			

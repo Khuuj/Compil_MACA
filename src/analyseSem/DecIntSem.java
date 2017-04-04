@@ -12,6 +12,6 @@ public class DecIntSem {
 	public DecIntSem(Tree node)
 	{
 		//Teste si la variable existe déjà dans la TDS locale
-		new DecIntExistenceId(node);
+		new DecVarExistenceId(node);
 	}
 }

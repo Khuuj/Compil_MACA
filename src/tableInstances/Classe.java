@@ -10,7 +10,7 @@ public class Classe extends Var
 	/**
 	 * Identificateur de la classe dont elle est l'instance.
 	 */
-	Element classId; 
+	String classId; 
 	
 	/**
 	 * Instancie l'instance de classe en gardant son id et sa classe.
@@ -18,7 +18,7 @@ public class Classe extends Var
 	 * @param id : l'identificateur de l'instance de classe.
 	 * @param classId : l'identificateur de la classe.
 	 */
-	public Classe(Element id, int scope, Element classId) {
+	public Classe(String id, int scope, String classId) {
 		super(id, scope);
 		this.classId = classId;
 	}
