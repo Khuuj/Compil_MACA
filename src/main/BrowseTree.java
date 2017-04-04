@@ -11,6 +11,7 @@ import org.antlr.runtime.tree.Tree;
 
 import actions.DecVar;
 import actions.Root;
+import antlr.collections.Stack;
 import expr.*;
 import tableInstances.Table;
 import tableTypes.TableClass;
@@ -28,12 +29,12 @@ import tableTypes.TableClass;
  * Les TDS sont des hashmaps avec gestion de collision afin d'optimiser les ajouts et accès.
  * 
  */
-public class ParcoursArbre {
+public class BrowseTree {
 	
 	/**Contient les TDS des éléments instanciés.
 	 * Les TDS sont empilées en fonction de leur portées.
 	 */
-	public static Table INSTANCE_TDS;
+	public static ArrayList<Table> INSTANCE_TDS;
 	
 	/*Est-ce qu'on a besoin d'une portée pour la définition de classes ? 
 	 * Il faudrait lire la grammaire pour s'en assurer!
@@ -56,7 +57,8 @@ public class ParcoursArbre {
         //Affiche l'arbre reçu sous une forme plus lisible
         printChildren(tree);
         
-        //browse(tree);
+        
+        browse(tree);
 	}
 	
 	/**
@@ -119,10 +121,12 @@ public class ParcoursArbre {
 				
 			//cas de déclaration de classe.
 			case "DEC_CLASS":
-				
+				break;
 			//cas de déclaration de variable.
 			case "DEC_VAR" :
 				new DecVar(node);
+				break;
+			default:
 				break;
 			
 		}

@@ -1,4 +1,5 @@
 var n : int;
+var n : int;
 var total : int;
 var i : int;
 

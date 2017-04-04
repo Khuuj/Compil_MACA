@@ -5,12 +5,12 @@ package tableInstances;
  * Classe représentant une instance de classe dans une TDS d'éléments instanciés.
  *
  */
-public class Classe extends Element 
+public class Classe extends Var
 {
 	/**
 	 * Identificateur de la classe dont elle est l'instance.
 	 */
-	String classId; 
+	Element classId; 
 	
 	/**
 	 * Instancie l'instance de classe en gardant son id et sa classe.
@@ -18,8 +18,8 @@ public class Classe extends Element
 	 * @param id : l'identificateur de l'instance de classe.
 	 * @param classId : l'identificateur de la classe.
 	 */
-	public Classe(String id, String classId) {
-		super(id);
+	public Classe(Element id, int scope, Element classId) {
+		super(id, scope);
 		this.classId = classId;
 	}
 

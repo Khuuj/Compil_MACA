@@ -16,6 +16,7 @@ public class Table extends HashMap<Integer,ArrayList<Element>>{
 	 */
 	public Table()
 	{
+		super();
 	}
 	
 	/**
@@ -25,25 +26,27 @@ public class Table extends HashMap<Integer,ArrayList<Element>>{
 	 */
 	public void addElement(Element element)
 	{
-		int clé = hash(element);
-		this.get(clé).add(element);
+		int key = hash(element.id);
+		if (this.get(key) == null)
+			this.put(key, new ArrayList<Element>());
+		this.get(key).add(element);
 	}
 	
 	/**
 	 * Fonction qui calcule la clé d'un élément dans la TDS en fonction de son id.
 	 * 
-	 * @param element : l'élément dont la clé doit être calculée.
+	 * @param element : id de l'élément dont la clé doit être calculée.
 	 * @return la clé de l'élément dans la TDS.
 	 */
-	public int hash(Element element)
+	public static int hash(String id)
 	{
-		int tailleId = element.id.length();
-		//nombre premier afin d'éviter la redondance dans les clés
+		int tailleId = id.length();
+		//Nombre premier afin d'éviter la redondance dans les clés
 		int hashNb = 23;
 		int clé = 0;
 		for(int i = 0 ; i < tailleId ; i++)
 		{
-			clé = clé * hashNb + element.id.charAt(i);
+			clé = clé * hashNb + id.charAt(i);
 		}
 		return clé;
 	}
