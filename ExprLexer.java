@@ -1,11 +1,9 @@
-<<<<<<< HEAD:output/ExprLexer.java
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/adam/Documents/Cours_TNCY/PCL/Compil_MACA/Expr.g 2017-03-30 14:16:11
-=======
 // $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-03-30 14:54:30
-package expr;
->>>>>>> ec1cf5f1d290d71bc6d4d783ae8503c084dbc680:src/expr/ExprLexer.java
 
 import org.antlr.runtime.*;
+import java.util.Stack;
+import java.util.List;
+import java.util.ArrayList;
 
 public class ExprLexer extends Lexer {
     public static final int EOF=-1;

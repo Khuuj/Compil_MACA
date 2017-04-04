@@ -1,11 +1,10 @@
-<<<<<<< HEAD:output/ExprParser.java
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/adam/Documents/Cours_TNCY/PCL/Compil_MACA/Expr.g 2017-03-30 14:16:11
-=======
 // $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-03-30 14:54:30
-package expr;
->>>>>>> ec1cf5f1d290d71bc6d4d783ae8503c084dbc680:src/expr/ExprParser.java
 
 import org.antlr.runtime.*;
+import java.util.Stack;
+import java.util.List;
+import java.util.ArrayList;
+
 
 import org.antlr.runtime.tree.*;
 
@@ -77,21 +76,7 @@ public class ExprParser extends Parser {
     // delegates
     // delegators
 
-<<<<<<< HEAD:output/ExprParser.java
-    public static final String[] ruleNames = new String[] {
-        "invalidRule", "oper", "moinsunaire", "type", "method_params", "instr", 
-        "retourne", "params", "e", "i", "class_decl", "var_decl", "f", "expr", 
-        "boundaries", "prog", "method_decl", "m", "exprmult", "class_item_decl", 
-        "print", "read", "exprplus", "atom"
-    };
-     
-        public int ruleLevel = 0;
-        public int getRuleLevel() { return ruleLevel; }
-        public void incRuleLevel() { ruleLevel++; }
-        public void decRuleLevel() { ruleLevel--; }
-=======
 
->>>>>>> ec1cf5f1d290d71bc6d4d783ae8503c084dbc680:src/expr/ExprParser.java
         public ExprParser(TokenStream input) {
             this(input, new RecognizerSharedState());
         }
@@ -238,11 +223,7 @@ public class ExprParser extends Parser {
 
 
             // AST REWRITE
-<<<<<<< HEAD:output/ExprParser.java
-            // elements: class_decl, var_decl, instr
-=======
             // elements: class_decl, instr, var_decl
->>>>>>> ec1cf5f1d290d71bc6d4d783ae8503c084dbc680:src/expr/ExprParser.java
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1107,11 +1088,7 @@ public class ExprParser extends Parser {
 
 
                     // AST REWRITE
-<<<<<<< HEAD:output/ExprParser.java
-                    // elements: var_decl, instr, type
-=======
                     // elements: instr, type, var_decl
->>>>>>> ec1cf5f1d290d71bc6d4d783ae8503c084dbc680:src/expr/ExprParser.java
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1349,17 +1326,9 @@ public class ExprParser extends Parser {
             root_0 = (Object)adaptor.nil();
             // 65:48: -> ( ^( PARAM ID_OTHERS type ) )*
             {
-<<<<<<< HEAD:output/ExprParser.java
-                dbg.location(65,51);
-                // /home/adam/Documents/Cours_TNCY/PCL/Compil_MACA/Expr.g:65:51: ( ^( PARAM ID_OTHERS type ) )*
-                while ( stream_type.hasNext()||stream_ID_OTHERS.hasNext() ) {
-                    dbg.location(65,51);
-                    // /home/adam/Documents/Cours_TNCY/PCL/Compil_MACA/Expr.g:65:51: ^( PARAM ID_OTHERS type )
-=======
                 // Expr.g:65:51: ( ^( PARAM ID_OTHERS type ) )*
                 while ( stream_type.hasNext()||stream_ID_OTHERS.hasNext() ) {
                     // Expr.g:65:51: ^( PARAM ID_OTHERS type )
->>>>>>> ec1cf5f1d290d71bc6d4d783ae8503c084dbc680:src/expr/ExprParser.java
                     {
                     Object root_1 = (Object)adaptor.nil();
                     root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PARAM, "PARAM"), root_1);
@@ -1553,7 +1522,7 @@ public class ExprParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: ID_OTHERS, i
+                    // elements: i, ID_OTHERS
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1634,11 +1603,7 @@ public class ExprParser extends Parser {
 
 
                     // AST REWRITE
-<<<<<<< HEAD:output/ExprParser.java
-                    // elements: instr, expr, instr
-=======
                     // elements: expr, instr, instr
->>>>>>> ec1cf5f1d290d71bc6d4d783ae8503c084dbc680:src/expr/ExprParser.java
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2038,11 +2003,7 @@ public class ExprParser extends Parser {
 
 
             // AST REWRITE
-<<<<<<< HEAD:output/ExprParser.java
-            // elements: 52, b, a
-=======
             // elements: 52, a, b
->>>>>>> ec1cf5f1d290d71bc6d4d783ae8503c084dbc680:src/expr/ExprParser.java
             // token labels: 
             // rule labels: a, b, retval
             // token list labels: 
