@@ -1,4 +1,4 @@
-package analyseTDS;
+package actionsTDS;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,6 @@ public class RootTDS {
 
 	public RootTDS()
 	{
-
 		BrowseTree.INSTANCE_TDS = new ArrayList<Table>();
 		BrowseTree.INSTANCE_TDS.add(new Table());
 		BrowseTree.CLASS_TDS = new TableClass();

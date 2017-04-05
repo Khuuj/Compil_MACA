@@ -9,11 +9,15 @@ import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.tree.Tree;
 
-import actions.Affect;
 import actions.Root;
+import actionsTDS.DecClassTDS;
+import actionsTDS.DecVarTDS;
+import actionsTDS.ForTDS;
+import actionsTDS.RootTDS;
+import analyseSem.AffectSem;
+import analyseSem.DecClassSem;
 import analyseSem.DecVarSem;
-import analyseTDS.DecVarTDS;
-import analyseTDS.RootTDS;
+import analyseSem.ForSem;
 import antlr.collections.Stack;
 import expr.*;
 import tableInstances.Table;
@@ -124,6 +128,8 @@ public class BrowseTree {
 				
 			//cas de déclaration de classe.
 			case "DEC_CLASS":
+				new DecClassSem(node);
+				new DecClassTDS(node);
 				break;
 				
 			//cas de déclaration de variable.
@@ -134,9 +140,13 @@ public class BrowseTree {
 			
 			//cas d'affectation de variable
 			case "AFFECT":
-				new Affect(node);
+				new AffectSem(node);
 				break;
-				
+			
+			case "FOR":
+				new ForSem(node);
+				new ForTDS(node);
+				break;
 			default:
 				break;
 			

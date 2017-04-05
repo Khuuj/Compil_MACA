@@ -1,4 +1,4 @@
-package analyseTDS;
+package actionsTDS;
 
 import org.antlr.runtime.tree.Tree;
 
