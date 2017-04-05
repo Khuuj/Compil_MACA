@@ -11,7 +11,9 @@ import org.antlr.runtime.tree.Tree;
 
 import actions.Affect;
 import actions.Root;
+import analyseSem.DecClassSem;
 import analyseSem.DecVarSem;
+import analyseTDS.DecClassTDS;
 import analyseTDS.DecVarTDS;
 import analyseTDS.RootTDS;
 import antlr.collections.Stack;
@@ -124,6 +126,8 @@ public class BrowseTree {
 				
 			//cas de déclaration de classe.
 			case "DEC_CLASS":
+				new DecClassSem(node);
+				new DecClassTDS(node);
 				break;
 				
 			//cas de déclaration de variable.

@@ -1,4 +1,4 @@
-package tableTypes;
+package tableTypesClassItems;
 
 public class Attribute extends ClassItem{
 

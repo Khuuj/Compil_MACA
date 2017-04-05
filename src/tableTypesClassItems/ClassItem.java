@@ -1,4 +1,4 @@
-package tableTypes;
+package tableTypesClassItems;
 
 
 //Classe représenant soit les attributs soit les méthodes d'une classe

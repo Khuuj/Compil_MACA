@@ -22,6 +22,7 @@ OPPOSE;
 APPELMETHODE;
 PARAM;
 NEW;
+BODY_CLASS;
 }
 
 prog :  	

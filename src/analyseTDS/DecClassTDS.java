@@ -2,33 +2,43 @@ package analyseTDS;
 
 import org.antlr.runtime.tree.Tree;
 
+import analyseSem.DecVarSem;
 import main.BrowseTree;
-import tableTypes.BodyClass;
 import tableTypes.ClassType;
 
 public class DecClassTDS {
 	public DecClassTDS(Tree node)
 	{
-		//'class' a=ID_CLASS ('inherit' b=ID_CLASS)? '=' '(' class_item_decl ')' ->^(DEC_CLASS $a ($b)? class_item_decl?)
 		String id = node.getChild(0).getText();
+		ClassType classType;
 		
+		// le 1er fils est le nom de la class
 		if(node.getChildCount() == 1){
-			BrowseTree.CLASS_TDS.addClassType(new ClassType(id));
+			classType = new ClassType(id);
 		}
+		// le second fils est: le nom de la class mère si elle exist, le corp de la classe sinon
 		else if(node.getChildCount() == 2){
 			String next = node.getChild(1).getText();
-			if(!node.getChild(1).getText().equals("BODY_CLASS"))
-			{
-				BrowseTree.CLASS_TDS.addClassType(new ClassType(id,next));
+			
+			if(!node.getChild(1).getText().equals("BODY_CLASS")){
+				classType = new ClassType(id,next);
 			}
 			else{
-				BrowseTree.CLASS_TDS.addClassType(new ClassType(id,new BodyClass(node.getChild(1)).getClassItems()));
+				//new BodyClassSem(node.getchild);
+				BodyClassTDS body = new BodyClassTDS(node.getChild(1));
+				classType = new ClassType(id,body.getClassItems());
 			}
 			
 		}
+		//le 3eme fils s'il existe est forcement le corp de la classe
 		else{
 			String next = node.getChild(1).getText();
-			BrowseTree.CLASS_TDS.addClassType(new ClassType(id,next,new BodyClass(node.getChild(2)).getClassItems()));
+			BodyClassTDS body = new BodyClassTDS(node.getChild(2));;
+	
+			classType = new ClassType(id,next,body.getClassItems());
 		}
+		
+		BrowseTree.CLASS_TDS.addClassType(classType);
 	}
 }
+
