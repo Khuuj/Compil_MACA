@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/clement/workspace/Compil_MACA/Fichiers/Expr.g 2017-04-05 18:40:11
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/clement/workspace/Compil_MACA/Fichiers/Expr.g 2017-04-05 23:08:56
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -80,10 +80,10 @@ public class ExprParser extends DebugParser {
     // delegators
 
     public static final String[] ruleNames = new String[] {
-        "invalidRule", "print", "atom", "instr", "exprplus", "type", "retourne", 
-        "oper", "prog", "params", "class_decl", "boundaries", "i", "class_item_decl", 
-        "read", "expr", "f", "exprmult", "moinsunaire", "m", "method_params", 
-        "e", "var_decl", "method_decl"
+        "invalidRule", "method_decl", "retourne", "expr", "exprplus", "var_decl", 
+        "prog", "m", "type", "class_decl", "read", "class_item_decl", "e", 
+        "atom", "print", "moinsunaire", "oper", "i", "f", "boundaries", 
+        "instr", "method_params", "params", "exprmult"
     };
      
         public int ruleLevel = 0;
@@ -303,7 +303,7 @@ public class ExprParser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: var_decl, instr, class_decl
+            // elements: class_decl, var_decl, instr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -687,7 +687,7 @@ public class ExprParser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: method_decl, var_decl
+            // elements: var_decl, method_decl
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1058,7 +1058,7 @@ public class ExprParser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: m, ID_OTHERS, method_params
+            // elements: method_params, ID_OTHERS, m
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1298,7 +1298,7 @@ public class ExprParser extends DebugParser {
 
 
                     // AST REWRITE
-                    // elements: instr, var_decl
+                    // elements: var_decl, instr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2086,7 +2086,7 @@ public class ExprParser extends DebugParser {
 
 
                     // AST REWRITE
-                    // elements: expr, instr, instr
+                    // elements: instr, expr, instr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2209,7 +2209,7 @@ public class ExprParser extends DebugParser {
 
 
                     // AST REWRITE
-                    // elements: boundaries, instr, ID_OTHERS
+                    // elements: ID_OTHERS, boundaries, instr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2589,7 +2589,7 @@ public class ExprParser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: a, 52, b
+            // elements: a, b, 52
             // token labels: 
             // rule labels: a, b, retval
             // token list labels: 
@@ -3530,7 +3530,7 @@ public class ExprParser extends DebugParser {
 
 
                     // AST REWRITE
-                    // elements: e, ID_OTHERS, f
+                    // elements: ID_OTHERS, f, e
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 

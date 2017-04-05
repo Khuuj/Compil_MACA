@@ -2,15 +2,16 @@ package actionsTDS;
 
 import org.antlr.runtime.tree.Tree;
 
-import analyseSem.DecVarSem;
 import main.BrowseTree;
 import tableTypes.ClassType;
 
 public class DecClassTDS {
+	
+	private ClassType classType;
+	
 	public DecClassTDS(Tree node)
 	{
 		String id = node.getChild(0).getText();
-		ClassType classType;
 		
 		// le 1er fils est le nom de la class
 		if(node.getChildCount() == 1){
@@ -39,6 +40,10 @@ public class DecClassTDS {
 		}
 		
 		BrowseTree.CLASS_TDS.addClassType(classType);
+	}
+	
+	public ClassType getClassType(){
+		return classType;
 	}
 }
 

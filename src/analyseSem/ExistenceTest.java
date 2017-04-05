@@ -21,7 +21,7 @@ public class ExistenceTest {
 		//Le sommet de la pile des TDS d'instances.
 		int scope = BrowseTree.INSTANCE_TDS.size() - 1;
 		
-		while (scope != 0)
+		while (scope >= 0)
 		{
 			//Si aucune entrée de la TDS ne correspond à cette clé, alors la variable n'existe pas.
 			if (BrowseTree.INSTANCE_TDS.get(scope).containsKey(key))

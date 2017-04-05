@@ -5,21 +5,17 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
-
 import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.tree.Tree;
 
-
+import actionsTDS.AffectTDS;
 import actionsTDS.DecClassTDS;
 import actionsTDS.DecVarTDS;
-import actionsTDS.ForTDS;
 import actionsTDS.RootTDS;
 import analyseSem.AffectSem;
 import analyseSem.DecClassSem;
 import analyseSem.DecVarSem;
-import analyseSem.ForSem;
-import antlr.collections.Stack;
 import expr.*;
 import tableInstances.Table;
 import tableTypes.TableClass;
@@ -66,7 +62,7 @@ public class BrowseTree {
         printChildren(tree);
         
         
-        browse(tree);
+        browse(tree);     
 	}
 	
 	/**
@@ -130,7 +126,8 @@ public class BrowseTree {
 			//cas de déclaration de classe.
 			case "DEC_CLASS":
 				new DecClassSem(node);
-				new DecClassTDS(node);
+				DecClassTDS classType = new DecClassTDS(node);
+				CLASS_TDS.addClassType(classType.getClassType());
 				break;
 				
 			//cas de déclaration de variable.
@@ -142,12 +139,13 @@ public class BrowseTree {
 			//cas d'affectation de variable
 			case "AFFECT":
 				new AffectSem(node);
+				new AffectTDS(node);
 				break;
 			
-			case "FOR":
+			/*case "FOR":
 				new ForSem(node);
 				new ForTDS(node);
-				break;
+				break;*/
 			default:
 				break;
 			

@@ -3,10 +3,10 @@ package actionsTDS;
 import org.antlr.runtime.tree.Tree;
 
 import main.BrowseTree;
-import tableInstances.Int;
-import tableInstances.SString;
-import tableInstances.Var;
-import tableInstances.CClass;
+import tableInstancesVar.CClass;
+import tableInstancesVar.Int;
+import tableInstancesVar.SString;
+import tableInstancesVar.Var;
 
 public class DecVarTDS {
 	

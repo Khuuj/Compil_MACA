@@ -3,8 +3,6 @@ var i : int;
 
 n := 10;
 
-total    := 0 ;
-
 for i in 0 .. n
 do 
  total := total + i * i ;

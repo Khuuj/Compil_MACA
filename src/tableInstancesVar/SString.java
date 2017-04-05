@@ -1,4 +1,4 @@
-package tableInstances;
+package tableInstancesVar;
 
 public class SString extends Var{
 

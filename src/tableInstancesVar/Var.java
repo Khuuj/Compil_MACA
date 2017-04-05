@@ -1,4 +1,6 @@
-package tableInstances;
+package tableInstancesVar;
+
+import tableInstances.Element;
 
 /**
  * 
