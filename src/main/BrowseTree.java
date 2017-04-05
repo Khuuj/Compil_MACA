@@ -9,8 +9,11 @@ import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.tree.Tree;
 
-import actions.DecVar;
+import actions.Affect;
 import actions.Root;
+import analyseSem.DecVarSem;
+import analyseTDS.DecVarTDS;
+import analyseTDS.RootTDS;
 import antlr.collections.Stack;
 import expr.*;
 import tableInstances.Table;
@@ -100,7 +103,7 @@ public class BrowseTree {
 		action(node);
 		for (int i = 0 ; i < nbChildren ; i++)
 		{
-			browse(node.getChild(i));
+			action(node.getChild(i));
 		}
 	}
 	
@@ -116,7 +119,7 @@ public class BrowseTree {
 		{
 			//cas traité afin d'éventuellement ajouter des traitement plus tard
 			case "ROOT":
-				new Root(node);
+				new RootTDS();
 				break;
 				
 			//cas de déclaration de classe.
@@ -125,7 +128,13 @@ public class BrowseTree {
 				
 			//cas de déclaration de variable.
 			case "DEC_VAR" :
-				new DecVar(node);
+				new DecVarSem(node);
+				new DecVarTDS(node);
+				break;
+			
+			//cas d'affectation de variable
+			case "AFFECT":
+				new Affect(node);
 				break;
 				
 			default:

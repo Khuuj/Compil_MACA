@@ -10,11 +10,6 @@ package tableInstances;
 public abstract class Element {
 	
 	/**
-	 * Portée de l'élément
-	 */
-	public int scope;
-	
-	/**
 	 * Identificateur de l'élément.
 	 */
 	public String id;
@@ -25,9 +20,8 @@ public abstract class Element {
 	 * @param id : identificateur de l'élément à stocker.
 	 * @param scope : portée de l'élément à stocker.
 	 */
-	public Element(String id, int scope)
+	public Element(String id)
 	{
 		this.id = id;
-		this.scope = scope;
 	}
 }

@@ -1,10 +1,7 @@
-package actions;
+package analyseSem;
 
 import org.antlr.runtime.tree.Tree;
 
-import analyseSem.DecClassSem;
-import analyseSem.DecIntSem;
-import analyseSem.DecStringSem;
 import analyseTDS.DecVarTDS;
 
 /**
@@ -12,10 +9,19 @@ import analyseTDS.DecVarTDS;
  * relatives à la déclaration de variable. 
  *
  */
-public class DecVar {
+public class DecVarSem {
 	
-	public DecVar(Tree node)
+	public DecVarSem(Tree node)
 	{
+		
+
+		//Teste si la variable existe déjà dans la TDS locale
+		new DoubleDecTest(node);
+		
+		
+		
+		
+		/*
 		//le type de la variable déclarée
 		String type = node.getChild(1).getText();
 		
@@ -34,10 +40,8 @@ public class DecVar {
 			default:
 				new DecClassSem(node);
 				break;
-		}
+		}*/
 		
-		//Action sur la TDS pour la déclaration d'une variable.
-		new DecVarTDS(node);
 	}
 	
 	

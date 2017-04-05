@@ -34,7 +34,7 @@ class_decl :
 	;
 	
 class_item_decl : 
-	var_decl* method_decl*
+	var_decl* method_decl* ->^(BODY_CLASS var_decl* method_decl*)
 	;
 
 var_decl : 

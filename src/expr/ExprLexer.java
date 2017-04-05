@@ -1,14 +1,13 @@
-<<<<<<< HEAD:output/ExprLexer.java
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/adam/Documents/Cours_TNCY/PCL/Compil_MACA/Expr.g 2017-03-30 14:16:11
-=======
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-03-30 14:54:30
 package expr;
->>>>>>> ec1cf5f1d290d71bc6d4d783ae8503c084dbc680:src/expr/ExprLexer.java
 
 import org.antlr.runtime.*;
+import java.util.Stack;
+import java.util.List;
+import java.util.ArrayList;
 
 public class ExprLexer extends Lexer {
     public static final int EOF=-1;
+    public static final int T__28=28;
     public static final int T__29=29;
     public static final int T__30=30;
     public static final int T__31=31;
@@ -62,12 +61,11 @@ public class ExprLexer extends Lexer {
     public static final int ID_CLASS=20;
     public static final int ID_OTHERS=21;
     public static final int STRING=22;
-    public static final int OPERMULT=23;
-    public static final int OPERCONDITION=24;
-    public static final int INT=25;
-    public static final int COMMENTS=26;
-    public static final int NEWLINE=27;
-    public static final int WS=28;
+    public static final int OPERCONDITION=23;
+    public static final int INT=24;
+    public static final int COMMENTS=25;
+    public static final int NEWLINE=26;
+    public static final int WS=27;
 
     // delegates
     // delegators
@@ -82,15 +80,36 @@ public class ExprLexer extends Lexer {
     }
     public String getGrammarFileName() { return "Expr.g"; }
 
-    // $ANTLR start "T__29"
-    public final void mT__29() throws RecognitionException {
+    // $ANTLR start "T__28"
+    public final void mT__28() throws RecognitionException {
         try {
-            int _type = T__29;
+            int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // Expr.g:3:7: ( 'class' )
             // Expr.g:3:9: 'class'
             {
             match("class"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__28"
+
+    // $ANTLR start "T__29"
+    public final void mT__29() throws RecognitionException {
+        try {
+            int _type = T__29;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // Expr.g:4:7: ( 'inherit' )
+            // Expr.g:4:9: 'inherit'
+            {
+            match("inherit"); 
 
 
             }
@@ -108,11 +127,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:4:7: ( 'inherit' )
-            // Expr.g:4:9: 'inherit'
+            // Expr.g:5:7: ( '=' )
+            // Expr.g:5:9: '='
             {
-            match("inherit"); 
-
+            match('='); 
 
             }
 
@@ -129,10 +147,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:5:7: ( '=' )
-            // Expr.g:5:9: '='
+            // Expr.g:6:7: ( '(' )
+            // Expr.g:6:9: '('
             {
-            match('='); 
+            match('('); 
 
             }
 
@@ -149,10 +167,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:6:7: ( '(' )
-            // Expr.g:6:9: '('
+            // Expr.g:7:7: ( ')' )
+            // Expr.g:7:9: ')'
             {
-            match('('); 
+            match(')'); 
 
             }
 
@@ -169,10 +187,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:7:7: ( ')' )
-            // Expr.g:7:9: ')'
+            // Expr.g:8:7: ( 'var' )
+            // Expr.g:8:9: 'var'
             {
-            match(')'); 
+            match("var"); 
+
 
             }
 
@@ -189,11 +208,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:8:7: ( 'var' )
-            // Expr.g:8:9: 'var'
+            // Expr.g:9:7: ( ':' )
+            // Expr.g:9:9: ':'
             {
-            match("var"); 
-
+            match(':'); 
 
             }
 
@@ -210,10 +228,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:9:7: ( ':' )
-            // Expr.g:9:9: ':'
+            // Expr.g:10:7: ( ';' )
+            // Expr.g:10:9: ';'
             {
-            match(':'); 
+            match(';'); 
 
             }
 
@@ -230,10 +248,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:10:7: ( ';' )
-            // Expr.g:10:9: ';'
+            // Expr.g:11:7: ( 'int' )
+            // Expr.g:11:9: 'int'
             {
-            match(';'); 
+            match("int"); 
+
 
             }
 
@@ -250,10 +269,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:11:7: ( 'int' )
-            // Expr.g:11:9: 'int'
+            // Expr.g:12:7: ( 'string' )
+            // Expr.g:12:9: 'string'
             {
-            match("int"); 
+            match("string"); 
 
 
             }
@@ -271,10 +290,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:12:7: ( 'string' )
-            // Expr.g:12:9: 'string'
+            // Expr.g:13:7: ( 'method' )
+            // Expr.g:13:9: 'method'
             {
-            match("string"); 
+            match("method"); 
 
 
             }
@@ -292,11 +311,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:13:7: ( 'method' )
-            // Expr.g:13:9: 'method'
+            // Expr.g:14:7: ( '{' )
+            // Expr.g:14:9: '{'
             {
-            match("method"); 
-
+            match('{'); 
 
             }
 
@@ -313,10 +331,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:14:7: ( '{' )
-            // Expr.g:14:9: '{'
+            // Expr.g:15:7: ( '}' )
+            // Expr.g:15:9: '}'
             {
-            match('{'); 
+            match('}'); 
 
             }
 
@@ -333,10 +351,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:15:7: ( '}' )
-            // Expr.g:15:9: '}'
+            // Expr.g:16:7: ( ',' )
+            // Expr.g:16:9: ','
             {
-            match('}'); 
+            match(','); 
 
             }
 
@@ -353,10 +371,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:16:7: ( ',' )
-            // Expr.g:16:9: ','
+            // Expr.g:17:7: ( ':=' )
+            // Expr.g:17:9: ':='
             {
-            match(','); 
+            match(":="); 
+
 
             }
 
@@ -373,10 +392,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:17:7: ( ':=' )
-            // Expr.g:17:9: ':='
+            // Expr.g:18:7: ( 'if' )
+            // Expr.g:18:9: 'if'
             {
-            match(":="); 
+            match("if"); 
 
 
             }
@@ -394,10 +413,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:18:7: ( 'if' )
-            // Expr.g:18:9: 'if'
+            // Expr.g:19:7: ( 'then' )
+            // Expr.g:19:9: 'then'
             {
-            match("if"); 
+            match("then"); 
 
 
             }
@@ -415,10 +434,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:19:7: ( 'then' )
-            // Expr.g:19:9: 'then'
+            // Expr.g:20:7: ( 'else' )
+            // Expr.g:20:9: 'else'
             {
-            match("then"); 
+            match("else"); 
 
 
             }
@@ -436,10 +455,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:20:7: ( 'else' )
-            // Expr.g:20:9: 'else'
+            // Expr.g:21:7: ( 'fi' )
+            // Expr.g:21:9: 'fi'
             {
-            match("else"); 
+            match("fi"); 
 
 
             }
@@ -457,10 +476,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:21:7: ( 'fi' )
-            // Expr.g:21:9: 'fi'
+            // Expr.g:22:7: ( 'for' )
+            // Expr.g:22:9: 'for'
             {
-            match("fi"); 
+            match("for"); 
 
 
             }
@@ -478,10 +497,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:22:7: ( 'for' )
-            // Expr.g:22:9: 'for'
+            // Expr.g:23:7: ( 'in' )
+            // Expr.g:23:9: 'in'
             {
-            match("for"); 
+            match("in"); 
 
 
             }
@@ -499,10 +518,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:23:7: ( 'in' )
-            // Expr.g:23:9: 'in'
+            // Expr.g:24:7: ( 'do' )
+            // Expr.g:24:9: 'do'
             {
-            match("in"); 
+            match("do"); 
 
 
             }
@@ -520,10 +539,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:24:7: ( 'do' )
-            // Expr.g:24:9: 'do'
+            // Expr.g:25:7: ( 'end' )
+            // Expr.g:25:9: 'end'
             {
-            match("do"); 
+            match("end"); 
 
 
             }
@@ -541,10 +560,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:25:7: ( 'end' )
-            // Expr.g:25:9: 'end'
+            // Expr.g:26:7: ( '..' )
+            // Expr.g:26:9: '..'
             {
-            match("end"); 
+            match(".."); 
 
 
             }
@@ -562,10 +581,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:26:7: ( '..' )
-            // Expr.g:26:9: '..'
+            // Expr.g:27:7: ( 'nil' )
+            // Expr.g:27:9: 'nil'
             {
-            match(".."); 
+            match("nil"); 
 
 
             }
@@ -583,10 +602,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:27:7: ( 'nil' )
-            // Expr.g:27:9: 'nil'
+            // Expr.g:28:7: ( 'write' )
+            // Expr.g:28:9: 'write'
             {
-            match("nil"); 
+            match("write"); 
 
 
             }
@@ -604,10 +623,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:28:7: ( 'write' )
-            // Expr.g:28:9: 'write'
+            // Expr.g:29:7: ( 'read' )
+            // Expr.g:29:9: 'read'
             {
-            match("write"); 
+            match("read"); 
 
 
             }
@@ -625,10 +644,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:29:7: ( 'read' )
-            // Expr.g:29:9: 'read'
+            // Expr.g:30:7: ( 'return' )
+            // Expr.g:30:9: 'return'
             {
-            match("read"); 
+            match("return"); 
 
 
             }
@@ -646,10 +665,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:30:7: ( 'return' )
-            // Expr.g:30:9: 'return'
+            // Expr.g:31:7: ( 'this' )
+            // Expr.g:31:9: 'this'
             {
-            match("return"); 
+            match("this"); 
 
 
             }
@@ -667,10 +686,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:31:7: ( 'this' )
-            // Expr.g:31:9: 'this'
+            // Expr.g:32:7: ( 'super' )
+            // Expr.g:32:9: 'super'
             {
-            match("this"); 
+            match("super"); 
 
 
             }
@@ -688,10 +707,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:32:7: ( 'super' )
-            // Expr.g:32:9: 'super'
+            // Expr.g:33:7: ( 'new' )
+            // Expr.g:33:9: 'new'
             {
-            match("super"); 
+            match("new"); 
 
 
             }
@@ -709,11 +728,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:33:7: ( 'new' )
-            // Expr.g:33:9: 'new'
+            // Expr.g:34:7: ( '.' )
+            // Expr.g:34:9: '.'
             {
-            match("new"); 
-
+            match('.'); 
 
             }
 
@@ -730,10 +748,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:34:7: ( '.' )
-            // Expr.g:34:9: '.'
+            // Expr.g:35:7: ( '+' )
+            // Expr.g:35:9: '+'
             {
-            match('.'); 
+            match('+'); 
 
             }
 
@@ -750,10 +768,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:35:7: ( '+' )
-            // Expr.g:35:9: '+'
+            // Expr.g:36:7: ( '-' )
+            // Expr.g:36:9: '-'
             {
-            match('+'); 
+            match('-'); 
 
             }
 
@@ -770,10 +788,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:36:7: ( '-' )
-            // Expr.g:36:9: '-'
+            // Expr.g:37:7: ( '*' )
+            // Expr.g:37:9: '*'
             {
-            match('-'); 
+            match('*'); 
 
             }
 
@@ -992,36 +1010,16 @@ public class ExprLexer extends Lexer {
     }
     // $ANTLR end "OPERCONDITION"
 
-    // $ANTLR start "OPERMULT"
-    public final void mOPERMULT() throws RecognitionException {
-        try {
-            int _type = OPERMULT;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:145:9: ( '*' )
-            // Expr.g:145:11: '*'
-            {
-            match('*'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "OPERMULT"
-
     // $ANTLR start "ID_CLASS"
     public final void mID_CLASS() throws RecognitionException {
         try {
             int _type = ID_CLASS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:148:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // Expr.g:148:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // Expr.g:147:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // Expr.g:147:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             matchRange('A','Z'); 
-            // Expr.g:148:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // Expr.g:147:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop4:
             do {
                 int alt4=2;
@@ -1070,11 +1068,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = ID_OTHERS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:149:11: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // Expr.g:149:13: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // Expr.g:148:11: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // Expr.g:148:13: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             matchRange('a','z'); 
-            // Expr.g:149:22: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // Expr.g:148:22: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop5:
             do {
                 int alt5=2;
@@ -1123,12 +1121,12 @@ public class ExprLexer extends Lexer {
         try {
             int _type = COMMENTS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:151:10: ( '/*' ( . )* '*/' )
-            // Expr.g:151:12: '/*' ( . )* '*/'
+            // Expr.g:150:10: ( '/*' ( . )* '*/' )
+            // Expr.g:150:12: '/*' ( . )* '*/'
             {
             match("/*"); 
 
-            // Expr.g:151:17: ( . )*
+            // Expr.g:150:17: ( . )*
             loop6:
             do {
                 int alt6=2;
@@ -1153,7 +1151,7 @@ public class ExprLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // Expr.g:151:17: .
+            	    // Expr.g:150:17: .
             	    {
             	    matchAny(); 
 
@@ -1184,10 +1182,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = NEWLINE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:152:8: ( ( '\\r' )? '\\n' )
-            // Expr.g:152:9: ( '\\r' )? '\\n'
+            // Expr.g:151:8: ( ( '\\r' )? '\\n' )
+            // Expr.g:151:9: ( '\\r' )? '\\n'
             {
-            // Expr.g:152:9: ( '\\r' )?
+            // Expr.g:151:9: ( '\\r' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1196,7 +1194,7 @@ public class ExprLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // Expr.g:152:9: '\\r'
+                    // Expr.g:151:9: '\\r'
                     {
                     match('\r'); 
 
@@ -1223,10 +1221,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Expr.g:153:4: ( ( ' ' | '\\t' )+ )
-            // Expr.g:153:6: ( ' ' | '\\t' )+
+            // Expr.g:152:4: ( ( ' ' | '\\t' )+ )
+            // Expr.g:152:6: ( ' ' | '\\t' )+
             {
-            // Expr.g:153:6: ( ' ' | '\\t' )+
+            // Expr.g:152:6: ( ' ' | '\\t' )+
             int cnt8=0;
             loop8:
             do {
@@ -1277,306 +1275,306 @@ public class ExprLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // Expr.g:1:8: ( T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | INT | STRING | OPERCONDITION | OPERMULT | ID_CLASS | ID_OTHERS | COMMENTS | NEWLINE | WS )
+        // Expr.g:1:8: ( T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | INT | STRING | OPERCONDITION | ID_CLASS | ID_OTHERS | COMMENTS | NEWLINE | WS )
         int alt9=43;
         alt9 = dfa9.predict(input);
         switch (alt9) {
             case 1 :
-                // Expr.g:1:10: T__29
+                // Expr.g:1:10: T__28
+                {
+                mT__28(); 
+
+                }
+                break;
+            case 2 :
+                // Expr.g:1:16: T__29
                 {
                 mT__29(); 
 
                 }
                 break;
-            case 2 :
-                // Expr.g:1:16: T__30
+            case 3 :
+                // Expr.g:1:22: T__30
                 {
                 mT__30(); 
 
                 }
                 break;
-            case 3 :
-                // Expr.g:1:22: T__31
+            case 4 :
+                // Expr.g:1:28: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
-            case 4 :
-                // Expr.g:1:28: T__32
+            case 5 :
+                // Expr.g:1:34: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
-            case 5 :
-                // Expr.g:1:34: T__33
+            case 6 :
+                // Expr.g:1:40: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
-            case 6 :
-                // Expr.g:1:40: T__34
+            case 7 :
+                // Expr.g:1:46: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
-            case 7 :
-                // Expr.g:1:46: T__35
+            case 8 :
+                // Expr.g:1:52: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
-            case 8 :
-                // Expr.g:1:52: T__36
+            case 9 :
+                // Expr.g:1:58: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
-            case 9 :
-                // Expr.g:1:58: T__37
+            case 10 :
+                // Expr.g:1:64: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
-            case 10 :
-                // Expr.g:1:64: T__38
+            case 11 :
+                // Expr.g:1:70: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
-            case 11 :
-                // Expr.g:1:70: T__39
+            case 12 :
+                // Expr.g:1:76: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
-            case 12 :
-                // Expr.g:1:76: T__40
+            case 13 :
+                // Expr.g:1:82: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
-            case 13 :
-                // Expr.g:1:82: T__41
+            case 14 :
+                // Expr.g:1:88: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
-            case 14 :
-                // Expr.g:1:88: T__42
+            case 15 :
+                // Expr.g:1:94: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
-            case 15 :
-                // Expr.g:1:94: T__43
+            case 16 :
+                // Expr.g:1:100: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
-            case 16 :
-                // Expr.g:1:100: T__44
+            case 17 :
+                // Expr.g:1:106: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
-            case 17 :
-                // Expr.g:1:106: T__45
+            case 18 :
+                // Expr.g:1:112: T__45
                 {
                 mT__45(); 
 
                 }
                 break;
-            case 18 :
-                // Expr.g:1:112: T__46
+            case 19 :
+                // Expr.g:1:118: T__46
                 {
                 mT__46(); 
 
                 }
                 break;
-            case 19 :
-                // Expr.g:1:118: T__47
+            case 20 :
+                // Expr.g:1:124: T__47
                 {
                 mT__47(); 
 
                 }
                 break;
-            case 20 :
-                // Expr.g:1:124: T__48
+            case 21 :
+                // Expr.g:1:130: T__48
                 {
                 mT__48(); 
 
                 }
                 break;
-            case 21 :
-                // Expr.g:1:130: T__49
+            case 22 :
+                // Expr.g:1:136: T__49
                 {
                 mT__49(); 
 
                 }
                 break;
-            case 22 :
-                // Expr.g:1:136: T__50
+            case 23 :
+                // Expr.g:1:142: T__50
                 {
                 mT__50(); 
 
                 }
                 break;
-            case 23 :
-                // Expr.g:1:142: T__51
+            case 24 :
+                // Expr.g:1:148: T__51
                 {
                 mT__51(); 
 
                 }
                 break;
-            case 24 :
-                // Expr.g:1:148: T__52
+            case 25 :
+                // Expr.g:1:154: T__52
                 {
                 mT__52(); 
 
                 }
                 break;
-            case 25 :
-                // Expr.g:1:154: T__53
+            case 26 :
+                // Expr.g:1:160: T__53
                 {
                 mT__53(); 
 
                 }
                 break;
-            case 26 :
-                // Expr.g:1:160: T__54
+            case 27 :
+                // Expr.g:1:166: T__54
                 {
                 mT__54(); 
 
                 }
                 break;
-            case 27 :
-                // Expr.g:1:166: T__55
+            case 28 :
+                // Expr.g:1:172: T__55
                 {
                 mT__55(); 
 
                 }
                 break;
-            case 28 :
-                // Expr.g:1:172: T__56
+            case 29 :
+                // Expr.g:1:178: T__56
                 {
                 mT__56(); 
 
                 }
                 break;
-            case 29 :
-                // Expr.g:1:178: T__57
+            case 30 :
+                // Expr.g:1:184: T__57
                 {
                 mT__57(); 
 
                 }
                 break;
-            case 30 :
-                // Expr.g:1:184: T__58
+            case 31 :
+                // Expr.g:1:190: T__58
                 {
                 mT__58(); 
 
                 }
                 break;
-            case 31 :
-                // Expr.g:1:190: T__59
+            case 32 :
+                // Expr.g:1:196: T__59
                 {
                 mT__59(); 
 
                 }
                 break;
-            case 32 :
-                // Expr.g:1:196: T__60
+            case 33 :
+                // Expr.g:1:202: T__60
                 {
                 mT__60(); 
 
                 }
                 break;
-            case 33 :
-                // Expr.g:1:202: T__61
+            case 34 :
+                // Expr.g:1:208: T__61
                 {
                 mT__61(); 
 
                 }
                 break;
-            case 34 :
-                // Expr.g:1:208: T__62
+            case 35 :
+                // Expr.g:1:214: T__62
                 {
                 mT__62(); 
 
                 }
                 break;
-            case 35 :
-                // Expr.g:1:214: INT
+            case 36 :
+                // Expr.g:1:220: INT
                 {
                 mINT(); 
 
                 }
                 break;
-            case 36 :
-                // Expr.g:1:218: STRING
+            case 37 :
+                // Expr.g:1:224: STRING
                 {
                 mSTRING(); 
 
                 }
                 break;
-            case 37 :
-                // Expr.g:1:225: OPERCONDITION
+            case 38 :
+                // Expr.g:1:231: OPERCONDITION
                 {
                 mOPERCONDITION(); 
 
                 }
                 break;
-            case 38 :
-                // Expr.g:1:239: OPERMULT
-                {
-                mOPERMULT(); 
-
-                }
-                break;
             case 39 :
-                // Expr.g:1:248: ID_CLASS
+                // Expr.g:1:245: ID_CLASS
                 {
                 mID_CLASS(); 
 
                 }
                 break;
             case 40 :
-                // Expr.g:1:257: ID_OTHERS
+                // Expr.g:1:254: ID_OTHERS
                 {
                 mID_OTHERS(); 
 
                 }
                 break;
             case 41 :
-                // Expr.g:1:267: COMMENTS
+                // Expr.g:1:264: COMMENTS
                 {
                 mCOMMENTS(); 
 
                 }
                 break;
             case 42 :
-                // Expr.g:1:276: NEWLINE
+                // Expr.g:1:273: NEWLINE
                 {
                 mNEWLINE(); 
 
                 }
                 break;
             case 43 :
-                // Expr.g:1:284: WS
+                // Expr.g:1:281: WS
                 {
                 mWS(); 
 
@@ -1628,14 +1626,14 @@ public class ExprLexer extends Lexer {
     static final String DFA9_specialS =
         "\164\uffff}>";
     static final String[] DFA9_transitionS = {
-            "\1\40\1\37\2\uffff\1\37\22\uffff\1\40\1\32\1\31\5\uffff\1\4"+
-            "\1\5\1\33\1\26\1\15\1\27\1\22\1\36\12\30\1\7\1\10\1\32\1\3\1"+
-            "\32\2\uffff\32\34\6\uffff\2\35\1\1\1\21\1\17\1\20\2\35\1\2\3"+
+            "\1\40\1\37\2\uffff\1\37\22\uffff\1\40\1\33\1\32\5\uffff\1\4"+
+            "\1\5\1\30\1\26\1\15\1\27\1\22\1\36\12\31\1\7\1\10\1\33\1\3\1"+
+            "\33\2\uffff\32\34\6\uffff\2\35\1\1\1\21\1\17\1\20\2\35\1\2\3"+
             "\35\1\12\1\23\3\35\1\25\1\11\1\16\1\35\1\6\1\24\3\35\1\13\1"+
             "\uffff\1\14",
             "\1\41",
             "\1\43\7\uffff\1\42",
-            "\1\32",
+            "\1\33",
             "",
             "",
             "\1\45",
@@ -1781,7 +1779,7 @@ public class ExprLexer extends Lexer {
             this.transition = DFA9_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | INT | STRING | OPERCONDITION | OPERMULT | ID_CLASS | ID_OTHERS | COMMENTS | NEWLINE | WS );";
+            return "1:1: Tokens : ( T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | INT | STRING | OPERCONDITION | ID_CLASS | ID_OTHERS | COMMENTS | NEWLINE | WS );";
         }
     }
  
