@@ -1,11 +1,16 @@
-Contrôles sémantiques à réaliser : (à sépare entre statique et dynamique probablement)
-1- Toute variable doit être déclarée avent d'être utilisée (lue ou affectée)
+Contrôles sémantiques à réaliser : (à séparer entre statique et dynamique probablement)
+1- FAIT NON TESTE Toute variable doit être déclarée avant d'être utilisée (lue ou affectée)
 2- FAIT NON TESTE - Le programme ne doit pas contenir de doubles déclarations
-3- Les types doivent être cohérents lors des opérations
-4- Les paramètres passés à une fonction doivent être de même type que que ceux définis lors de la déclaration de la fonction
-5- Si une classe hérite, la classe doit être déjà définie.
-6- On ne peut pas rédefinir une classe existante
-7- Les noms des classes et des méthodes doivent être visibles partout
-8- Dans une classe un identificateur ne peut pas désigner à la fois un argument ou un attribut, et une méthode
-9- La portée de déclaration d'une variable locale commence à la fin de se déclaration et fini à la fin du bloc englobant se déclaration.
-10- 
+3 4 et 5- Les types doivent être cohérents lors des opérations --> dans une addition, multiplication, il ne peut y avoir que des "int" ou bien l'appel à une méthode d'une classe qui renvoie un "int". dans une addition, on peut accepter "int" et "string" (idem ou bien méthode d'une classe...).
+
+6- Les paramètres passés à une fonction doivent être de même type que que ceux définis lors de la déclaration de la fonction.
+7- Le nombre de paramètres entrés aussi doit être cohérent.
+8- Le type de retour doit bien être le bon.
+9- Toute variable déclarée et utilisée doit avoir une valeur (lors d"un retour ou d'une utilisation)
+10- Si une classe hérite, la classe doit être déjà définie.
+11- On ne peut pas rédéfinir une classe existante.
+12- Les noms des classes et des méthodes doivent être visibles partout.
+13- Dans une classe un identificateur ne peut pas désigner à la fois un argument ou un attribut, et une méthode
+14- La portée de déclaration d'une variable locale commence à la fin de se déclaration et fini à la fin du bloc englobant se déclaration.
+15- Boucle for : terminale, variable déclarée.
+16- Regarder les contrôles sur le sujet (je les rajouterais plus tard).
