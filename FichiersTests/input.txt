@@ -1,13 +1,8 @@
 var n : int;
-var i : int;
+n := 1;
+var txt : String;
+var total : int;
+a := 3;
 
-n := 10;
+total := total + n*a;
 
-total    := 0 ;
-
-for i in 0 .. n
-do 
- total := total + i * i ;
-end
-
-write total;

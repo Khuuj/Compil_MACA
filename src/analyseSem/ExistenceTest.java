@@ -15,13 +15,13 @@ public class ExistenceTest {
 		boolean exists = false;
 		
 		//L'identifiant de la variable.
-		String id = node.getChild(0).getText();
+		String id = node.getText();
 		//Sa clé potentielle dans la TDS locale.
 		int key = Table.hash(id);
 		//Le sommet de la pile des TDS d'instances.
-		int scope = BrowseTree.INSTANCE_TDS.size() - 1;
+		int scope = BrowseTree.INSTANCE_TDS.size() -1;
 		
-		while (scope != 0)
+		while (scope >= 0)
 		{
 			//Si aucune entrée de la TDS ne correspond à cette clé, alors la variable n'existe pas.
 			if (BrowseTree.INSTANCE_TDS.get(scope).containsKey(key))
@@ -30,12 +30,13 @@ public class ExistenceTest {
 				
 				while (it.hasNext())
 					exists = exists || it.next().id.equals(id);
+				
 			}
 			scope--;
 		}
 		
 		
-		//Affiche une erreur si la variable existe déjà dans la TDS locale.
+		//Affiche une erreur si la variable n'existe pas dans les TDS
 		if (!exists)
 			System.err.println("Erreur : la variable "+id+" n'est pas définie !\n");
 	}

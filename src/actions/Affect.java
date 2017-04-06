@@ -2,8 +2,7 @@ package actions;
 
 import org.antlr.runtime.tree.Tree;
 
-import analyseSem.DoubleDecTest;
-import analyseSem.ExistenceTest;
+import analyseSem.*;
 
 /**
  * Classe centralisant les actions sur la TDS et les analyses sémantiques 
@@ -14,7 +13,9 @@ public class Affect {
 
 	public Affect(Tree node)
 	{
+		System.out.println("YOOOOOOOOOOOOOo");
 		//Teste si la variable affectée est bien définie
-		new ExistenceTest(node);
+		//new TypeTester(node.getChild(0));
+		new ExistenceTest(node.getChild(0));
 	}
 }
