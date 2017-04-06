@@ -4,7 +4,11 @@ import java.util.Iterator;
 
 import org.antlr.runtime.tree.Tree;
 
+<<<<<<< HEAD
 import analyseSem.OperSem;
+=======
+import analyseSem.*;
+>>>>>>> dfa2957a6e8378dcedd6a283a431ff1415ed069d
 import main.BrowseTree;
 import tableInstances.Element;
 import tableInstances.Table;
@@ -13,6 +17,10 @@ import tableInstancesVar.Var;
 public class AffectTDS {
 	
 	public AffectTDS(Tree node){
+<<<<<<< HEAD
+=======
+
+>>>>>>> dfa2957a6e8378dcedd6a283a431ff1415ed069d
 		
 		String name = node.getChild(0).getText();
 		
@@ -47,6 +55,6 @@ public class AffectTDS {
 				new OperSem(node.getChild(1).getChild(1));
 				break;
 		}
-		
 	}
+
 }

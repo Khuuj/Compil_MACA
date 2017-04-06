@@ -37,9 +37,7 @@ class Cat inherit MAmouth =
 		do super.whoami();
 		write ". And I am a cat .";
 	}
-)
-
-
+	
 var n : int;
 var txt : string;
 var total : int;
@@ -49,6 +47,10 @@ write a + banane.eat();
 n := 10;
 
 
-n := txt + n;
+n := txt + (n + 3) *9;
 
-n := total + total*i;
+n := total + n.whoami();
+)
+
+
+
