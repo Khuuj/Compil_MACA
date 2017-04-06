@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
@@ -43,6 +44,7 @@ public class BrowseTree {
 	 * Les TDS sont empilées en fonction de leur portées.
 	 */
 	public static ArrayList<Table> INSTANCE_TDS;
+	
 	
 	/*Est-ce qu'on a besoin d'une portée pour la définition de classes ? 
 	 * Il faudrait lire la grammaire pour s'en assurer!

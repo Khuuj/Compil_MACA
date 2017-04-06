@@ -29,7 +29,7 @@ class Dog inherit Animal =
 		write ". And I am a dog .";
 	}
 )
-class Cat inherit MAmouth =
+class Cat inherit Mamouth =
 (
 	method whoami()
 	{
@@ -38,6 +38,16 @@ class Cat inherit MAmouth =
 	}
 )
 
+class Bichon inherit Dog =
+(
+	method whoami()
+	{
+		do super.whoami();
+		write ". And I am a bichon";
+	}
+)
+
+var do : int;
 
 var n : int;
 var txt : string;
