@@ -16,10 +16,11 @@ IF;
 BLOC;
 BODY;
 METHOD;
+DEC_METHOD;
 ARGS;
 PARAMS;
 OPPOSE;
-APPELMETHODE;
+APPEL_METHODE;
 PARAM;
 NEW;
 BODY_CLASS;
@@ -49,7 +50,7 @@ type :
 	;
 
 method_decl : 
-	'method' ID_OTHERS '('  method_params? ')' m -> ^(METHOD ID_OTHERS   method_params?  m )
+	'method' ID_OTHERS '('  method_params? ')' m -> ^(DEC_METHOD ID_OTHERS   method_params?  m )
 	;
 
 m  :
@@ -100,14 +101,13 @@ retourne :
  	;
 
 expr:
-	 exprplus e //ID_OTHERS e
+	 exprplus e//ID_OTHERS e
 	| 'this' e
 	| 'super' e
-	| STRING
-	| 'new' ID_CLASS e -> ^(NEW ID_CLASS e?)
+	| 'new' ID_CLASS -> ^(NEW ID_CLASS)
 	;
 e :
-	'.' ID_OTHERS '(' f? ')' e -> ^(APPELMETHODE ID_OTHERS f? e?)
+	'.' ID_OTHERS '(' f? ')' e -> ^(APPEL_METHODE ID_OTHERS f? e?)
 	|
 	;
 	
@@ -134,7 +134,8 @@ moinsunaire:
 	;
 atom: 
 	 ID_OTHERS
-	|  INT
+	| INT
+	| STRING
 	| '('expr')'
 	;
 

@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/adam/workspace/Compil_MACA/Fichiers/Expr.g 2017-04-06 17:45:23
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-04-06 16:56:20
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -6,68 +6,67 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class ExprLexer extends Lexer {
-    public static final int BLOC=11;
-    public static final int APPEL_METHODE=18;
-    public static final int NEW=20;
-    public static final int T__50=50;
-    public static final int T__59=59;
-    public static final int T__55=55;
-    public static final int T__56=56;
-    public static final int T__57=57;
-    public static final int T__58=58;
-    public static final int T__51=51;
-    public static final int T__52=52;
-    public static final int IF=10;
-    public static final int T__53=53;
-    public static final int T__54=54;
-    public static final int T__60=60;
-    public static final int T__61=61;
-    public static final int BODY_CLASS=21;
-    public static final int NEWLINE=28;
-    public static final int FOR=9;
-    public static final int OPPOSE=17;
-    public static final int DEC_CLASS=5;
-    public static final int OPERCONDITION=24;
-    public static final int METHOD=13;
-    public static final int PARAMS=16;
-    public static final int T__62=62;
-    public static final int T__63=63;
-    public static final int BODY=12;
-    public static final int T__64=64;
-    public static final int ARGS=15;
-    public static final int ROOT=4;
-    public static final int COMMENTS=27;
-    public static final int INT=25;
-    public static final int RETURN=8;
-    public static final int T__37=37;
-    public static final int ID_OTHERS=23;
-    public static final int T__38=38;
-    public static final int T__39=39;
+    public static final int EOF=-1;
+    public static final int T__29=29;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int WS=29;
-    public static final int EOF=-1;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
-    public static final int DEC_VAR=6;
-    public static final int PARAM=19;
-    public static final int AFFECT=7;
-    public static final int T__48=48;
-    public static final int T__49=49;
-    public static final int DEC_METHOD=14;
-    public static final int T__44=44;
-    public static final int T__45=45;
-    public static final int ID_CLASS=22;
-    public static final int STRING=26;
-    public static final int T__46=46;
-    public static final int T__47=47;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
     public static final int T__40=40;
     public static final int T__41=41;
     public static final int T__42=42;
     public static final int T__43=43;
+    public static final int T__44=44;
+    public static final int T__45=45;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int T__50=50;
+    public static final int T__51=51;
+    public static final int T__52=52;
+    public static final int T__53=53;
+    public static final int T__54=54;
+    public static final int T__55=55;
+    public static final int T__56=56;
+    public static final int T__57=57;
+    public static final int T__58=58;
+    public static final int T__59=59;
+    public static final int T__60=60;
+    public static final int T__61=61;
+    public static final int T__62=62;
+    public static final int T__63=63;
+    public static final int ROOT=4;
+    public static final int DEC_CLASS=5;
+    public static final int DEC_VAR=6;
+    public static final int AFFECT=7;
+    public static final int RETURN=8;
+    public static final int FOR=9;
+    public static final int IF=10;
+    public static final int BLOC=11;
+    public static final int BODY=12;
+    public static final int METHOD=13;
+    public static final int ARGS=14;
+    public static final int PARAMS=15;
+    public static final int OPPOSE=16;
+    public static final int APPELMETHODE=17;
+    public static final int PARAM=18;
+    public static final int NEW=19;
+    public static final int BODY_CLASS=20;
+    public static final int ID_CLASS=21;
+    public static final int ID_OTHERS=22;
+    public static final int OPERCONDITION=23;
+    public static final int INT=24;
+    public static final int STRING=25;
+    public static final int COMMENTS=26;
+    public static final int NEWLINE=27;
+    public static final int WS=28;
 
     // delegates
     // delegators
@@ -80,17 +79,38 @@ public class ExprLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "/home/adam/workspace/Compil_MACA/Fichiers/Expr.g"; }
+    public String getGrammarFileName() { return "Expr.g"; }
+
+    // $ANTLR start "T__29"
+    public final void mT__29() throws RecognitionException {
+        try {
+            int _type = T__29;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // Expr.g:3:7: ( 'class' )
+            // Expr.g:3:9: 'class'
+            {
+            match("class"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__29"
 
     // $ANTLR start "T__30"
     public final void mT__30() throws RecognitionException {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:3:7: ( 'class' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:3:9: 'class'
+            // Expr.g:4:7: ( 'inherit' )
+            // Expr.g:4:9: 'inherit'
             {
-            match("class"); 
+            match("inherit"); 
 
 
             }
@@ -108,11 +128,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:4:7: ( 'inherit' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:4:9: 'inherit'
+            // Expr.g:5:7: ( '=' )
+            // Expr.g:5:9: '='
             {
-            match("inherit"); 
-
+            match('='); 
 
             }
 
@@ -129,10 +148,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:5:7: ( '=' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:5:9: '='
+            // Expr.g:6:7: ( '(' )
+            // Expr.g:6:9: '('
             {
-            match('='); 
+            match('('); 
 
             }
 
@@ -149,10 +168,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:6:7: ( '(' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:6:9: '('
+            // Expr.g:7:7: ( ')' )
+            // Expr.g:7:9: ')'
             {
-            match('('); 
+            match(')'); 
 
             }
 
@@ -169,10 +188,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:7:7: ( ')' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:7:9: ')'
+            // Expr.g:8:7: ( 'var' )
+            // Expr.g:8:9: 'var'
             {
-            match(')'); 
+            match("var"); 
+
 
             }
 
@@ -189,11 +209,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:8:7: ( 'var' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:8:9: 'var'
+            // Expr.g:9:7: ( ':' )
+            // Expr.g:9:9: ':'
             {
-            match("var"); 
-
+            match(':'); 
 
             }
 
@@ -210,10 +229,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:9:7: ( ':' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:9:9: ':'
+            // Expr.g:10:7: ( ';' )
+            // Expr.g:10:9: ';'
             {
-            match(':'); 
+            match(';'); 
 
             }
 
@@ -230,10 +249,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:10:7: ( ';' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:10:9: ';'
+            // Expr.g:11:7: ( 'int' )
+            // Expr.g:11:9: 'int'
             {
-            match(';'); 
+            match("int"); 
+
 
             }
 
@@ -250,10 +270,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:11:7: ( 'int' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:11:9: 'int'
+            // Expr.g:12:7: ( 'string' )
+            // Expr.g:12:9: 'string'
             {
-            match("int"); 
+            match("string"); 
 
 
             }
@@ -271,10 +291,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:12:7: ( 'string' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:12:9: 'string'
+            // Expr.g:13:7: ( 'method' )
+            // Expr.g:13:9: 'method'
             {
-            match("string"); 
+            match("method"); 
 
 
             }
@@ -292,11 +312,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:13:7: ( 'method' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:13:9: 'method'
+            // Expr.g:14:7: ( '{' )
+            // Expr.g:14:9: '{'
             {
-            match("method"); 
-
+            match('{'); 
 
             }
 
@@ -313,10 +332,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:14:7: ( '{' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:14:9: '{'
+            // Expr.g:15:7: ( '}' )
+            // Expr.g:15:9: '}'
             {
-            match('{'); 
+            match('}'); 
 
             }
 
@@ -333,10 +352,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:15:7: ( '}' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:15:9: '}'
+            // Expr.g:16:7: ( ',' )
+            // Expr.g:16:9: ','
             {
-            match('}'); 
+            match(','); 
 
             }
 
@@ -353,10 +372,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:16:7: ( ',' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:16:9: ','
+            // Expr.g:17:7: ( ':=' )
+            // Expr.g:17:9: ':='
             {
-            match(','); 
+            match(":="); 
+
 
             }
 
@@ -373,10 +393,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:17:7: ( ':=' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:17:9: ':='
+            // Expr.g:18:7: ( 'if' )
+            // Expr.g:18:9: 'if'
             {
-            match(":="); 
+            match("if"); 
 
 
             }
@@ -394,10 +414,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:18:7: ( 'if' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:18:9: 'if'
+            // Expr.g:19:7: ( 'then' )
+            // Expr.g:19:9: 'then'
             {
-            match("if"); 
+            match("then"); 
 
 
             }
@@ -415,10 +435,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:19:7: ( 'then' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:19:9: 'then'
+            // Expr.g:20:7: ( 'else' )
+            // Expr.g:20:9: 'else'
             {
-            match("then"); 
+            match("else"); 
 
 
             }
@@ -436,10 +456,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:20:7: ( 'else' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:20:9: 'else'
+            // Expr.g:21:7: ( 'fi' )
+            // Expr.g:21:9: 'fi'
             {
-            match("else"); 
+            match("fi"); 
 
 
             }
@@ -457,10 +477,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:21:7: ( 'fi' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:21:9: 'fi'
+            // Expr.g:22:7: ( 'for' )
+            // Expr.g:22:9: 'for'
             {
-            match("fi"); 
+            match("for"); 
 
 
             }
@@ -478,10 +498,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:22:7: ( 'for' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:22:9: 'for'
+            // Expr.g:23:7: ( 'in' )
+            // Expr.g:23:9: 'in'
             {
-            match("for"); 
+            match("in"); 
 
 
             }
@@ -499,10 +519,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:23:7: ( 'in' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:23:9: 'in'
+            // Expr.g:24:7: ( 'do' )
+            // Expr.g:24:9: 'do'
             {
-            match("in"); 
+            match("do"); 
 
 
             }
@@ -520,10 +540,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:24:7: ( 'do' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:24:9: 'do'
+            // Expr.g:25:7: ( 'end' )
+            // Expr.g:25:9: 'end'
             {
-            match("do"); 
+            match("end"); 
 
 
             }
@@ -541,10 +561,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:25:7: ( 'end' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:25:9: 'end'
+            // Expr.g:26:7: ( '..' )
+            // Expr.g:26:9: '..'
             {
-            match("end"); 
+            match(".."); 
 
 
             }
@@ -562,10 +582,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:26:7: ( '..' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:26:9: '..'
+            // Expr.g:27:7: ( 'nil' )
+            // Expr.g:27:9: 'nil'
             {
-            match(".."); 
+            match("nil"); 
 
 
             }
@@ -583,10 +603,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:27:7: ( 'nil' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:27:9: 'nil'
+            // Expr.g:28:7: ( 'write' )
+            // Expr.g:28:9: 'write'
             {
-            match("nil"); 
+            match("write"); 
 
 
             }
@@ -604,10 +624,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:28:7: ( 'write' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:28:9: 'write'
+            // Expr.g:29:7: ( 'read' )
+            // Expr.g:29:9: 'read'
             {
-            match("write"); 
+            match("read"); 
 
 
             }
@@ -625,10 +645,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:29:7: ( 'read' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:29:9: 'read'
+            // Expr.g:30:7: ( 'return' )
+            // Expr.g:30:9: 'return'
             {
-            match("read"); 
+            match("return"); 
 
 
             }
@@ -646,10 +666,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:30:7: ( 'return' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:30:9: 'return'
+            // Expr.g:31:7: ( 'this' )
+            // Expr.g:31:9: 'this'
             {
-            match("return"); 
+            match("this"); 
 
 
             }
@@ -667,10 +687,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:31:7: ( 'this' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:31:9: 'this'
+            // Expr.g:32:7: ( 'super' )
+            // Expr.g:32:9: 'super'
             {
-            match("this"); 
+            match("super"); 
 
 
             }
@@ -688,10 +708,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:32:7: ( 'super' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:32:9: 'super'
+            // Expr.g:33:7: ( 'new' )
+            // Expr.g:33:9: 'new'
             {
-            match("super"); 
+            match("new"); 
 
 
             }
@@ -709,11 +729,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:33:7: ( 'new' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:33:9: 'new'
+            // Expr.g:34:7: ( '.' )
+            // Expr.g:34:9: '.'
             {
-            match("new"); 
-
+            match('.'); 
 
             }
 
@@ -730,10 +749,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:34:7: ( '.' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:34:9: '.'
+            // Expr.g:35:7: ( '+' )
+            // Expr.g:35:9: '+'
             {
-            match('.'); 
+            match('+'); 
 
             }
 
@@ -750,10 +769,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:35:7: ( '+' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:35:9: '+'
+            // Expr.g:36:7: ( '-' )
+            // Expr.g:36:9: '-'
             {
-            match('+'); 
+            match('-'); 
 
             }
 
@@ -770,28 +789,8 @@ public class ExprLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:36:7: ( '-' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:36:9: '-'
-            {
-            match('-'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__63"
-
-    // $ANTLR start "T__64"
-    public final void mT__64() throws RecognitionException {
-        try {
-            int _type = T__64;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:37:7: ( '*' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:37:9: '*'
+            // Expr.g:37:7: ( '*' )
+            // Expr.g:37:9: '*'
             {
             match('*'); 
 
@@ -803,17 +802,17 @@ public class ExprLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__64"
+    // $ANTLR end "T__63"
 
     // $ANTLR start "INT"
     public final void mINT() throws RecognitionException {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:143:5: ( ( '0' .. '9' )+ )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:143:7: ( '0' .. '9' )+
+            // Expr.g:142:5: ( ( '0' .. '9' )+ )
+            // Expr.g:142:7: ( '0' .. '9' )+
             {
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:143:7: ( '0' .. '9' )+
+            // Expr.g:142:7: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -827,7 +826,7 @@ public class ExprLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:143:7: '0' .. '9'
+            	    // Expr.g:142:7: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -859,11 +858,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:144:8: ( '\"' ( ' ' .. '!' | '#' .. '~' )* '\"' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:144:12: '\"' ( ' ' .. '!' | '#' .. '~' )* '\"'
+            // Expr.g:143:8: ( '\"' ( ' ' .. '!' | '#' .. '~' )* '\"' )
+            // Expr.g:143:12: '\"' ( ' ' .. '!' | '#' .. '~' )* '\"'
             {
             match('\"'); 
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:144:16: ( ' ' .. '!' | '#' .. '~' )*
+            // Expr.g:143:16: ( ' ' .. '!' | '#' .. '~' )*
             loop2:
             do {
                 int alt2=2;
@@ -876,7 +875,7 @@ public class ExprLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:
+            	    // Expr.g:
             	    {
             	    if ( (input.LA(1)>=' ' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='~') ) {
             	        input.consume();
@@ -913,7 +912,7 @@ public class ExprLexer extends Lexer {
         try {
             int _type = OPERCONDITION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:146:14: ( '<' | '<=' | '>' | '>=' | '==' | '!=' )
+            // Expr.g:145:14: ( '<' | '<=' | '>' | '>=' | '==' | '!=' )
             int alt3=6;
             switch ( input.LA(1) ) {
             case '<':
@@ -957,14 +956,14 @@ public class ExprLexer extends Lexer {
 
             switch (alt3) {
                 case 1 :
-                    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:146:15: '<'
+                    // Expr.g:145:15: '<'
                     {
                     match('<'); 
 
                     }
                     break;
                 case 2 :
-                    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:146:19: '<='
+                    // Expr.g:145:19: '<='
                     {
                     match("<="); 
 
@@ -972,14 +971,14 @@ public class ExprLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:146:24: '>'
+                    // Expr.g:145:24: '>'
                     {
                     match('>'); 
 
                     }
                     break;
                 case 4 :
-                    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:146:28: '>='
+                    // Expr.g:145:28: '>='
                     {
                     match(">="); 
 
@@ -987,7 +986,7 @@ public class ExprLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:146:33: '=='
+                    // Expr.g:145:33: '=='
                     {
                     match("=="); 
 
@@ -995,7 +994,7 @@ public class ExprLexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:146:38: '!='
+                    // Expr.g:145:38: '!='
                     {
                     match("!="); 
 
@@ -1017,11 +1016,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = ID_CLASS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:149:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:149:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // Expr.g:148:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // Expr.g:148:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             matchRange('A','Z'); 
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:149:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // Expr.g:148:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop4:
             do {
                 int alt4=2;
@@ -1034,7 +1033,7 @@ public class ExprLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:
+            	    // Expr.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -1070,11 +1069,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = ID_OTHERS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:150:11: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:150:13: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // Expr.g:149:11: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // Expr.g:149:13: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             matchRange('a','z'); 
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:150:22: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // Expr.g:149:22: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop5:
             do {
                 int alt5=2;
@@ -1087,7 +1086,7 @@ public class ExprLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:
+            	    // Expr.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -1123,12 +1122,12 @@ public class ExprLexer extends Lexer {
         try {
             int _type = COMMENTS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:152:10: ( '/*' ( . )* '*/' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:152:12: '/*' ( . )* '*/'
+            // Expr.g:151:10: ( '/*' ( . )* '*/' )
+            // Expr.g:151:12: '/*' ( . )* '*/'
             {
             match("/*"); 
 
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:152:17: ( . )*
+            // Expr.g:151:17: ( . )*
             loop6:
             do {
                 int alt6=2;
@@ -1153,7 +1152,7 @@ public class ExprLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:152:17: .
+            	    // Expr.g:151:17: .
             	    {
             	    matchAny(); 
 
@@ -1184,10 +1183,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = NEWLINE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:153:8: ( ( '\\r' )? '\\n' )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:153:9: ( '\\r' )? '\\n'
+            // Expr.g:152:8: ( ( '\\r' )? '\\n' )
+            // Expr.g:152:9: ( '\\r' )? '\\n'
             {
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:153:9: ( '\\r' )?
+            // Expr.g:152:9: ( '\\r' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1196,7 +1195,7 @@ public class ExprLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:153:9: '\\r'
+                    // Expr.g:152:9: '\\r'
                     {
                     match('\r'); 
 
@@ -1223,10 +1222,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:154:4: ( ( ' ' | '\\t' )+ )
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:154:6: ( ' ' | '\\t' )+
+            // Expr.g:153:4: ( ( ' ' | '\\t' )+ )
+            // Expr.g:153:6: ( ' ' | '\\t' )+
             {
-            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:154:6: ( ' ' | '\\t' )+
+            // Expr.g:153:6: ( ' ' | '\\t' )+
             int cnt8=0;
             loop8:
             do {
@@ -1240,7 +1239,7 @@ public class ExprLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:
+            	    // Expr.g:
             	    {
             	    if ( input.LA(1)=='\t'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -1277,306 +1276,306 @@ public class ExprLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:8: ( T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | INT | STRING | OPERCONDITION | ID_CLASS | ID_OTHERS | COMMENTS | NEWLINE | WS )
+        // Expr.g:1:8: ( T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | INT | STRING | OPERCONDITION | ID_CLASS | ID_OTHERS | COMMENTS | NEWLINE | WS )
         int alt9=43;
         alt9 = dfa9.predict(input);
         switch (alt9) {
             case 1 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:10: T__30
+                // Expr.g:1:10: T__29
+                {
+                mT__29(); 
+
+                }
+                break;
+            case 2 :
+                // Expr.g:1:16: T__30
                 {
                 mT__30(); 
 
                 }
                 break;
-            case 2 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:16: T__31
+            case 3 :
+                // Expr.g:1:22: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
-            case 3 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:22: T__32
+            case 4 :
+                // Expr.g:1:28: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
-            case 4 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:28: T__33
+            case 5 :
+                // Expr.g:1:34: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
-            case 5 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:34: T__34
+            case 6 :
+                // Expr.g:1:40: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
-            case 6 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:40: T__35
+            case 7 :
+                // Expr.g:1:46: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
-            case 7 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:46: T__36
+            case 8 :
+                // Expr.g:1:52: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
-            case 8 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:52: T__37
+            case 9 :
+                // Expr.g:1:58: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
-            case 9 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:58: T__38
+            case 10 :
+                // Expr.g:1:64: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
-            case 10 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:64: T__39
+            case 11 :
+                // Expr.g:1:70: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
-            case 11 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:70: T__40
+            case 12 :
+                // Expr.g:1:76: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
-            case 12 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:76: T__41
+            case 13 :
+                // Expr.g:1:82: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
-            case 13 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:82: T__42
+            case 14 :
+                // Expr.g:1:88: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
-            case 14 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:88: T__43
+            case 15 :
+                // Expr.g:1:94: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
-            case 15 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:94: T__44
+            case 16 :
+                // Expr.g:1:100: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
-            case 16 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:100: T__45
+            case 17 :
+                // Expr.g:1:106: T__45
                 {
                 mT__45(); 
 
                 }
                 break;
-            case 17 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:106: T__46
+            case 18 :
+                // Expr.g:1:112: T__46
                 {
                 mT__46(); 
 
                 }
                 break;
-            case 18 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:112: T__47
+            case 19 :
+                // Expr.g:1:118: T__47
                 {
                 mT__47(); 
 
                 }
                 break;
-            case 19 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:118: T__48
+            case 20 :
+                // Expr.g:1:124: T__48
                 {
                 mT__48(); 
 
                 }
                 break;
-            case 20 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:124: T__49
+            case 21 :
+                // Expr.g:1:130: T__49
                 {
                 mT__49(); 
 
                 }
                 break;
-            case 21 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:130: T__50
+            case 22 :
+                // Expr.g:1:136: T__50
                 {
                 mT__50(); 
 
                 }
                 break;
-            case 22 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:136: T__51
+            case 23 :
+                // Expr.g:1:142: T__51
                 {
                 mT__51(); 
 
                 }
                 break;
-            case 23 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:142: T__52
+            case 24 :
+                // Expr.g:1:148: T__52
                 {
                 mT__52(); 
 
                 }
                 break;
-            case 24 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:148: T__53
+            case 25 :
+                // Expr.g:1:154: T__53
                 {
                 mT__53(); 
 
                 }
                 break;
-            case 25 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:154: T__54
+            case 26 :
+                // Expr.g:1:160: T__54
                 {
                 mT__54(); 
 
                 }
                 break;
-            case 26 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:160: T__55
+            case 27 :
+                // Expr.g:1:166: T__55
                 {
                 mT__55(); 
 
                 }
                 break;
-            case 27 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:166: T__56
+            case 28 :
+                // Expr.g:1:172: T__56
                 {
                 mT__56(); 
 
                 }
                 break;
-            case 28 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:172: T__57
+            case 29 :
+                // Expr.g:1:178: T__57
                 {
                 mT__57(); 
 
                 }
                 break;
-            case 29 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:178: T__58
+            case 30 :
+                // Expr.g:1:184: T__58
                 {
                 mT__58(); 
 
                 }
                 break;
-            case 30 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:184: T__59
+            case 31 :
+                // Expr.g:1:190: T__59
                 {
                 mT__59(); 
 
                 }
                 break;
-            case 31 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:190: T__60
+            case 32 :
+                // Expr.g:1:196: T__60
                 {
                 mT__60(); 
 
                 }
                 break;
-            case 32 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:196: T__61
+            case 33 :
+                // Expr.g:1:202: T__61
                 {
                 mT__61(); 
 
                 }
                 break;
-            case 33 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:202: T__62
+            case 34 :
+                // Expr.g:1:208: T__62
                 {
                 mT__62(); 
 
                 }
                 break;
-            case 34 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:208: T__63
+            case 35 :
+                // Expr.g:1:214: T__63
                 {
                 mT__63(); 
 
                 }
                 break;
-            case 35 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:214: T__64
-                {
-                mT__64(); 
-
-                }
-                break;
             case 36 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:220: INT
+                // Expr.g:1:220: INT
                 {
                 mINT(); 
 
                 }
                 break;
             case 37 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:224: STRING
+                // Expr.g:1:224: STRING
                 {
                 mSTRING(); 
 
                 }
                 break;
             case 38 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:231: OPERCONDITION
+                // Expr.g:1:231: OPERCONDITION
                 {
                 mOPERCONDITION(); 
 
                 }
                 break;
             case 39 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:245: ID_CLASS
+                // Expr.g:1:245: ID_CLASS
                 {
                 mID_CLASS(); 
 
                 }
                 break;
             case 40 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:254: ID_OTHERS
+                // Expr.g:1:254: ID_OTHERS
                 {
                 mID_OTHERS(); 
 
                 }
                 break;
             case 41 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:264: COMMENTS
+                // Expr.g:1:264: COMMENTS
                 {
                 mCOMMENTS(); 
 
                 }
                 break;
             case 42 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:273: NEWLINE
+                // Expr.g:1:273: NEWLINE
                 {
                 mNEWLINE(); 
 
                 }
                 break;
             case 43 :
-                // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:1:281: WS
+                // Expr.g:1:281: WS
                 {
                 mWS(); 
 
@@ -1781,7 +1780,7 @@ public class ExprLexer extends Lexer {
             this.transition = DFA9_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | INT | STRING | OPERCONDITION | ID_CLASS | ID_OTHERS | COMMENTS | NEWLINE | WS );";
+            return "1:1: Tokens : ( T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | INT | STRING | OPERCONDITION | ID_CLASS | ID_OTHERS | COMMENTS | NEWLINE | WS );";
         }
     }
  
