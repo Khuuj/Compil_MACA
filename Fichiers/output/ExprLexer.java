@@ -2,7 +2,11 @@
 // $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/adam/workspace/Compil_MACA/Fichiers/Expr.g 2017-04-06 17:45:23
 =======
 // $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/clement/workspace/Compil_MACA/Fichiers/Expr.g 2017-04-06 17:09:16
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -36,7 +40,11 @@ public class ExprLexer extends Lexer {
 =======
     public static final int OPERCONDITION=23;
     public static final int T__29=29;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public static final int METHOD=13;
     public static final int PARAMS=16;
     public static final int T__62=62;
@@ -75,7 +83,11 @@ public class ExprLexer extends Lexer {
 =======
     public static final int ID_CLASS=21;
     public static final int STRING=24;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public static final int T__46=46;
     public static final int T__47=47;
     public static final int T__40=40;
@@ -834,7 +846,11 @@ public class ExprLexer extends Lexer {
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:144:7: ( '0' .. '9' )+
             {
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:144:7: ( '0' .. '9' )+
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int cnt1=0;
             loop1:
             do {
@@ -852,7 +868,11 @@ public class ExprLexer extends Lexer {
             	    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:143:7: '0' .. '9'
 =======
             	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:144:7: '0' .. '9'
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             	    {
             	    matchRange('0','9'); 
 
@@ -896,7 +916,11 @@ public class ExprLexer extends Lexer {
             {
             match('\"'); 
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:145:16: ( ' ' .. '!' | '#' .. '~' )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             loop2:
             do {
                 int alt2=2;
@@ -950,7 +974,11 @@ public class ExprLexer extends Lexer {
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:146:14: ( '<' | '<=' | '>' | '>=' | '==' | '!=' )
 =======
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:147:14: ( '<' | '<=' | '>' | '>=' | '==' | '!=' )
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int alt3=6;
             switch ( input.LA(1) ) {
             case '<':
@@ -998,7 +1026,11 @@ public class ExprLexer extends Lexer {
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:146:15: '<'
 =======
                     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:147:15: '<'
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     match('<'); 
 
@@ -1009,7 +1041,11 @@ public class ExprLexer extends Lexer {
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:146:19: '<='
 =======
                     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:147:19: '<='
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     match("<="); 
 
@@ -1021,7 +1057,11 @@ public class ExprLexer extends Lexer {
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:146:24: '>'
 =======
                     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:147:24: '>'
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     match('>'); 
 
@@ -1032,7 +1072,11 @@ public class ExprLexer extends Lexer {
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:146:28: '>='
 =======
                     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:147:28: '>='
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     match(">="); 
 
@@ -1044,7 +1088,11 @@ public class ExprLexer extends Lexer {
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:146:33: '=='
 =======
                     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:147:33: '=='
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     match("=="); 
 
@@ -1056,7 +1104,11 @@ public class ExprLexer extends Lexer {
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:146:38: '!='
 =======
                     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:147:38: '!='
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     match("!="); 
 
@@ -1090,7 +1142,11 @@ public class ExprLexer extends Lexer {
             {
             matchRange('A','Z'); 
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:150:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             loop4:
             do {
                 int alt4=2;
@@ -1151,7 +1207,11 @@ public class ExprLexer extends Lexer {
             {
             matchRange('a','z'); 
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:151:22: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             loop5:
             do {
                 int alt5=2;
@@ -1214,7 +1274,11 @@ public class ExprLexer extends Lexer {
             match("/*"); 
 
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:153:17: ( . )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             loop6:
             do {
                 int alt6=2;
@@ -1243,7 +1307,11 @@ public class ExprLexer extends Lexer {
             	    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:152:17: .
 =======
             	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:153:17: .
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             	    {
             	    matchAny(); 
 
@@ -1284,7 +1352,11 @@ public class ExprLexer extends Lexer {
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:154:9: ( '\\r' )? '\\n'
             {
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:154:9: ( '\\r' )?
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1297,7 +1369,11 @@ public class ExprLexer extends Lexer {
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:153:9: '\\r'
 =======
                     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:154:9: '\\r'
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     match('\r'); 
 
@@ -1334,7 +1410,11 @@ public class ExprLexer extends Lexer {
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:155:6: ( ' ' | '\\t' )+
             {
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:155:6: ( ' ' | '\\t' )+
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int cnt8=0;
             loop8:
             do {

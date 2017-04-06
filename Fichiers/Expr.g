@@ -113,7 +113,11 @@ expr:
 	| 'super' e
 	//| STRING
 	| 'new' ID_CLASS  -> ^(NEW ID_CLASS )
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 	;
 e :
 	'.' ID_OTHERS '(' f? ')' e -> ^(APPEL_METHODE ID_OTHERS f? e?)
@@ -150,7 +154,11 @@ atom:
 	 ID_OTHERS e
 	| STRING
 	|  INT 
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 	| '('expr')'
 	;
 

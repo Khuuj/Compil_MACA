@@ -4,7 +4,11 @@ package expr;
 // $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-04-06 16:56:20
 =======
 // $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-04-06 15:21:12
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -74,7 +78,11 @@ public class ExprLexer extends Lexer {
 =======
     public static final int STRING=24;
     public static final int INT=25;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public static final int COMMENTS=26;
     public static final int NEWLINE=27;
     public static final int WS=28;
@@ -830,7 +838,11 @@ public class ExprLexer extends Lexer {
             // Expr.g:143:7: ( '0' .. '9' )+
             {
             // Expr.g:143:7: ( '0' .. '9' )+
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int cnt1=0;
             loop1:
             do {
@@ -848,7 +860,11 @@ public class ExprLexer extends Lexer {
             	    // Expr.g:142:7: '0' .. '9'
 =======
             	    // Expr.g:143:7: '0' .. '9'
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             	    {
             	    matchRange('0','9'); 
 
@@ -892,7 +908,11 @@ public class ExprLexer extends Lexer {
             {
             match('\"'); 
             // Expr.g:144:16: ( ' ' .. '!' | '#' .. '~' )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             loop2:
             do {
                 int alt2=2;
@@ -946,7 +966,11 @@ public class ExprLexer extends Lexer {
             // Expr.g:145:14: ( '<' | '<=' | '>' | '>=' | '==' | '!=' )
 =======
             // Expr.g:146:14: ( '<' | '<=' | '>' | '>=' | '==' | '!=' )
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int alt3=6;
             switch ( input.LA(1) ) {
             case '<':
@@ -994,7 +1018,11 @@ public class ExprLexer extends Lexer {
                     // Expr.g:145:15: '<'
 =======
                     // Expr.g:146:15: '<'
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     match('<'); 
 
@@ -1005,7 +1033,11 @@ public class ExprLexer extends Lexer {
                     // Expr.g:145:19: '<='
 =======
                     // Expr.g:146:19: '<='
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     match("<="); 
 
@@ -1017,7 +1049,11 @@ public class ExprLexer extends Lexer {
                     // Expr.g:145:24: '>'
 =======
                     // Expr.g:146:24: '>'
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     match('>'); 
 
@@ -1028,7 +1064,11 @@ public class ExprLexer extends Lexer {
                     // Expr.g:145:28: '>='
 =======
                     // Expr.g:146:28: '>='
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     match(">="); 
 
@@ -1040,7 +1080,11 @@ public class ExprLexer extends Lexer {
                     // Expr.g:145:33: '=='
 =======
                     // Expr.g:146:33: '=='
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     match("=="); 
 
@@ -1052,7 +1096,11 @@ public class ExprLexer extends Lexer {
                     // Expr.g:145:38: '!='
 =======
                     // Expr.g:146:38: '!='
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     match("!="); 
 
@@ -1086,7 +1134,11 @@ public class ExprLexer extends Lexer {
             {
             matchRange('A','Z'); 
             // Expr.g:149:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             loop4:
             do {
                 int alt4=2;
@@ -1147,7 +1199,11 @@ public class ExprLexer extends Lexer {
             {
             matchRange('a','z'); 
             // Expr.g:150:22: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             loop5:
             do {
                 int alt5=2;
@@ -1210,7 +1266,11 @@ public class ExprLexer extends Lexer {
             match("/*"); 
 
             // Expr.g:152:17: ( . )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             loop6:
             do {
                 int alt6=2;
@@ -1239,7 +1299,11 @@ public class ExprLexer extends Lexer {
             	    // Expr.g:151:17: .
 =======
             	    // Expr.g:152:17: .
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             	    {
             	    matchAny(); 
 
@@ -1280,7 +1344,11 @@ public class ExprLexer extends Lexer {
             // Expr.g:153:9: ( '\\r' )? '\\n'
             {
             // Expr.g:153:9: ( '\\r' )?
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1293,7 +1361,11 @@ public class ExprLexer extends Lexer {
                     // Expr.g:152:9: '\\r'
 =======
                     // Expr.g:153:9: '\\r'
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     match('\r'); 
 
@@ -1330,7 +1402,11 @@ public class ExprLexer extends Lexer {
             // Expr.g:154:6: ( ' ' | '\\t' )+
             {
             // Expr.g:154:6: ( ' ' | '\\t' )+
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int cnt8=0;
             loop8:
             do {

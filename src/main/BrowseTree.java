@@ -136,7 +136,11 @@ public class BrowseTree {
 				CLASS_TDS.addClassType(classType.getClassType());
 =======
 				new DecClassTDS(node);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 				break;
 				
 			//cas de déclaration de variable.

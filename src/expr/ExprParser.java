@@ -4,7 +4,11 @@ package expr;
 // $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-04-06 16:56:19
 =======
 // $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-04-06 15:21:11
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -20,7 +24,11 @@ public class ExprParser extends Parser {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ROOT", "DEC_CLASS", "DEC_VAR", "AFFECT", "RETURN", "FOR", "IF", "BLOC", "BODY", "METHOD", "ARGS", "PARAMS", "OPPOSE", "APPELMETHODE", "PARAM", "NEW", "BODY_CLASS", "ID_CLASS", "ID_OTHERS", "OPERCONDITION", "INT", "STRING", "COMMENTS", "NEWLINE", "WS", "'class'", "'inherit'", "'='", "'('", "')'", "'var'", "':'", "';'", "'int'", "'string'", "'method'", "'{'", "'}'", "','", "':='", "'if'", "'then'", "'else'", "'fi'", "'for'", "'in'", "'do'", "'end'", "'..'", "'nil'", "'write'", "'read'", "'return'", "'this'", "'super'", "'new'", "'.'", "'+'", "'-'", "'*'"
 =======
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ROOT", "DEC_CLASS", "DEC_VAR", "AFFECT", "RETURN", "FOR", "IF", "BLOC", "BODY", "METHOD", "ARGS", "PARAMS", "OPPOSE", "APPELMETHODE", "PARAM", "NEW", "BODY_CLASS", "ID_CLASS", "ID_OTHERS", "OPERCONDITION", "STRING", "INT", "COMMENTS", "NEWLINE", "WS", "'class'", "'inherit'", "'='", "'('", "')'", "'var'", "':'", "';'", "'int'", "'string'", "'method'", "'{'", "'}'", "','", "':='", "'if'", "'then'", "'else'", "'fi'", "'for'", "'in'", "'do'", "'end'", "'..'", "'nil'", "'write'", "'read'", "'return'", "'this'", "'super'", "'new'", "'.'", "'+'", "'-'", "'*'"
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     };
     public static final int EOF=-1;
     public static final int T__29=29;
@@ -84,7 +92,11 @@ public class ExprParser extends Parser {
 =======
     public static final int STRING=24;
     public static final int INT=25;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public static final int COMMENTS=26;
     public static final int NEWLINE=27;
     public static final int WS=28;
@@ -1384,7 +1396,11 @@ public class ExprParser extends Parser {
                 while ( stream_type.hasNext()||stream_ID_OTHERS.hasNext() ) {
 =======
                 while ( stream_ID_OTHERS.hasNext()||stream_type.hasNext() ) {
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     // Expr.g:66:51: ^( PARAM ID_OTHERS type )
                     {
                     Object root_1 = (Object)adaptor.nil();
@@ -1931,7 +1947,11 @@ public class ExprParser extends Parser {
                     // elements: expr, 50
 =======
                     // elements: 50, expr
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2068,7 +2088,11 @@ public class ExprParser extends Parser {
             // elements: 52, a, b
 =======
             // elements: a, b, 52
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             // token labels: 
             // rule labels: a, b, retval
             // token list labels: 
@@ -2150,7 +2174,11 @@ public class ExprParser extends Parser {
             if ( (LA19_0==ID_OTHERS||(LA19_0>=INT && LA19_0<=STRING)||LA19_0==32||(LA19_0>=57 && LA19_0<=59)||LA19_0==62) ) {
 =======
             if ( (LA19_0==ID_OTHERS||(LA19_0>=STRING && LA19_0<=INT)||LA19_0==32||(LA19_0>=57 && LA19_0<=59)||LA19_0==62) ) {
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                 alt19=1;
             }
             else if ( (LA19_0==53) ) {
@@ -2564,7 +2592,11 @@ public class ExprParser extends Parser {
 <<<<<<< HEAD
             case STRING:
 =======
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             case 32:
             case 62:
                 {
@@ -2671,7 +2703,11 @@ public class ExprParser extends Parser {
                     stream_ID_CLASS.add(ID_CLASS92);
 
                     pushFollow(FOLLOW_e_in_expr738);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     e93=e();
 
                     state._fsp--;
@@ -2743,7 +2779,11 @@ public class ExprParser extends Parser {
     // Expr.g:108:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? e ) | );
 =======
     // Expr.g:109:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | );
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public final ExprParser.e_return e() throws RecognitionException {
         ExprParser.e_return retval = new ExprParser.e_return();
         retval.start = input.LT(1);
@@ -2774,7 +2814,11 @@ public class ExprParser extends Parser {
             // Expr.g:108:3: ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? e ) | )
 =======
             // Expr.g:109:3: ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | )
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -2810,7 +2854,11 @@ public class ExprParser extends Parser {
                     stream_ID_OTHERS.add(ID_OTHERS95);
 
                     char_literal96=(Token)match(input,32,FOLLOW_32_in_e763);  
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     stream_32.add(char_literal96);
 
                     // Expr.g:110:20: ( f )?
@@ -2821,7 +2869,11 @@ public class ExprParser extends Parser {
                     if ( (LA21_0==ID_OTHERS||(LA21_0>=INT && LA21_0<=STRING)||LA21_0==32||(LA21_0>=57 && LA21_0<=59)||LA21_0==62) ) {
 =======
                     if ( (LA21_0==ID_OTHERS||(LA21_0>=STRING && LA21_0<=INT)||LA21_0==32||(LA21_0>=57 && LA21_0<=59)||LA21_0==62) ) {
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                         alt21=1;
                     }
                     switch (alt21) {
@@ -2832,7 +2884,11 @@ public class ExprParser extends Parser {
                             pushFollow(FOLLOW_f_in_e763);
 =======
                             pushFollow(FOLLOW_f_in_e765);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                             f97=f();
 
                             state._fsp--;
@@ -2854,7 +2910,11 @@ public class ExprParser extends Parser {
                     stream_33.add(char_literal98);
 
                     pushFollow(FOLLOW_e_in_e770);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     e99=e();
 
                     state._fsp--;
@@ -2881,7 +2941,11 @@ public class ExprParser extends Parser {
                     // 110:29: -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? )
                     {
                         // Expr.g:110:32: ^( APPELMETHODE ID_OTHERS ( f )? ( e )? )
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(APPELMETHODE, "APPELMETHODE"), root_1);
@@ -2902,7 +2966,11 @@ public class ExprParser extends Parser {
 
                         }
                         stream_e.reset();
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
                         adaptor.addChild(root_0, root_1);
                         }
@@ -2969,7 +3037,11 @@ public class ExprParser extends Parser {
             pushFollow(FOLLOW_expr_in_f798);
 =======
             pushFollow(FOLLOW_expr_in_f801);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             expr100=expr();
 
             state._fsp--;
@@ -2979,7 +3051,11 @@ public class ExprParser extends Parser {
             // Expr.g:113:13: ( ',' expr )*
 =======
             // Expr.g:114:13: ( ',' expr )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             loop23:
             do {
                 int alt23=2;
@@ -3004,7 +3080,11 @@ public class ExprParser extends Parser {
             	    stream_42.add(char_literal101);
 
             	    pushFollow(FOLLOW_expr_in_f806);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             	    expr102=expr();
 
             	    state._fsp--;
@@ -3105,7 +3185,11 @@ public class ExprParser extends Parser {
             pushFollow(FOLLOW_exprmult_in_exprplus827);
 =======
             pushFollow(FOLLOW_exprmult_in_exprplus830);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             exprmult103=exprmult();
 
             state._fsp--;
@@ -3115,7 +3199,11 @@ public class ExprParser extends Parser {
             // Expr.g:118:11: ( ( '+' | '-' ) exprmult )*
 =======
             // Expr.g:119:11: ( ( '+' | '-' ) exprmult )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             loop25:
             do {
                 int alt25=2;
@@ -3154,7 +3242,11 @@ public class ExprParser extends Parser {
             	            char_literal104=(Token)match(input,61,FOLLOW_61_in_exprplus832); 
 =======
             	            char_literal104=(Token)match(input,61,FOLLOW_61_in_exprplus835); 
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             	            char_literal104_tree = (Object)adaptor.create(char_literal104);
             	            root_0 = (Object)adaptor.becomeRoot(char_literal104_tree, root_0);
 
@@ -3168,7 +3260,11 @@ public class ExprParser extends Parser {
             	            char_literal105=(Token)match(input,62,FOLLOW_62_in_exprplus835); 
 =======
             	            char_literal105=(Token)match(input,62,FOLLOW_62_in_exprplus838); 
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             	            char_literal105_tree = (Object)adaptor.create(char_literal105);
             	            root_0 = (Object)adaptor.becomeRoot(char_literal105_tree, root_0);
 
@@ -3182,7 +3278,11 @@ public class ExprParser extends Parser {
             	    pushFollow(FOLLOW_exprmult_in_exprplus839);
 =======
             	    pushFollow(FOLLOW_exprmult_in_exprplus842);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             	    exprmult106=exprmult();
 
             	    state._fsp--;
@@ -3249,7 +3349,11 @@ public class ExprParser extends Parser {
             pushFollow(FOLLOW_oper_in_exprmult853);
 =======
             pushFollow(FOLLOW_oper_in_exprmult856);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             oper107=oper();
 
             state._fsp--;
@@ -3259,7 +3363,11 @@ public class ExprParser extends Parser {
             // Expr.g:123:7: ( '*' oper )?
 =======
             // Expr.g:124:7: ( '*' oper )?
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -3282,7 +3390,11 @@ public class ExprParser extends Parser {
                     root_0 = (Object)adaptor.becomeRoot(char_literal108_tree, root_0);
 
                     pushFollow(FOLLOW_oper_in_exprmult862);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     oper109=oper();
 
                     state._fsp--;
@@ -3346,7 +3458,11 @@ public class ExprParser extends Parser {
             pushFollow(FOLLOW_moinsunaire_in_oper872);
 =======
             pushFollow(FOLLOW_moinsunaire_in_oper875);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             moinsunaire110=moinsunaire();
 
             state._fsp--;
@@ -3356,7 +3472,11 @@ public class ExprParser extends Parser {
             // Expr.g:127:14: ( OPERCONDITION moinsunaire )*
 =======
             // Expr.g:128:14: ( OPERCONDITION moinsunaire )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             loop27:
             do {
                 int alt27=2;
@@ -3383,7 +3503,11 @@ public class ExprParser extends Parser {
             	    root_0 = (Object)adaptor.becomeRoot(OPERCONDITION111_tree, root_0);
 
             	    pushFollow(FOLLOW_moinsunaire_in_oper881);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             	    moinsunaire112=moinsunaire();
 
             	    state._fsp--;
@@ -3453,7 +3577,11 @@ public class ExprParser extends Parser {
             else if ( (LA28_0==ID_OTHERS||(LA28_0>=INT && LA28_0<=STRING)||LA28_0==32) ) {
 =======
             else if ( (LA28_0==ID_OTHERS||(LA28_0>=STRING && LA28_0<=INT)||LA28_0==32) ) {
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                 alt28=2;
             }
             else {
@@ -3476,7 +3604,11 @@ public class ExprParser extends Parser {
                     stream_62.add(char_literal113);
 
                     pushFollow(FOLLOW_atom_in_moinsunaire896);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     atom114=atom();
 
                     state._fsp--;
@@ -3521,7 +3653,11 @@ public class ExprParser extends Parser {
                     pushFollow(FOLLOW_atom_in_moinsunaire906);
 =======
                     pushFollow(FOLLOW_atom_in_moinsunaire909);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     atom115=atom();
 
                     state._fsp--;
@@ -3560,7 +3696,11 @@ public class ExprParser extends Parser {
     // Expr.g:134:1: atom : ( ID_OTHERS | INT | STRING | '(' expr ')' );
 =======
     // Expr.g:135:1: atom : ( ID_OTHERS | STRING | INT | '(' expr ')' );
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public final ExprParser.atom_return atom() throws RecognitionException {
         ExprParser.atom_return retval = new ExprParser.atom_return();
         retval.start = input.LT(1);
@@ -3574,7 +3714,11 @@ public class ExprParser extends Parser {
 =======
         Token STRING117=null;
         Token INT118=null;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
         Token char_literal119=null;
         Token char_literal121=null;
         ExprParser.expr_return expr120 = null;
@@ -3587,7 +3731,11 @@ public class ExprParser extends Parser {
 =======
         Object STRING117_tree=null;
         Object INT118_tree=null;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
         Object char_literal119_tree=null;
         Object char_literal121_tree=null;
 
@@ -3596,7 +3744,11 @@ public class ExprParser extends Parser {
             // Expr.g:134:5: ( ID_OTHERS | INT | STRING | '(' expr ')' )
 =======
             // Expr.g:135:5: ( ID_OTHERS | STRING | INT | '(' expr ')' )
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int alt29=4;
             switch ( input.LA(1) ) {
             case ID_OTHERS:
@@ -3613,7 +3765,11 @@ public class ExprParser extends Parser {
             case STRING:
 =======
             case INT:
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                 {
                 alt29=3;
                 }
@@ -3640,7 +3796,11 @@ public class ExprParser extends Parser {
                     ID_OTHERS116=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_atom917); 
 =======
                     ID_OTHERS116=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_atom920); 
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     ID_OTHERS116_tree = (Object)adaptor.create(ID_OTHERS116);
                     adaptor.addChild(root_0, ID_OTHERS116_tree);
 
@@ -3676,7 +3836,11 @@ public class ExprParser extends Parser {
                     INT118=(Token)match(input,INT,FOLLOW_INT_in_atom931); 
                     INT118_tree = (Object)adaptor.create(INT118);
                     adaptor.addChild(root_0, INT118_tree);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
 
                     }
@@ -3715,7 +3879,11 @@ public class ExprParser extends Parser {
                     adaptor.addChild(root_0, char_literal119_tree);
 
                     pushFollow(FOLLOW_expr_in_atom937);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     expr120=expr();
 
                     state._fsp--;
@@ -3725,7 +3893,11 @@ public class ExprParser extends Parser {
                     char_literal121=(Token)match(input,33,FOLLOW_33_in_atom934); 
 =======
                     char_literal121=(Token)match(input,33,FOLLOW_33_in_atom938); 
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     char_literal121_tree = (Object)adaptor.create(char_literal121);
                     adaptor.addChild(root_0, char_literal121_tree);
 
@@ -3915,6 +4087,10 @@ public class ExprParser extends Parser {
     public static final BitSet FOLLOW_32_in_atom936 = new BitSet(new long[]{0x4E00000103400000L});
     public static final BitSet FOLLOW_expr_in_atom937 = new BitSet(new long[]{0x0000000200000000L});
     public static final BitSet FOLLOW_33_in_atom938 = new BitSet(new long[]{0x0000000000000002L});
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
 }

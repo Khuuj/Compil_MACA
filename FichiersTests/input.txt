@@ -50,7 +50,11 @@ n := 10;
 =======
 n := 1;
 a := 4;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
 n := txt + n;
 

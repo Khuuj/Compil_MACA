@@ -2,7 +2,11 @@
 // $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/adam/workspace/Compil_MACA/Fichiers/Expr.g 2017-04-06 17:45:23
 =======
 // $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/clement/workspace/Compil_MACA/Fichiers/Expr.g 2017-04-06 17:09:16
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -20,7 +24,11 @@ public class ExprParser extends DebugParser {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ROOT", "DEC_CLASS", "DEC_VAR", "AFFECT", "RETURN", "FOR", "IF", "BLOC", "BODY", "METHOD", "DEC_METHOD", "ARGS", "PARAMS", "OPPOSE", "APPEL_METHODE", "PARAM", "NEW", "BODY_CLASS", "ID_CLASS", "ID_OTHERS", "OPERCONDITION", "INT", "STRING", "COMMENTS", "NEWLINE", "WS", "'class'", "'inherit'", "'='", "'('", "')'", "'var'", "':'", "';'", "'int'", "'string'", "'method'", "'{'", "'}'", "','", "':='", "'if'", "'then'", "'else'", "'fi'", "'for'", "'in'", "'do'", "'end'", "'..'", "'nil'", "'write'", "'read'", "'return'", "'this'", "'super'", "'new'", "'.'", "'+'", "'-'", "'*'"
 =======
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ROOT", "DEC_CLASS", "DEC_VAR", "AFFECT", "RETURN", "FOR", "IF", "BLOC", "BODY", "METHOD", "ARGS", "PARAMS", "OPPOSE", "APPELMETHODE", "PARAM", "NEW", "BODY_CLASS", "ID_CLASS", "ID_OTHERS", "OPERCONDITION", "STRING", "INT", "COMMENTS", "NEWLINE", "WS", "'class'", "'inherit'", "'='", "'('", "')'", "'var'", "':'", "';'", "'int'", "'string'", "'method'", "'{'", "'}'", "','", "':='", "'if'", "'then'", "'else'", "'fi'", "'for'", "'in'", "'do'", "'end'", "'..'", "'nil'", "'write'", "'read'", "'return'", "'this'", "'super'", "'new'", "'.'", "'+'", "'-'", "'*'"
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     };
     public static final int BLOC=11;
     public static final int APPEL_METHODE=18;
@@ -48,7 +56,11 @@ public class ExprParser extends DebugParser {
 =======
     public static final int OPERCONDITION=23;
     public static final int T__29=29;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public static final int METHOD=13;
     public static final int PARAMS=16;
     public static final int T__62=62;
@@ -87,7 +99,11 @@ public class ExprParser extends DebugParser {
 =======
     public static final int ID_CLASS=21;
     public static final int STRING=24;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public static final int T__46=46;
     public static final int T__47=47;
     public static final int T__40=40;
@@ -109,7 +125,11 @@ public class ExprParser extends DebugParser {
         "retourne", "i", "class_decl", "e", "print", "expr", "prog", "type", 
         "oper", "exprmult", "exprplus", "method_params", "params", "instr", 
         "m", "moinsunaire", "read", "boundaries"
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     };
      
         public int ruleLevel = 0;
@@ -1490,7 +1510,11 @@ public class ExprParser extends DebugParser {
                     // elements: instr, var_decl, type
 =======
                     // elements: instr, type, var_decl
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1800,7 +1824,11 @@ public class ExprParser extends DebugParser {
                 while ( stream_type.hasNext()||stream_ID_OTHERS.hasNext() ) {
                     dbg.location(66,51);
                     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:66:51: ^( PARAM ID_OTHERS type )
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     Object root_1 = (Object)adaptor.nil();
                     dbg.location(67,53);
@@ -2251,7 +2279,11 @@ public class ExprParser extends DebugParser {
                     // elements: boundaries, ID_OTHERS, instr
 =======
                     // elements: boundaries, instr, ID_OTHERS
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2733,7 +2765,11 @@ public class ExprParser extends DebugParser {
             if ( (LA19_0==ID_OTHERS||(LA19_0>=INT && LA19_0<=STRING)||LA19_0==33||(LA19_0>=58 && LA19_0<=60)||LA19_0==63) ) {
 =======
             if ( (LA19_0==ID_OTHERS||(LA19_0>=STRING && LA19_0<=INT)||LA19_0==32||(LA19_0>=57 && LA19_0<=59)||LA19_0==62) ) {
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                 alt19=1;
             }
             else if ( (LA19_0==54) ) {
@@ -3202,7 +3238,11 @@ public class ExprParser extends DebugParser {
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:103:1: expr : ( exprplus e | 'this' e | 'super' e | 'new' ID_CLASS -> ^( NEW ID_CLASS ) );
 =======
     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:102:1: expr : ( exprplus | 'this' e | 'super' e | 'new' ID_CLASS -> ^( NEW ID_CLASS ) );
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public final ExprParser.expr_return expr() throws RecognitionException {
         ExprParser.expr_return retval = new ExprParser.expr_return();
         retval.start = input.LT(1);
@@ -3219,7 +3259,11 @@ public class ExprParser extends DebugParser {
         Token string_literal88=null;
         Token string_literal90=null;
         Token ID_CLASS91=null;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
         ExprParser.exprplus_return exprplus85 = null;
 
         ExprParser.e_return e87 = null;
@@ -3241,7 +3285,11 @@ public class ExprParser extends DebugParser {
         Object ID_CLASS91_tree=null;
         RewriteRuleTokenStream stream_59=new RewriteRuleTokenStream(adaptor,"token 59");
         RewriteRuleTokenStream stream_ID_CLASS=new RewriteRuleTokenStream(adaptor,"token ID_CLASS");
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
         try { dbg.enterRule(getGrammarFileName(), "expr");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -3253,7 +3301,11 @@ public class ExprParser extends DebugParser {
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:103:5: ( exprplus e | 'this' e | 'super' e | 'new' ID_CLASS -> ^( NEW ID_CLASS ) )
 =======
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:102:5: ( exprplus | 'this' e | 'super' e | 'new' ID_CLASS -> ^( NEW ID_CLASS ) )
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int alt20=4;
             try { dbg.enterDecision(20);
 
@@ -3282,7 +3334,11 @@ public class ExprParser extends DebugParser {
             case 60:
 =======
             case 59:
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                 {
                 alt20=4;
                 }
@@ -3315,7 +3371,11 @@ public class ExprParser extends DebugParser {
 
                     dbg.location(104,2);
                     pushFollow(FOLLOW_exprplus_in_expr711);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     exprplus85=exprplus();
 
                     state._fsp--;
@@ -3330,7 +3390,11 @@ public class ExprParser extends DebugParser {
 
                     adaptor.addChild(root_0, e86.getTree());
 =======
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
                     }
                     break;
@@ -3341,7 +3405,11 @@ public class ExprParser extends DebugParser {
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:105:4: 'this' e
 =======
                     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:105:4: 'this' e
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3362,7 +3430,11 @@ public class ExprParser extends DebugParser {
                     dbg.location(105,11);
                     pushFollow(FOLLOW_e_in_expr718);
                     e87=e();
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
                     state._fsp--;
 
@@ -3377,7 +3449,11 @@ public class ExprParser extends DebugParser {
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:106:4: 'super' e
 =======
                     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:106:4: 'super' e
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3398,7 +3474,11 @@ public class ExprParser extends DebugParser {
                     dbg.location(106,12);
                     pushFollow(FOLLOW_e_in_expr725);
                     e89=e();
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
                     state._fsp--;
 
@@ -3429,7 +3509,11 @@ public class ExprParser extends DebugParser {
                     dbg.location(108,10);
                     ID_CLASS91=(Token)match(input,ID_CLASS,FOLLOW_ID_CLASS_in_expr734);  
                     stream_ID_CLASS.add(ID_CLASS91);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
 
 
@@ -3466,7 +3550,11 @@ public class ExprParser extends DebugParser {
                         root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(NEW, "NEW"), root_1);
 
                         dbg.location(108,29);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                         adaptor.addChild(root_1, stream_ID_CLASS.nextNode());
 
                         adaptor.addChild(root_0, root_1);
@@ -3516,7 +3604,11 @@ public class ExprParser extends DebugParser {
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:109:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPEL_METHODE ID_OTHERS ( f )? ( e )? ) | );
 =======
     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:110:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | );
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public final ExprParser.e_return e() throws RecognitionException {
         ExprParser.e_return retval = new ExprParser.e_return();
         retval.start = input.LT(1);
@@ -3551,7 +3643,11 @@ public class ExprParser extends DebugParser {
         Object ID_OTHERS93_tree=null;
         Object char_literal94_tree=null;
         Object char_literal96_tree=null;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
         RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
         RewriteRuleTokenStream stream_34=new RewriteRuleTokenStream(adaptor,"token 34");
         RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
@@ -3584,7 +3680,11 @@ public class ExprParser extends DebugParser {
             try {
                 isCyclicDecision = true;
                 alt22 = dfa22.predict(input);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             }
             catch (NoViableAltException nvae) {
                 dbg.recognitionException(nvae);
@@ -3630,7 +3730,11 @@ public class ExprParser extends DebugParser {
 
                     dbg.location(111,20);
                     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:111:20: ( f )?
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     int alt21=2;
                     try { dbg.enterSubRule(21);
                     try { dbg.enterDecision(21);
@@ -3641,7 +3745,11 @@ public class ExprParser extends DebugParser {
                     if ( (LA21_0==ID_OTHERS||(LA21_0>=INT && LA21_0<=STRING)||LA21_0==33||(LA21_0>=58 && LA21_0<=60)||LA21_0==63) ) {
 =======
                     if ( (LA21_0==ID_OTHERS||(LA21_0>=STRING && LA21_0<=INT)||LA21_0==32||(LA21_0>=57 && LA21_0<=59)||LA21_0==62) ) {
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                         alt21=1;
                     }
                     } finally {dbg.exitDecision(21);}
@@ -3670,7 +3778,11 @@ public class ExprParser extends DebugParser {
                             state._fsp--;
 
                             stream_f.add(f95.getTree());
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
                             }
                             break;
@@ -3710,7 +3822,11 @@ public class ExprParser extends DebugParser {
 
                     // AST REWRITE
                     // elements: f, e, ID_OTHERS
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -3752,7 +3868,11 @@ public class ExprParser extends DebugParser {
                         // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:111:57: ( f )?
                         if ( stream_f.hasNext() ) {
                             dbg.location(111,57);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                             adaptor.addChild(root_1, stream_f.nextTree());
 
                         }
@@ -3767,7 +3887,11 @@ public class ExprParser extends DebugParser {
                         // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:111:60: ( e )?
                         if ( stream_e.hasNext() ) {
                             dbg.location(111,60);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                             adaptor.addChild(root_1, stream_e.nextTree());
 
                         }
@@ -3788,7 +3912,11 @@ public class ExprParser extends DebugParser {
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:112:2: 
 =======
                     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:113:2: 
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3833,7 +3961,11 @@ public class ExprParser extends DebugParser {
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:114:1: f : expr ( ',' expr )* -> ^( ARGS ( expr )* ) ;
 =======
     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:115:1: f : expr ( ',' expr )* -> ^( ARGS ( expr )* ) ;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public final ExprParser.f_return f() throws RecognitionException {
         ExprParser.f_return retval = new ExprParser.f_return();
         retval.start = input.LT(1);
@@ -3858,7 +3990,11 @@ public class ExprParser extends DebugParser {
 
         Object char_literal99_tree=null;
         RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try { dbg.enterRule(getGrammarFileName(), "f");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -3896,7 +4032,11 @@ public class ExprParser extends DebugParser {
             stream_expr.add(expr98.getTree());
             dbg.location(115,13);
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:115:13: ( ',' expr )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             try { dbg.enterSubRule(23);
 
             loop23:
@@ -3945,7 +4085,11 @@ public class ExprParser extends DebugParser {
             	    state._fsp--;
 
             	    stream_expr.add(expr100.getTree());
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
             	    }
             	    break;
@@ -3977,7 +4121,11 @@ public class ExprParser extends DebugParser {
 =======
                 dbg.location(115,29);
                 // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:115:29: ^( ARGS ( expr )* )
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(115,31);
@@ -3989,7 +4137,11 @@ public class ExprParser extends DebugParser {
 =======
                 dbg.location(115,36);
                 // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:115:36: ( expr )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                 while ( stream_expr.hasNext() ) {
                     dbg.location(115,36);
                     adaptor.addChild(root_1, stream_expr.nextTree());
@@ -4042,7 +4194,11 @@ public class ExprParser extends DebugParser {
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:118:1: exprplus : exprmult ( ( '+' | '-' ) exprmult )* ;
 =======
     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:119:1: exprplus : exprmult e ( ( '+' | '-' ) exprmult e )* ;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public final ExprParser.exprplus_return exprplus() throws RecognitionException {
         ExprParser.exprplus_return retval = new ExprParser.exprplus_return();
         retval.start = input.LT(1);
@@ -4057,7 +4213,11 @@ public class ExprParser extends DebugParser {
         ExprParser.exprmult_return exprmult101 = null;
 
         ExprParser.e_return e102 = null;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
         ExprParser.exprmult_return exprmult105 = null;
 
@@ -4066,7 +4226,11 @@ public class ExprParser extends DebugParser {
 <<<<<<< HEAD
 =======
 
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
         Object char_literal103_tree=null;
         Object char_literal104_tree=null;
 
@@ -4117,7 +4281,11 @@ public class ExprParser extends DebugParser {
             adaptor.addChild(root_0, e102.getTree());
             dbg.location(120,13);
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:120:13: ( ( '+' | '-' ) exprmult e )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             try { dbg.enterSubRule(25);
 
             loop25:
@@ -4148,7 +4316,11 @@ public class ExprParser extends DebugParser {
             	    {
             	    dbg.location(120,15);
             	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:120:15: ( '+' | '-' )
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             	    int alt24=2;
             	    try { dbg.enterSubRule(24);
             	    try { dbg.enterDecision(24);
@@ -4184,7 +4356,11 @@ public class ExprParser extends DebugParser {
             	            {
             	            dbg.location(120,19);
             	            char_literal103=(Token)match(input,61,FOLLOW_61_in_exprplus832); 
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             	            char_literal103_tree = (Object)adaptor.create(char_literal103);
             	            root_0 = (Object)adaptor.becomeRoot(char_literal103_tree, root_0);
 
@@ -4204,7 +4380,11 @@ public class ExprParser extends DebugParser {
             	            {
             	            dbg.location(120,24);
             	            char_literal104=(Token)match(input,62,FOLLOW_62_in_exprplus835); 
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             	            char_literal104_tree = (Object)adaptor.create(char_literal104);
             	            root_0 = (Object)adaptor.becomeRoot(char_literal104_tree, root_0);
 
@@ -4221,7 +4401,11 @@ public class ExprParser extends DebugParser {
 =======
             	    dbg.location(120,27);
             	    pushFollow(FOLLOW_exprmult_in_exprplus839);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             	    exprmult105=exprmult();
 
             	    state._fsp--;
@@ -4236,7 +4420,11 @@ public class ExprParser extends DebugParser {
             	    state._fsp--;
 
             	    adaptor.addChild(root_0, e106.getTree());
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
             	    }
             	    break;
@@ -4287,7 +4475,11 @@ public class ExprParser extends DebugParser {
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:123:1: exprmult : oper ( '*' oper )? ;
 =======
     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:124:1: exprmult : oper ( '*' oper )? ;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public final ExprParser.exprmult_return exprmult() throws RecognitionException {
         ExprParser.exprmult_return retval = new ExprParser.exprmult_return();
         retval.start = input.LT(1);
@@ -4310,7 +4502,11 @@ public class ExprParser extends DebugParser {
 
 
         Object char_literal108_tree=null;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
         try { dbg.enterRule(getGrammarFileName(), "exprmult");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -4352,7 +4548,11 @@ public class ExprParser extends DebugParser {
             adaptor.addChild(root_0, oper107.getTree());
             dbg.location(125,7);
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:125:7: ( '*' oper )?
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int alt26=2;
             try { dbg.enterSubRule(26);
             try { dbg.enterDecision(26);
@@ -4370,7 +4570,11 @@ public class ExprParser extends DebugParser {
             catch (NoViableAltException nvae) {
                 dbg.recognitionException(nvae);
                 throw nvae;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             }
             } finally {dbg.exitDecision(26);}
 
@@ -4408,7 +4612,11 @@ public class ExprParser extends DebugParser {
                     state._fsp--;
 
                     adaptor.addChild(root_0, oper109.getTree());
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
                     }
                     break;
@@ -4456,7 +4664,11 @@ public class ExprParser extends DebugParser {
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:127:1: oper : moinsunaire ( OPERCONDITION moinsunaire )* ;
 =======
     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:128:1: oper : moinsunaire ( OPERCONDITION moinsunaire )* ;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public final ExprParser.oper_return oper() throws RecognitionException {
         ExprParser.oper_return retval = new ExprParser.oper_return();
         retval.start = input.LT(1);
@@ -4479,7 +4691,11 @@ public class ExprParser extends DebugParser {
 
 
         Object OPERCONDITION111_tree=null;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
         try { dbg.enterRule(getGrammarFileName(), "oper");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -4521,7 +4737,11 @@ public class ExprParser extends DebugParser {
             adaptor.addChild(root_0, moinsunaire110.getTree());
             dbg.location(129,14);
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:129:14: ( OPERCONDITION moinsunaire )*
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             try { dbg.enterSubRule(27);
 
             loop27:
@@ -4573,7 +4793,11 @@ public class ExprParser extends DebugParser {
             	    state._fsp--;
 
             	    adaptor.addChild(root_0, moinsunaire112.getTree());
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
             	    }
             	    break;
@@ -4624,7 +4848,11 @@ public class ExprParser extends DebugParser {
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:131:1: moinsunaire : ( '-' atom -> ^( OPPOSE atom ) | atom );
 =======
     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:132:1: moinsunaire : ( '-' atom -> ^( OPPOSE atom ) | atom );
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public final ExprParser.moinsunaire_return moinsunaire() throws RecognitionException {
         ExprParser.moinsunaire_return retval = new ExprParser.moinsunaire_return();
         retval.start = input.LT(1);
@@ -4649,7 +4877,11 @@ public class ExprParser extends DebugParser {
 
         Object char_literal113_tree=null;
         RewriteRuleTokenStream stream_62=new RewriteRuleTokenStream(adaptor,"token 62");
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
         RewriteRuleSubtreeStream stream_atom=new RewriteRuleSubtreeStream(adaptor,"rule atom");
         try { dbg.enterRule(getGrammarFileName(), "moinsunaire");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -4661,7 +4893,11 @@ public class ExprParser extends DebugParser {
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:131:12: ( '-' atom -> ^( OPPOSE atom ) | atom )
 =======
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:132:12: ( '-' atom -> ^( OPPOSE atom ) | atom )
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int alt28=2;
             try { dbg.enterDecision(28);
 
@@ -4674,7 +4910,11 @@ public class ExprParser extends DebugParser {
             else if ( (LA28_0==ID_OTHERS||(LA28_0>=INT && LA28_0<=STRING)||LA28_0==33) ) {
 =======
             else if ( (LA28_0==ID_OTHERS||(LA28_0>=STRING && LA28_0<=INT)||LA28_0==32) ) {
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                 alt28=2;
             }
             else {
@@ -4718,7 +4958,11 @@ public class ExprParser extends DebugParser {
                     state._fsp--;
 
                     stream_atom.add(atom114.getTree());
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
 
                     // AST REWRITE
@@ -4740,7 +4984,11 @@ public class ExprParser extends DebugParser {
 =======
                         dbg.location(133,14);
                         // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:133:14: ^( OPPOSE atom )
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(133,16);
@@ -4784,7 +5032,11 @@ public class ExprParser extends DebugParser {
                     state._fsp--;
 
                     adaptor.addChild(root_0, atom115.getTree());
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
                     }
                     break;
@@ -4827,7 +5079,11 @@ public class ExprParser extends DebugParser {
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:135:1: atom : ( ID_OTHERS | INT | STRING | '(' expr ')' );
 =======
     // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:136:1: atom : ( ID_OTHERS e | STRING | INT | '(' expr ')' );
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
     public final ExprParser.atom_return atom() throws RecognitionException {
         ExprParser.atom_return retval = new ExprParser.atom_return();
         retval.start = input.LT(1);
@@ -4864,7 +5120,11 @@ public class ExprParser extends DebugParser {
         Object INT119_tree=null;
         Object char_literal120_tree=null;
         Object char_literal122_tree=null;
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
         try { dbg.enterRule(getGrammarFileName(), "atom");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -4876,7 +5136,11 @@ public class ExprParser extends DebugParser {
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:135:5: ( ID_OTHERS | INT | STRING | '(' expr ')' )
 =======
             // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:136:5: ( ID_OTHERS e | STRING | INT | '(' expr ')' )
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
             int alt29=4;
             try { dbg.enterDecision(29);
 
@@ -4895,7 +5159,11 @@ public class ExprParser extends DebugParser {
             case STRING:
 =======
             case INT:
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                 {
                 alt29=3;
                 }
@@ -4904,7 +5172,11 @@ public class ExprParser extends DebugParser {
             case 33:
 =======
             case 32:
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
                 {
                 alt29=4;
                 }
@@ -4945,7 +5217,11 @@ public class ExprParser extends DebugParser {
                     dbg.location(137,13);
                     pushFollow(FOLLOW_e_in_atom921);
                     e117=e();
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
                     state._fsp--;
 
@@ -4974,7 +5250,11 @@ public class ExprParser extends DebugParser {
                     STRING118=(Token)match(input,STRING,FOLLOW_STRING_in_atom926); 
                     STRING118_tree = (Object)adaptor.create(STRING118);
                     adaptor.addChild(root_0, STRING118_tree);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
 
                     }
@@ -5000,7 +5280,11 @@ public class ExprParser extends DebugParser {
                     INT119=(Token)match(input,INT,FOLLOW_INT_in_atom932); 
                     INT119_tree = (Object)adaptor.create(INT119);
                     adaptor.addChild(root_0, INT119_tree);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
 
                     }
@@ -5050,7 +5334,11 @@ public class ExprParser extends DebugParser {
                     char_literal122=(Token)match(input,33,FOLLOW_33_in_atom940); 
                     char_literal122_tree = (Object)adaptor.create(char_literal122);
                     adaptor.addChild(root_0, char_literal122_tree);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
 
                     }
@@ -5075,7 +5363,11 @@ public class ExprParser extends DebugParser {
         dbg.location(140, 2);
 =======
         dbg.location(141, 2);
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
         }
         finally {
@@ -5520,6 +5812,10 @@ public class ExprParser extends DebugParser {
     public static final BitSet FOLLOW_32_in_atom938 = new BitSet(new long[]{0x4E00000103400000L});
     public static final BitSet FOLLOW_expr_in_atom939 = new BitSet(new long[]{0x0000000200000000L});
     public static final BitSet FOLLOW_33_in_atom940 = new BitSet(new long[]{0x0000000000000002L});
+<<<<<<< Updated upstream
 >>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> Stashed changes
 
 }
