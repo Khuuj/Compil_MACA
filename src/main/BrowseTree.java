@@ -125,7 +125,7 @@ public class BrowseTree {
 				
 			//cas de déclaration de classe.
 			case "DEC_CLASS":
-				new DecClassSem(node);
+				new DecClassSem(node.getChild(0));
 				DecClassTDS classType = new DecClassTDS(node);
 				CLASS_TDS.addClassType(classType.getClassType());
 				break;

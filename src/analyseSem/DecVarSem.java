@@ -14,10 +14,8 @@ public class DecVarSem {
 	public DecVarSem(Tree node)
 	{
 		
-
 		//Teste si la variable existe déjà dans la TDS locale
 		new DoubleDecTest(node);
-		
 		
 		
 		

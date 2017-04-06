@@ -1,20 +1,19 @@
 package analyseSem;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Map.Entry;
 
 import org.antlr.runtime.tree.Tree;
 
 import main.BrowseTree;
-import tableInstances.Element;
 import tableInstances.Table;
 import tableTypes.ClassType;
 
-public class DecClassSem {
-
-	public DecClassSem(Tree node) {
-		boolean alreadyExists = false;
+/**
+ * Fonction semantique renvoyant une erreur si une classe mère n'est pas définie 
+ * */
+public class ExistExtendsSem {
+	public ExistExtendsSem(Tree node){
+		boolean doNotExists = false;
 		
 		//L'identifiant de la variable.
 		String id = node.getText();
@@ -26,15 +25,12 @@ public class DecClassSem {
 		    Integer cle = entry.getKey();
 		   // ClassType classType = entry.getValue();
 		    if(cle==key){
-		    	alreadyExists = true;
+		    	doNotExists = true;
 		    }
 		}
 		
-		if(alreadyExists){
-			System.err.println("Erreur : la classe "+id+" est déjà définie !");
+		if(doNotExists){
+			System.err.println("Erreur : la classe "+id+" n'est pas définie, vous ne pouvez pas l'etendre à une autre classe");
 		}
-		
 	}
-
-	
 }

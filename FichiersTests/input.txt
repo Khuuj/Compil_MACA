@@ -1,3 +1,38 @@
+class Animal =
+(
+	var name : string;
+
+	method setName (n : string)
+	{
+		name := n;
+	}
+
+	method whoami()
+	{
+		write "My name is ";
+		write name;
+	}
+)
+
+class Dog inherit Animal =
+(
+	method whoami()
+	{
+		write "My name is ";
+		write name;
+		write ". And I am a dog .";
+	}
+)
+class Cat inherit MAmouth =
+(
+	method whoami()
+	{
+		do super.whoami();
+		write ". And I am a cat .";
+	}
+)
+
+
 var n : int;
 var i : int;
 
