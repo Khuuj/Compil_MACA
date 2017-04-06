@@ -7,6 +7,7 @@ import org.antlr.runtime.tree.Tree;
 import main.BrowseTree;
 import tableInstances.Element;
 import tableInstances.Table;
+import tableInstancesVar.Int;
 
 public class ForSemIncIsInt {
 
@@ -29,16 +30,20 @@ public class ForSemIncIsInt {
 			{
 				Iterator<Element> it = BrowseTree.INSTANCE_TDS.get(scope).get(key).iterator();
 				
-				while (it.hasNext()) {
-					exists = exists || it.next().id.equals(id);
-				}	
+				while (it.hasNext() && !isInt) {
+					Element e = it.next();
+					if(e.id.equals(id)){
+						isInt = e instanceof Int;
+					}
+				}
+				
 			}
 			scope--;
 		} 
 		
 		
 		//Affiche une erreur si la variable n'existe pas dans les TDS
-		if (!exists)
+		if (!isInt)
 			System.err.println("Erreur : la variable "+id+" n'est pas définie !\n");
 	}
 
