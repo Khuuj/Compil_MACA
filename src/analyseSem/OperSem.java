@@ -14,7 +14,7 @@ public class OperSem {
 		//Si c'est un identificateur
 		if ( (int)operande.charAt(0) >= 97 || (int)operande.charAt(0) <=122){
 			//On teste s'il est déjà défini
-			new ExistenceTest(node);
+			new AffectSemExistVar(node);
 			//On teste son type
 			String type = (new TypeTester(node)).getType();
 			if (!type.equals("int")){

@@ -15,6 +15,12 @@ public abstract class Var extends Element {
 	public String type;
 	
 	/**
+	 * Initialisation de la variable (ou non)
+	 */
+	
+	public Boolean init;
+	
+	/**
 	 * Décalage de la variable.
 	 */
 	int offset;

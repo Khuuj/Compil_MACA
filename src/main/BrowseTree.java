@@ -5,12 +5,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
+
 import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.tree.Tree;
 
-import actions.ActionRead;
-import actions.ActionWrite;
 import actionsTDS.AffectTDS;
 import actionsTDS.DecClassTDS;
 import actionsTDS.DecVarTDS;
@@ -18,10 +17,10 @@ import actionsTDS.RootTDS;
 import analyseSem.AffectSem;
 import analyseSem.DecClassSem;
 import analyseSem.DecVarSem;
-import actionsTDS.*;
-import analyseSem.*;
-
-import expr.*;
+import analyseSem.ReadSem;
+import analyseSem.WriteSem;
+import expr.ExprLexer;
+import expr.ExprParser;
 import tableInstances.Table;
 import tableTypes.TableClass;
 

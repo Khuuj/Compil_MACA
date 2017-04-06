@@ -13,6 +13,6 @@ public class AffectSem {
 	public AffectSem(Tree node)
 	{
 		//Teste si la variable affectée est bien définie
-		new ExistenceTest(node.getChild(0));
+		new AffectSemExistVar(node.getChild(0));
 	}
 }
