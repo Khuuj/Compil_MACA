@@ -9,6 +9,7 @@ import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.tree.Tree;
 
+<<<<<<< HEAD
 import actions.ActionRead;
 import actions.ActionWrite;
 import actionsTDS.AffectTDS;
@@ -18,6 +19,10 @@ import actionsTDS.RootTDS;
 import analyseSem.AffectSem;
 import analyseSem.DecClassSem;
 import analyseSem.DecVarSem;
+=======
+import actionsTDS.*;
+import analyseSem.*;
+>>>>>>> 4cffea008b8c4ea48a35b4288f6bf4cde59ca82e
 import expr.*;
 import tableInstances.Table;
 import tableTypes.TableClass;
@@ -154,6 +159,7 @@ public class BrowseTree {
 			
 			case "read":
 				new ActionRead(node);
+
 			default:
 				break;
 			

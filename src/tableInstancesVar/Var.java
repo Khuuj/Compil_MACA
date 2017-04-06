@@ -12,7 +12,7 @@ public abstract class Var extends Element {
 	/**
 	 * Type de la variable.
 	 */
-	String type;
+	public String type;
 	
 	/**
 	 * Décalage de la variable.
