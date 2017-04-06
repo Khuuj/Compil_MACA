@@ -1,6 +1,11 @@
 var n : int ;
+var var : int;
 var total : int ;
 var i : int ;
+{n := total + i.whoami();
+do a.setName();
+j := j* u+;
+};
 var x : string;
 n := -10;
 

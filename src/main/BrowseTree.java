@@ -11,11 +11,15 @@ import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.tree.Tree;
 
 import actionsTDS.AffectTDS;
+import actionsTDS.BlockTDS;
 import actionsTDS.DecClassTDS;
 import actionsTDS.DecVarTDS;
 import actionsTDS.ForTDS;
+import actionsTDS.IfTDS;
 import actionsTDS.RootTDS;
 import analyseSem.AffectSem;
+import analyseSem.BlockSem;
+import analyseSem.IfSem;
 import analyseSem.ReadSem;
 import analyseSem.WriteSem;
 import analyseSemDecClass.DecClassSem;
@@ -151,6 +155,20 @@ public class BrowseTree {
 				new ForSem(node);
 				new ForTDS(node);
 				break;
+			
+			case "IF":
+				new IfSem(node);
+				new IfTDS(node);
+				break;
+				
+			case "BLOC":
+				new BlockSem(node);
+				new BlockTDS(node);
+				break;
+			
+			case "do":
+				//to do avec expr
+				break;
 				
 			case "write":
 				new WriteSem(node);
@@ -158,7 +176,8 @@ public class BrowseTree {
 			
 			case "read":
 				new ReadSem(node);
-
+				break;
+				
 			default:
 				break;
 			

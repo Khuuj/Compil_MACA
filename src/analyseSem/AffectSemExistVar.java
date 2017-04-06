@@ -39,7 +39,7 @@ public class AffectSemExistVar {
 		
 		//Affiche une erreur si la variable n'existe pas dans les TDS
 		if (!exists)
-			System.err.println("Erreur : la variable "+id+" n'est pas définie !\n");
+			System.err.println("Erreur : la variable "+id+" n'est pas définie !");
 	}
 
 	

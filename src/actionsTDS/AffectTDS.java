@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 import org.antlr.runtime.tree.Tree;
 
-import analyseSem.OperSem;
+import analyseSem.*;
 import main.BrowseTree;
 import tableInstances.Element;
 import tableInstances.Table;
@@ -13,6 +13,7 @@ import tableInstancesVar.Var;
 public class AffectTDS {
 	
 	public AffectTDS(Tree node){
+
 		
 		String name = node.getChild(0).getText();
 		
@@ -47,6 +48,6 @@ public class AffectTDS {
 				new OperSem(node.getChild(1).getChild(1));
 				break;
 		}
-		
 	}
+
 }
