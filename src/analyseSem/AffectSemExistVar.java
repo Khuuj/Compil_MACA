@@ -8,9 +8,9 @@ import main.BrowseTree;
 import tableInstances.Element;
 import tableInstances.Table;
 
-public class ExistenceTest {
+public class AffectSemExistVar {
 
-	public ExistenceTest(Tree node) {
+	public AffectSemExistVar(Tree node) {
 		
 		boolean exists = false;
 		
@@ -28,8 +28,8 @@ public class ExistenceTest {
 			{
 				Iterator<Element> it = BrowseTree.INSTANCE_TDS.get(scope).get(key).iterator();
 				
-				while (it.hasNext()) {
-					exists = exists || it.next().id.equals(id);
+				while (it.hasNext() && !exists) {
+						exists= it.next().id.equals(id);
 				}
 				
 			}

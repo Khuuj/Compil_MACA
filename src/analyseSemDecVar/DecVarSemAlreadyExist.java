@@ -33,8 +33,9 @@ public class DecVarSemAlreadyExist
 		{
 			Iterator<Element> it = BrowseTree.INSTANCE_TDS.get(scope).get(key).iterator();
 			
-			while (it.hasNext())
-				alreadyExists = alreadyExists || it.next().id.equals(name);
+			while (it.hasNext() && !alreadyExists)
+				
+				alreadyExists = it.next().id.equals(name);
 				
 		}
 		
