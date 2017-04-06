@@ -14,3 +14,4 @@ Contrôles sémantiques à réaliser : (à séparer entre statique et dynamique 
 14- La portée de déclaration d'une variable locale commence à la fin de se déclaration et fini à la fin du bloc englobant se déclaration.
 15- Boucle for : terminale, variable déclarée.
 16- Regarder les contrôles sur le sujet (je les rajouterais plus tard).
+17 - retourne?

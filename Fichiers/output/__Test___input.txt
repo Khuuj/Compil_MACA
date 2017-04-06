@@ -6,3 +6,7 @@ var i : int ;
 do a.setName();
 j := j* u+;
 };
+var x : string;
+n := -10;
+
+n:= n+n.a();

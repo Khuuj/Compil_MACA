@@ -43,12 +43,12 @@ public class Table extends HashMap<Integer,ArrayList<Element>>{
 		int tailleId = id.length();
 		//Nombre premier afin d'éviter la redondance dans les clés
 		int hashNb = 23;
-		int clé = 0;
+		int key = 0;
 		for(int i = 0 ; i < tailleId ; i++)
 		{
-			clé = clé * hashNb + id.charAt(i);
+			key = key * hashNb + id.charAt(i);
 		}
-		return clé;
+		return key;
 	}
 	
 }

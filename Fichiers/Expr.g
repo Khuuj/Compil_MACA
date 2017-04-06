@@ -100,11 +100,12 @@ retourne :
  	;
 
 expr:
-	 exprplus e //ID_OTHERS e
+	// exprplus e
+	exprplus
 	| 'this' e
 	| 'super' e
 	//| STRING
-	| 'new' ID_CLASS e -> ^(NEW ID_CLASS e?)
+	| 'new' ID_CLASS  -> ^(NEW ID_CLASS )
 	;
 e :
 	'.' ID_OTHERS '(' f? ')' e -> ^(APPELMETHODE ID_OTHERS f? e?)
@@ -116,7 +117,7 @@ f  	:  expr (',' expr )* -> ^(ARGS expr*)
 
 
 exprplus: 
-	exprmult ( ('+'^|'-'^) exprmult)*
+	exprmult e ( ('+'^|'-'^) exprmult e)*
 	;
 
 
@@ -133,9 +134,9 @@ moinsunaire:
 	| atom
 	;
 atom: 
-	 ID_OTHERS
+	 ID_OTHERS e
 	| STRING
-	|  INT
+	|  INT 
 	| '('expr')'
 	;
 

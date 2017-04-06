@@ -7,40 +7,7 @@ public class OperSem {
 	public OperSem(Tree node){ // Le node dans le constructeur coorespond à un noeud +, - ou *
 		
 		
-		/*
-		int nbChild = node.getChildCount();
-		
-		for (int i = 0 ; i < nbChild ; i++) { // On regarde pour ses deux fils
-			
-			// Attention mot clé this, super 
-			// si la première lettre est une minuscule (variable)
-			if ((int)node.getChild(i).getText().charAt(0) >= 97 && ((int)node.getChild(i).getText().charAt(0)) <= 122) {
-				new OperSemVar(node.getChild(i));
-			} 
-			// si la première lettre est une majuscule (Classe)
-			else if ((int)(node.getChild(i).getText().charAt(0)) >= 65 && (int)(node.getChild(i).getText().charAt(0)) <=122) {
-				new OperSemClasse(node.getChild(i));
-			} 
-			// si le fils est un autre signe opératoire
-			// PEUT ETRE A VIRER EN FONCTION DE CE QUE FAIT ADAM
-			else if (node.getChild(i).getText().equals("[+-\\*]")){
-				new OperSem(node.getChild(i));
-			} 
-			// Si l'opérande n'est pas un int
-			else if (!node.getChild(i).getText().matches("[-+]?\\d+") ) {
-				//Géré par la grammaire
-				System.err.println("Erreur : L'opérande " + node.getChild(i).getText() + " n'est pas supportée par les opérations. \n");
-			}	
-		}
-		*/
-		
-		
-		
-		//type à égaler (membre gauche de l'affect ou paramètre d'une fonction)
-		
-		
-		
-		
+	
 	}
 	
 	public static boolean rightType(Tree node, String type)
