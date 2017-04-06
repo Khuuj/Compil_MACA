@@ -1,6 +1,7 @@
 var n : int ;
 var total : int ;
 var i : int ;
+var x : string;
 n := -10;
 total := 0 ;
 for i in 0 .. n
@@ -11,3 +12,7 @@ write total ;
 {
 var a : int;
 a:=a+1;}
+
+x:= "a";
+x:=x+x;
+write x;
