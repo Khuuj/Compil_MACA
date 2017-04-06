@@ -7,16 +7,6 @@ public class OperSem {
 	public OperSem(Tree node){ // Le node dans le constructeur coorespond à un noeud +, - ou *
 		
 		
-<<<<<<< HEAD
-		//Si c'est un identificateur
-		if ( (int)operande.charAt(0) >= 97 || (int)operande.charAt(0) <=122){
-			//On teste s'il est déjà défini
-			new AffectSemExistVar(node);
-			//On teste son type
-			String type = (new TypeTester(node)).getType();
-			if (!type.equals("int")){
-				System.err.println("Erreur : Les opérations ne supportent pas le type " + type + "! (utilisation de la variable " + operande + ")\n");
-=======
 	
 	}
 	
@@ -39,7 +29,6 @@ public class OperSem {
 			//terminal entier
 			if (node.getText().matches("[-+]?\\d+")) {
 				return type.equals("int");
->>>>>>> dfa2957a6e8378dcedd6a283a431ff1415ed069d
 			}
 			
 			//variable
