@@ -9,14 +9,6 @@ import java.util.ArrayList;
 import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.tree.Tree;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> branch 'master' of https://github.com/Khuuj/Compil_MACA
-=======
->>>>>>> dfa2957a6e8378dcedd6a283a431ff1415ed069d
 import actionsTDS.AffectTDS;
 import actionsTDS.DecClassTDS;
 import actionsTDS.DecVarTDS;

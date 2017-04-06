@@ -35,9 +35,9 @@ class Cat inherit MAmouth =
 	method whoami()
 	{
 		do super.whoami();
-		write ". And I am a cat .";
+		write ".\\* And I am a cat .";
 	}
-	
+)
 var n : int;
 var txt : string;
 var total : int;
