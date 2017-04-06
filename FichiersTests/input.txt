@@ -29,6 +29,7 @@ class Dog inherit Animal =
 		write ". And I am a dog .";
 	}
 )
+
 class Cat inherit MAmouth =
 (
 	method whoami()
@@ -44,17 +45,9 @@ var txt : string;
 var total : int;
 var total :int;
 
-<<<<<<< HEAD
 write a + banane.eat();
 n := 10;
-=======
-n := 1;
-a := 4;
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+
 
 n := txt + n;
 

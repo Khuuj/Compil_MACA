@@ -1,34 +1,15 @@
 package expr;
 
-<<<<<<< HEAD
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-04-06 16:56:19
-=======
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-04-06 15:21:11
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-04-06 18:20:19
 
 import org.antlr.runtime.*;
-import java.util.Stack;
-import java.util.List;
-import java.util.ArrayList;
 
 
 import org.antlr.runtime.tree.*;
 
 public class ExprParser extends Parser {
     public static final String[] tokenNames = new String[] {
-<<<<<<< HEAD
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ROOT", "DEC_CLASS", "DEC_VAR", "AFFECT", "RETURN", "FOR", "IF", "BLOC", "BODY", "METHOD", "ARGS", "PARAMS", "OPPOSE", "APPELMETHODE", "PARAM", "NEW", "BODY_CLASS", "ID_CLASS", "ID_OTHERS", "OPERCONDITION", "INT", "STRING", "COMMENTS", "NEWLINE", "WS", "'class'", "'inherit'", "'='", "'('", "')'", "'var'", "':'", "';'", "'int'", "'string'", "'method'", "'{'", "'}'", "','", "':='", "'if'", "'then'", "'else'", "'fi'", "'for'", "'in'", "'do'", "'end'", "'..'", "'nil'", "'write'", "'read'", "'return'", "'this'", "'super'", "'new'", "'.'", "'+'", "'-'", "'*'"
-=======
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ROOT", "DEC_CLASS", "DEC_VAR", "AFFECT", "RETURN", "FOR", "IF", "BLOC", "BODY", "METHOD", "ARGS", "PARAMS", "OPPOSE", "APPELMETHODE", "PARAM", "NEW", "BODY_CLASS", "ID_CLASS", "ID_OTHERS", "OPERCONDITION", "STRING", "INT", "COMMENTS", "NEWLINE", "WS", "'class'", "'inherit'", "'='", "'('", "')'", "'var'", "':'", "';'", "'int'", "'string'", "'method'", "'{'", "'}'", "','", "':='", "'if'", "'then'", "'else'", "'fi'", "'for'", "'in'", "'do'", "'end'", "'..'", "'nil'", "'write'", "'read'", "'return'", "'this'", "'super'", "'new'", "'.'", "'+'", "'-'", "'*'"
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
     };
     public static final int EOF=-1;
     public static final int T__29=29;
@@ -86,17 +67,8 @@ public class ExprParser extends Parser {
     public static final int ID_CLASS=21;
     public static final int ID_OTHERS=22;
     public static final int OPERCONDITION=23;
-<<<<<<< HEAD
-    public static final int INT=24;
-    public static final int STRING=25;
-=======
     public static final int STRING=24;
     public static final int INT=25;
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
     public static final int COMMENTS=26;
     public static final int NEWLINE=27;
     public static final int WS=28;
@@ -403,7 +375,7 @@ public class ExprParser extends Parser {
 
 
             // AST REWRITE
-            // elements: b, class_item_decl, a
+            // elements: b, a, class_item_decl
             // token labels: a, b
             // rule labels: retval
             // token list labels: 
@@ -840,7 +812,7 @@ public class ExprParser extends Parser {
 
 
             // AST REWRITE
-            // elements: ID_OTHERS, method_params, m
+            // elements: method_params, ID_OTHERS, m
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1153,7 +1125,7 @@ public class ExprParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: var_decl, type, instr
+                    // elements: instr, type, var_decl
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1379,7 +1351,7 @@ public class ExprParser extends Parser {
 
 
             // AST REWRITE
-            // elements: ID_OTHERS, type
+            // elements: type, ID_OTHERS
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1392,15 +1364,7 @@ public class ExprParser extends Parser {
             // 66:48: -> ( ^( PARAM ID_OTHERS type ) )*
             {
                 // Expr.g:66:51: ( ^( PARAM ID_OTHERS type ) )*
-<<<<<<< HEAD
                 while ( stream_type.hasNext()||stream_ID_OTHERS.hasNext() ) {
-=======
-                while ( stream_ID_OTHERS.hasNext()||stream_type.hasNext() ) {
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
                     // Expr.g:66:51: ^( PARAM ID_OTHERS type )
                     {
                     Object root_1 = (Object)adaptor.nil();
@@ -1413,8 +1377,8 @@ public class ExprParser extends Parser {
                     }
 
                 }
-                stream_ID_OTHERS.reset();
                 stream_type.reset();
+                stream_ID_OTHERS.reset();
 
             }
 
@@ -1676,7 +1640,7 @@ public class ExprParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: instr, expr, instr
+                    // elements: expr, instr, instr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1772,7 +1736,7 @@ public class ExprParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: ID_OTHERS, instr, boundaries
+                    // elements: boundaries, ID_OTHERS, instr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1885,7 +1849,7 @@ public class ExprParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: var_decl, instr
+                    // elements: instr, var_decl
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1943,15 +1907,7 @@ public class ExprParser extends Parser {
 
 
                     // AST REWRITE
-<<<<<<< HEAD
                     // elements: expr, 50
-=======
-                    // elements: 50, expr
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2084,15 +2040,7 @@ public class ExprParser extends Parser {
 
 
             // AST REWRITE
-<<<<<<< HEAD
             // elements: 52, a, b
-=======
-            // elements: a, b, 52
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
             // token labels: 
             // rule labels: a, b, retval
             // token list labels: 
@@ -2170,15 +2118,7 @@ public class ExprParser extends Parser {
             int alt19=2;
             int LA19_0 = input.LA(1);
 
-<<<<<<< HEAD
-            if ( (LA19_0==ID_OTHERS||(LA19_0>=INT && LA19_0<=STRING)||LA19_0==32||(LA19_0>=57 && LA19_0<=59)||LA19_0==62) ) {
-=======
             if ( (LA19_0==ID_OTHERS||(LA19_0>=STRING && LA19_0<=INT)||LA19_0==32||(LA19_0>=57 && LA19_0<=59)||LA19_0==62) ) {
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
                 alt19=1;
             }
             else if ( (LA19_0==53) ) {
@@ -2553,50 +2493,38 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "expr"
-    // Expr.g:102:1: expr : ( exprplus e | 'this' e | 'super' e | 'new' ID_CLASS e -> ^( NEW ID_CLASS ( e )? ) );
+    // Expr.g:102:1: expr : ( exprplus | 'this' e | 'super' e | 'new' ID_CLASS -> ^( NEW ID_CLASS ) );
     public final ExprParser.expr_return expr() throws RecognitionException {
         ExprParser.expr_return retval = new ExprParser.expr_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token string_literal87=null;
-        Token string_literal89=null;
-        Token string_literal91=null;
-        Token ID_CLASS92=null;
+        Token string_literal86=null;
+        Token string_literal88=null;
+        Token string_literal90=null;
+        Token ID_CLASS91=null;
         ExprParser.exprplus_return exprplus85 = null;
 
-        ExprParser.e_return e86 = null;
+        ExprParser.e_return e87 = null;
 
-        ExprParser.e_return e88 = null;
-
-        ExprParser.e_return e90 = null;
-
-        ExprParser.e_return e93 = null;
+        ExprParser.e_return e89 = null;
 
 
-        Object string_literal87_tree=null;
-        Object string_literal89_tree=null;
-        Object string_literal91_tree=null;
-        Object ID_CLASS92_tree=null;
+        Object string_literal86_tree=null;
+        Object string_literal88_tree=null;
+        Object string_literal90_tree=null;
+        Object ID_CLASS91_tree=null;
         RewriteRuleTokenStream stream_59=new RewriteRuleTokenStream(adaptor,"token 59");
         RewriteRuleTokenStream stream_ID_CLASS=new RewriteRuleTokenStream(adaptor,"token ID_CLASS");
-        RewriteRuleSubtreeStream stream_e=new RewriteRuleSubtreeStream(adaptor,"rule e");
+
         try {
-            // Expr.g:102:5: ( exprplus e | 'this' e | 'super' e | 'new' ID_CLASS e -> ^( NEW ID_CLASS ( e )? ) )
+            // Expr.g:102:5: ( exprplus | 'this' e | 'super' e | 'new' ID_CLASS -> ^( NEW ID_CLASS ) )
             int alt20=4;
             switch ( input.LA(1) ) {
             case ID_OTHERS:
             case STRING:
             case INT:
-<<<<<<< HEAD
-            case STRING:
-=======
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
             case 32:
             case 62:
                 {
@@ -2627,96 +2555,68 @@ public class ExprParser extends Parser {
 
             switch (alt20) {
                 case 1 :
-                    // Expr.g:103:3: exprplus e
+                    // Expr.g:104:2: exprplus
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    pushFollow(FOLLOW_exprplus_in_expr710);
+                    pushFollow(FOLLOW_exprplus_in_expr711);
                     exprplus85=exprplus();
 
                     state._fsp--;
 
                     adaptor.addChild(root_0, exprplus85.getTree());
-                    pushFollow(FOLLOW_e_in_expr712);
-                    e86=e();
-
-                    state._fsp--;
-
-                    adaptor.addChild(root_0, e86.getTree());
 
                     }
                     break;
                 case 2 :
-                    // Expr.g:104:4: 'this' e
+                    // Expr.g:105:4: 'this' e
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    string_literal87=(Token)match(input,57,FOLLOW_57_in_expr718); 
-                    string_literal87_tree = (Object)adaptor.create(string_literal87);
-                    adaptor.addChild(root_0, string_literal87_tree);
+                    string_literal86=(Token)match(input,57,FOLLOW_57_in_expr716); 
+                    string_literal86_tree = (Object)adaptor.create(string_literal86);
+                    adaptor.addChild(root_0, string_literal86_tree);
 
-                    pushFollow(FOLLOW_e_in_expr720);
-                    e88=e();
+                    pushFollow(FOLLOW_e_in_expr718);
+                    e87=e();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, e88.getTree());
+                    adaptor.addChild(root_0, e87.getTree());
 
                     }
                     break;
                 case 3 :
-                    // Expr.g:105:4: 'super' e
+                    // Expr.g:106:4: 'super' e
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    string_literal89=(Token)match(input,58,FOLLOW_58_in_expr725); 
-                    string_literal89_tree = (Object)adaptor.create(string_literal89);
-                    adaptor.addChild(root_0, string_literal89_tree);
+                    string_literal88=(Token)match(input,58,FOLLOW_58_in_expr723); 
+                    string_literal88_tree = (Object)adaptor.create(string_literal88);
+                    adaptor.addChild(root_0, string_literal88_tree);
 
-                    pushFollow(FOLLOW_e_in_expr727);
-                    e90=e();
+                    pushFollow(FOLLOW_e_in_expr725);
+                    e89=e();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, e90.getTree());
+                    adaptor.addChild(root_0, e89.getTree());
 
                     }
                     break;
                 case 4 :
-<<<<<<< HEAD
-                    // Expr.g:106:4: 'new' ID_CLASS e
+                    // Expr.g:108:4: 'new' ID_CLASS
                     {
-                    string_literal91=(Token)match(input,59,FOLLOW_59_in_expr732);  
-                    stream_59.add(string_literal91);
+                    string_literal90=(Token)match(input,59,FOLLOW_59_in_expr732);  
+                    stream_59.add(string_literal90);
 
-                    ID_CLASS92=(Token)match(input,ID_CLASS,FOLLOW_ID_CLASS_in_expr734);  
-                    stream_ID_CLASS.add(ID_CLASS92);
+                    ID_CLASS91=(Token)match(input,ID_CLASS,FOLLOW_ID_CLASS_in_expr734);  
+                    stream_ID_CLASS.add(ID_CLASS91);
 
-                    pushFollow(FOLLOW_e_in_expr736);
-=======
-                    // Expr.g:107:4: 'new' ID_CLASS e
-                    {
-                    string_literal91=(Token)match(input,59,FOLLOW_59_in_expr734);  
-                    stream_59.add(string_literal91);
-
-                    ID_CLASS92=(Token)match(input,ID_CLASS,FOLLOW_ID_CLASS_in_expr736);  
-                    stream_ID_CLASS.add(ID_CLASS92);
-
-                    pushFollow(FOLLOW_e_in_expr738);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-                    e93=e();
-
-                    state._fsp--;
-
-                    stream_e.add(e93.getTree());
 
 
                     // AST REWRITE
-                    // elements: ID_CLASS, e
+                    // elements: ID_CLASS
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2726,20 +2626,14 @@ public class ExprParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 107:21: -> ^( NEW ID_CLASS ( e )? )
+                    // 108:20: -> ^( NEW ID_CLASS )
                     {
-                        // Expr.g:107:24: ^( NEW ID_CLASS ( e )? )
+                        // Expr.g:108:23: ^( NEW ID_CLASS )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(NEW, "NEW"), root_1);
 
                         adaptor.addChild(root_1, stream_ID_CLASS.nextNode());
-                        // Expr.g:107:39: ( e )?
-                        if ( stream_e.hasNext() ) {
-                            adaptor.addChild(root_1, stream_e.nextTree());
-
-                        }
-                        stream_e.reset();
 
                         adaptor.addChild(root_0, root_1);
                         }
@@ -2775,34 +2669,26 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "e"
-<<<<<<< HEAD
-    // Expr.g:108:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? e ) | );
-=======
-    // Expr.g:109:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | );
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+    // Expr.g:110:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | );
     public final ExprParser.e_return e() throws RecognitionException {
         ExprParser.e_return retval = new ExprParser.e_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
+        Token char_literal92=null;
+        Token ID_OTHERS93=null;
         Token char_literal94=null;
-        Token ID_OTHERS95=null;
         Token char_literal96=null;
-        Token char_literal98=null;
-        ExprParser.f_return f97 = null;
+        ExprParser.f_return f95 = null;
 
-        ExprParser.e_return e99 = null;
+        ExprParser.e_return e97 = null;
 
 
+        Object char_literal92_tree=null;
+        Object ID_OTHERS93_tree=null;
         Object char_literal94_tree=null;
-        Object ID_OTHERS95_tree=null;
         Object char_literal96_tree=null;
-        Object char_literal98_tree=null;
         RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
         RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
         RewriteRuleTokenStream stream_60=new RewriteRuleTokenStream(adaptor,"token 60");
@@ -2810,120 +2696,58 @@ public class ExprParser extends Parser {
         RewriteRuleSubtreeStream stream_e=new RewriteRuleSubtreeStream(adaptor,"rule e");
         RewriteRuleSubtreeStream stream_f=new RewriteRuleSubtreeStream(adaptor,"rule f");
         try {
-<<<<<<< HEAD
-            // Expr.g:108:3: ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? e ) | )
-=======
-            // Expr.g:109:3: ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | )
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            // Expr.g:110:3: ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | )
             int alt22=2;
-            int LA22_0 = input.LA(1);
-
-            if ( (LA22_0==60) ) {
-                alt22=1;
-            }
-            else if ( (LA22_0==33||LA22_0==36||LA22_0==42||LA22_0==45||LA22_0==50||LA22_0==52) ) {
-                alt22=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 22, 0, input);
-
-                throw nvae;
-            }
+            alt22 = dfa22.predict(input);
             switch (alt22) {
                 case 1 :
-                    // Expr.g:110:2: '.' ID_OTHERS '(' ( f )? ')' e
+                    // Expr.g:111:2: '.' ID_OTHERS '(' ( f )? ')' e
                     {
-<<<<<<< HEAD
-                    char_literal94=(Token)match(input,60,FOLLOW_60_in_e757);  
-                    stream_60.add(char_literal94);
+                    char_literal92=(Token)match(input,60,FOLLOW_60_in_e754);  
+                    stream_60.add(char_literal92);
 
-                    ID_OTHERS95=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_e759);  
-                    stream_ID_OTHERS.add(ID_OTHERS95);
+                    ID_OTHERS93=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_e756);  
+                    stream_ID_OTHERS.add(ID_OTHERS93);
 
-                    char_literal96=(Token)match(input,32,FOLLOW_32_in_e761);  
-=======
-                    char_literal94=(Token)match(input,60,FOLLOW_60_in_e759);  
-                    stream_60.add(char_literal94);
+                    char_literal94=(Token)match(input,32,FOLLOW_32_in_e758);  
+                    stream_32.add(char_literal94);
 
-                    ID_OTHERS95=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_e761);  
-                    stream_ID_OTHERS.add(ID_OTHERS95);
-
-                    char_literal96=(Token)match(input,32,FOLLOW_32_in_e763);  
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-                    stream_32.add(char_literal96);
-
-                    // Expr.g:110:20: ( f )?
+                    // Expr.g:111:20: ( f )?
                     int alt21=2;
                     int LA21_0 = input.LA(1);
 
-<<<<<<< HEAD
-                    if ( (LA21_0==ID_OTHERS||(LA21_0>=INT && LA21_0<=STRING)||LA21_0==32||(LA21_0>=57 && LA21_0<=59)||LA21_0==62) ) {
-=======
                     if ( (LA21_0==ID_OTHERS||(LA21_0>=STRING && LA21_0<=INT)||LA21_0==32||(LA21_0>=57 && LA21_0<=59)||LA21_0==62) ) {
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
                         alt21=1;
                     }
                     switch (alt21) {
                         case 1 :
-                            // Expr.g:110:20: f
+                            // Expr.g:111:20: f
                             {
-<<<<<<< HEAD
-                            pushFollow(FOLLOW_f_in_e763);
-=======
-                            pushFollow(FOLLOW_f_in_e765);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-                            f97=f();
+                            pushFollow(FOLLOW_f_in_e760);
+                            f95=f();
 
                             state._fsp--;
 
-                            stream_f.add(f97.getTree());
+                            stream_f.add(f95.getTree());
 
                             }
                             break;
 
                     }
 
-<<<<<<< HEAD
-                    char_literal98=(Token)match(input,33,FOLLOW_33_in_e766);  
-                    stream_33.add(char_literal98);
+                    char_literal96=(Token)match(input,33,FOLLOW_33_in_e763);  
+                    stream_33.add(char_literal96);
 
-                    pushFollow(FOLLOW_e_in_e768);
-=======
-                    char_literal98=(Token)match(input,33,FOLLOW_33_in_e768);  
-                    stream_33.add(char_literal98);
-
-                    pushFollow(FOLLOW_e_in_e770);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-                    e99=e();
+                    pushFollow(FOLLOW_e_in_e765);
+                    e97=e();
 
                     state._fsp--;
 
-                    stream_e.add(e99.getTree());
+                    stream_e.add(e97.getTree());
 
 
                     // AST REWRITE
-                    // elements: e, ID_OTHERS, f
+                    // elements: ID_OTHERS, f, e
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2933,44 +2757,26 @@ public class ExprParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-<<<<<<< HEAD
-                    // 109:29: -> ^( APPELMETHODE ID_OTHERS ( f )? e )
+                    // 111:29: -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? )
                     {
-                        // Expr.g:109:32: ^( APPELMETHODE ID_OTHERS ( f )? e )
-=======
-                    // 110:29: -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? )
-                    {
-                        // Expr.g:110:32: ^( APPELMETHODE ID_OTHERS ( f )? ( e )? )
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+                        // Expr.g:111:32: ^( APPELMETHODE ID_OTHERS ( f )? ( e )? )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(APPELMETHODE, "APPELMETHODE"), root_1);
 
                         adaptor.addChild(root_1, stream_ID_OTHERS.nextNode());
-                        // Expr.g:110:57: ( f )?
+                        // Expr.g:111:57: ( f )?
                         if ( stream_f.hasNext() ) {
                             adaptor.addChild(root_1, stream_f.nextTree());
 
                         }
                         stream_f.reset();
-<<<<<<< HEAD
-                        adaptor.addChild(root_1, stream_e.nextTree());
-=======
-                        // Expr.g:110:60: ( e )?
+                        // Expr.g:111:60: ( e )?
                         if ( stream_e.hasNext() ) {
                             adaptor.addChild(root_1, stream_e.nextTree());
 
                         }
                         stream_e.reset();
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
 
                         adaptor.addChild(root_0, root_1);
                         }
@@ -2981,7 +2787,7 @@ public class ExprParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Expr.g:112:2: 
+                    // Expr.g:113:2: 
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3013,49 +2819,33 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "f"
-    // Expr.g:114:1: f : expr ( ',' expr )* -> ^( ARGS ( expr )* ) ;
+    // Expr.g:115:1: f : expr ( ',' expr )* -> ^( ARGS ( expr )* ) ;
     public final ExprParser.f_return f() throws RecognitionException {
         ExprParser.f_return retval = new ExprParser.f_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token char_literal101=null;
+        Token char_literal99=null;
+        ExprParser.expr_return expr98 = null;
+
         ExprParser.expr_return expr100 = null;
 
-        ExprParser.expr_return expr102 = null;
 
-
-        Object char_literal101_tree=null;
+        Object char_literal99_tree=null;
         RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // Expr.g:114:5: ( expr ( ',' expr )* -> ^( ARGS ( expr )* ) )
-            // Expr.g:114:8: expr ( ',' expr )*
+            // Expr.g:115:5: ( expr ( ',' expr )* -> ^( ARGS ( expr )* ) )
+            // Expr.g:115:8: expr ( ',' expr )*
             {
-<<<<<<< HEAD
-            pushFollow(FOLLOW_expr_in_f798);
-=======
-            pushFollow(FOLLOW_expr_in_f801);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-            expr100=expr();
+            pushFollow(FOLLOW_expr_in_f796);
+            expr98=expr();
 
             state._fsp--;
 
-            stream_expr.add(expr100.getTree());
-<<<<<<< HEAD
-            // Expr.g:113:13: ( ',' expr )*
-=======
-            // Expr.g:114:13: ( ',' expr )*
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            stream_expr.add(expr98.getTree());
+            // Expr.g:115:13: ( ',' expr )*
             loop23:
             do {
                 int alt23=2;
@@ -3068,28 +2858,17 @@ public class ExprParser extends Parser {
 
                 switch (alt23) {
             	case 1 :
-            	    // Expr.g:114:14: ',' expr
+            	    // Expr.g:115:14: ',' expr
             	    {
-<<<<<<< HEAD
-            	    char_literal101=(Token)match(input,42,FOLLOW_42_in_f801);  
-            	    stream_42.add(char_literal101);
+            	    char_literal99=(Token)match(input,42,FOLLOW_42_in_f799);  
+            	    stream_42.add(char_literal99);
 
-            	    pushFollow(FOLLOW_expr_in_f803);
-=======
-            	    char_literal101=(Token)match(input,42,FOLLOW_42_in_f804);  
-            	    stream_42.add(char_literal101);
-
-            	    pushFollow(FOLLOW_expr_in_f806);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-            	    expr102=expr();
+            	    pushFollow(FOLLOW_expr_in_f801);
+            	    expr100=expr();
 
             	    state._fsp--;
 
-            	    stream_expr.add(expr102.getTree());
+            	    stream_expr.add(expr100.getTree());
 
             	    }
             	    break;
@@ -3112,14 +2891,14 @@ public class ExprParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 114:26: -> ^( ARGS ( expr )* )
+            // 115:26: -> ^( ARGS ( expr )* )
             {
-                // Expr.g:114:29: ^( ARGS ( expr )* )
+                // Expr.g:115:29: ^( ARGS ( expr )* )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(ARGS, "ARGS"), root_1);
 
-                // Expr.g:114:36: ( expr )*
+                // Expr.g:115:36: ( expr )*
                 while ( stream_expr.hasNext() ) {
                     adaptor.addChild(root_1, stream_expr.nextTree());
 
@@ -3158,52 +2937,46 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "exprplus"
-    // Expr.g:118:1: exprplus : exprmult ( ( '+' | '-' ) exprmult )* ;
+    // Expr.g:119:1: exprplus : exprmult e ( ( '+' | '-' ) exprmult e )* ;
     public final ExprParser.exprplus_return exprplus() throws RecognitionException {
         ExprParser.exprplus_return retval = new ExprParser.exprplus_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
+        Token char_literal103=null;
         Token char_literal104=null;
-        Token char_literal105=null;
-        ExprParser.exprmult_return exprmult103 = null;
+        ExprParser.exprmult_return exprmult101 = null;
 
-        ExprParser.exprmult_return exprmult106 = null;
+        ExprParser.e_return e102 = null;
+
+        ExprParser.exprmult_return exprmult105 = null;
+
+        ExprParser.e_return e106 = null;
 
 
+        Object char_literal103_tree=null;
         Object char_literal104_tree=null;
-        Object char_literal105_tree=null;
 
         try {
-            // Expr.g:118:9: ( exprmult ( ( '+' | '-' ) exprmult )* )
-            // Expr.g:119:2: exprmult ( ( '+' | '-' ) exprmult )*
+            // Expr.g:119:9: ( exprmult e ( ( '+' | '-' ) exprmult e )* )
+            // Expr.g:120:2: exprmult e ( ( '+' | '-' ) exprmult e )*
             {
             root_0 = (Object)adaptor.nil();
 
-<<<<<<< HEAD
-            pushFollow(FOLLOW_exprmult_in_exprplus827);
-=======
-            pushFollow(FOLLOW_exprmult_in_exprplus830);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-            exprmult103=exprmult();
+            pushFollow(FOLLOW_exprmult_in_exprplus825);
+            exprmult101=exprmult();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, exprmult103.getTree());
-<<<<<<< HEAD
-            // Expr.g:118:11: ( ( '+' | '-' ) exprmult )*
-=======
-            // Expr.g:119:11: ( ( '+' | '-' ) exprmult )*
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            adaptor.addChild(root_0, exprmult101.getTree());
+            pushFollow(FOLLOW_e_in_exprplus827);
+            e102=e();
+
+            state._fsp--;
+
+            adaptor.addChild(root_0, e102.getTree());
+            // Expr.g:120:13: ( ( '+' | '-' ) exprmult e )*
             loop25:
             do {
                 int alt25=2;
@@ -3216,9 +2989,9 @@ public class ExprParser extends Parser {
 
                 switch (alt25) {
             	case 1 :
-            	    // Expr.g:119:13: ( '+' | '-' ) exprmult
+            	    // Expr.g:120:15: ( '+' | '-' ) exprmult e
             	    {
-            	    // Expr.g:119:13: ( '+' | '-' )
+            	    // Expr.g:120:15: ( '+' | '-' )
             	    int alt24=2;
             	    int LA24_0 = input.LA(1);
 
@@ -3236,37 +3009,21 @@ public class ExprParser extends Parser {
             	    }
             	    switch (alt24) {
             	        case 1 :
-            	            // Expr.g:119:14: '+'
+            	            // Expr.g:120:16: '+'
             	            {
-<<<<<<< HEAD
-            	            char_literal104=(Token)match(input,61,FOLLOW_61_in_exprplus832); 
-=======
-            	            char_literal104=(Token)match(input,61,FOLLOW_61_in_exprplus835); 
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-            	            char_literal104_tree = (Object)adaptor.create(char_literal104);
-            	            root_0 = (Object)adaptor.becomeRoot(char_literal104_tree, root_0);
+            	            char_literal103=(Token)match(input,61,FOLLOW_61_in_exprplus832); 
+            	            char_literal103_tree = (Object)adaptor.create(char_literal103);
+            	            root_0 = (Object)adaptor.becomeRoot(char_literal103_tree, root_0);
 
 
             	            }
             	            break;
             	        case 2 :
-            	            // Expr.g:119:19: '-'
+            	            // Expr.g:120:21: '-'
             	            {
-<<<<<<< HEAD
-            	            char_literal105=(Token)match(input,62,FOLLOW_62_in_exprplus835); 
-=======
-            	            char_literal105=(Token)match(input,62,FOLLOW_62_in_exprplus838); 
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-            	            char_literal105_tree = (Object)adaptor.create(char_literal105);
-            	            root_0 = (Object)adaptor.becomeRoot(char_literal105_tree, root_0);
+            	            char_literal104=(Token)match(input,62,FOLLOW_62_in_exprplus835); 
+            	            char_literal104_tree = (Object)adaptor.create(char_literal104);
+            	            root_0 = (Object)adaptor.becomeRoot(char_literal104_tree, root_0);
 
 
             	            }
@@ -3274,20 +3031,18 @@ public class ExprParser extends Parser {
 
             	    }
 
-<<<<<<< HEAD
             	    pushFollow(FOLLOW_exprmult_in_exprplus839);
-=======
-            	    pushFollow(FOLLOW_exprmult_in_exprplus842);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-            	    exprmult106=exprmult();
+            	    exprmult105=exprmult();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, exprmult106.getTree());
+            	    adaptor.addChild(root_0, exprmult105.getTree());
+            	    pushFollow(FOLLOW_e_in_exprplus841);
+            	    e106=e();
+
+            	    state._fsp--;
+
+            	    adaptor.addChild(root_0, e106.getTree());
 
             	    }
             	    break;
@@ -3324,7 +3079,7 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "exprmult"
-    // Expr.g:123:1: exprmult : oper ( '*' oper )? ;
+    // Expr.g:124:1: exprmult : oper ( '*' oper )? ;
     public final ExprParser.exprmult_return exprmult() throws RecognitionException {
         ExprParser.exprmult_return retval = new ExprParser.exprmult_return();
         retval.start = input.LT(1);
@@ -3340,61 +3095,29 @@ public class ExprParser extends Parser {
         Object char_literal108_tree=null;
 
         try {
-            // Expr.g:123:9: ( oper ( '*' oper )? )
-            // Expr.g:124:3: oper ( '*' oper )?
+            // Expr.g:124:9: ( oper ( '*' oper )? )
+            // Expr.g:125:3: oper ( '*' oper )?
             {
             root_0 = (Object)adaptor.nil();
 
-<<<<<<< HEAD
-            pushFollow(FOLLOW_oper_in_exprmult853);
-=======
-            pushFollow(FOLLOW_oper_in_exprmult856);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            pushFollow(FOLLOW_oper_in_exprmult855);
             oper107=oper();
 
             state._fsp--;
 
             adaptor.addChild(root_0, oper107.getTree());
-<<<<<<< HEAD
-            // Expr.g:123:7: ( '*' oper )?
-=======
-            // Expr.g:124:7: ( '*' oper )?
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            // Expr.g:125:7: ( '*' oper )?
             int alt26=2;
-            int LA26_0 = input.LA(1);
-
-            if ( (LA26_0==63) ) {
-                alt26=1;
-            }
+            alt26 = dfa26.predict(input);
             switch (alt26) {
                 case 1 :
-                    // Expr.g:124:9: '*' oper
+                    // Expr.g:125:9: '*' oper
                     {
-<<<<<<< HEAD
-                    char_literal108=(Token)match(input,63,FOLLOW_63_in_exprmult856); 
+                    char_literal108=(Token)match(input,63,FOLLOW_63_in_exprmult858); 
                     char_literal108_tree = (Object)adaptor.create(char_literal108);
                     root_0 = (Object)adaptor.becomeRoot(char_literal108_tree, root_0);
 
-                    pushFollow(FOLLOW_oper_in_exprmult859);
-=======
-                    char_literal108=(Token)match(input,63,FOLLOW_63_in_exprmult859); 
-                    char_literal108_tree = (Object)adaptor.create(char_literal108);
-                    root_0 = (Object)adaptor.becomeRoot(char_literal108_tree, root_0);
-
-                    pushFollow(FOLLOW_oper_in_exprmult862);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+                    pushFollow(FOLLOW_oper_in_exprmult861);
                     oper109=oper();
 
                     state._fsp--;
@@ -3433,7 +3156,7 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "oper"
-    // Expr.g:127:1: oper : moinsunaire ( OPERCONDITION moinsunaire )* ;
+    // Expr.g:128:1: oper : moinsunaire ( OPERCONDITION moinsunaire )* ;
     public final ExprParser.oper_return oper() throws RecognitionException {
         ExprParser.oper_return retval = new ExprParser.oper_return();
         retval.start = input.LT(1);
@@ -3449,65 +3172,31 @@ public class ExprParser extends Parser {
         Object OPERCONDITION111_tree=null;
 
         try {
-            // Expr.g:127:5: ( moinsunaire ( OPERCONDITION moinsunaire )* )
-            // Expr.g:128:2: moinsunaire ( OPERCONDITION moinsunaire )*
+            // Expr.g:128:5: ( moinsunaire ( OPERCONDITION moinsunaire )* )
+            // Expr.g:129:2: moinsunaire ( OPERCONDITION moinsunaire )*
             {
             root_0 = (Object)adaptor.nil();
 
-<<<<<<< HEAD
-            pushFollow(FOLLOW_moinsunaire_in_oper872);
-=======
-            pushFollow(FOLLOW_moinsunaire_in_oper875);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            pushFollow(FOLLOW_moinsunaire_in_oper874);
             moinsunaire110=moinsunaire();
 
             state._fsp--;
 
             adaptor.addChild(root_0, moinsunaire110.getTree());
-<<<<<<< HEAD
-            // Expr.g:127:14: ( OPERCONDITION moinsunaire )*
-=======
-            // Expr.g:128:14: ( OPERCONDITION moinsunaire )*
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            // Expr.g:129:14: ( OPERCONDITION moinsunaire )*
             loop27:
             do {
                 int alt27=2;
-                int LA27_0 = input.LA(1);
-
-                if ( (LA27_0==OPERCONDITION) ) {
-                    alt27=1;
-                }
-
-
+                alt27 = dfa27.predict(input);
                 switch (alt27) {
             	case 1 :
-            	    // Expr.g:128:15: OPERCONDITION moinsunaire
+            	    // Expr.g:129:15: OPERCONDITION moinsunaire
             	    {
-<<<<<<< HEAD
-            	    OPERCONDITION111=(Token)match(input,OPERCONDITION,FOLLOW_OPERCONDITION_in_oper875); 
+            	    OPERCONDITION111=(Token)match(input,OPERCONDITION,FOLLOW_OPERCONDITION_in_oper877); 
             	    OPERCONDITION111_tree = (Object)adaptor.create(OPERCONDITION111);
             	    root_0 = (Object)adaptor.becomeRoot(OPERCONDITION111_tree, root_0);
 
-            	    pushFollow(FOLLOW_moinsunaire_in_oper878);
-=======
-            	    OPERCONDITION111=(Token)match(input,OPERCONDITION,FOLLOW_OPERCONDITION_in_oper878); 
-            	    OPERCONDITION111_tree = (Object)adaptor.create(OPERCONDITION111);
-            	    root_0 = (Object)adaptor.becomeRoot(OPERCONDITION111_tree, root_0);
-
-            	    pushFollow(FOLLOW_moinsunaire_in_oper881);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            	    pushFollow(FOLLOW_moinsunaire_in_oper880);
             	    moinsunaire112=moinsunaire();
 
             	    state._fsp--;
@@ -3549,7 +3238,7 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "moinsunaire"
-    // Expr.g:131:1: moinsunaire : ( '-' atom -> ^( OPPOSE atom ) | atom );
+    // Expr.g:132:1: moinsunaire : ( '-' atom -> ^( OPPOSE atom ) | atom );
     public final ExprParser.moinsunaire_return moinsunaire() throws RecognitionException {
         ExprParser.moinsunaire_return retval = new ExprParser.moinsunaire_return();
         retval.start = input.LT(1);
@@ -3566,22 +3255,14 @@ public class ExprParser extends Parser {
         RewriteRuleTokenStream stream_62=new RewriteRuleTokenStream(adaptor,"token 62");
         RewriteRuleSubtreeStream stream_atom=new RewriteRuleSubtreeStream(adaptor,"rule atom");
         try {
-            // Expr.g:131:12: ( '-' atom -> ^( OPPOSE atom ) | atom )
+            // Expr.g:132:12: ( '-' atom -> ^( OPPOSE atom ) | atom )
             int alt28=2;
             int LA28_0 = input.LA(1);
 
             if ( (LA28_0==62) ) {
                 alt28=1;
             }
-<<<<<<< HEAD
-            else if ( (LA28_0==ID_OTHERS||(LA28_0>=INT && LA28_0<=STRING)||LA28_0==32) ) {
-=======
             else if ( (LA28_0==ID_OTHERS||(LA28_0>=STRING && LA28_0<=INT)||LA28_0==32) ) {
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
                 alt28=2;
             }
             else {
@@ -3592,23 +3273,12 @@ public class ExprParser extends Parser {
             }
             switch (alt28) {
                 case 1 :
-                    // Expr.g:132:2: '-' atom
+                    // Expr.g:133:2: '-' atom
                     {
-<<<<<<< HEAD
-                    char_literal113=(Token)match(input,62,FOLLOW_62_in_moinsunaire891);  
+                    char_literal113=(Token)match(input,62,FOLLOW_62_in_moinsunaire893);  
                     stream_62.add(char_literal113);
 
-                    pushFollow(FOLLOW_atom_in_moinsunaire893);
-=======
-                    char_literal113=(Token)match(input,62,FOLLOW_62_in_moinsunaire894);  
-                    stream_62.add(char_literal113);
-
-                    pushFollow(FOLLOW_atom_in_moinsunaire896);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+                    pushFollow(FOLLOW_atom_in_moinsunaire895);
                     atom114=atom();
 
                     state._fsp--;
@@ -3627,9 +3297,9 @@ public class ExprParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 132:11: -> ^( OPPOSE atom )
+                    // 133:11: -> ^( OPPOSE atom )
                     {
-                        // Expr.g:132:14: ^( OPPOSE atom )
+                        // Expr.g:133:14: ^( OPPOSE atom )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(OPPOSE, "OPPOSE"), root_1);
@@ -3645,19 +3315,11 @@ public class ExprParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Expr.g:133:4: atom
+                    // Expr.g:134:4: atom
                     {
                     root_0 = (Object)adaptor.nil();
 
-<<<<<<< HEAD
-                    pushFollow(FOLLOW_atom_in_moinsunaire906);
-=======
-                    pushFollow(FOLLOW_atom_in_moinsunaire909);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+                    pushFollow(FOLLOW_atom_in_moinsunaire908);
                     atom115=atom();
 
                     state._fsp--;
@@ -3692,15 +3354,7 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "atom"
-<<<<<<< HEAD
-    // Expr.g:134:1: atom : ( ID_OTHERS | INT | STRING | '(' expr ')' );
-=======
-    // Expr.g:135:1: atom : ( ID_OTHERS | STRING | INT | '(' expr ')' );
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+    // Expr.g:136:1: atom : ( ID_OTHERS e | STRING | INT | '(' expr ')' );
     public final ExprParser.atom_return atom() throws RecognitionException {
         ExprParser.atom_return retval = new ExprParser.atom_return();
         retval.start = input.LT(1);
@@ -3708,47 +3362,23 @@ public class ExprParser extends Parser {
         Object root_0 = null;
 
         Token ID_OTHERS116=null;
-<<<<<<< HEAD
-        Token INT117=null;
         Token STRING118=null;
-=======
-        Token STRING117=null;
-        Token INT118=null;
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-        Token char_literal119=null;
-        Token char_literal121=null;
-        ExprParser.expr_return expr120 = null;
+        Token INT119=null;
+        Token char_literal120=null;
+        Token char_literal122=null;
+        ExprParser.e_return e117 = null;
+
+        ExprParser.expr_return expr121 = null;
 
 
         Object ID_OTHERS116_tree=null;
-<<<<<<< HEAD
-        Object INT117_tree=null;
         Object STRING118_tree=null;
-=======
-        Object STRING117_tree=null;
-        Object INT118_tree=null;
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-        Object char_literal119_tree=null;
-        Object char_literal121_tree=null;
+        Object INT119_tree=null;
+        Object char_literal120_tree=null;
+        Object char_literal122_tree=null;
 
         try {
-<<<<<<< HEAD
-            // Expr.g:134:5: ( ID_OTHERS | INT | STRING | '(' expr ')' )
-=======
-            // Expr.g:135:5: ( ID_OTHERS | STRING | INT | '(' expr ')' )
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            // Expr.g:136:5: ( ID_OTHERS e | STRING | INT | '(' expr ')' )
             int alt29=4;
             switch ( input.LA(1) ) {
             case ID_OTHERS:
@@ -3761,15 +3391,7 @@ public class ExprParser extends Parser {
                 alt29=2;
                 }
                 break;
-<<<<<<< HEAD
-            case STRING:
-=======
             case INT:
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
                 {
                 alt29=3;
                 }
@@ -3788,118 +3410,65 @@ public class ExprParser extends Parser {
 
             switch (alt29) {
                 case 1 :
-                    // Expr.g:136:3: ID_OTHERS
+                    // Expr.g:137:3: ID_OTHERS e
                     {
                     root_0 = (Object)adaptor.nil();
 
-<<<<<<< HEAD
-                    ID_OTHERS116=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_atom917); 
-=======
-                    ID_OTHERS116=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_atom920); 
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+                    ID_OTHERS116=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_atom919); 
                     ID_OTHERS116_tree = (Object)adaptor.create(ID_OTHERS116);
                     adaptor.addChild(root_0, ID_OTHERS116_tree);
 
+                    pushFollow(FOLLOW_e_in_atom921);
+                    e117=e();
+
+                    state._fsp--;
+
+                    adaptor.addChild(root_0, e117.getTree());
 
                     }
                     break;
                 case 2 :
-<<<<<<< HEAD
-                    // Expr.g:136:4: INT
+                    // Expr.g:138:4: STRING
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    INT117=(Token)match(input,INT,FOLLOW_INT_in_atom922); 
-                    INT117_tree = (Object)adaptor.create(INT117);
-                    adaptor.addChild(root_0, INT117_tree);
-=======
-                    // Expr.g:137:4: STRING
-                    {
-                    root_0 = (Object)adaptor.nil();
-
-                    STRING117=(Token)match(input,STRING,FOLLOW_STRING_in_atom925); 
-                    STRING117_tree = (Object)adaptor.create(STRING117);
-                    adaptor.addChild(root_0, STRING117_tree);
-
-
-                    }
-                    break;
-                case 3 :
-                    // Expr.g:138:5: INT
-                    {
-                    root_0 = (Object)adaptor.nil();
-
-                    INT118=(Token)match(input,INT,FOLLOW_INT_in_atom931); 
-                    INT118_tree = (Object)adaptor.create(INT118);
-                    adaptor.addChild(root_0, INT118_tree);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-
-
-                    }
-                    break;
-<<<<<<< HEAD
-                case 3 :
-                    // Expr.g:137:4: STRING
-                    {
-                    root_0 = (Object)adaptor.nil();
-
-                    STRING118=(Token)match(input,STRING,FOLLOW_STRING_in_atom927); 
+                    STRING118=(Token)match(input,STRING,FOLLOW_STRING_in_atom926); 
                     STRING118_tree = (Object)adaptor.create(STRING118);
                     adaptor.addChild(root_0, STRING118_tree);
 
 
                     }
                     break;
-                case 4 :
-                    // Expr.g:138:4: '(' expr ')'
+                case 3 :
+                    // Expr.g:139:5: INT
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    char_literal119=(Token)match(input,32,FOLLOW_32_in_atom932); 
-                    char_literal119_tree = (Object)adaptor.create(char_literal119);
-                    adaptor.addChild(root_0, char_literal119_tree);
+                    INT119=(Token)match(input,INT,FOLLOW_INT_in_atom932); 
+                    INT119_tree = (Object)adaptor.create(INT119);
+                    adaptor.addChild(root_0, INT119_tree);
 
-                    pushFollow(FOLLOW_expr_in_atom933);
-=======
+
+                    }
+                    break;
                 case 4 :
-                    // Expr.g:139:4: '(' expr ')'
+                    // Expr.g:140:4: '(' expr ')'
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    char_literal119=(Token)match(input,32,FOLLOW_32_in_atom936); 
-                    char_literal119_tree = (Object)adaptor.create(char_literal119);
-                    adaptor.addChild(root_0, char_literal119_tree);
+                    char_literal120=(Token)match(input,32,FOLLOW_32_in_atom938); 
+                    char_literal120_tree = (Object)adaptor.create(char_literal120);
+                    adaptor.addChild(root_0, char_literal120_tree);
 
-                    pushFollow(FOLLOW_expr_in_atom937);
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-                    expr120=expr();
+                    pushFollow(FOLLOW_expr_in_atom939);
+                    expr121=expr();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, expr120.getTree());
-<<<<<<< HEAD
-                    char_literal121=(Token)match(input,33,FOLLOW_33_in_atom934); 
-=======
-                    char_literal121=(Token)match(input,33,FOLLOW_33_in_atom938); 
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
-                    char_literal121_tree = (Object)adaptor.create(char_literal121);
-                    adaptor.addChild(root_0, char_literal121_tree);
+                    adaptor.addChild(root_0, expr121.getTree());
+                    char_literal122=(Token)match(input,33,FOLLOW_33_in_atom940); 
+                    char_literal122_tree = (Object)adaptor.create(char_literal122);
+                    adaptor.addChild(root_0, char_literal122_tree);
 
 
                     }
@@ -3927,6 +3496,191 @@ public class ExprParser extends Parser {
     // Delegated rules
 
 
+    protected DFA22 dfa22 = new DFA22(this);
+    protected DFA26 dfa26 = new DFA26(this);
+    protected DFA27 dfa27 = new DFA27(this);
+    static final String DFA22_eotS =
+        "\14\uffff";
+    static final String DFA22_eofS =
+        "\14\uffff";
+    static final String DFA22_minS =
+        "\1\27\13\uffff";
+    static final String DFA22_maxS =
+        "\1\77\13\uffff";
+    static final String DFA22_acceptS =
+        "\1\uffff\1\1\1\2\11\uffff";
+    static final String DFA22_specialS =
+        "\14\uffff}>";
+    static final String[] DFA22_transitionS = {
+            "\1\2\11\uffff\1\2\2\uffff\1\2\5\uffff\1\2\2\uffff\1\2\4\uffff"+
+            "\1\2\1\uffff\1\2\7\uffff\1\1\3\2",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA22_eot = DFA.unpackEncodedString(DFA22_eotS);
+    static final short[] DFA22_eof = DFA.unpackEncodedString(DFA22_eofS);
+    static final char[] DFA22_min = DFA.unpackEncodedStringToUnsignedChars(DFA22_minS);
+    static final char[] DFA22_max = DFA.unpackEncodedStringToUnsignedChars(DFA22_maxS);
+    static final short[] DFA22_accept = DFA.unpackEncodedString(DFA22_acceptS);
+    static final short[] DFA22_special = DFA.unpackEncodedString(DFA22_specialS);
+    static final short[][] DFA22_transition;
+
+    static {
+        int numStates = DFA22_transitionS.length;
+        DFA22_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA22_transition[i] = DFA.unpackEncodedString(DFA22_transitionS[i]);
+        }
+    }
+
+    class DFA22 extends DFA {
+
+        public DFA22(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 22;
+            this.eot = DFA22_eot;
+            this.eof = DFA22_eof;
+            this.min = DFA22_min;
+            this.max = DFA22_max;
+            this.accept = DFA22_accept;
+            this.special = DFA22_special;
+            this.transition = DFA22_transition;
+        }
+        public String getDescription() {
+            return "110:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | );";
+        }
+    }
+    static final String DFA26_eotS =
+        "\13\uffff";
+    static final String DFA26_eofS =
+        "\13\uffff";
+    static final String DFA26_minS =
+        "\1\41\12\uffff";
+    static final String DFA26_maxS =
+        "\1\77\12\uffff";
+    static final String DFA26_acceptS =
+        "\1\uffff\1\1\1\2\10\uffff";
+    static final String DFA26_specialS =
+        "\13\uffff}>";
+    static final String[] DFA26_transitionS = {
+            "\1\2\2\uffff\1\2\5\uffff\1\2\2\uffff\1\2\4\uffff\1\2\1\uffff"+
+            "\1\2\7\uffff\3\2\1\1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA26_eot = DFA.unpackEncodedString(DFA26_eotS);
+    static final short[] DFA26_eof = DFA.unpackEncodedString(DFA26_eofS);
+    static final char[] DFA26_min = DFA.unpackEncodedStringToUnsignedChars(DFA26_minS);
+    static final char[] DFA26_max = DFA.unpackEncodedStringToUnsignedChars(DFA26_maxS);
+    static final short[] DFA26_accept = DFA.unpackEncodedString(DFA26_acceptS);
+    static final short[] DFA26_special = DFA.unpackEncodedString(DFA26_specialS);
+    static final short[][] DFA26_transition;
+
+    static {
+        int numStates = DFA26_transitionS.length;
+        DFA26_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA26_transition[i] = DFA.unpackEncodedString(DFA26_transitionS[i]);
+        }
+    }
+
+    class DFA26 extends DFA {
+
+        public DFA26(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 26;
+            this.eot = DFA26_eot;
+            this.eof = DFA26_eof;
+            this.min = DFA26_min;
+            this.max = DFA26_max;
+            this.accept = DFA26_accept;
+            this.special = DFA26_special;
+            this.transition = DFA26_transition;
+        }
+        public String getDescription() {
+            return "125:7: ( '*' oper )?";
+        }
+    }
+    static final String DFA27_eotS =
+        "\14\uffff";
+    static final String DFA27_eofS =
+        "\14\uffff";
+    static final String DFA27_minS =
+        "\1\27\13\uffff";
+    static final String DFA27_maxS =
+        "\1\77\13\uffff";
+    static final String DFA27_acceptS =
+        "\1\uffff\1\2\11\uffff\1\1";
+    static final String DFA27_specialS =
+        "\14\uffff}>";
+    static final String[] DFA27_transitionS = {
+            "\1\13\11\uffff\1\1\2\uffff\1\1\5\uffff\1\1\2\uffff\1\1\4\uffff"+
+            "\1\1\1\uffff\1\1\7\uffff\4\1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA27_eot = DFA.unpackEncodedString(DFA27_eotS);
+    static final short[] DFA27_eof = DFA.unpackEncodedString(DFA27_eofS);
+    static final char[] DFA27_min = DFA.unpackEncodedStringToUnsignedChars(DFA27_minS);
+    static final char[] DFA27_max = DFA.unpackEncodedStringToUnsignedChars(DFA27_maxS);
+    static final short[] DFA27_accept = DFA.unpackEncodedString(DFA27_acceptS);
+    static final short[] DFA27_special = DFA.unpackEncodedString(DFA27_specialS);
+    static final short[][] DFA27_transition;
+
+    static {
+        int numStates = DFA27_transitionS.length;
+        DFA27_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA27_transition[i] = DFA.unpackEncodedString(DFA27_transitionS[i]);
+        }
+    }
+
+    class DFA27 extends DFA {
+
+        public DFA27(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 27;
+            this.eot = DFA27_eot;
+            this.eof = DFA27_eof;
+            this.min = DFA27_min;
+            this.max = DFA27_max;
+            this.accept = DFA27_accept;
+            this.special = DFA27_special;
+            this.transition = DFA27_transition;
+        }
+        public String getDescription() {
+            return "()* loopback of 129:14: ( OPERCONDITION moinsunaire )*";
+        }
+    }
  
 
     public static final BitSet FOLLOW_class_decl_in_prog88 = new BitSet(new long[]{0x01C5110420400000L});
@@ -4017,80 +3771,43 @@ public class ExprParser extends Parser {
     public static final BitSet FOLLOW_expr_in_retourne687 = new BitSet(new long[]{0x0000000200000000L});
     public static final BitSet FOLLOW_33_in_retourne689 = new BitSet(new long[]{0x0000001000000000L});
     public static final BitSet FOLLOW_36_in_retourne690 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_exprplus_in_expr710 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_e_in_expr712 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_expr718 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_e_in_expr720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_expr725 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_e_in_expr727 = new BitSet(new long[]{0x0000000000000002L});
-<<<<<<< HEAD
+    public static final BitSet FOLLOW_exprplus_in_expr711 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_expr716 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_e_in_expr718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_expr723 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_e_in_expr725 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_59_in_expr732 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_ID_CLASS_in_expr734 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_e_in_expr736 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_e757 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_ID_OTHERS_in_e759 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_e761 = new BitSet(new long[]{0x4E00000303400000L});
-    public static final BitSet FOLLOW_f_in_e763 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_e766 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_e_in_e768 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expr_in_f798 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_42_in_f801 = new BitSet(new long[]{0x4E00000103400000L});
-    public static final BitSet FOLLOW_expr_in_f803 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_exprmult_in_exprplus827 = new BitSet(new long[]{0x6000000000000002L});
+    public static final BitSet FOLLOW_ID_CLASS_in_expr734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_e754 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_ID_OTHERS_in_e756 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_e758 = new BitSet(new long[]{0x4E00000303400000L});
+    public static final BitSet FOLLOW_f_in_e760 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_e763 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_e_in_e765 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_f796 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_42_in_f799 = new BitSet(new long[]{0x4E00000103400000L});
+    public static final BitSet FOLLOW_expr_in_f801 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_exprmult_in_exprplus825 = new BitSet(new long[]{0x7000000000000000L});
+    public static final BitSet FOLLOW_e_in_exprplus827 = new BitSet(new long[]{0x6000000000000002L});
     public static final BitSet FOLLOW_61_in_exprplus832 = new BitSet(new long[]{0x4000000103400000L});
     public static final BitSet FOLLOW_62_in_exprplus835 = new BitSet(new long[]{0x4000000103400000L});
-    public static final BitSet FOLLOW_exprmult_in_exprplus839 = new BitSet(new long[]{0x6000000000000002L});
-    public static final BitSet FOLLOW_oper_in_exprmult853 = new BitSet(new long[]{0x8000000000000002L});
-    public static final BitSet FOLLOW_63_in_exprmult856 = new BitSet(new long[]{0x4000000103400000L});
-    public static final BitSet FOLLOW_oper_in_exprmult859 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_moinsunaire_in_oper872 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_OPERCONDITION_in_oper875 = new BitSet(new long[]{0x4000000103400000L});
-    public static final BitSet FOLLOW_moinsunaire_in_oper878 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_62_in_moinsunaire891 = new BitSet(new long[]{0x4000000103400000L});
-    public static final BitSet FOLLOW_atom_in_moinsunaire893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_atom_in_moinsunaire906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_OTHERS_in_atom917 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INT_in_atom922 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_atom927 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_atom932 = new BitSet(new long[]{0x4E00000103400000L});
-    public static final BitSet FOLLOW_expr_in_atom933 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_atom934 = new BitSet(new long[]{0x0000000000000002L});
-=======
-    public static final BitSet FOLLOW_59_in_expr734 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_ID_CLASS_in_expr736 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_e_in_expr738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_e759 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_ID_OTHERS_in_e761 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_e763 = new BitSet(new long[]{0x4E00000303400000L});
-    public static final BitSet FOLLOW_f_in_e765 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_e768 = new BitSet(new long[]{0x1000000000000000L});
-    public static final BitSet FOLLOW_e_in_e770 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expr_in_f801 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_42_in_f804 = new BitSet(new long[]{0x4E00000103400000L});
-    public static final BitSet FOLLOW_expr_in_f806 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_exprmult_in_exprplus830 = new BitSet(new long[]{0x6000000000000002L});
-    public static final BitSet FOLLOW_61_in_exprplus835 = new BitSet(new long[]{0x4000000103400000L});
-    public static final BitSet FOLLOW_62_in_exprplus838 = new BitSet(new long[]{0x4000000103400000L});
-    public static final BitSet FOLLOW_exprmult_in_exprplus842 = new BitSet(new long[]{0x6000000000000002L});
-    public static final BitSet FOLLOW_oper_in_exprmult856 = new BitSet(new long[]{0x8000000000000002L});
-    public static final BitSet FOLLOW_63_in_exprmult859 = new BitSet(new long[]{0x4000000103400000L});
-    public static final BitSet FOLLOW_oper_in_exprmult862 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_moinsunaire_in_oper875 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_OPERCONDITION_in_oper878 = new BitSet(new long[]{0x4000000103400000L});
-    public static final BitSet FOLLOW_moinsunaire_in_oper881 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_62_in_moinsunaire894 = new BitSet(new long[]{0x4000000103400000L});
-    public static final BitSet FOLLOW_atom_in_moinsunaire896 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_atom_in_moinsunaire909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_OTHERS_in_atom920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_atom925 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INT_in_atom931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_atom936 = new BitSet(new long[]{0x4E00000103400000L});
-    public static final BitSet FOLLOW_expr_in_atom937 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_atom938 = new BitSet(new long[]{0x0000000000000002L});
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+    public static final BitSet FOLLOW_exprmult_in_exprplus839 = new BitSet(new long[]{0x7000000000000000L});
+    public static final BitSet FOLLOW_e_in_exprplus841 = new BitSet(new long[]{0x6000000000000002L});
+    public static final BitSet FOLLOW_oper_in_exprmult855 = new BitSet(new long[]{0x8000000000000002L});
+    public static final BitSet FOLLOW_63_in_exprmult858 = new BitSet(new long[]{0x4000000103400000L});
+    public static final BitSet FOLLOW_oper_in_exprmult861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_moinsunaire_in_oper874 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_OPERCONDITION_in_oper877 = new BitSet(new long[]{0x4000000103400000L});
+    public static final BitSet FOLLOW_moinsunaire_in_oper880 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_62_in_moinsunaire893 = new BitSet(new long[]{0x4000000103400000L});
+    public static final BitSet FOLLOW_atom_in_moinsunaire895 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_atom_in_moinsunaire908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_OTHERS_in_atom919 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_e_in_atom921 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_atom926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INT_in_atom932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_atom938 = new BitSet(new long[]{0x4E00000103400000L});
+    public static final BitSet FOLLOW_expr_in_atom939 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_atom940 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -1,19 +1,8 @@
 package expr;
 
-<<<<<<< HEAD
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-04-06 16:56:20
-=======
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-04-06 15:21:12
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-04-06 18:20:19
 
 import org.antlr.runtime.*;
-import java.util.Stack;
-import java.util.List;
-import java.util.ArrayList;
 
 public class ExprLexer extends Lexer {
     public static final int EOF=-1;
@@ -72,17 +61,8 @@ public class ExprLexer extends Lexer {
     public static final int ID_CLASS=21;
     public static final int ID_OTHERS=22;
     public static final int OPERCONDITION=23;
-<<<<<<< HEAD
-    public static final int INT=24;
-    public static final int STRING=25;
-=======
     public static final int STRING=24;
     public static final int INT=25;
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
     public static final int COMMENTS=26;
     public static final int NEWLINE=27;
     public static final int WS=28;
@@ -828,21 +808,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // Expr.g:142:5: ( ( '0' .. '9' )+ )
-            // Expr.g:142:7: ( '0' .. '9' )+
+            // Expr.g:144:5: ( ( '0' .. '9' )+ )
+            // Expr.g:144:7: ( '0' .. '9' )+
             {
-            // Expr.g:142:7: ( '0' .. '9' )+
-=======
-            // Expr.g:143:5: ( ( '0' .. '9' )+ )
-            // Expr.g:143:7: ( '0' .. '9' )+
-            {
-            // Expr.g:143:7: ( '0' .. '9' )+
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            // Expr.g:144:7: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -856,15 +825,7 @@ public class ExprLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-<<<<<<< HEAD
-            	    // Expr.g:142:7: '0' .. '9'
-=======
-            	    // Expr.g:143:7: '0' .. '9'
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            	    // Expr.g:144:7: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -896,23 +857,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // Expr.g:143:8: ( '\"' ( ' ' .. '!' | '#' .. '~' )* '\"' )
-            // Expr.g:143:12: '\"' ( ' ' .. '!' | '#' .. '~' )* '\"'
+            // Expr.g:145:8: ( '\"' ( ' ' .. '!' | '#' .. '~' )* '\"' )
+            // Expr.g:145:12: '\"' ( ' ' .. '!' | '#' .. '~' )* '\"'
             {
             match('\"'); 
-            // Expr.g:143:16: ( ' ' .. '!' | '#' .. '~' )*
-=======
-            // Expr.g:144:8: ( '\"' ( ' ' .. '!' | '#' .. '~' )* '\"' )
-            // Expr.g:144:12: '\"' ( ' ' .. '!' | '#' .. '~' )* '\"'
-            {
-            match('\"'); 
-            // Expr.g:144:16: ( ' ' .. '!' | '#' .. '~' )*
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            // Expr.g:145:16: ( ' ' .. '!' | '#' .. '~' )*
             loop2:
             do {
                 int alt2=2;
@@ -962,15 +911,7 @@ public class ExprLexer extends Lexer {
         try {
             int _type = OPERCONDITION;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // Expr.g:145:14: ( '<' | '<=' | '>' | '>=' | '==' | '!=' )
-=======
-            // Expr.g:146:14: ( '<' | '<=' | '>' | '>=' | '==' | '!=' )
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            // Expr.g:147:14: ( '<' | '<=' | '>' | '>=' | '==' | '!=' )
             int alt3=6;
             switch ( input.LA(1) ) {
             case '<':
@@ -1014,30 +955,14 @@ public class ExprLexer extends Lexer {
 
             switch (alt3) {
                 case 1 :
-<<<<<<< HEAD
-                    // Expr.g:145:15: '<'
-=======
-                    // Expr.g:146:15: '<'
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+                    // Expr.g:147:15: '<'
                     {
                     match('<'); 
 
                     }
                     break;
                 case 2 :
-<<<<<<< HEAD
-                    // Expr.g:145:19: '<='
-=======
-                    // Expr.g:146:19: '<='
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+                    // Expr.g:147:19: '<='
                     {
                     match("<="); 
 
@@ -1045,30 +970,14 @@ public class ExprLexer extends Lexer {
                     }
                     break;
                 case 3 :
-<<<<<<< HEAD
-                    // Expr.g:145:24: '>'
-=======
-                    // Expr.g:146:24: '>'
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+                    // Expr.g:147:24: '>'
                     {
                     match('>'); 
 
                     }
                     break;
                 case 4 :
-<<<<<<< HEAD
-                    // Expr.g:145:28: '>='
-=======
-                    // Expr.g:146:28: '>='
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+                    // Expr.g:147:28: '>='
                     {
                     match(">="); 
 
@@ -1076,15 +985,7 @@ public class ExprLexer extends Lexer {
                     }
                     break;
                 case 5 :
-<<<<<<< HEAD
-                    // Expr.g:145:33: '=='
-=======
-                    // Expr.g:146:33: '=='
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+                    // Expr.g:147:33: '=='
                     {
                     match("=="); 
 
@@ -1092,15 +993,7 @@ public class ExprLexer extends Lexer {
                     }
                     break;
                 case 6 :
-<<<<<<< HEAD
-                    // Expr.g:145:38: '!='
-=======
-                    // Expr.g:146:38: '!='
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+                    // Expr.g:147:38: '!='
                     {
                     match("!="); 
 
@@ -1122,23 +1015,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = ID_CLASS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // Expr.g:148:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // Expr.g:148:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // Expr.g:150:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // Expr.g:150:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             matchRange('A','Z'); 
-            // Expr.g:148:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
-=======
-            // Expr.g:149:10: ( 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // Expr.g:149:12: 'A' .. 'Z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
-            {
-            matchRange('A','Z'); 
-            // Expr.g:149:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            // Expr.g:150:21: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop4:
             do {
                 int alt4=2;
@@ -1187,23 +1068,11 @@ public class ExprLexer extends Lexer {
         try {
             int _type = ID_OTHERS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // Expr.g:149:11: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // Expr.g:149:13: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // Expr.g:151:11: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // Expr.g:151:13: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             matchRange('a','z'); 
-            // Expr.g:149:22: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
-=======
-            // Expr.g:150:11: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // Expr.g:150:13: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
-            {
-            matchRange('a','z'); 
-            // Expr.g:150:22: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            // Expr.g:151:22: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop5:
             do {
                 int alt5=2;
@@ -1252,25 +1121,12 @@ public class ExprLexer extends Lexer {
         try {
             int _type = COMMENTS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // Expr.g:151:10: ( '/*' ( . )* '*/' )
-            // Expr.g:151:12: '/*' ( . )* '*/'
+            // Expr.g:153:10: ( '/*' ( . )* '*/' )
+            // Expr.g:153:12: '/*' ( . )* '*/'
             {
             match("/*"); 
 
-            // Expr.g:151:17: ( . )*
-=======
-            // Expr.g:152:10: ( '/*' ( . )* '*/' )
-            // Expr.g:152:12: '/*' ( . )* '*/'
-            {
-            match("/*"); 
-
-            // Expr.g:152:17: ( . )*
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            // Expr.g:153:17: ( . )*
             loop6:
             do {
                 int alt6=2;
@@ -1295,15 +1151,7 @@ public class ExprLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-<<<<<<< HEAD
-            	    // Expr.g:151:17: .
-=======
-            	    // Expr.g:152:17: .
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            	    // Expr.g:153:17: .
             	    {
             	    matchAny(); 
 
@@ -1334,21 +1182,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = NEWLINE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // Expr.g:152:8: ( ( '\\r' )? '\\n' )
-            // Expr.g:152:9: ( '\\r' )? '\\n'
+            // Expr.g:154:8: ( ( '\\r' )? '\\n' )
+            // Expr.g:154:9: ( '\\r' )? '\\n'
             {
-            // Expr.g:152:9: ( '\\r' )?
-=======
-            // Expr.g:153:8: ( ( '\\r' )? '\\n' )
-            // Expr.g:153:9: ( '\\r' )? '\\n'
-            {
-            // Expr.g:153:9: ( '\\r' )?
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            // Expr.g:154:9: ( '\\r' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1357,15 +1194,7 @@ public class ExprLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-<<<<<<< HEAD
-                    // Expr.g:152:9: '\\r'
-=======
-                    // Expr.g:153:9: '\\r'
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+                    // Expr.g:154:9: '\\r'
                     {
                     match('\r'); 
 
@@ -1392,21 +1221,10 @@ public class ExprLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-<<<<<<< HEAD
-            // Expr.g:153:4: ( ( ' ' | '\\t' )+ )
-            // Expr.g:153:6: ( ' ' | '\\t' )+
+            // Expr.g:155:4: ( ( ' ' | '\\t' )+ )
+            // Expr.g:155:6: ( ' ' | '\\t' )+
             {
-            // Expr.g:153:6: ( ' ' | '\\t' )+
-=======
-            // Expr.g:154:4: ( ( ' ' | '\\t' )+ )
-            // Expr.g:154:6: ( ' ' | '\\t' )+
-            {
-            // Expr.g:154:6: ( ' ' | '\\t' )+
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
+            // Expr.g:155:6: ( ' ' | '\\t' )+
             int cnt8=0;
             loop8:
             do {

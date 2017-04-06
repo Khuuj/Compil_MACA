@@ -16,11 +16,10 @@ IF;
 BLOC;
 BODY;
 METHOD;
-DEC_METHOD;
 ARGS;
 PARAMS;
 OPPOSE;
-APPEL_METHODE;
+APPELMETHODE;
 PARAM;
 NEW;
 BODY_CLASS;
@@ -50,7 +49,7 @@ type :
 	;
 
 method_decl : 
-	'method' ID_OTHERS '('  method_params? ')' m -> ^(DEC_METHOD ID_OTHERS   method_params?  m )
+	'method' ID_OTHERS '('  method_params? ')' m -> ^(METHOD ID_OTHERS   method_params?  m )
 	;
 
 m  :
@@ -101,26 +100,13 @@ retourne :
  	;
 
 expr:
-<<<<<<< HEAD
-	 exprplus e//ID_OTHERS e
-	| 'this' e
-	| 'super' e
-	| 'new' ID_CLASS -> ^(NEW ID_CLASS)
-=======
-	// exprplus e
 	exprplus
 	| 'this' e
 	| 'super' e
-	//| STRING
 	| 'new' ID_CLASS  -> ^(NEW ID_CLASS )
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
 	;
 e :
-	'.' ID_OTHERS '(' f? ')' e -> ^(APPEL_METHODE ID_OTHERS f? e?)
+	'.' ID_OTHERS '(' f? ')' e -> ^(APPELMETHODE ID_OTHERS f? e?)
 	|
 	;
 	
@@ -146,19 +132,9 @@ moinsunaire:
 	| atom
 	;
 atom: 
-<<<<<<< HEAD
-	 ID_OTHERS
-	| INT
-	| STRING
-=======
 	 ID_OTHERS e
 	| STRING
 	|  INT 
-<<<<<<< Updated upstream
->>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> Stashed changes
 	| '('expr')'
 	;
 
