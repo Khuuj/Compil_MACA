@@ -101,10 +101,19 @@ retourne :
  	;
 
 expr:
+<<<<<<< HEAD
 	 exprplus e//ID_OTHERS e
 	| 'this' e
 	| 'super' e
 	| 'new' ID_CLASS -> ^(NEW ID_CLASS)
+=======
+	// exprplus e
+	exprplus
+	| 'this' e
+	| 'super' e
+	//| STRING
+	| 'new' ID_CLASS  -> ^(NEW ID_CLASS )
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 	;
 e :
 	'.' ID_OTHERS '(' f? ')' e -> ^(APPEL_METHODE ID_OTHERS f? e?)
@@ -116,7 +125,7 @@ f  	:  expr (',' expr )* -> ^(ARGS expr*)
 
 
 exprplus: 
-	exprmult ( ('+'^|'-'^) exprmult)*
+	exprmult e ( ('+'^|'-'^) exprmult e)*
 	;
 
 
@@ -133,9 +142,15 @@ moinsunaire:
 	| atom
 	;
 atom: 
+<<<<<<< HEAD
 	 ID_OTHERS
 	| INT
 	| STRING
+=======
+	 ID_OTHERS e
+	| STRING
+	|  INT 
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 	| '('expr')'
 	;
 

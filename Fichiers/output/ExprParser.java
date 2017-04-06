@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/adam/workspace/Compil_MACA/Fichiers/Expr.g 2017-04-06 17:45:23
+=======
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/clement/workspace/Compil_MACA/Fichiers/Expr.g 2017-04-06 17:09:16
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -12,7 +16,11 @@ import org.antlr.runtime.tree.*;
 
 public class ExprParser extends DebugParser {
     public static final String[] tokenNames = new String[] {
+<<<<<<< HEAD
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ROOT", "DEC_CLASS", "DEC_VAR", "AFFECT", "RETURN", "FOR", "IF", "BLOC", "BODY", "METHOD", "DEC_METHOD", "ARGS", "PARAMS", "OPPOSE", "APPEL_METHODE", "PARAM", "NEW", "BODY_CLASS", "ID_CLASS", "ID_OTHERS", "OPERCONDITION", "INT", "STRING", "COMMENTS", "NEWLINE", "WS", "'class'", "'inherit'", "'='", "'('", "')'", "'var'", "':'", "';'", "'int'", "'string'", "'method'", "'{'", "'}'", "','", "':='", "'if'", "'then'", "'else'", "'fi'", "'for'", "'in'", "'do'", "'end'", "'..'", "'nil'", "'write'", "'read'", "'return'", "'this'", "'super'", "'new'", "'.'", "'+'", "'-'", "'*'"
+=======
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ROOT", "DEC_CLASS", "DEC_VAR", "AFFECT", "RETURN", "FOR", "IF", "BLOC", "BODY", "METHOD", "ARGS", "PARAMS", "OPPOSE", "APPELMETHODE", "PARAM", "NEW", "BODY_CLASS", "ID_CLASS", "ID_OTHERS", "OPERCONDITION", "STRING", "INT", "COMMENTS", "NEWLINE", "WS", "'class'", "'inherit'", "'='", "'('", "')'", "'var'", "':'", "';'", "'int'", "'string'", "'method'", "'{'", "'}'", "','", "':='", "'if'", "'then'", "'else'", "'fi'", "'for'", "'in'", "'do'", "'end'", "'..'", "'nil'", "'write'", "'read'", "'return'", "'this'", "'super'", "'new'", "'.'", "'+'", "'-'", "'*'"
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     };
     public static final int BLOC=11;
     public static final int APPEL_METHODE=18;
@@ -35,7 +43,12 @@ public class ExprParser extends DebugParser {
     public static final int FOR=9;
     public static final int OPPOSE=17;
     public static final int DEC_CLASS=5;
+<<<<<<< HEAD
     public static final int OPERCONDITION=24;
+=======
+    public static final int OPERCONDITION=23;
+    public static final int T__29=29;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     public static final int METHOD=13;
     public static final int PARAMS=16;
     public static final int T__62=62;
@@ -68,8 +81,13 @@ public class ExprParser extends DebugParser {
     public static final int DEC_METHOD=14;
     public static final int T__44=44;
     public static final int T__45=45;
+<<<<<<< HEAD
     public static final int ID_CLASS=22;
     public static final int STRING=26;
+=======
+    public static final int ID_CLASS=21;
+    public static final int STRING=24;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     public static final int T__46=46;
     public static final int T__47=47;
     public static final int T__40=40;
@@ -81,10 +99,17 @@ public class ExprParser extends DebugParser {
     // delegators
 
     public static final String[] ruleNames = new String[] {
+<<<<<<< HEAD
         "invalidRule", "m", "exprplus", "var_decl", "print", "read", "class_decl", 
         "e", "boundaries", "class_item_decl", "method_decl", "i", "method_params", 
         "params", "atom", "instr", "exprmult", "f", "moinsunaire", "oper", 
         "prog", "type", "expr", "retourne"
+=======
+        "invalidRule", "atom", "f", "var_decl", "method_decl", "class_item_decl", 
+        "retourne", "i", "class_decl", "e", "print", "expr", "prog", "type", 
+        "oper", "exprmult", "exprplus", "method_params", "params", "instr", 
+        "m", "moinsunaire", "read", "boundaries"
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     };
      
         public int ruleLevel = 0;
@@ -304,7 +329,7 @@ public class ExprParser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: class_decl, var_decl, instr
+            // elements: var_decl, class_decl, instr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -825,7 +850,7 @@ public class ExprParser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: ID_OTHERS, type
+            // elements: type, ID_OTHERS
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1461,7 +1486,11 @@ public class ExprParser extends DebugParser {
 
 
                     // AST REWRITE
+<<<<<<< HEAD
                     // elements: instr, var_decl, type
+=======
+                    // elements: instr, type, var_decl
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1747,7 +1776,7 @@ public class ExprParser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: ID_OTHERS, type
+            // elements: type, ID_OTHERS
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1759,11 +1788,19 @@ public class ExprParser extends DebugParser {
             root_0 = (Object)adaptor.nil();
             // 67:48: -> ( ^( PARAM ID_OTHERS type ) )*
             {
+<<<<<<< HEAD
                 dbg.location(67,51);
                 // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:67:51: ( ^( PARAM ID_OTHERS type ) )*
                 while ( stream_ID_OTHERS.hasNext()||stream_type.hasNext() ) {
                     dbg.location(67,51);
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:67:51: ^( PARAM ID_OTHERS type )
+=======
+                dbg.location(66,51);
+                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:66:51: ( ^( PARAM ID_OTHERS type ) )*
+                while ( stream_type.hasNext()||stream_ID_OTHERS.hasNext() ) {
+                    dbg.location(66,51);
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:66:51: ^( PARAM ID_OTHERS type )
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     {
                     Object root_1 = (Object)adaptor.nil();
                     dbg.location(67,53);
@@ -1778,8 +1815,8 @@ public class ExprParser extends DebugParser {
                     }
 
                 }
-                stream_ID_OTHERS.reset();
                 stream_type.reset();
+                stream_ID_OTHERS.reset();
 
             }
 
@@ -2210,7 +2247,11 @@ public class ExprParser extends DebugParser {
 
 
                     // AST REWRITE
+<<<<<<< HEAD
                     // elements: boundaries, ID_OTHERS, instr
+=======
+                    // elements: boundaries, instr, ID_OTHERS
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2688,7 +2729,11 @@ public class ExprParser extends DebugParser {
 
             int LA19_0 = input.LA(1);
 
+<<<<<<< HEAD
             if ( (LA19_0==ID_OTHERS||(LA19_0>=INT && LA19_0<=STRING)||LA19_0==33||(LA19_0>=58 && LA19_0<=60)||LA19_0==63) ) {
+=======
+            if ( (LA19_0==ID_OTHERS||(LA19_0>=STRING && LA19_0<=INT)||LA19_0==32||(LA19_0>=57 && LA19_0<=59)||LA19_0==62) ) {
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                 alt19=1;
             }
             else if ( (LA19_0==54) ) {
@@ -3153,32 +3198,50 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "expr"
+<<<<<<< HEAD
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:103:1: expr : ( exprplus e | 'this' e | 'super' e | 'new' ID_CLASS -> ^( NEW ID_CLASS ) );
+=======
+    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:102:1: expr : ( exprplus | 'this' e | 'super' e | 'new' ID_CLASS -> ^( NEW ID_CLASS ) );
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     public final ExprParser.expr_return expr() throws RecognitionException {
         ExprParser.expr_return retval = new ExprParser.expr_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
+<<<<<<< HEAD
         Token string_literal87=null;
         Token string_literal89=null;
         Token string_literal91=null;
         Token ID_CLASS92=null;
+=======
+        Token string_literal86=null;
+        Token string_literal88=null;
+        Token string_literal90=null;
+        Token ID_CLASS91=null;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
         ExprParser.exprplus_return exprplus85 = null;
 
-        ExprParser.e_return e86 = null;
+        ExprParser.e_return e87 = null;
 
-        ExprParser.e_return e88 = null;
-
-        ExprParser.e_return e90 = null;
+        ExprParser.e_return e89 = null;
 
 
+<<<<<<< HEAD
         Object string_literal87_tree=null;
         Object string_literal89_tree=null;
         Object string_literal91_tree=null;
         Object ID_CLASS92_tree=null;
         RewriteRuleTokenStream stream_ID_CLASS=new RewriteRuleTokenStream(adaptor,"token ID_CLASS");
         RewriteRuleTokenStream stream_60=new RewriteRuleTokenStream(adaptor,"token 60");
+=======
+        Object string_literal86_tree=null;
+        Object string_literal88_tree=null;
+        Object string_literal90_tree=null;
+        Object ID_CLASS91_tree=null;
+        RewriteRuleTokenStream stream_59=new RewriteRuleTokenStream(adaptor,"token 59");
+        RewriteRuleTokenStream stream_ID_CLASS=new RewriteRuleTokenStream(adaptor,"token ID_CLASS");
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
         try { dbg.enterRule(getGrammarFileName(), "expr");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -3186,12 +3249,17 @@ public class ExprParser extends DebugParser {
         dbg.location(103, 1);
 
         try {
+<<<<<<< HEAD
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:103:5: ( exprplus e | 'this' e | 'super' e | 'new' ID_CLASS -> ^( NEW ID_CLASS ) )
+=======
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:102:5: ( exprplus | 'this' e | 'super' e | 'new' ID_CLASS -> ^( NEW ID_CLASS ) )
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             int alt20=4;
             try { dbg.enterDecision(20);
 
             switch ( input.LA(1) ) {
             case ID_OTHERS:
+            case STRING:
             case INT:
             case STRING:
             case 33:
@@ -3210,7 +3278,11 @@ public class ExprParser extends DebugParser {
                 alt20=3;
                 }
                 break;
+<<<<<<< HEAD
             case 60:
+=======
+            case 59:
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                 {
                 alt20=4;
                 }
@@ -3229,17 +3301,27 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
+<<<<<<< HEAD
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:104:3: exprplus e
                     {
                     root_0 = (Object)adaptor.nil();
 
                     dbg.location(104,3);
                     pushFollow(FOLLOW_exprplus_in_expr713);
+=======
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:104:2: exprplus
+                    {
+                    root_0 = (Object)adaptor.nil();
+
+                    dbg.location(104,2);
+                    pushFollow(FOLLOW_exprplus_in_expr711);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     exprplus85=exprplus();
 
                     state._fsp--;
 
                     adaptor.addChild(root_0, exprplus85.getTree());
+<<<<<<< HEAD
                     dbg.location(104,12);
                     pushFollow(FOLLOW_e_in_expr715);
                     e86=e();
@@ -3247,17 +3329,24 @@ public class ExprParser extends DebugParser {
                     state._fsp--;
 
                     adaptor.addChild(root_0, e86.getTree());
+=======
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
                     }
                     break;
                 case 2 :
                     dbg.enterAlt(2);
 
+<<<<<<< HEAD
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:105:4: 'this' e
+=======
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:105:4: 'this' e
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     {
                     root_0 = (Object)adaptor.nil();
 
                     dbg.location(105,4);
+<<<<<<< HEAD
                     string_literal87=(Token)match(input,58,FOLLOW_58_in_expr720); 
                     string_literal87_tree = (Object)adaptor.create(string_literal87);
                     adaptor.addChild(root_0, string_literal87_tree);
@@ -3265,21 +3354,35 @@ public class ExprParser extends DebugParser {
                     dbg.location(105,11);
                     pushFollow(FOLLOW_e_in_expr722);
                     e88=e();
+=======
+                    string_literal86=(Token)match(input,57,FOLLOW_57_in_expr716); 
+                    string_literal86_tree = (Object)adaptor.create(string_literal86);
+                    adaptor.addChild(root_0, string_literal86_tree);
+
+                    dbg.location(105,11);
+                    pushFollow(FOLLOW_e_in_expr718);
+                    e87=e();
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, e88.getTree());
+                    adaptor.addChild(root_0, e87.getTree());
 
                     }
                     break;
                 case 3 :
                     dbg.enterAlt(3);
 
+<<<<<<< HEAD
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:106:4: 'super' e
+=======
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:106:4: 'super' e
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     {
                     root_0 = (Object)adaptor.nil();
 
                     dbg.location(106,4);
+<<<<<<< HEAD
                     string_literal89=(Token)match(input,59,FOLLOW_59_in_expr727); 
                     string_literal89_tree = (Object)adaptor.create(string_literal89);
                     adaptor.addChild(root_0, string_literal89_tree);
@@ -3287,16 +3390,26 @@ public class ExprParser extends DebugParser {
                     dbg.location(106,12);
                     pushFollow(FOLLOW_e_in_expr729);
                     e90=e();
+=======
+                    string_literal88=(Token)match(input,58,FOLLOW_58_in_expr723); 
+                    string_literal88_tree = (Object)adaptor.create(string_literal88);
+                    adaptor.addChild(root_0, string_literal88_tree);
+
+                    dbg.location(106,12);
+                    pushFollow(FOLLOW_e_in_expr725);
+                    e89=e();
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, e90.getTree());
+                    adaptor.addChild(root_0, e89.getTree());
 
                     }
                     break;
                 case 4 :
                     dbg.enterAlt(4);
 
+<<<<<<< HEAD
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:107:4: 'new' ID_CLASS
                     {
                     dbg.location(107,4);
@@ -3306,6 +3419,17 @@ public class ExprParser extends DebugParser {
                     dbg.location(107,10);
                     ID_CLASS92=(Token)match(input,ID_CLASS,FOLLOW_ID_CLASS_in_expr736);  
                     stream_ID_CLASS.add(ID_CLASS92);
+=======
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:108:4: 'new' ID_CLASS
+                    {
+                    dbg.location(108,4);
+                    string_literal90=(Token)match(input,59,FOLLOW_59_in_expr732);  
+                    stream_59.add(string_literal90);
+
+                    dbg.location(108,10);
+                    ID_CLASS91=(Token)match(input,ID_CLASS,FOLLOW_ID_CLASS_in_expr734);  
+                    stream_ID_CLASS.add(ID_CLASS91);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
 
 
@@ -3320,6 +3444,7 @@ public class ExprParser extends DebugParser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
+<<<<<<< HEAD
                     // 107:19: -> ^( NEW ID_CLASS )
                     {
                         dbg.location(107,22);
@@ -3330,6 +3455,18 @@ public class ExprParser extends DebugParser {
                         root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(NEW, "NEW"), root_1);
 
                         dbg.location(107,28);
+=======
+                    // 108:20: -> ^( NEW ID_CLASS )
+                    {
+                        dbg.location(108,23);
+                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:108:23: ^( NEW ID_CLASS )
+                        {
+                        Object root_1 = (Object)adaptor.nil();
+                        dbg.location(108,25);
+                        root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(NEW, "NEW"), root_1);
+
+                        dbg.location(108,29);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                         adaptor.addChild(root_1, stream_ID_CLASS.nextNode());
 
                         adaptor.addChild(root_0, root_1);
@@ -3356,7 +3493,7 @@ public class ExprParser extends DebugParser {
         }
         finally {
         }
-        dbg.location(108, 2);
+        dbg.location(109, 2);
 
         }
         finally {
@@ -3375,13 +3512,18 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "e"
+<<<<<<< HEAD
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:109:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPEL_METHODE ID_OTHERS ( f )? ( e )? ) | );
+=======
+    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:110:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | );
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     public final ExprParser.e_return e() throws RecognitionException {
         ExprParser.e_return retval = new ExprParser.e_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
+<<<<<<< HEAD
         Token char_literal93=null;
         Token ID_OTHERS94=null;
         Token char_literal95=null;
@@ -3395,6 +3537,21 @@ public class ExprParser extends DebugParser {
         Object ID_OTHERS94_tree=null;
         Object char_literal95_tree=null;
         Object char_literal97_tree=null;
+=======
+        Token char_literal92=null;
+        Token ID_OTHERS93=null;
+        Token char_literal94=null;
+        Token char_literal96=null;
+        ExprParser.f_return f95 = null;
+
+        ExprParser.e_return e97 = null;
+
+
+        Object char_literal92_tree=null;
+        Object ID_OTHERS93_tree=null;
+        Object char_literal94_tree=null;
+        Object char_literal96_tree=null;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
         RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
         RewriteRuleTokenStream stream_34=new RewriteRuleTokenStream(adaptor,"token 34");
         RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
@@ -3404,9 +3561,10 @@ public class ExprParser extends DebugParser {
         try { dbg.enterRule(getGrammarFileName(), "e");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(109, 1);
+        dbg.location(110, 1);
 
         try {
+<<<<<<< HEAD
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:109:3: ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPEL_METHODE ID_OTHERS ( f )? ( e )? ) | )
             int alt22=2;
             try { dbg.enterDecision(22);
@@ -3418,11 +3576,17 @@ public class ExprParser extends DebugParser {
             }
             else if ( (LA22_0==34||LA22_0==37||LA22_0==43||LA22_0==46||LA22_0==51||LA22_0==53) ) {
                 alt22=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 22, 0, input);
+=======
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:110:3: ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | )
+            int alt22=2;
+            try { dbg.enterDecision(22);
 
+            try {
+                isCyclicDecision = true;
+                alt22 = dfa22.predict(input);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+            }
+            catch (NoViableAltException nvae) {
                 dbg.recognitionException(nvae);
                 throw nvae;
             }
@@ -3432,6 +3596,7 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
+<<<<<<< HEAD
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:110:2: '.' ID_OTHERS '(' ( f )? ')' e
                     {
                     dbg.location(110,2);
@@ -3448,13 +3613,35 @@ public class ExprParser extends DebugParser {
 
                     dbg.location(110,20);
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:110:20: ( f )?
+=======
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:111:2: '.' ID_OTHERS '(' ( f )? ')' e
+                    {
+                    dbg.location(111,2);
+                    char_literal92=(Token)match(input,60,FOLLOW_60_in_e754);  
+                    stream_60.add(char_literal92);
+
+                    dbg.location(111,6);
+                    ID_OTHERS93=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_e756);  
+                    stream_ID_OTHERS.add(ID_OTHERS93);
+
+                    dbg.location(111,16);
+                    char_literal94=(Token)match(input,32,FOLLOW_32_in_e758);  
+                    stream_32.add(char_literal94);
+
+                    dbg.location(111,20);
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:111:20: ( f )?
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     int alt21=2;
                     try { dbg.enterSubRule(21);
                     try { dbg.enterDecision(21);
 
                     int LA21_0 = input.LA(1);
 
+<<<<<<< HEAD
                     if ( (LA21_0==ID_OTHERS||(LA21_0>=INT && LA21_0<=STRING)||LA21_0==33||(LA21_0>=58 && LA21_0<=60)||LA21_0==63) ) {
+=======
+                    if ( (LA21_0==ID_OTHERS||(LA21_0>=STRING && LA21_0<=INT)||LA21_0==32||(LA21_0>=57 && LA21_0<=59)||LA21_0==62) ) {
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                         alt21=1;
                     }
                     } finally {dbg.exitDecision(21);}
@@ -3463,6 +3650,7 @@ public class ExprParser extends DebugParser {
                         case 1 :
                             dbg.enterAlt(1);
 
+<<<<<<< HEAD
                             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:110:20: f
                             {
                             dbg.location(110,20);
@@ -3472,6 +3660,17 @@ public class ExprParser extends DebugParser {
                             state._fsp--;
 
                             stream_f.add(f96.getTree());
+=======
+                            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:111:20: f
+                            {
+                            dbg.location(111,20);
+                            pushFollow(FOLLOW_f_in_e760);
+                            f95=f();
+
+                            state._fsp--;
+
+                            stream_f.add(f95.getTree());
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
                             }
                             break;
@@ -3479,6 +3678,7 @@ public class ExprParser extends DebugParser {
                     }
                     } finally {dbg.exitSubRule(21);}
 
+<<<<<<< HEAD
                     dbg.location(110,23);
                     char_literal97=(Token)match(input,34,FOLLOW_34_in_e763);  
                     stream_34.add(char_literal97);
@@ -3494,6 +3694,23 @@ public class ExprParser extends DebugParser {
 
                     // AST REWRITE
                     // elements: f, ID_OTHERS, e
+=======
+                    dbg.location(111,23);
+                    char_literal96=(Token)match(input,33,FOLLOW_33_in_e763);  
+                    stream_33.add(char_literal96);
+
+                    dbg.location(111,27);
+                    pushFollow(FOLLOW_e_in_e765);
+                    e97=e();
+
+                    state._fsp--;
+
+                    stream_e.add(e97.getTree());
+
+
+                    // AST REWRITE
+                    // elements: f, e, ID_OTHERS
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -3503,6 +3720,7 @@ public class ExprParser extends DebugParser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
+<<<<<<< HEAD
                     // 110:29: -> ^( APPEL_METHODE ID_OTHERS ( f )? ( e )? )
                     {
                         dbg.location(110,32);
@@ -3518,14 +3736,38 @@ public class ExprParser extends DebugParser {
                         // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:110:58: ( f )?
                         if ( stream_f.hasNext() ) {
                             dbg.location(110,58);
+=======
+                    // 111:29: -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? )
+                    {
+                        dbg.location(111,32);
+                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:111:32: ^( APPELMETHODE ID_OTHERS ( f )? ( e )? )
+                        {
+                        Object root_1 = (Object)adaptor.nil();
+                        dbg.location(111,34);
+                        root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(APPELMETHODE, "APPELMETHODE"), root_1);
+
+                        dbg.location(111,47);
+                        adaptor.addChild(root_1, stream_ID_OTHERS.nextNode());
+                        dbg.location(111,57);
+                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:111:57: ( f )?
+                        if ( stream_f.hasNext() ) {
+                            dbg.location(111,57);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                             adaptor.addChild(root_1, stream_f.nextTree());
 
                         }
                         stream_f.reset();
+<<<<<<< HEAD
                         dbg.location(110,61);
                         // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:110:61: ( e )?
                         if ( stream_e.hasNext() ) {
                             dbg.location(110,61);
+=======
+                        dbg.location(111,60);
+                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:111:60: ( e )?
+                        if ( stream_e.hasNext() ) {
+                            dbg.location(111,60);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                             adaptor.addChild(root_1, stream_e.nextTree());
 
                         }
@@ -3542,7 +3784,11 @@ public class ExprParser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
+<<<<<<< HEAD
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:112:2: 
+=======
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:113:2: 
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3564,7 +3810,7 @@ public class ExprParser extends DebugParser {
         }
         finally {
         }
-        dbg.location(112, 2);
+        dbg.location(113, 2);
 
         }
         finally {
@@ -3583,13 +3829,18 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "f"
+<<<<<<< HEAD
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:114:1: f : expr ( ',' expr )* -> ^( ARGS ( expr )* ) ;
+=======
+    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:115:1: f : expr ( ',' expr )* -> ^( ARGS ( expr )* ) ;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     public final ExprParser.f_return f() throws RecognitionException {
         ExprParser.f_return retval = new ExprParser.f_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
+<<<<<<< HEAD
         Token char_literal100=null;
         ExprParser.expr_return expr99 = null;
 
@@ -3598,13 +3849,24 @@ public class ExprParser extends DebugParser {
 
         Object char_literal100_tree=null;
         RewriteRuleTokenStream stream_43=new RewriteRuleTokenStream(adaptor,"token 43");
+=======
+        Token char_literal99=null;
+        ExprParser.expr_return expr98 = null;
+
+        ExprParser.expr_return expr100 = null;
+
+
+        Object char_literal99_tree=null;
+        RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try { dbg.enterRule(getGrammarFileName(), "f");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(114, 1);
+        dbg.location(115, 1);
 
         try {
+<<<<<<< HEAD
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:114:5: ( expr ( ',' expr )* -> ^( ARGS ( expr )* ) )
             dbg.enterAlt(1);
 
@@ -3619,6 +3881,22 @@ public class ExprParser extends DebugParser {
             stream_expr.add(expr99.getTree());
             dbg.location(114,13);
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:114:13: ( ',' expr )*
+=======
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:115:5: ( expr ( ',' expr )* -> ^( ARGS ( expr )* ) )
+            dbg.enterAlt(1);
+
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:115:8: expr ( ',' expr )*
+            {
+            dbg.location(115,8);
+            pushFollow(FOLLOW_expr_in_f796);
+            expr98=expr();
+
+            state._fsp--;
+
+            stream_expr.add(expr98.getTree());
+            dbg.location(115,13);
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:115:13: ( ',' expr )*
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             try { dbg.enterSubRule(23);
 
             loop23:
@@ -3639,6 +3917,7 @@ public class ExprParser extends DebugParser {
             	case 1 :
             	    dbg.enterAlt(1);
 
+<<<<<<< HEAD
             	    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:114:14: ',' expr
             	    {
             	    dbg.location(114,14);
@@ -3652,6 +3931,21 @@ public class ExprParser extends DebugParser {
             	    state._fsp--;
 
             	    stream_expr.add(expr101.getTree());
+=======
+            	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:115:14: ',' expr
+            	    {
+            	    dbg.location(115,14);
+            	    char_literal99=(Token)match(input,42,FOLLOW_42_in_f799);  
+            	    stream_42.add(char_literal99);
+
+            	    dbg.location(115,18);
+            	    pushFollow(FOLLOW_expr_in_f801);
+            	    expr100=expr();
+
+            	    state._fsp--;
+
+            	    stream_expr.add(expr100.getTree());
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
             	    }
             	    break;
@@ -3675,19 +3969,29 @@ public class ExprParser extends DebugParser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 114:26: -> ^( ARGS ( expr )* )
+            // 115:26: -> ^( ARGS ( expr )* )
             {
+<<<<<<< HEAD
                 dbg.location(114,29);
                 // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:114:29: ^( ARGS ( expr )* )
+=======
+                dbg.location(115,29);
+                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:115:29: ^( ARGS ( expr )* )
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                 {
                 Object root_1 = (Object)adaptor.nil();
-                dbg.location(114,31);
+                dbg.location(115,31);
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(ARGS, "ARGS"), root_1);
 
+<<<<<<< HEAD
                 dbg.location(114,36);
                 // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:114:36: ( expr )*
+=======
+                dbg.location(115,36);
+                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:115:36: ( expr )*
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                 while ( stream_expr.hasNext() ) {
-                    dbg.location(114,36);
+                    dbg.location(115,36);
                     adaptor.addChild(root_1, stream_expr.nextTree());
 
                 }
@@ -3715,7 +4019,7 @@ public class ExprParser extends DebugParser {
         }
         finally {
         }
-        dbg.location(115, 2);
+        dbg.location(116, 2);
 
         }
         finally {
@@ -3734,7 +4038,11 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "exprplus"
+<<<<<<< HEAD
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:118:1: exprplus : exprmult ( ( '+' | '-' ) exprmult )* ;
+=======
+    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:119:1: exprplus : exprmult e ( ( '+' | '-' ) exprmult e )* ;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     public final ExprParser.exprplus_return exprplus() throws RecognitionException {
         ExprParser.exprplus_return retval = new ExprParser.exprplus_return();
         retval.start = input.LT(1);
@@ -3743,20 +4051,32 @@ public class ExprParser extends DebugParser {
 
         Token char_literal103=null;
         Token char_literal104=null;
+<<<<<<< HEAD
         ExprParser.exprmult_return exprmult102 = null;
+=======
+        ExprParser.exprmult_return exprmult101 = null;
+
+        ExprParser.e_return e102 = null;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
         ExprParser.exprmult_return exprmult105 = null;
 
+        ExprParser.e_return e106 = null;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
         Object char_literal103_tree=null;
         Object char_literal104_tree=null;
 
         try { dbg.enterRule(getGrammarFileName(), "exprplus");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(118, 1);
+        dbg.location(119, 1);
 
         try {
+<<<<<<< HEAD
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:118:9: ( exprmult ( ( '+' | '-' ) exprmult )* )
             dbg.enterAlt(1);
 
@@ -3773,6 +4093,31 @@ public class ExprParser extends DebugParser {
             adaptor.addChild(root_0, exprmult102.getTree());
             dbg.location(119,11);
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:119:11: ( ( '+' | '-' ) exprmult )*
+=======
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:119:9: ( exprmult e ( ( '+' | '-' ) exprmult e )* )
+            dbg.enterAlt(1);
+
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:120:2: exprmult e ( ( '+' | '-' ) exprmult e )*
+            {
+            root_0 = (Object)adaptor.nil();
+
+            dbg.location(120,2);
+            pushFollow(FOLLOW_exprmult_in_exprplus825);
+            exprmult101=exprmult();
+
+            state._fsp--;
+
+            adaptor.addChild(root_0, exprmult101.getTree());
+            dbg.location(120,11);
+            pushFollow(FOLLOW_e_in_exprplus827);
+            e102=e();
+
+            state._fsp--;
+
+            adaptor.addChild(root_0, e102.getTree());
+            dbg.location(120,13);
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:120:13: ( ( '+' | '-' ) exprmult e )*
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             try { dbg.enterSubRule(25);
 
             loop25:
@@ -3793,10 +4138,17 @@ public class ExprParser extends DebugParser {
             	case 1 :
             	    dbg.enterAlt(1);
 
+<<<<<<< HEAD
             	    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:119:13: ( '+' | '-' ) exprmult
             	    {
             	    dbg.location(119,13);
             	    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:119:13: ( '+' | '-' )
+=======
+            	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:120:15: ( '+' | '-' ) exprmult e
+            	    {
+            	    dbg.location(120,15);
+            	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:120:15: ( '+' | '-' )
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             	    int alt24=2;
             	    try { dbg.enterSubRule(24);
             	    try { dbg.enterDecision(24);
@@ -3822,10 +4174,17 @@ public class ExprParser extends DebugParser {
             	        case 1 :
             	            dbg.enterAlt(1);
 
+<<<<<<< HEAD
             	            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:119:14: '+'
             	            {
             	            dbg.location(119,17);
             	            char_literal103=(Token)match(input,62,FOLLOW_62_in_exprplus830); 
+=======
+            	            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:120:16: '+'
+            	            {
+            	            dbg.location(120,19);
+            	            char_literal103=(Token)match(input,61,FOLLOW_61_in_exprplus832); 
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             	            char_literal103_tree = (Object)adaptor.create(char_literal103);
             	            root_0 = (Object)adaptor.becomeRoot(char_literal103_tree, root_0);
 
@@ -3835,10 +4194,17 @@ public class ExprParser extends DebugParser {
             	        case 2 :
             	            dbg.enterAlt(2);
 
+<<<<<<< HEAD
             	            // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:119:19: '-'
             	            {
             	            dbg.location(119,22);
             	            char_literal104=(Token)match(input,63,FOLLOW_63_in_exprplus833); 
+=======
+            	            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:120:21: '-'
+            	            {
+            	            dbg.location(120,24);
+            	            char_literal104=(Token)match(input,62,FOLLOW_62_in_exprplus835); 
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             	            char_literal104_tree = (Object)adaptor.create(char_literal104);
             	            root_0 = (Object)adaptor.becomeRoot(char_literal104_tree, root_0);
 
@@ -3849,13 +4215,28 @@ public class ExprParser extends DebugParser {
             	    }
             	    } finally {dbg.exitSubRule(24);}
 
+<<<<<<< HEAD
             	    dbg.location(119,25);
             	    pushFollow(FOLLOW_exprmult_in_exprplus837);
+=======
+            	    dbg.location(120,27);
+            	    pushFollow(FOLLOW_exprmult_in_exprplus839);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             	    exprmult105=exprmult();
 
             	    state._fsp--;
 
             	    adaptor.addChild(root_0, exprmult105.getTree());
+<<<<<<< HEAD
+=======
+            	    dbg.location(120,36);
+            	    pushFollow(FOLLOW_e_in_exprplus841);
+            	    e106=e();
+
+            	    state._fsp--;
+
+            	    adaptor.addChild(root_0, e106.getTree());
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
             	    }
             	    break;
@@ -3883,7 +4264,7 @@ public class ExprParser extends DebugParser {
         }
         finally {
         }
-        dbg.location(120, 2);
+        dbg.location(121, 2);
 
         }
         finally {
@@ -3902,13 +4283,18 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "exprmult"
+<<<<<<< HEAD
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:123:1: exprmult : oper ( '*' oper )? ;
+=======
+    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:124:1: exprmult : oper ( '*' oper )? ;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     public final ExprParser.exprmult_return exprmult() throws RecognitionException {
         ExprParser.exprmult_return retval = new ExprParser.exprmult_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
+<<<<<<< HEAD
         Token char_literal107=null;
         ExprParser.oper_return oper106 = null;
 
@@ -3916,13 +4302,23 @@ public class ExprParser extends DebugParser {
 
 
         Object char_literal107_tree=null;
+=======
+        Token char_literal108=null;
+        ExprParser.oper_return oper107 = null;
+
+        ExprParser.oper_return oper109 = null;
+
+
+        Object char_literal108_tree=null;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
         try { dbg.enterRule(getGrammarFileName(), "exprmult");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(123, 1);
+        dbg.location(124, 1);
 
         try {
+<<<<<<< HEAD
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:123:9: ( oper ( '*' oper )? )
             dbg.enterAlt(1);
 
@@ -3939,14 +4335,42 @@ public class ExprParser extends DebugParser {
             adaptor.addChild(root_0, oper106.getTree());
             dbg.location(124,7);
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:124:7: ( '*' oper )?
+=======
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:124:9: ( oper ( '*' oper )? )
+            dbg.enterAlt(1);
+
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:125:3: oper ( '*' oper )?
+            {
+            root_0 = (Object)adaptor.nil();
+
+            dbg.location(125,3);
+            pushFollow(FOLLOW_oper_in_exprmult855);
+            oper107=oper();
+
+            state._fsp--;
+
+            adaptor.addChild(root_0, oper107.getTree());
+            dbg.location(125,7);
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:125:7: ( '*' oper )?
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             int alt26=2;
             try { dbg.enterSubRule(26);
             try { dbg.enterDecision(26);
 
+<<<<<<< HEAD
             int LA26_0 = input.LA(1);
 
             if ( (LA26_0==64) ) {
                 alt26=1;
+=======
+            try {
+                isCyclicDecision = true;
+                alt26 = dfa26.predict(input);
+            }
+            catch (NoViableAltException nvae) {
+                dbg.recognitionException(nvae);
+                throw nvae;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             }
             } finally {dbg.exitDecision(26);}
 
@@ -3954,6 +4378,7 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
+<<<<<<< HEAD
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:124:9: '*' oper
                     {
                     dbg.location(124,12);
@@ -3968,6 +4393,22 @@ public class ExprParser extends DebugParser {
                     state._fsp--;
 
                     adaptor.addChild(root_0, oper108.getTree());
+=======
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:125:9: '*' oper
+                    {
+                    dbg.location(125,12);
+                    char_literal108=(Token)match(input,63,FOLLOW_63_in_exprmult858); 
+                    char_literal108_tree = (Object)adaptor.create(char_literal108);
+                    root_0 = (Object)adaptor.becomeRoot(char_literal108_tree, root_0);
+
+                    dbg.location(125,14);
+                    pushFollow(FOLLOW_oper_in_exprmult861);
+                    oper109=oper();
+
+                    state._fsp--;
+
+                    adaptor.addChild(root_0, oper109.getTree());
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
                     }
                     break;
@@ -3992,7 +4433,7 @@ public class ExprParser extends DebugParser {
         }
         finally {
         }
-        dbg.location(125, 2);
+        dbg.location(126, 2);
 
         }
         finally {
@@ -4011,13 +4452,18 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "oper"
+<<<<<<< HEAD
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:127:1: oper : moinsunaire ( OPERCONDITION moinsunaire )* ;
+=======
+    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:128:1: oper : moinsunaire ( OPERCONDITION moinsunaire )* ;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     public final ExprParser.oper_return oper() throws RecognitionException {
         ExprParser.oper_return retval = new ExprParser.oper_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
+<<<<<<< HEAD
         Token OPERCONDITION110=null;
         ExprParser.moinsunaire_return moinsunaire109 = null;
 
@@ -4025,13 +4471,23 @@ public class ExprParser extends DebugParser {
 
 
         Object OPERCONDITION110_tree=null;
+=======
+        Token OPERCONDITION111=null;
+        ExprParser.moinsunaire_return moinsunaire110 = null;
+
+        ExprParser.moinsunaire_return moinsunaire112 = null;
+
+
+        Object OPERCONDITION111_tree=null;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
         try { dbg.enterRule(getGrammarFileName(), "oper");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(127, 1);
+        dbg.location(128, 1);
 
         try {
+<<<<<<< HEAD
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:127:5: ( moinsunaire ( OPERCONDITION moinsunaire )* )
             dbg.enterAlt(1);
 
@@ -4048,6 +4504,24 @@ public class ExprParser extends DebugParser {
             adaptor.addChild(root_0, moinsunaire109.getTree());
             dbg.location(128,14);
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:128:14: ( OPERCONDITION moinsunaire )*
+=======
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:128:5: ( moinsunaire ( OPERCONDITION moinsunaire )* )
+            dbg.enterAlt(1);
+
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:129:2: moinsunaire ( OPERCONDITION moinsunaire )*
+            {
+            root_0 = (Object)adaptor.nil();
+
+            dbg.location(129,2);
+            pushFollow(FOLLOW_moinsunaire_in_oper874);
+            moinsunaire110=moinsunaire();
+
+            state._fsp--;
+
+            adaptor.addChild(root_0, moinsunaire110.getTree());
+            dbg.location(129,14);
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:129:14: ( OPERCONDITION moinsunaire )*
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             try { dbg.enterSubRule(27);
 
             loop27:
@@ -4055,19 +4529,21 @@ public class ExprParser extends DebugParser {
                 int alt27=2;
                 try { dbg.enterDecision(27);
 
-                int LA27_0 = input.LA(1);
-
-                if ( (LA27_0==OPERCONDITION) ) {
-                    alt27=1;
+                try {
+                    isCyclicDecision = true;
+                    alt27 = dfa27.predict(input);
                 }
-
-
+                catch (NoViableAltException nvae) {
+                    dbg.recognitionException(nvae);
+                    throw nvae;
+                }
                 } finally {dbg.exitDecision(27);}
 
                 switch (alt27) {
             	case 1 :
             	    dbg.enterAlt(1);
 
+<<<<<<< HEAD
             	    // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:128:15: OPERCONDITION moinsunaire
             	    {
             	    dbg.location(128,28);
@@ -4082,6 +4558,22 @@ public class ExprParser extends DebugParser {
             	    state._fsp--;
 
             	    adaptor.addChild(root_0, moinsunaire111.getTree());
+=======
+            	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:129:15: OPERCONDITION moinsunaire
+            	    {
+            	    dbg.location(129,28);
+            	    OPERCONDITION111=(Token)match(input,OPERCONDITION,FOLLOW_OPERCONDITION_in_oper877); 
+            	    OPERCONDITION111_tree = (Object)adaptor.create(OPERCONDITION111);
+            	    root_0 = (Object)adaptor.becomeRoot(OPERCONDITION111_tree, root_0);
+
+            	    dbg.location(129,30);
+            	    pushFollow(FOLLOW_moinsunaire_in_oper880);
+            	    moinsunaire112=moinsunaire();
+
+            	    state._fsp--;
+
+            	    adaptor.addChild(root_0, moinsunaire112.getTree());
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
             	    }
             	    break;
@@ -4109,7 +4601,7 @@ public class ExprParser extends DebugParser {
         }
         finally {
         }
-        dbg.location(129, 2);
+        dbg.location(130, 2);
 
         }
         finally {
@@ -4128,13 +4620,18 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "moinsunaire"
+<<<<<<< HEAD
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:131:1: moinsunaire : ( '-' atom -> ^( OPPOSE atom ) | atom );
+=======
+    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:132:1: moinsunaire : ( '-' atom -> ^( OPPOSE atom ) | atom );
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     public final ExprParser.moinsunaire_return moinsunaire() throws RecognitionException {
         ExprParser.moinsunaire_return retval = new ExprParser.moinsunaire_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
+<<<<<<< HEAD
         Token char_literal112=null;
         ExprParser.atom_return atom113 = null;
 
@@ -4143,14 +4640,28 @@ public class ExprParser extends DebugParser {
 
         Object char_literal112_tree=null;
         RewriteRuleTokenStream stream_63=new RewriteRuleTokenStream(adaptor,"token 63");
+=======
+        Token char_literal113=null;
+        ExprParser.atom_return atom114 = null;
+
+        ExprParser.atom_return atom115 = null;
+
+
+        Object char_literal113_tree=null;
+        RewriteRuleTokenStream stream_62=new RewriteRuleTokenStream(adaptor,"token 62");
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
         RewriteRuleSubtreeStream stream_atom=new RewriteRuleSubtreeStream(adaptor,"rule atom");
         try { dbg.enterRule(getGrammarFileName(), "moinsunaire");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(131, 1);
+        dbg.location(132, 1);
 
         try {
+<<<<<<< HEAD
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:131:12: ( '-' atom -> ^( OPPOSE atom ) | atom )
+=======
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:132:12: ( '-' atom -> ^( OPPOSE atom ) | atom )
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             int alt28=2;
             try { dbg.enterDecision(28);
 
@@ -4159,7 +4670,11 @@ public class ExprParser extends DebugParser {
             if ( (LA28_0==63) ) {
                 alt28=1;
             }
+<<<<<<< HEAD
             else if ( (LA28_0==ID_OTHERS||(LA28_0>=INT && LA28_0<=STRING)||LA28_0==33) ) {
+=======
+            else if ( (LA28_0==ID_OTHERS||(LA28_0>=STRING && LA28_0<=INT)||LA28_0==32) ) {
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                 alt28=2;
             }
             else {
@@ -4175,6 +4690,7 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
+<<<<<<< HEAD
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:132:2: '-' atom
                     {
                     dbg.location(132,2);
@@ -4188,6 +4704,21 @@ public class ExprParser extends DebugParser {
                     state._fsp--;
 
                     stream_atom.add(atom113.getTree());
+=======
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:133:2: '-' atom
+                    {
+                    dbg.location(133,2);
+                    char_literal113=(Token)match(input,62,FOLLOW_62_in_moinsunaire893);  
+                    stream_62.add(char_literal113);
+
+                    dbg.location(133,6);
+                    pushFollow(FOLLOW_atom_in_moinsunaire895);
+                    atom114=atom();
+
+                    state._fsp--;
+
+                    stream_atom.add(atom114.getTree());
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
 
                     // AST REWRITE
@@ -4201,16 +4732,21 @@ public class ExprParser extends DebugParser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 132:11: -> ^( OPPOSE atom )
+                    // 133:11: -> ^( OPPOSE atom )
                     {
+<<<<<<< HEAD
                         dbg.location(132,14);
                         // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:132:14: ^( OPPOSE atom )
+=======
+                        dbg.location(133,14);
+                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:133:14: ^( OPPOSE atom )
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                         {
                         Object root_1 = (Object)adaptor.nil();
-                        dbg.location(132,16);
+                        dbg.location(133,16);
                         root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(OPPOSE, "OPPOSE"), root_1);
 
-                        dbg.location(132,23);
+                        dbg.location(133,23);
                         adaptor.addChild(root_1, stream_atom.nextTree());
 
                         adaptor.addChild(root_0, root_1);
@@ -4224,6 +4760,7 @@ public class ExprParser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
+<<<<<<< HEAD
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:133:4: atom
                     {
                     root_0 = (Object)adaptor.nil();
@@ -4235,6 +4772,19 @@ public class ExprParser extends DebugParser {
                     state._fsp--;
 
                     adaptor.addChild(root_0, atom114.getTree());
+=======
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:134:4: atom
+                    {
+                    root_0 = (Object)adaptor.nil();
+
+                    dbg.location(134,4);
+                    pushFollow(FOLLOW_atom_in_moinsunaire908);
+                    atom115=atom();
+
+                    state._fsp--;
+
+                    adaptor.addChild(root_0, atom115.getTree());
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
                     }
                     break;
@@ -4254,7 +4804,7 @@ public class ExprParser extends DebugParser {
         }
         finally {
         }
-        dbg.location(134, 2);
+        dbg.location(135, 2);
 
         }
         finally {
@@ -4273,13 +4823,18 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "atom"
+<<<<<<< HEAD
     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:135:1: atom : ( ID_OTHERS | INT | STRING | '(' expr ')' );
+=======
+    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:136:1: atom : ( ID_OTHERS e | STRING | INT | '(' expr ')' );
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     public final ExprParser.atom_return atom() throws RecognitionException {
         ExprParser.atom_return retval = new ExprParser.atom_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
+<<<<<<< HEAD
         Token ID_OTHERS115=null;
         Token INT116=null;
         Token STRING117=null;
@@ -4293,14 +4848,35 @@ public class ExprParser extends DebugParser {
         Object STRING117_tree=null;
         Object char_literal118_tree=null;
         Object char_literal120_tree=null;
+=======
+        Token ID_OTHERS116=null;
+        Token STRING118=null;
+        Token INT119=null;
+        Token char_literal120=null;
+        Token char_literal122=null;
+        ExprParser.e_return e117 = null;
+
+        ExprParser.expr_return expr121 = null;
+
+
+        Object ID_OTHERS116_tree=null;
+        Object STRING118_tree=null;
+        Object INT119_tree=null;
+        Object char_literal120_tree=null;
+        Object char_literal122_tree=null;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
         try { dbg.enterRule(getGrammarFileName(), "atom");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
-        dbg.location(135, 1);
+        dbg.location(136, 1);
 
         try {
+<<<<<<< HEAD
             // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:135:5: ( ID_OTHERS | INT | STRING | '(' expr ')' )
+=======
+            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:136:5: ( ID_OTHERS e | STRING | INT | '(' expr ')' )
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             int alt29=4;
             try { dbg.enterDecision(29);
 
@@ -4310,17 +4886,25 @@ public class ExprParser extends DebugParser {
                 alt29=1;
                 }
                 break;
-            case INT:
+            case STRING:
                 {
                 alt29=2;
                 }
                 break;
+<<<<<<< HEAD
             case STRING:
+=======
+            case INT:
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                 {
                 alt29=3;
                 }
                 break;
+<<<<<<< HEAD
             case 33:
+=======
+            case 32:
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                 {
                 alt29=4;
                 }
@@ -4339,6 +4923,7 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
+<<<<<<< HEAD
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:136:3: ID_OTHERS
                     {
                     root_0 = (Object)adaptor.nil();
@@ -4347,13 +4932,31 @@ public class ExprParser extends DebugParser {
                     ID_OTHERS115=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_atom915); 
                     ID_OTHERS115_tree = (Object)adaptor.create(ID_OTHERS115);
                     adaptor.addChild(root_0, ID_OTHERS115_tree);
+=======
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:137:3: ID_OTHERS e
+                    {
+                    root_0 = (Object)adaptor.nil();
 
+                    dbg.location(137,3);
+                    ID_OTHERS116=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_atom919); 
+                    ID_OTHERS116_tree = (Object)adaptor.create(ID_OTHERS116);
+                    adaptor.addChild(root_0, ID_OTHERS116_tree);
+
+                    dbg.location(137,13);
+                    pushFollow(FOLLOW_e_in_atom921);
+                    e117=e();
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+
+                    state._fsp--;
+
+                    adaptor.addChild(root_0, e117.getTree());
 
                     }
                     break;
                 case 2 :
                     dbg.enterAlt(2);
 
+<<<<<<< HEAD
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:137:4: INT
                     {
                     root_0 = (Object)adaptor.nil();
@@ -4362,6 +4965,16 @@ public class ExprParser extends DebugParser {
                     INT116=(Token)match(input,INT,FOLLOW_INT_in_atom920); 
                     INT116_tree = (Object)adaptor.create(INT116);
                     adaptor.addChild(root_0, INT116_tree);
+=======
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:138:4: STRING
+                    {
+                    root_0 = (Object)adaptor.nil();
+
+                    dbg.location(138,4);
+                    STRING118=(Token)match(input,STRING,FOLLOW_STRING_in_atom926); 
+                    STRING118_tree = (Object)adaptor.create(STRING118);
+                    adaptor.addChild(root_0, STRING118_tree);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
 
                     }
@@ -4369,6 +4982,7 @@ public class ExprParser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
+<<<<<<< HEAD
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:138:4: STRING
                     {
                     root_0 = (Object)adaptor.nil();
@@ -4377,6 +4991,16 @@ public class ExprParser extends DebugParser {
                     STRING117=(Token)match(input,STRING,FOLLOW_STRING_in_atom925); 
                     STRING117_tree = (Object)adaptor.create(STRING117);
                     adaptor.addChild(root_0, STRING117_tree);
+=======
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:139:5: INT
+                    {
+                    root_0 = (Object)adaptor.nil();
+
+                    dbg.location(139,5);
+                    INT119=(Token)match(input,INT,FOLLOW_INT_in_atom932); 
+                    INT119_tree = (Object)adaptor.create(INT119);
+                    adaptor.addChild(root_0, INT119_tree);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
 
                     }
@@ -4384,6 +5008,7 @@ public class ExprParser extends DebugParser {
                 case 4 :
                     dbg.enterAlt(4);
 
+<<<<<<< HEAD
                     // /home/adam/workspace/Compil_MACA/Fichiers/Expr.g:139:4: '(' expr ')'
                     {
                     root_0 = (Object)adaptor.nil();
@@ -4404,6 +5029,28 @@ public class ExprParser extends DebugParser {
                     char_literal120=(Token)match(input,34,FOLLOW_34_in_atom932); 
                     char_literal120_tree = (Object)adaptor.create(char_literal120);
                     adaptor.addChild(root_0, char_literal120_tree);
+=======
+                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:140:4: '(' expr ')'
+                    {
+                    root_0 = (Object)adaptor.nil();
+
+                    dbg.location(140,4);
+                    char_literal120=(Token)match(input,32,FOLLOW_32_in_atom938); 
+                    char_literal120_tree = (Object)adaptor.create(char_literal120);
+                    adaptor.addChild(root_0, char_literal120_tree);
+
+                    dbg.location(140,7);
+                    pushFollow(FOLLOW_expr_in_atom939);
+                    expr121=expr();
+
+                    state._fsp--;
+
+                    adaptor.addChild(root_0, expr121.getTree());
+                    dbg.location(140,11);
+                    char_literal122=(Token)match(input,33,FOLLOW_33_in_atom940); 
+                    char_literal122_tree = (Object)adaptor.create(char_literal122);
+                    adaptor.addChild(root_0, char_literal122_tree);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
 
                     }
@@ -4424,7 +5071,11 @@ public class ExprParser extends DebugParser {
         }
         finally {
         }
+<<<<<<< HEAD
         dbg.location(140, 2);
+=======
+        dbg.location(141, 2);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
         }
         finally {
@@ -4440,6 +5091,200 @@ public class ExprParser extends DebugParser {
     // Delegated rules
 
 
+    protected DFA22 dfa22 = new DFA22(this);
+    protected DFA26 dfa26 = new DFA26(this);
+    protected DFA27 dfa27 = new DFA27(this);
+    static final String DFA22_eotS =
+        "\14\uffff";
+    static final String DFA22_eofS =
+        "\14\uffff";
+    static final String DFA22_minS =
+        "\1\27\13\uffff";
+    static final String DFA22_maxS =
+        "\1\77\13\uffff";
+    static final String DFA22_acceptS =
+        "\1\uffff\1\1\1\2\11\uffff";
+    static final String DFA22_specialS =
+        "\14\uffff}>";
+    static final String[] DFA22_transitionS = {
+            "\1\2\11\uffff\1\2\2\uffff\1\2\5\uffff\1\2\2\uffff\1\2\4\uffff"+
+            "\1\2\1\uffff\1\2\7\uffff\1\1\3\2",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA22_eot = DFA.unpackEncodedString(DFA22_eotS);
+    static final short[] DFA22_eof = DFA.unpackEncodedString(DFA22_eofS);
+    static final char[] DFA22_min = DFA.unpackEncodedStringToUnsignedChars(DFA22_minS);
+    static final char[] DFA22_max = DFA.unpackEncodedStringToUnsignedChars(DFA22_maxS);
+    static final short[] DFA22_accept = DFA.unpackEncodedString(DFA22_acceptS);
+    static final short[] DFA22_special = DFA.unpackEncodedString(DFA22_specialS);
+    static final short[][] DFA22_transition;
+
+    static {
+        int numStates = DFA22_transitionS.length;
+        DFA22_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA22_transition[i] = DFA.unpackEncodedString(DFA22_transitionS[i]);
+        }
+    }
+
+    class DFA22 extends DFA {
+
+        public DFA22(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 22;
+            this.eot = DFA22_eot;
+            this.eof = DFA22_eof;
+            this.min = DFA22_min;
+            this.max = DFA22_max;
+            this.accept = DFA22_accept;
+            this.special = DFA22_special;
+            this.transition = DFA22_transition;
+        }
+        public String getDescription() {
+            return "110:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | );";
+        }
+        public void error(NoViableAltException nvae) {
+            dbg.recognitionException(nvae);
+        }
+    }
+    static final String DFA26_eotS =
+        "\13\uffff";
+    static final String DFA26_eofS =
+        "\13\uffff";
+    static final String DFA26_minS =
+        "\1\41\12\uffff";
+    static final String DFA26_maxS =
+        "\1\77\12\uffff";
+    static final String DFA26_acceptS =
+        "\1\uffff\1\1\1\2\10\uffff";
+    static final String DFA26_specialS =
+        "\13\uffff}>";
+    static final String[] DFA26_transitionS = {
+            "\1\2\2\uffff\1\2\5\uffff\1\2\2\uffff\1\2\4\uffff\1\2\1\uffff"+
+            "\1\2\7\uffff\3\2\1\1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA26_eot = DFA.unpackEncodedString(DFA26_eotS);
+    static final short[] DFA26_eof = DFA.unpackEncodedString(DFA26_eofS);
+    static final char[] DFA26_min = DFA.unpackEncodedStringToUnsignedChars(DFA26_minS);
+    static final char[] DFA26_max = DFA.unpackEncodedStringToUnsignedChars(DFA26_maxS);
+    static final short[] DFA26_accept = DFA.unpackEncodedString(DFA26_acceptS);
+    static final short[] DFA26_special = DFA.unpackEncodedString(DFA26_specialS);
+    static final short[][] DFA26_transition;
+
+    static {
+        int numStates = DFA26_transitionS.length;
+        DFA26_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA26_transition[i] = DFA.unpackEncodedString(DFA26_transitionS[i]);
+        }
+    }
+
+    class DFA26 extends DFA {
+
+        public DFA26(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 26;
+            this.eot = DFA26_eot;
+            this.eof = DFA26_eof;
+            this.min = DFA26_min;
+            this.max = DFA26_max;
+            this.accept = DFA26_accept;
+            this.special = DFA26_special;
+            this.transition = DFA26_transition;
+        }
+        public String getDescription() {
+            return "125:7: ( '*' oper )?";
+        }
+        public void error(NoViableAltException nvae) {
+            dbg.recognitionException(nvae);
+        }
+    }
+    static final String DFA27_eotS =
+        "\14\uffff";
+    static final String DFA27_eofS =
+        "\14\uffff";
+    static final String DFA27_minS =
+        "\1\27\13\uffff";
+    static final String DFA27_maxS =
+        "\1\77\13\uffff";
+    static final String DFA27_acceptS =
+        "\1\uffff\1\2\11\uffff\1\1";
+    static final String DFA27_specialS =
+        "\14\uffff}>";
+    static final String[] DFA27_transitionS = {
+            "\1\13\11\uffff\1\1\2\uffff\1\1\5\uffff\1\1\2\uffff\1\1\4\uffff"+
+            "\1\1\1\uffff\1\1\7\uffff\4\1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA27_eot = DFA.unpackEncodedString(DFA27_eotS);
+    static final short[] DFA27_eof = DFA.unpackEncodedString(DFA27_eofS);
+    static final char[] DFA27_min = DFA.unpackEncodedStringToUnsignedChars(DFA27_minS);
+    static final char[] DFA27_max = DFA.unpackEncodedStringToUnsignedChars(DFA27_maxS);
+    static final short[] DFA27_accept = DFA.unpackEncodedString(DFA27_acceptS);
+    static final short[] DFA27_special = DFA.unpackEncodedString(DFA27_specialS);
+    static final short[][] DFA27_transition;
+
+    static {
+        int numStates = DFA27_transitionS.length;
+        DFA27_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA27_transition[i] = DFA.unpackEncodedString(DFA27_transitionS[i]);
+        }
+    }
+
+    class DFA27 extends DFA {
+
+        public DFA27(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 27;
+            this.eot = DFA27_eot;
+            this.eof = DFA27_eof;
+            this.min = DFA27_min;
+            this.max = DFA27_max;
+            this.accept = DFA27_accept;
+            this.special = DFA27_special;
+            this.transition = DFA27_transition;
+        }
+        public String getDescription() {
+            return "()* loopback of 129:14: ( OPERCONDITION moinsunaire )*";
+        }
+        public void error(NoViableAltException nvae) {
+            dbg.recognitionException(nvae);
+        }
+    }
  
 
     public static final BitSet FOLLOW_class_decl_in_prog91 = new BitSet(new long[]{0x038A220840800000L});
@@ -4461,6 +5306,7 @@ public class ExprParser extends DebugParser {
     public static final BitSet FOLLOW_type_in_var_decl210 = new BitSet(new long[]{0x0000002000000000L});
     public static final BitSet FOLLOW_37_in_var_decl212 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_type0 = new BitSet(new long[]{0x0000000000000002L});
+<<<<<<< HEAD
     public static final BitSet FOLLOW_40_in_method_decl255 = new BitSet(new long[]{0x0000000000800000L});
     public static final BitSet FOLLOW_ID_OTHERS_in_method_decl257 = new BitSet(new long[]{0x0000000200000000L});
     public static final BitSet FOLLOW_33_in_method_decl259 = new BitSet(new long[]{0x0000000400800000L});
@@ -4566,5 +5412,114 @@ public class ExprParser extends DebugParser {
     public static final BitSet FOLLOW_33_in_atom930 = new BitSet(new long[]{0x9C00000206800000L});
     public static final BitSet FOLLOW_expr_in_atom931 = new BitSet(new long[]{0x0000000400000000L});
     public static final BitSet FOLLOW_34_in_atom932 = new BitSet(new long[]{0x0000000000000002L});
+=======
+    public static final BitSet FOLLOW_39_in_method_decl252 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_ID_OTHERS_in_method_decl254 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_method_decl256 = new BitSet(new long[]{0x0000000200400000L});
+    public static final BitSet FOLLOW_method_params_in_method_decl259 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_method_decl262 = new BitSet(new long[]{0x0000010800000000L});
+    public static final BitSet FOLLOW_m_in_method_decl264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_m293 = new BitSet(new long[]{0x01C5110400400000L});
+    public static final BitSet FOLLOW_var_decl_in_m295 = new BitSet(new long[]{0x01C5110400400000L});
+    public static final BitSet FOLLOW_instr_in_m298 = new BitSet(new long[]{0x01C5130400400000L});
+    public static final BitSet FOLLOW_41_in_m301 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_m319 = new BitSet(new long[]{0x0000006000200000L});
+    public static final BitSet FOLLOW_type_in_m321 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_40_in_m323 = new BitSet(new long[]{0x01C5110400400000L});
+    public static final BitSet FOLLOW_var_decl_in_m325 = new BitSet(new long[]{0x01C5110400400000L});
+    public static final BitSet FOLLOW_instr_in_m328 = new BitSet(new long[]{0x01C5130400400000L});
+    public static final BitSet FOLLOW_41_in_m331 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_params_in_method_params360 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_OTHERS_in_params380 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_params382 = new BitSet(new long[]{0x0000006000200000L});
+    public static final BitSet FOLLOW_type_in_params385 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_42_in_params388 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_ID_OTHERS_in_params390 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_params392 = new BitSet(new long[]{0x0000006000200000L});
+    public static final BitSet FOLLOW_type_in_params394 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_ID_OTHERS_in_instr422 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_43_in_instr424 = new BitSet(new long[]{0x4E20000103400000L});
+    public static final BitSet FOLLOW_i_in_instr426 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_instr440 = new BitSet(new long[]{0x4E00000103400000L});
+    public static final BitSet FOLLOW_expr_in_instr442 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_45_in_instr444 = new BitSet(new long[]{0x01C5110400400000L});
+    public static final BitSet FOLLOW_instr_in_instr446 = new BitSet(new long[]{0x0000C00000000000L});
+    public static final BitSet FOLLOW_46_in_instr449 = new BitSet(new long[]{0x01C5110400400000L});
+    public static final BitSet FOLLOW_instr_in_instr451 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_47_in_instr455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_instr473 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_ID_OTHERS_in_instr475 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_instr477 = new BitSet(new long[]{0x4E00000103400000L});
+    public static final BitSet FOLLOW_boundaries_in_instr479 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_50_in_instr481 = new BitSet(new long[]{0x01C5110400400000L});
+    public static final BitSet FOLLOW_instr_in_instr483 = new BitSet(new long[]{0x01CD110400400000L});
+    public static final BitSet FOLLOW_51_in_instr486 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_instr503 = new BitSet(new long[]{0x01C5110400400000L});
+    public static final BitSet FOLLOW_var_decl_in_instr505 = new BitSet(new long[]{0x01C5110400400000L});
+    public static final BitSet FOLLOW_instr_in_instr508 = new BitSet(new long[]{0x01C5130400400000L});
+    public static final BitSet FOLLOW_41_in_instr511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_instr528 = new BitSet(new long[]{0x4E00000103400000L});
+    public static final BitSet FOLLOW_expr_in_instr530 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_instr532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_print_in_instr545 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_read_in_instr549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_retourne_in_instr553 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_boundaries572 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_boundaries574 = new BitSet(new long[]{0x4E00000103400000L});
+    public static final BitSet FOLLOW_expr_in_boundaries578 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_i604 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_i606 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_i615 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_i617 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_print634 = new BitSet(new long[]{0x4E00000103400000L});
+    public static final BitSet FOLLOW_expr_in_print636 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_print638 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_read660 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_ID_OTHERS_in_read662 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_read664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_56_in_retourne683 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_retourne685 = new BitSet(new long[]{0x4E00000103400000L});
+    public static final BitSet FOLLOW_expr_in_retourne687 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_retourne689 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_retourne690 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_exprplus_in_expr711 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_57_in_expr716 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_e_in_expr718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_expr723 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_e_in_expr725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_expr732 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_ID_CLASS_in_expr734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_e754 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_ID_OTHERS_in_e756 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_e758 = new BitSet(new long[]{0x4E00000303400000L});
+    public static final BitSet FOLLOW_f_in_e760 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_e763 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_e_in_e765 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_f796 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_42_in_f799 = new BitSet(new long[]{0x4E00000103400000L});
+    public static final BitSet FOLLOW_expr_in_f801 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_exprmult_in_exprplus825 = new BitSet(new long[]{0x7000000000000000L});
+    public static final BitSet FOLLOW_e_in_exprplus827 = new BitSet(new long[]{0x6000000000000002L});
+    public static final BitSet FOLLOW_61_in_exprplus832 = new BitSet(new long[]{0x4000000103400000L});
+    public static final BitSet FOLLOW_62_in_exprplus835 = new BitSet(new long[]{0x4000000103400000L});
+    public static final BitSet FOLLOW_exprmult_in_exprplus839 = new BitSet(new long[]{0x7000000000000000L});
+    public static final BitSet FOLLOW_e_in_exprplus841 = new BitSet(new long[]{0x6000000000000002L});
+    public static final BitSet FOLLOW_oper_in_exprmult855 = new BitSet(new long[]{0x8000000000000002L});
+    public static final BitSet FOLLOW_63_in_exprmult858 = new BitSet(new long[]{0x4000000103400000L});
+    public static final BitSet FOLLOW_oper_in_exprmult861 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_moinsunaire_in_oper874 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_OPERCONDITION_in_oper877 = new BitSet(new long[]{0x4000000103400000L});
+    public static final BitSet FOLLOW_moinsunaire_in_oper880 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_62_in_moinsunaire893 = new BitSet(new long[]{0x4000000103400000L});
+    public static final BitSet FOLLOW_atom_in_moinsunaire895 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_atom_in_moinsunaire908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_OTHERS_in_atom919 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_e_in_atom921 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_atom926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INT_in_atom932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_atom938 = new BitSet(new long[]{0x4E00000103400000L});
+    public static final BitSet FOLLOW_expr_in_atom939 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_atom940 = new BitSet(new long[]{0x0000000000000002L});
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
 }

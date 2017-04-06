@@ -1,3 +1,4 @@
+
 class Animal =
 (
 	var name : string;
@@ -13,7 +14,12 @@ class Animal =
 		write name;
 	}
 )
+class Animal =
+(
+	var name : string;
 
+	
+)
 class Dog inherit Animal =
 (
 	method whoami()
@@ -34,14 +40,18 @@ class Cat inherit MAmouth =
 
 
 var n : int;
-var i : int;
+var txt : string;
+var total : int;
+var total :int;
 
+<<<<<<< HEAD
 write a + banane.eat();
 n := 10;
+=======
+n := 1;
+a := 4;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
-for i in 0 .. n
-do 
- total := total + i * i ;
-end
+n := txt + n;
 
-write total;
+n := total + total*i;

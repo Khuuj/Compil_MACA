@@ -1,6 +1,10 @@
 package expr;
 
+<<<<<<< HEAD
 // $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-04-06 16:56:19
+=======
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 Expr.g 2017-04-06 15:21:11
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -12,7 +16,11 @@ import org.antlr.runtime.tree.*;
 
 public class ExprParser extends Parser {
     public static final String[] tokenNames = new String[] {
+<<<<<<< HEAD
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ROOT", "DEC_CLASS", "DEC_VAR", "AFFECT", "RETURN", "FOR", "IF", "BLOC", "BODY", "METHOD", "ARGS", "PARAMS", "OPPOSE", "APPELMETHODE", "PARAM", "NEW", "BODY_CLASS", "ID_CLASS", "ID_OTHERS", "OPERCONDITION", "INT", "STRING", "COMMENTS", "NEWLINE", "WS", "'class'", "'inherit'", "'='", "'('", "')'", "'var'", "':'", "';'", "'int'", "'string'", "'method'", "'{'", "'}'", "','", "':='", "'if'", "'then'", "'else'", "'fi'", "'for'", "'in'", "'do'", "'end'", "'..'", "'nil'", "'write'", "'read'", "'return'", "'this'", "'super'", "'new'", "'.'", "'+'", "'-'", "'*'"
+=======
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ROOT", "DEC_CLASS", "DEC_VAR", "AFFECT", "RETURN", "FOR", "IF", "BLOC", "BODY", "METHOD", "ARGS", "PARAMS", "OPPOSE", "APPELMETHODE", "PARAM", "NEW", "BODY_CLASS", "ID_CLASS", "ID_OTHERS", "OPERCONDITION", "STRING", "INT", "COMMENTS", "NEWLINE", "WS", "'class'", "'inherit'", "'='", "'('", "')'", "'var'", "':'", "';'", "'int'", "'string'", "'method'", "'{'", "'}'", "','", "':='", "'if'", "'then'", "'else'", "'fi'", "'for'", "'in'", "'do'", "'end'", "'..'", "'nil'", "'write'", "'read'", "'return'", "'this'", "'super'", "'new'", "'.'", "'+'", "'-'", "'*'"
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     };
     public static final int EOF=-1;
     public static final int T__29=29;
@@ -70,8 +78,13 @@ public class ExprParser extends Parser {
     public static final int ID_CLASS=21;
     public static final int ID_OTHERS=22;
     public static final int OPERCONDITION=23;
+<<<<<<< HEAD
     public static final int INT=24;
     public static final int STRING=25;
+=======
+    public static final int STRING=24;
+    public static final int INT=25;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     public static final int COMMENTS=26;
     public static final int NEWLINE=27;
     public static final int WS=28;
@@ -378,7 +391,7 @@ public class ExprParser extends Parser {
 
 
             // AST REWRITE
-            // elements: b, a, class_item_decl
+            // elements: b, class_item_decl, a
             // token labels: a, b
             // rule labels: retval
             // token list labels: 
@@ -815,7 +828,7 @@ public class ExprParser extends Parser {
 
 
             // AST REWRITE
-            // elements: method_params, ID_OTHERS, m
+            // elements: ID_OTHERS, method_params, m
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1128,7 +1141,7 @@ public class ExprParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: instr, type, var_decl
+                    // elements: var_decl, type, instr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1354,7 +1367,7 @@ public class ExprParser extends Parser {
 
 
             // AST REWRITE
-            // elements: type, ID_OTHERS
+            // elements: ID_OTHERS, type
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1367,7 +1380,11 @@ public class ExprParser extends Parser {
             // 66:48: -> ( ^( PARAM ID_OTHERS type ) )*
             {
                 // Expr.g:66:51: ( ^( PARAM ID_OTHERS type ) )*
+<<<<<<< HEAD
                 while ( stream_type.hasNext()||stream_ID_OTHERS.hasNext() ) {
+=======
+                while ( stream_ID_OTHERS.hasNext()||stream_type.hasNext() ) {
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     // Expr.g:66:51: ^( PARAM ID_OTHERS type )
                     {
                     Object root_1 = (Object)adaptor.nil();
@@ -1380,8 +1397,8 @@ public class ExprParser extends Parser {
                     }
 
                 }
-                stream_type.reset();
                 stream_ID_OTHERS.reset();
+                stream_type.reset();
 
             }
 
@@ -1643,7 +1660,7 @@ public class ExprParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: expr, instr, instr
+                    // elements: instr, expr, instr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1739,7 +1756,7 @@ public class ExprParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: boundaries, ID_OTHERS, instr
+                    // elements: ID_OTHERS, instr, boundaries
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1852,7 +1869,7 @@ public class ExprParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: instr, var_decl
+                    // elements: var_decl, instr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1910,7 +1927,11 @@ public class ExprParser extends Parser {
 
 
                     // AST REWRITE
+<<<<<<< HEAD
                     // elements: expr, 50
+=======
+                    // elements: 50, expr
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2043,7 +2064,11 @@ public class ExprParser extends Parser {
 
 
             // AST REWRITE
+<<<<<<< HEAD
             // elements: 52, a, b
+=======
+            // elements: a, b, 52
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             // token labels: 
             // rule labels: a, b, retval
             // token list labels: 
@@ -2121,7 +2146,11 @@ public class ExprParser extends Parser {
             int alt19=2;
             int LA19_0 = input.LA(1);
 
+<<<<<<< HEAD
             if ( (LA19_0==ID_OTHERS||(LA19_0>=INT && LA19_0<=STRING)||LA19_0==32||(LA19_0>=57 && LA19_0<=59)||LA19_0==62) ) {
+=======
+            if ( (LA19_0==ID_OTHERS||(LA19_0>=STRING && LA19_0<=INT)||LA19_0==32||(LA19_0>=57 && LA19_0<=59)||LA19_0==62) ) {
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                 alt19=1;
             }
             else if ( (LA19_0==53) ) {
@@ -2530,8 +2559,12 @@ public class ExprParser extends Parser {
             int alt20=4;
             switch ( input.LA(1) ) {
             case ID_OTHERS:
-            case INT:
             case STRING:
+            case INT:
+<<<<<<< HEAD
+            case STRING:
+=======
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             case 32:
             case 62:
                 {
@@ -2618,6 +2651,7 @@ public class ExprParser extends Parser {
                     }
                     break;
                 case 4 :
+<<<<<<< HEAD
                     // Expr.g:106:4: 'new' ID_CLASS e
                     {
                     string_literal91=(Token)match(input,59,FOLLOW_59_in_expr732);  
@@ -2627,6 +2661,17 @@ public class ExprParser extends Parser {
                     stream_ID_CLASS.add(ID_CLASS92);
 
                     pushFollow(FOLLOW_e_in_expr736);
+=======
+                    // Expr.g:107:4: 'new' ID_CLASS e
+                    {
+                    string_literal91=(Token)match(input,59,FOLLOW_59_in_expr734);  
+                    stream_59.add(string_literal91);
+
+                    ID_CLASS92=(Token)match(input,ID_CLASS,FOLLOW_ID_CLASS_in_expr736);  
+                    stream_ID_CLASS.add(ID_CLASS92);
+
+                    pushFollow(FOLLOW_e_in_expr738);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     e93=e();
 
                     state._fsp--;
@@ -2645,15 +2690,15 @@ public class ExprParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 106:21: -> ^( NEW ID_CLASS ( e )? )
+                    // 107:21: -> ^( NEW ID_CLASS ( e )? )
                     {
-                        // Expr.g:106:24: ^( NEW ID_CLASS ( e )? )
+                        // Expr.g:107:24: ^( NEW ID_CLASS ( e )? )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(NEW, "NEW"), root_1);
 
                         adaptor.addChild(root_1, stream_ID_CLASS.nextNode());
-                        // Expr.g:106:39: ( e )?
+                        // Expr.g:107:39: ( e )?
                         if ( stream_e.hasNext() ) {
                             adaptor.addChild(root_1, stream_e.nextTree());
 
@@ -2694,7 +2739,11 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "e"
+<<<<<<< HEAD
     // Expr.g:108:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? e ) | );
+=======
+    // Expr.g:109:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | );
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     public final ExprParser.e_return e() throws RecognitionException {
         ExprParser.e_return retval = new ExprParser.e_return();
         retval.start = input.LT(1);
@@ -2721,7 +2770,11 @@ public class ExprParser extends Parser {
         RewriteRuleSubtreeStream stream_e=new RewriteRuleSubtreeStream(adaptor,"rule e");
         RewriteRuleSubtreeStream stream_f=new RewriteRuleSubtreeStream(adaptor,"rule f");
         try {
+<<<<<<< HEAD
             // Expr.g:108:3: ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? e ) | )
+=======
+            // Expr.g:109:3: ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | )
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -2739,8 +2792,9 @@ public class ExprParser extends Parser {
             }
             switch (alt22) {
                 case 1 :
-                    // Expr.g:109:2: '.' ID_OTHERS '(' ( f )? ')' e
+                    // Expr.g:110:2: '.' ID_OTHERS '(' ( f )? ')' e
                     {
+<<<<<<< HEAD
                     char_literal94=(Token)match(input,60,FOLLOW_60_in_e757);  
                     stream_60.add(char_literal94);
 
@@ -2748,20 +2802,37 @@ public class ExprParser extends Parser {
                     stream_ID_OTHERS.add(ID_OTHERS95);
 
                     char_literal96=(Token)match(input,32,FOLLOW_32_in_e761);  
+=======
+                    char_literal94=(Token)match(input,60,FOLLOW_60_in_e759);  
+                    stream_60.add(char_literal94);
+
+                    ID_OTHERS95=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_e761);  
+                    stream_ID_OTHERS.add(ID_OTHERS95);
+
+                    char_literal96=(Token)match(input,32,FOLLOW_32_in_e763);  
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     stream_32.add(char_literal96);
 
-                    // Expr.g:109:20: ( f )?
+                    // Expr.g:110:20: ( f )?
                     int alt21=2;
                     int LA21_0 = input.LA(1);
 
+<<<<<<< HEAD
                     if ( (LA21_0==ID_OTHERS||(LA21_0>=INT && LA21_0<=STRING)||LA21_0==32||(LA21_0>=57 && LA21_0<=59)||LA21_0==62) ) {
+=======
+                    if ( (LA21_0==ID_OTHERS||(LA21_0>=STRING && LA21_0<=INT)||LA21_0==32||(LA21_0>=57 && LA21_0<=59)||LA21_0==62) ) {
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                         alt21=1;
                     }
                     switch (alt21) {
                         case 1 :
-                            // Expr.g:109:20: f
+                            // Expr.g:110:20: f
                             {
+<<<<<<< HEAD
                             pushFollow(FOLLOW_f_in_e763);
+=======
+                            pushFollow(FOLLOW_f_in_e765);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                             f97=f();
 
                             state._fsp--;
@@ -2773,10 +2844,17 @@ public class ExprParser extends Parser {
 
                     }
 
+<<<<<<< HEAD
                     char_literal98=(Token)match(input,33,FOLLOW_33_in_e766);  
                     stream_33.add(char_literal98);
 
                     pushFollow(FOLLOW_e_in_e768);
+=======
+                    char_literal98=(Token)match(input,33,FOLLOW_33_in_e768);  
+                    stream_33.add(char_literal98);
+
+                    pushFollow(FOLLOW_e_in_e770);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     e99=e();
 
                     state._fsp--;
@@ -2795,21 +2873,36 @@ public class ExprParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
+<<<<<<< HEAD
                     // 109:29: -> ^( APPELMETHODE ID_OTHERS ( f )? e )
                     {
                         // Expr.g:109:32: ^( APPELMETHODE ID_OTHERS ( f )? e )
+=======
+                    // 110:29: -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? )
+                    {
+                        // Expr.g:110:32: ^( APPELMETHODE ID_OTHERS ( f )? ( e )? )
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(APPELMETHODE, "APPELMETHODE"), root_1);
 
                         adaptor.addChild(root_1, stream_ID_OTHERS.nextNode());
-                        // Expr.g:109:57: ( f )?
+                        // Expr.g:110:57: ( f )?
                         if ( stream_f.hasNext() ) {
                             adaptor.addChild(root_1, stream_f.nextTree());
 
                         }
                         stream_f.reset();
+<<<<<<< HEAD
                         adaptor.addChild(root_1, stream_e.nextTree());
+=======
+                        // Expr.g:110:60: ( e )?
+                        if ( stream_e.hasNext() ) {
+                            adaptor.addChild(root_1, stream_e.nextTree());
+
+                        }
+                        stream_e.reset();
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
                         adaptor.addChild(root_0, root_1);
                         }
@@ -2820,7 +2913,7 @@ public class ExprParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Expr.g:111:2: 
+                    // Expr.g:112:2: 
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -2852,7 +2945,7 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "f"
-    // Expr.g:113:1: f : expr ( ',' expr )* -> ^( ARGS ( expr )* ) ;
+    // Expr.g:114:1: f : expr ( ',' expr )* -> ^( ARGS ( expr )* ) ;
     public final ExprParser.f_return f() throws RecognitionException {
         ExprParser.f_return retval = new ExprParser.f_return();
         retval.start = input.LT(1);
@@ -2869,16 +2962,24 @@ public class ExprParser extends Parser {
         RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // Expr.g:113:5: ( expr ( ',' expr )* -> ^( ARGS ( expr )* ) )
-            // Expr.g:113:8: expr ( ',' expr )*
+            // Expr.g:114:5: ( expr ( ',' expr )* -> ^( ARGS ( expr )* ) )
+            // Expr.g:114:8: expr ( ',' expr )*
             {
+<<<<<<< HEAD
             pushFollow(FOLLOW_expr_in_f798);
+=======
+            pushFollow(FOLLOW_expr_in_f801);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             expr100=expr();
 
             state._fsp--;
 
             stream_expr.add(expr100.getTree());
+<<<<<<< HEAD
             // Expr.g:113:13: ( ',' expr )*
+=======
+            // Expr.g:114:13: ( ',' expr )*
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             loop23:
             do {
                 int alt23=2;
@@ -2891,12 +2992,19 @@ public class ExprParser extends Parser {
 
                 switch (alt23) {
             	case 1 :
-            	    // Expr.g:113:14: ',' expr
+            	    // Expr.g:114:14: ',' expr
             	    {
+<<<<<<< HEAD
             	    char_literal101=(Token)match(input,42,FOLLOW_42_in_f801);  
             	    stream_42.add(char_literal101);
 
             	    pushFollow(FOLLOW_expr_in_f803);
+=======
+            	    char_literal101=(Token)match(input,42,FOLLOW_42_in_f804);  
+            	    stream_42.add(char_literal101);
+
+            	    pushFollow(FOLLOW_expr_in_f806);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             	    expr102=expr();
 
             	    state._fsp--;
@@ -2924,14 +3032,14 @@ public class ExprParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 113:26: -> ^( ARGS ( expr )* )
+            // 114:26: -> ^( ARGS ( expr )* )
             {
-                // Expr.g:113:29: ^( ARGS ( expr )* )
+                // Expr.g:114:29: ^( ARGS ( expr )* )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(ARGS, "ARGS"), root_1);
 
-                // Expr.g:113:36: ( expr )*
+                // Expr.g:114:36: ( expr )*
                 while ( stream_expr.hasNext() ) {
                     adaptor.addChild(root_1, stream_expr.nextTree());
 
@@ -2970,7 +3078,7 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "exprplus"
-    // Expr.g:117:1: exprplus : exprmult ( ( '+' | '-' ) exprmult )* ;
+    // Expr.g:118:1: exprplus : exprmult ( ( '+' | '-' ) exprmult )* ;
     public final ExprParser.exprplus_return exprplus() throws RecognitionException {
         ExprParser.exprplus_return retval = new ExprParser.exprplus_return();
         retval.start = input.LT(1);
@@ -2988,18 +3096,26 @@ public class ExprParser extends Parser {
         Object char_literal105_tree=null;
 
         try {
-            // Expr.g:117:9: ( exprmult ( ( '+' | '-' ) exprmult )* )
-            // Expr.g:118:2: exprmult ( ( '+' | '-' ) exprmult )*
+            // Expr.g:118:9: ( exprmult ( ( '+' | '-' ) exprmult )* )
+            // Expr.g:119:2: exprmult ( ( '+' | '-' ) exprmult )*
             {
             root_0 = (Object)adaptor.nil();
 
+<<<<<<< HEAD
             pushFollow(FOLLOW_exprmult_in_exprplus827);
+=======
+            pushFollow(FOLLOW_exprmult_in_exprplus830);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             exprmult103=exprmult();
 
             state._fsp--;
 
             adaptor.addChild(root_0, exprmult103.getTree());
+<<<<<<< HEAD
             // Expr.g:118:11: ( ( '+' | '-' ) exprmult )*
+=======
+            // Expr.g:119:11: ( ( '+' | '-' ) exprmult )*
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             loop25:
             do {
                 int alt25=2;
@@ -3012,9 +3128,9 @@ public class ExprParser extends Parser {
 
                 switch (alt25) {
             	case 1 :
-            	    // Expr.g:118:13: ( '+' | '-' ) exprmult
+            	    // Expr.g:119:13: ( '+' | '-' ) exprmult
             	    {
-            	    // Expr.g:118:13: ( '+' | '-' )
+            	    // Expr.g:119:13: ( '+' | '-' )
             	    int alt24=2;
             	    int LA24_0 = input.LA(1);
 
@@ -3032,9 +3148,13 @@ public class ExprParser extends Parser {
             	    }
             	    switch (alt24) {
             	        case 1 :
-            	            // Expr.g:118:14: '+'
+            	            // Expr.g:119:14: '+'
             	            {
+<<<<<<< HEAD
             	            char_literal104=(Token)match(input,61,FOLLOW_61_in_exprplus832); 
+=======
+            	            char_literal104=(Token)match(input,61,FOLLOW_61_in_exprplus835); 
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             	            char_literal104_tree = (Object)adaptor.create(char_literal104);
             	            root_0 = (Object)adaptor.becomeRoot(char_literal104_tree, root_0);
 
@@ -3042,9 +3162,13 @@ public class ExprParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // Expr.g:118:19: '-'
+            	            // Expr.g:119:19: '-'
             	            {
+<<<<<<< HEAD
             	            char_literal105=(Token)match(input,62,FOLLOW_62_in_exprplus835); 
+=======
+            	            char_literal105=(Token)match(input,62,FOLLOW_62_in_exprplus838); 
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             	            char_literal105_tree = (Object)adaptor.create(char_literal105);
             	            root_0 = (Object)adaptor.becomeRoot(char_literal105_tree, root_0);
 
@@ -3054,7 +3178,11 @@ public class ExprParser extends Parser {
 
             	    }
 
+<<<<<<< HEAD
             	    pushFollow(FOLLOW_exprmult_in_exprplus839);
+=======
+            	    pushFollow(FOLLOW_exprmult_in_exprplus842);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             	    exprmult106=exprmult();
 
             	    state._fsp--;
@@ -3096,7 +3224,7 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "exprmult"
-    // Expr.g:122:1: exprmult : oper ( '*' oper )? ;
+    // Expr.g:123:1: exprmult : oper ( '*' oper )? ;
     public final ExprParser.exprmult_return exprmult() throws RecognitionException {
         ExprParser.exprmult_return retval = new ExprParser.exprmult_return();
         retval.start = input.LT(1);
@@ -3112,18 +3240,26 @@ public class ExprParser extends Parser {
         Object char_literal108_tree=null;
 
         try {
-            // Expr.g:122:9: ( oper ( '*' oper )? )
-            // Expr.g:123:3: oper ( '*' oper )?
+            // Expr.g:123:9: ( oper ( '*' oper )? )
+            // Expr.g:124:3: oper ( '*' oper )?
             {
             root_0 = (Object)adaptor.nil();
 
+<<<<<<< HEAD
             pushFollow(FOLLOW_oper_in_exprmult853);
+=======
+            pushFollow(FOLLOW_oper_in_exprmult856);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             oper107=oper();
 
             state._fsp--;
 
             adaptor.addChild(root_0, oper107.getTree());
+<<<<<<< HEAD
             // Expr.g:123:7: ( '*' oper )?
+=======
+            // Expr.g:124:7: ( '*' oper )?
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             int alt26=2;
             int LA26_0 = input.LA(1);
 
@@ -3132,13 +3268,21 @@ public class ExprParser extends Parser {
             }
             switch (alt26) {
                 case 1 :
-                    // Expr.g:123:9: '*' oper
+                    // Expr.g:124:9: '*' oper
                     {
+<<<<<<< HEAD
                     char_literal108=(Token)match(input,63,FOLLOW_63_in_exprmult856); 
                     char_literal108_tree = (Object)adaptor.create(char_literal108);
                     root_0 = (Object)adaptor.becomeRoot(char_literal108_tree, root_0);
 
                     pushFollow(FOLLOW_oper_in_exprmult859);
+=======
+                    char_literal108=(Token)match(input,63,FOLLOW_63_in_exprmult859); 
+                    char_literal108_tree = (Object)adaptor.create(char_literal108);
+                    root_0 = (Object)adaptor.becomeRoot(char_literal108_tree, root_0);
+
+                    pushFollow(FOLLOW_oper_in_exprmult862);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     oper109=oper();
 
                     state._fsp--;
@@ -3177,7 +3321,7 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "oper"
-    // Expr.g:126:1: oper : moinsunaire ( OPERCONDITION moinsunaire )* ;
+    // Expr.g:127:1: oper : moinsunaire ( OPERCONDITION moinsunaire )* ;
     public final ExprParser.oper_return oper() throws RecognitionException {
         ExprParser.oper_return retval = new ExprParser.oper_return();
         retval.start = input.LT(1);
@@ -3193,18 +3337,26 @@ public class ExprParser extends Parser {
         Object OPERCONDITION111_tree=null;
 
         try {
-            // Expr.g:126:5: ( moinsunaire ( OPERCONDITION moinsunaire )* )
-            // Expr.g:127:2: moinsunaire ( OPERCONDITION moinsunaire )*
+            // Expr.g:127:5: ( moinsunaire ( OPERCONDITION moinsunaire )* )
+            // Expr.g:128:2: moinsunaire ( OPERCONDITION moinsunaire )*
             {
             root_0 = (Object)adaptor.nil();
 
+<<<<<<< HEAD
             pushFollow(FOLLOW_moinsunaire_in_oper872);
+=======
+            pushFollow(FOLLOW_moinsunaire_in_oper875);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             moinsunaire110=moinsunaire();
 
             state._fsp--;
 
             adaptor.addChild(root_0, moinsunaire110.getTree());
+<<<<<<< HEAD
             // Expr.g:127:14: ( OPERCONDITION moinsunaire )*
+=======
+            // Expr.g:128:14: ( OPERCONDITION moinsunaire )*
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             loop27:
             do {
                 int alt27=2;
@@ -3217,13 +3369,21 @@ public class ExprParser extends Parser {
 
                 switch (alt27) {
             	case 1 :
-            	    // Expr.g:127:15: OPERCONDITION moinsunaire
+            	    // Expr.g:128:15: OPERCONDITION moinsunaire
             	    {
+<<<<<<< HEAD
             	    OPERCONDITION111=(Token)match(input,OPERCONDITION,FOLLOW_OPERCONDITION_in_oper875); 
             	    OPERCONDITION111_tree = (Object)adaptor.create(OPERCONDITION111);
             	    root_0 = (Object)adaptor.becomeRoot(OPERCONDITION111_tree, root_0);
 
             	    pushFollow(FOLLOW_moinsunaire_in_oper878);
+=======
+            	    OPERCONDITION111=(Token)match(input,OPERCONDITION,FOLLOW_OPERCONDITION_in_oper878); 
+            	    OPERCONDITION111_tree = (Object)adaptor.create(OPERCONDITION111);
+            	    root_0 = (Object)adaptor.becomeRoot(OPERCONDITION111_tree, root_0);
+
+            	    pushFollow(FOLLOW_moinsunaire_in_oper881);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             	    moinsunaire112=moinsunaire();
 
             	    state._fsp--;
@@ -3265,7 +3425,7 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "moinsunaire"
-    // Expr.g:130:1: moinsunaire : ( '-' atom -> ^( OPPOSE atom ) | atom );
+    // Expr.g:131:1: moinsunaire : ( '-' atom -> ^( OPPOSE atom ) | atom );
     public final ExprParser.moinsunaire_return moinsunaire() throws RecognitionException {
         ExprParser.moinsunaire_return retval = new ExprParser.moinsunaire_return();
         retval.start = input.LT(1);
@@ -3282,14 +3442,18 @@ public class ExprParser extends Parser {
         RewriteRuleTokenStream stream_62=new RewriteRuleTokenStream(adaptor,"token 62");
         RewriteRuleSubtreeStream stream_atom=new RewriteRuleSubtreeStream(adaptor,"rule atom");
         try {
-            // Expr.g:130:12: ( '-' atom -> ^( OPPOSE atom ) | atom )
+            // Expr.g:131:12: ( '-' atom -> ^( OPPOSE atom ) | atom )
             int alt28=2;
             int LA28_0 = input.LA(1);
 
             if ( (LA28_0==62) ) {
                 alt28=1;
             }
+<<<<<<< HEAD
             else if ( (LA28_0==ID_OTHERS||(LA28_0>=INT && LA28_0<=STRING)||LA28_0==32) ) {
+=======
+            else if ( (LA28_0==ID_OTHERS||(LA28_0>=STRING && LA28_0<=INT)||LA28_0==32) ) {
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                 alt28=2;
             }
             else {
@@ -3300,12 +3464,19 @@ public class ExprParser extends Parser {
             }
             switch (alt28) {
                 case 1 :
-                    // Expr.g:131:2: '-' atom
+                    // Expr.g:132:2: '-' atom
                     {
+<<<<<<< HEAD
                     char_literal113=(Token)match(input,62,FOLLOW_62_in_moinsunaire891);  
                     stream_62.add(char_literal113);
 
                     pushFollow(FOLLOW_atom_in_moinsunaire893);
+=======
+                    char_literal113=(Token)match(input,62,FOLLOW_62_in_moinsunaire894);  
+                    stream_62.add(char_literal113);
+
+                    pushFollow(FOLLOW_atom_in_moinsunaire896);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     atom114=atom();
 
                     state._fsp--;
@@ -3324,9 +3495,9 @@ public class ExprParser extends Parser {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (Object)adaptor.nil();
-                    // 131:11: -> ^( OPPOSE atom )
+                    // 132:11: -> ^( OPPOSE atom )
                     {
-                        // Expr.g:131:14: ^( OPPOSE atom )
+                        // Expr.g:132:14: ^( OPPOSE atom )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(OPPOSE, "OPPOSE"), root_1);
@@ -3342,11 +3513,15 @@ public class ExprParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // Expr.g:132:4: atom
+                    // Expr.g:133:4: atom
                     {
                     root_0 = (Object)adaptor.nil();
 
+<<<<<<< HEAD
                     pushFollow(FOLLOW_atom_in_moinsunaire906);
+=======
+                    pushFollow(FOLLOW_atom_in_moinsunaire909);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     atom115=atom();
 
                     state._fsp--;
@@ -3381,7 +3556,11 @@ public class ExprParser extends Parser {
     };
 
     // $ANTLR start "atom"
+<<<<<<< HEAD
     // Expr.g:134:1: atom : ( ID_OTHERS | INT | STRING | '(' expr ')' );
+=======
+    // Expr.g:135:1: atom : ( ID_OTHERS | STRING | INT | '(' expr ')' );
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
     public final ExprParser.atom_return atom() throws RecognitionException {
         ExprParser.atom_return retval = new ExprParser.atom_return();
         retval.start = input.LT(1);
@@ -3389,21 +3568,35 @@ public class ExprParser extends Parser {
         Object root_0 = null;
 
         Token ID_OTHERS116=null;
+<<<<<<< HEAD
         Token INT117=null;
         Token STRING118=null;
+=======
+        Token STRING117=null;
+        Token INT118=null;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
         Token char_literal119=null;
         Token char_literal121=null;
         ExprParser.expr_return expr120 = null;
 
 
         Object ID_OTHERS116_tree=null;
+<<<<<<< HEAD
         Object INT117_tree=null;
         Object STRING118_tree=null;
+=======
+        Object STRING117_tree=null;
+        Object INT118_tree=null;
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
         Object char_literal119_tree=null;
         Object char_literal121_tree=null;
 
         try {
+<<<<<<< HEAD
             // Expr.g:134:5: ( ID_OTHERS | INT | STRING | '(' expr ')' )
+=======
+            // Expr.g:135:5: ( ID_OTHERS | STRING | INT | '(' expr ')' )
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
             int alt29=4;
             switch ( input.LA(1) ) {
             case ID_OTHERS:
@@ -3411,12 +3604,16 @@ public class ExprParser extends Parser {
                 alt29=1;
                 }
                 break;
-            case INT:
+            case STRING:
                 {
                 alt29=2;
                 }
                 break;
+<<<<<<< HEAD
             case STRING:
+=======
+            case INT:
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                 {
                 alt29=3;
                 }
@@ -3435,11 +3632,15 @@ public class ExprParser extends Parser {
 
             switch (alt29) {
                 case 1 :
-                    // Expr.g:135:3: ID_OTHERS
+                    // Expr.g:136:3: ID_OTHERS
                     {
                     root_0 = (Object)adaptor.nil();
 
+<<<<<<< HEAD
                     ID_OTHERS116=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_atom917); 
+=======
+                    ID_OTHERS116=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_atom920); 
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     ID_OTHERS116_tree = (Object)adaptor.create(ID_OTHERS116);
                     adaptor.addChild(root_0, ID_OTHERS116_tree);
 
@@ -3447,6 +3648,7 @@ public class ExprParser extends Parser {
                     }
                     break;
                 case 2 :
+<<<<<<< HEAD
                     // Expr.g:136:4: INT
                     {
                     root_0 = (Object)adaptor.nil();
@@ -3454,10 +3656,32 @@ public class ExprParser extends Parser {
                     INT117=(Token)match(input,INT,FOLLOW_INT_in_atom922); 
                     INT117_tree = (Object)adaptor.create(INT117);
                     adaptor.addChild(root_0, INT117_tree);
+=======
+                    // Expr.g:137:4: STRING
+                    {
+                    root_0 = (Object)adaptor.nil();
+
+                    STRING117=(Token)match(input,STRING,FOLLOW_STRING_in_atom925); 
+                    STRING117_tree = (Object)adaptor.create(STRING117);
+                    adaptor.addChild(root_0, STRING117_tree);
 
 
                     }
                     break;
+                case 3 :
+                    // Expr.g:138:5: INT
+                    {
+                    root_0 = (Object)adaptor.nil();
+
+                    INT118=(Token)match(input,INT,FOLLOW_INT_in_atom931); 
+                    INT118_tree = (Object)adaptor.create(INT118);
+                    adaptor.addChild(root_0, INT118_tree);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
+
+
+                    }
+                    break;
+<<<<<<< HEAD
                 case 3 :
                     // Expr.g:137:4: STRING
                     {
@@ -3480,12 +3704,28 @@ public class ExprParser extends Parser {
                     adaptor.addChild(root_0, char_literal119_tree);
 
                     pushFollow(FOLLOW_expr_in_atom933);
+=======
+                case 4 :
+                    // Expr.g:139:4: '(' expr ')'
+                    {
+                    root_0 = (Object)adaptor.nil();
+
+                    char_literal119=(Token)match(input,32,FOLLOW_32_in_atom936); 
+                    char_literal119_tree = (Object)adaptor.create(char_literal119);
+                    adaptor.addChild(root_0, char_literal119_tree);
+
+                    pushFollow(FOLLOW_expr_in_atom937);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     expr120=expr();
 
                     state._fsp--;
 
                     adaptor.addChild(root_0, expr120.getTree());
+<<<<<<< HEAD
                     char_literal121=(Token)match(input,33,FOLLOW_33_in_atom934); 
+=======
+                    char_literal121=(Token)match(input,33,FOLLOW_33_in_atom938); 
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
                     char_literal121_tree = (Object)adaptor.create(char_literal121);
                     adaptor.addChild(root_0, char_literal121_tree);
 
@@ -3611,6 +3851,7 @@ public class ExprParser extends Parser {
     public static final BitSet FOLLOW_e_in_expr720 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_58_in_expr725 = new BitSet(new long[]{0x1000000000000000L});
     public static final BitSet FOLLOW_e_in_expr727 = new BitSet(new long[]{0x0000000000000002L});
+<<<<<<< HEAD
     public static final BitSet FOLLOW_59_in_expr732 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_ID_CLASS_in_expr734 = new BitSet(new long[]{0x1000000000000000L});
     public static final BitSet FOLLOW_e_in_expr736 = new BitSet(new long[]{0x0000000000000002L});
@@ -3642,5 +3883,38 @@ public class ExprParser extends Parser {
     public static final BitSet FOLLOW_32_in_atom932 = new BitSet(new long[]{0x4E00000103400000L});
     public static final BitSet FOLLOW_expr_in_atom933 = new BitSet(new long[]{0x0000000200000000L});
     public static final BitSet FOLLOW_33_in_atom934 = new BitSet(new long[]{0x0000000000000002L});
+=======
+    public static final BitSet FOLLOW_59_in_expr734 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_ID_CLASS_in_expr736 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_e_in_expr738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_e759 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_ID_OTHERS_in_e761 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_e763 = new BitSet(new long[]{0x4E00000303400000L});
+    public static final BitSet FOLLOW_f_in_e765 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_e768 = new BitSet(new long[]{0x1000000000000000L});
+    public static final BitSet FOLLOW_e_in_e770 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_f801 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_42_in_f804 = new BitSet(new long[]{0x4E00000103400000L});
+    public static final BitSet FOLLOW_expr_in_f806 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_exprmult_in_exprplus830 = new BitSet(new long[]{0x6000000000000002L});
+    public static final BitSet FOLLOW_61_in_exprplus835 = new BitSet(new long[]{0x4000000103400000L});
+    public static final BitSet FOLLOW_62_in_exprplus838 = new BitSet(new long[]{0x4000000103400000L});
+    public static final BitSet FOLLOW_exprmult_in_exprplus842 = new BitSet(new long[]{0x6000000000000002L});
+    public static final BitSet FOLLOW_oper_in_exprmult856 = new BitSet(new long[]{0x8000000000000002L});
+    public static final BitSet FOLLOW_63_in_exprmult859 = new BitSet(new long[]{0x4000000103400000L});
+    public static final BitSet FOLLOW_oper_in_exprmult862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_moinsunaire_in_oper875 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_OPERCONDITION_in_oper878 = new BitSet(new long[]{0x4000000103400000L});
+    public static final BitSet FOLLOW_moinsunaire_in_oper881 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_62_in_moinsunaire894 = new BitSet(new long[]{0x4000000103400000L});
+    public static final BitSet FOLLOW_atom_in_moinsunaire896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_atom_in_moinsunaire909 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_OTHERS_in_atom920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_atom925 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INT_in_atom931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_atom936 = new BitSet(new long[]{0x4E00000103400000L});
+    public static final BitSet FOLLOW_expr_in_atom937 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_atom938 = new BitSet(new long[]{0x0000000000000002L});
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 
 }

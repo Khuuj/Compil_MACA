@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var n : int;
 var total : int;
 var i : int;
@@ -12,3 +13,12 @@ do
 end
 
 write total;
+=======
+var n : int ;
+var total : int ;
+var i : int ;
+var x : string;
+n := -10;
+
+n:= n+n.a();
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940

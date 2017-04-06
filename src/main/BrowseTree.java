@@ -9,6 +9,8 @@ import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.tree.Tree;
 
+import actions.ActionRead;
+import actions.ActionWrite;
 import actionsTDS.AffectTDS;
 import actionsTDS.DecClassTDS;
 import actionsTDS.DecVarTDS;
@@ -16,6 +18,9 @@ import actionsTDS.RootTDS;
 import analyseSem.AffectSem;
 import analyseSem.DecClassSem;
 import analyseSem.DecVarSem;
+import actionsTDS.*;
+import analyseSem.*;
+
 import expr.*;
 import tableInstances.Table;
 import tableTypes.TableClass;
@@ -126,8 +131,12 @@ public class BrowseTree {
 			//cas de déclaration de classe.
 			case "DEC_CLASS":
 				new DecClassSem(node);
+<<<<<<< HEAD
 				DecClassTDS classType = new DecClassTDS(node);
 				CLASS_TDS.addClassType(classType.getClassType());
+=======
+				new DecClassTDS(node);
+>>>>>>> 4ee3460ba8d8bb80f35fbc5a0d2306eafa2bb940
 				break;
 				
 			//cas de déclaration de variable.
@@ -146,6 +155,14 @@ public class BrowseTree {
 				new ForSem(node);
 				new ForTDS(node);
 				break;*/
+				
+			case "write":
+				new WriteSem(node);
+				break;
+			
+			case "read":
+				new ReadSem(node);
+
 			default:
 				break;
 			
