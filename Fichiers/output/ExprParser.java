@@ -1,4 +1,4 @@
-// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/clement/workspace/Compil_MACA/Fichiers/Expr.g 2017-04-06 15:05:08
+// $ANTLR 3.2 Sep 23, 2009 12:02:23 /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g 2017-04-06 16:46:31
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -14,76 +14,76 @@ public class ExprParser extends DebugParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ROOT", "DEC_CLASS", "DEC_VAR", "AFFECT", "RETURN", "FOR", "IF", "BLOC", "BODY", "METHOD", "ARGS", "PARAMS", "OPPOSE", "APPELMETHODE", "PARAM", "NEW", "BODY_CLASS", "ID_CLASS", "ID_OTHERS", "OPERCONDITION", "STRING", "INT", "COMMENTS", "NEWLINE", "WS", "'class'", "'inherit'", "'='", "'('", "')'", "'var'", "':'", "';'", "'int'", "'string'", "'method'", "'{'", "'}'", "','", "':='", "'if'", "'then'", "'else'", "'fi'", "'for'", "'in'", "'do'", "'end'", "'..'", "'nil'", "'write'", "'read'", "'return'", "'this'", "'super'", "'new'", "'.'", "'+'", "'-'", "'*'"
     };
-    public static final int BLOC=11;
+    public static final int T__29=29;
+    public static final int T__62=62;
+    public static final int T__63=63;
     public static final int NEW=19;
-    public static final int T__50=50;
-    public static final int APPELMETHODE=17;
-    public static final int T__59=59;
+    public static final int FOR=9;
+    public static final int PARAM=18;
+    public static final int ID_OTHERS=22;
+    public static final int T__61=61;
+    public static final int EOF=-1;
+    public static final int T__60=60;
+    public static final int IF=10;
     public static final int T__55=55;
     public static final int T__56=56;
     public static final int T__57=57;
     public static final int T__58=58;
     public static final int T__51=51;
     public static final int T__52=52;
-    public static final int IF=10;
+    public static final int COMMENTS=26;
     public static final int T__53=53;
     public static final int T__54=54;
-    public static final int T__60=60;
-    public static final int T__61=61;
-    public static final int BODY_CLASS=20;
-    public static final int NEWLINE=27;
-    public static final int FOR=9;
-    public static final int OPPOSE=16;
     public static final int DEC_CLASS=5;
-    public static final int OPERCONDITION=23;
-    public static final int T__29=29;
-    public static final int METHOD=13;
-    public static final int PARAMS=15;
-    public static final int T__62=62;
-    public static final int T__63=63;
-    public static final int BODY=12;
-    public static final int ARGS=14;
-    public static final int ROOT=4;
-    public static final int COMMENTS=26;
-    public static final int INT=25;
+    public static final int T__59=59;
     public static final int RETURN=8;
-    public static final int T__37=37;
-    public static final int ID_OTHERS=22;
-    public static final int T__38=38;
-    public static final int T__39=39;
-    public static final int T__33=33;
-    public static final int T__34=34;
-    public static final int T__35=35;
-    public static final int T__36=36;
-    public static final int WS=28;
-    public static final int EOF=-1;
+    public static final int ARGS=14;
+    public static final int BODY=12;
+    public static final int OPERCONDITION=23;
+    public static final int T__50=50;
+    public static final int AFFECT=7;
+    public static final int PARAMS=15;
+    public static final int APPELMETHODE=17;
+    public static final int T__42=42;
+    public static final int T__43=43;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__44=44;
+    public static final int BLOC=11;
+    public static final int T__45=45;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int OPPOSE=16;
+    public static final int INT=25;
+    public static final int ROOT=4;
+    public static final int BODY_CLASS=20;
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
+    public static final int WS=28;
+    public static final int T__33=33;
+    public static final int T__34=34;
+    public static final int NEWLINE=27;
+    public static final int T__35=35;
+    public static final int T__36=36;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
     public static final int DEC_VAR=6;
-    public static final int PARAM=18;
-    public static final int AFFECT=7;
-    public static final int T__48=48;
-    public static final int T__49=49;
-    public static final int T__44=44;
-    public static final int T__45=45;
+    public static final int METHOD=13;
     public static final int ID_CLASS=21;
     public static final int STRING=24;
-    public static final int T__46=46;
-    public static final int T__47=47;
-    public static final int T__40=40;
-    public static final int T__41=41;
-    public static final int T__42=42;
-    public static final int T__43=43;
 
     // delegates
     // delegators
 
     public static final String[] ruleNames = new String[] {
-        "invalidRule", "m", "var_decl", "f", "prog", "e", "expr", "retourne", 
-        "exprplus", "method_decl", "moinsunaire", "atom", "class_item_decl", 
-        "params", "i", "oper", "class_decl", "type", "method_params", "boundaries", 
-        "print", "read", "exprmult", "instr"
+        "invalidRule", "retourne", "boundaries", "params", "class_item_decl", 
+        "atom", "read", "method_params", "instr", "oper", "exprmult", "exprplus", 
+        "class_decl", "method_decl", "moinsunaire", "e", "expr", "prog", 
+        "f", "i", "type", "m", "var_decl", "print"
     };
      
         public int ruleLevel = 0;
@@ -133,7 +133,7 @@ public class ExprParser extends DebugParser {
 
 
     public String[] getTokenNames() { return ExprParser.tokenNames; }
-    public String getGrammarFileName() { return "/home/clement/workspace/Compil_MACA/Fichiers/Expr.g"; }
+    public String getGrammarFileName() { return "/home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g"; }
 
 
     public static class prog_return extends ParserRuleReturnScope {
@@ -142,7 +142,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "prog"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:28:1: prog : ( class_decl )* ( var_decl )* ( instr )+ -> ^( ROOT ( class_decl )* ( var_decl )* ( instr )+ ) ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:28:1: prog : ( class_decl )* ( var_decl )* ( instr )+ -> ^( ROOT ( class_decl )* ( var_decl )* ( instr )+ ) ;
     public final ExprParser.prog_return prog() throws RecognitionException {
         ExprParser.prog_return retval = new ExprParser.prog_return();
         retval.start = input.LT(1);
@@ -156,22 +156,22 @@ public class ExprParser extends DebugParser {
         ExprParser.instr_return instr3 = null;
 
 
-        RewriteRuleSubtreeStream stream_instr=new RewriteRuleSubtreeStream(adaptor,"rule instr");
         RewriteRuleSubtreeStream stream_class_decl=new RewriteRuleSubtreeStream(adaptor,"rule class_decl");
         RewriteRuleSubtreeStream stream_var_decl=new RewriteRuleSubtreeStream(adaptor,"rule var_decl");
+        RewriteRuleSubtreeStream stream_instr=new RewriteRuleSubtreeStream(adaptor,"rule instr");
         try { dbg.enterRule(getGrammarFileName(), "prog");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
         dbg.location(28, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:28:6: ( ( class_decl )* ( var_decl )* ( instr )+ -> ^( ROOT ( class_decl )* ( var_decl )* ( instr )+ ) )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:28:6: ( ( class_decl )* ( var_decl )* ( instr )+ -> ^( ROOT ( class_decl )* ( var_decl )* ( instr )+ ) )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:29:2: ( class_decl )* ( var_decl )* ( instr )+
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:29:2: ( class_decl )* ( var_decl )* ( instr )+
             {
             dbg.location(29,2);
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:29:2: ( class_decl )*
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:29:2: ( class_decl )*
             try { dbg.enterSubRule(1);
 
             loop1:
@@ -192,7 +192,7 @@ public class ExprParser extends DebugParser {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:29:2: class_decl
+            	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:29:2: class_decl
             	    {
             	    dbg.location(29,2);
             	    pushFollow(FOLLOW_class_decl_in_prog88);
@@ -212,7 +212,7 @@ public class ExprParser extends DebugParser {
             } finally {dbg.exitSubRule(1);}
 
             dbg.location(29,14);
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:29:14: ( var_decl )*
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:29:14: ( var_decl )*
             try { dbg.enterSubRule(2);
 
             loop2:
@@ -233,7 +233,7 @@ public class ExprParser extends DebugParser {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:29:14: var_decl
+            	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:29:14: var_decl
             	    {
             	    dbg.location(29,14);
             	    pushFollow(FOLLOW_var_decl_in_prog91);
@@ -253,7 +253,7 @@ public class ExprParser extends DebugParser {
             } finally {dbg.exitSubRule(2);}
 
             dbg.location(29,24);
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:29:24: ( instr )+
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:29:24: ( instr )+
             int cnt3=0;
             try { dbg.enterSubRule(3);
 
@@ -275,7 +275,7 @@ public class ExprParser extends DebugParser {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:29:24: instr
+            	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:29:24: instr
             	    {
             	    dbg.location(29,24);
             	    pushFollow(FOLLOW_instr_in_prog94);
@@ -303,7 +303,7 @@ public class ExprParser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: class_decl, var_decl, instr
+            // elements: instr, var_decl, class_decl
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -316,14 +316,14 @@ public class ExprParser extends DebugParser {
             // 29:31: -> ^( ROOT ( class_decl )* ( var_decl )* ( instr )+ )
             {
                 dbg.location(29,34);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:29:34: ^( ROOT ( class_decl )* ( var_decl )* ( instr )+ )
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:29:34: ^( ROOT ( class_decl )* ( var_decl )* ( instr )+ )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(29,36);
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(ROOT, "ROOT"), root_1);
 
                 dbg.location(29,41);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:29:41: ( class_decl )*
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:29:41: ( class_decl )*
                 while ( stream_class_decl.hasNext() ) {
                     dbg.location(29,41);
                     adaptor.addChild(root_1, stream_class_decl.nextTree());
@@ -331,7 +331,7 @@ public class ExprParser extends DebugParser {
                 }
                 stream_class_decl.reset();
                 dbg.location(29,53);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:29:53: ( var_decl )*
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:29:53: ( var_decl )*
                 while ( stream_var_decl.hasNext() ) {
                     dbg.location(29,53);
                     adaptor.addChild(root_1, stream_var_decl.nextTree());
@@ -390,7 +390,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "class_decl"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:33:1: class_decl : 'class' a= ID_CLASS ( 'inherit' b= ID_CLASS )? '=' '(' class_item_decl ')' -> ^( DEC_CLASS $a ( $b)? ( class_item_decl )? ) ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:33:1: class_decl : 'class' a= ID_CLASS ( 'inherit' b= ID_CLASS )? '=' '(' class_item_decl ')' -> ^( DEC_CLASS $a ( $b)? ( class_item_decl )? ) ;
     public final ExprParser.class_decl_return class_decl() throws RecognitionException {
         ExprParser.class_decl_return retval = new ExprParser.class_decl_return();
         retval.start = input.LT(1);
@@ -414,12 +414,12 @@ public class ExprParser extends DebugParser {
         Object char_literal6_tree=null;
         Object char_literal7_tree=null;
         Object char_literal9_tree=null;
-        RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
-        RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
-        RewriteRuleTokenStream stream_ID_CLASS=new RewriteRuleTokenStream(adaptor,"token ID_CLASS");
         RewriteRuleTokenStream stream_30=new RewriteRuleTokenStream(adaptor,"token 30");
-        RewriteRuleTokenStream stream_31=new RewriteRuleTokenStream(adaptor,"token 31");
         RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
+        RewriteRuleTokenStream stream_31=new RewriteRuleTokenStream(adaptor,"token 31");
+        RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
+        RewriteRuleTokenStream stream_ID_CLASS=new RewriteRuleTokenStream(adaptor,"token ID_CLASS");
+        RewriteRuleTokenStream stream_29=new RewriteRuleTokenStream(adaptor,"token 29");
         RewriteRuleSubtreeStream stream_class_item_decl=new RewriteRuleSubtreeStream(adaptor,"rule class_item_decl");
         try { dbg.enterRule(getGrammarFileName(), "class_decl");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -427,10 +427,10 @@ public class ExprParser extends DebugParser {
         dbg.location(33, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:33:12: ( 'class' a= ID_CLASS ( 'inherit' b= ID_CLASS )? '=' '(' class_item_decl ')' -> ^( DEC_CLASS $a ( $b)? ( class_item_decl )? ) )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:33:12: ( 'class' a= ID_CLASS ( 'inherit' b= ID_CLASS )? '=' '(' class_item_decl ')' -> ^( DEC_CLASS $a ( $b)? ( class_item_decl )? ) )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:34:3: 'class' a= ID_CLASS ( 'inherit' b= ID_CLASS )? '=' '(' class_item_decl ')'
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:34:3: 'class' a= ID_CLASS ( 'inherit' b= ID_CLASS )? '=' '(' class_item_decl ')'
             {
             dbg.location(34,3);
             string_literal4=(Token)match(input,29,FOLLOW_29_in_class_decl123);  
@@ -441,7 +441,7 @@ public class ExprParser extends DebugParser {
             stream_ID_CLASS.add(a);
 
             dbg.location(34,22);
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:34:22: ( 'inherit' b= ID_CLASS )?
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:34:22: ( 'inherit' b= ID_CLASS )?
             int alt4=2;
             try { dbg.enterSubRule(4);
             try { dbg.enterDecision(4);
@@ -457,7 +457,7 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:34:23: 'inherit' b= ID_CLASS
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:34:23: 'inherit' b= ID_CLASS
                     {
                     dbg.location(34,23);
                     string_literal5=(Token)match(input,30,FOLLOW_30_in_class_decl130);  
@@ -497,21 +497,21 @@ public class ExprParser extends DebugParser {
 
             // AST REWRITE
             // elements: a, class_item_decl, b
-            // token labels: a, b
+            // token labels: b, a
             // rule labels: retval
             // token list labels: 
             // rule list labels: 
             // wildcard labels: 
             retval.tree = root_0;
-            RewriteRuleTokenStream stream_a=new RewriteRuleTokenStream(adaptor,"token a",a);
             RewriteRuleTokenStream stream_b=new RewriteRuleTokenStream(adaptor,"token b",b);
+            RewriteRuleTokenStream stream_a=new RewriteRuleTokenStream(adaptor,"token a",a);
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
             // 34:74: -> ^( DEC_CLASS $a ( $b)? ( class_item_decl )? )
             {
                 dbg.location(34,76);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:34:76: ^( DEC_CLASS $a ( $b)? ( class_item_decl )? )
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:34:76: ^( DEC_CLASS $a ( $b)? ( class_item_decl )? )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(34,78);
@@ -520,7 +520,7 @@ public class ExprParser extends DebugParser {
                 dbg.location(34,88);
                 adaptor.addChild(root_1, stream_a.nextNode());
                 dbg.location(34,91);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:34:91: ( $b)?
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:34:91: ( $b)?
                 if ( stream_b.hasNext() ) {
                     dbg.location(34,92);
                     adaptor.addChild(root_1, stream_b.nextNode());
@@ -528,7 +528,7 @@ public class ExprParser extends DebugParser {
                 }
                 stream_b.reset();
                 dbg.location(34,97);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:34:97: ( class_item_decl )?
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:34:97: ( class_item_decl )?
                 if ( stream_class_item_decl.hasNext() ) {
                     dbg.location(34,97);
                     adaptor.addChild(root_1, stream_class_item_decl.nextTree());
@@ -577,7 +577,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "class_item_decl"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:37:1: class_item_decl : ( var_decl )* ( method_decl )* -> ^( BODY_CLASS ( var_decl )* ( method_decl )* ) ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:37:1: class_item_decl : ( var_decl )* ( method_decl )* -> ^( BODY_CLASS ( var_decl )* ( method_decl )* ) ;
     public final ExprParser.class_item_decl_return class_item_decl() throws RecognitionException {
         ExprParser.class_item_decl_return retval = new ExprParser.class_item_decl_return();
         retval.start = input.LT(1);
@@ -589,21 +589,21 @@ public class ExprParser extends DebugParser {
         ExprParser.method_decl_return method_decl11 = null;
 
 
-        RewriteRuleSubtreeStream stream_method_decl=new RewriteRuleSubtreeStream(adaptor,"rule method_decl");
         RewriteRuleSubtreeStream stream_var_decl=new RewriteRuleSubtreeStream(adaptor,"rule var_decl");
+        RewriteRuleSubtreeStream stream_method_decl=new RewriteRuleSubtreeStream(adaptor,"rule method_decl");
         try { dbg.enterRule(getGrammarFileName(), "class_item_decl");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
         dbg.location(37, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:37:17: ( ( var_decl )* ( method_decl )* -> ^( BODY_CLASS ( var_decl )* ( method_decl )* ) )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:37:17: ( ( var_decl )* ( method_decl )* -> ^( BODY_CLASS ( var_decl )* ( method_decl )* ) )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:38:2: ( var_decl )* ( method_decl )*
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:38:2: ( var_decl )* ( method_decl )*
             {
             dbg.location(38,2);
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:38:2: ( var_decl )*
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:38:2: ( var_decl )*
             try { dbg.enterSubRule(5);
 
             loop5:
@@ -624,7 +624,7 @@ public class ExprParser extends DebugParser {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:38:2: var_decl
+            	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:38:2: var_decl
             	    {
             	    dbg.location(38,2);
             	    pushFollow(FOLLOW_var_decl_in_class_item_decl174);
@@ -644,7 +644,7 @@ public class ExprParser extends DebugParser {
             } finally {dbg.exitSubRule(5);}
 
             dbg.location(38,12);
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:38:12: ( method_decl )*
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:38:12: ( method_decl )*
             try { dbg.enterSubRule(6);
 
             loop6:
@@ -665,7 +665,7 @@ public class ExprParser extends DebugParser {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:38:12: method_decl
+            	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:38:12: method_decl
             	    {
             	    dbg.location(38,12);
             	    pushFollow(FOLLOW_method_decl_in_class_item_decl177);
@@ -687,7 +687,7 @@ public class ExprParser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: var_decl, method_decl
+            // elements: method_decl, var_decl
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -700,14 +700,14 @@ public class ExprParser extends DebugParser {
             // 38:25: -> ^( BODY_CLASS ( var_decl )* ( method_decl )* )
             {
                 dbg.location(38,27);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:38:27: ^( BODY_CLASS ( var_decl )* ( method_decl )* )
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:38:27: ^( BODY_CLASS ( var_decl )* ( method_decl )* )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(38,29);
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(BODY_CLASS, "BODY_CLASS"), root_1);
 
                 dbg.location(38,40);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:38:40: ( var_decl )*
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:38:40: ( var_decl )*
                 while ( stream_var_decl.hasNext() ) {
                     dbg.location(38,40);
                     adaptor.addChild(root_1, stream_var_decl.nextTree());
@@ -715,7 +715,7 @@ public class ExprParser extends DebugParser {
                 }
                 stream_var_decl.reset();
                 dbg.location(38,50);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:38:50: ( method_decl )*
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:38:50: ( method_decl )*
                 while ( stream_method_decl.hasNext() ) {
                     dbg.location(38,50);
                     adaptor.addChild(root_1, stream_method_decl.nextTree());
@@ -764,7 +764,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "var_decl"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:41:1: var_decl : 'var' ID_OTHERS ':' type ';' -> ^( DEC_VAR ID_OTHERS type ) ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:41:1: var_decl : 'var' ID_OTHERS ':' type ';' -> ^( DEC_VAR ID_OTHERS type ) ;
     public final ExprParser.var_decl_return var_decl() throws RecognitionException {
         ExprParser.var_decl_return retval = new ExprParser.var_decl_return();
         retval.start = input.LT(1);
@@ -782,10 +782,10 @@ public class ExprParser extends DebugParser {
         Object ID_OTHERS13_tree=null;
         Object char_literal14_tree=null;
         Object char_literal16_tree=null;
-        RewriteRuleTokenStream stream_34=new RewriteRuleTokenStream(adaptor,"token 34");
+        RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
         RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
         RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
-        RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
+        RewriteRuleTokenStream stream_34=new RewriteRuleTokenStream(adaptor,"token 34");
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try { dbg.enterRule(getGrammarFileName(), "var_decl");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -793,10 +793,10 @@ public class ExprParser extends DebugParser {
         dbg.location(41, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:41:10: ( 'var' ID_OTHERS ':' type ';' -> ^( DEC_VAR ID_OTHERS type ) )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:41:10: ( 'var' ID_OTHERS ':' type ';' -> ^( DEC_VAR ID_OTHERS type ) )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:42:2: 'var' ID_OTHERS ':' type ';'
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:42:2: 'var' ID_OTHERS ':' type ';'
             {
             dbg.location(42,2);
             string_literal12=(Token)match(input,34,FOLLOW_34_in_var_decl201);  
@@ -824,7 +824,7 @@ public class ExprParser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: ID_OTHERS, type
+            // elements: type, ID_OTHERS
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -837,7 +837,7 @@ public class ExprParser extends DebugParser {
             // 42:31: -> ^( DEC_VAR ID_OTHERS type )
             {
                 dbg.location(42,33);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:42:33: ^( DEC_VAR ID_OTHERS type )
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:42:33: ^( DEC_VAR ID_OTHERS type )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(42,35);
@@ -889,7 +889,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "type"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:45:1: type : ( ID_CLASS | 'int' | 'string' );
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:45:1: type : ( ID_CLASS | 'int' | 'string' );
     public final ExprParser.type_return type() throws RecognitionException {
         ExprParser.type_return retval = new ExprParser.type_return();
         retval.start = input.LT(1);
@@ -906,10 +906,10 @@ public class ExprParser extends DebugParser {
         dbg.location(45, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:45:6: ( ID_CLASS | 'int' | 'string' )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:45:6: ( ID_CLASS | 'int' | 'string' )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:
             {
             root_0 = (Object)adaptor.nil();
 
@@ -962,7 +962,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "method_decl"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:51:1: method_decl : 'method' ID_OTHERS '(' ( method_params )? ')' m -> ^( METHOD ID_OTHERS ( method_params )? m ) ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:51:1: method_decl : 'method' ID_OTHERS '(' ( method_params )? ')' m -> ^( METHOD ID_OTHERS ( method_params )? m ) ;
     public final ExprParser.method_decl_return method_decl() throws RecognitionException {
         ExprParser.method_decl_return retval = new ExprParser.method_decl_return();
         retval.start = input.LT(1);
@@ -982,10 +982,10 @@ public class ExprParser extends DebugParser {
         Object ID_OTHERS19_tree=null;
         Object char_literal20_tree=null;
         Object char_literal22_tree=null;
-        RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
-        RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
         RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
+        RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
+        RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
+        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
         RewriteRuleSubtreeStream stream_method_params=new RewriteRuleSubtreeStream(adaptor,"rule method_params");
         RewriteRuleSubtreeStream stream_m=new RewriteRuleSubtreeStream(adaptor,"rule m");
         try { dbg.enterRule(getGrammarFileName(), "method_decl");
@@ -994,10 +994,10 @@ public class ExprParser extends DebugParser {
         dbg.location(51, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:51:13: ( 'method' ID_OTHERS '(' ( method_params )? ')' m -> ^( METHOD ID_OTHERS ( method_params )? m ) )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:51:13: ( 'method' ID_OTHERS '(' ( method_params )? ')' m -> ^( METHOD ID_OTHERS ( method_params )? m ) )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:52:2: 'method' ID_OTHERS '(' ( method_params )? ')' m
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:52:2: 'method' ID_OTHERS '(' ( method_params )? ')' m
             {
             dbg.location(52,2);
             string_literal18=(Token)match(input,39,FOLLOW_39_in_method_decl252);  
@@ -1012,7 +1012,7 @@ public class ExprParser extends DebugParser {
             stream_32.add(char_literal20);
 
             dbg.location(52,26);
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:52:26: ( method_params )?
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:52:26: ( method_params )?
             int alt7=2;
             try { dbg.enterSubRule(7);
             try { dbg.enterDecision(7);
@@ -1028,7 +1028,7 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:52:26: method_params
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:52:26: method_params
                     {
                     dbg.location(52,26);
                     pushFollow(FOLLOW_method_params_in_method_decl259);
@@ -1058,7 +1058,7 @@ public class ExprParser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: m, method_params, ID_OTHERS
+            // elements: method_params, ID_OTHERS, m
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1071,7 +1071,7 @@ public class ExprParser extends DebugParser {
             // 52:47: -> ^( METHOD ID_OTHERS ( method_params )? m )
             {
                 dbg.location(52,50);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:52:50: ^( METHOD ID_OTHERS ( method_params )? m )
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:52:50: ^( METHOD ID_OTHERS ( method_params )? m )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(52,52);
@@ -1080,7 +1080,7 @@ public class ExprParser extends DebugParser {
                 dbg.location(52,59);
                 adaptor.addChild(root_1, stream_ID_OTHERS.nextNode());
                 dbg.location(52,71);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:52:71: ( method_params )?
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:52:71: ( method_params )?
                 if ( stream_method_params.hasNext() ) {
                     dbg.location(52,71);
                     adaptor.addChild(root_1, stream_method_params.nextTree());
@@ -1131,7 +1131,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "m"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:55:1: m : ( '{' ( var_decl )* ( instr )+ '}' -> ^( BODY ( var_decl )* ( instr )+ ) | ':' type '{' ( var_decl )* ( instr )+ '}' -> type ^( BODY ( var_decl )* ( instr )+ ) );
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:55:1: m : ( '{' ( var_decl )* ( instr )+ '}' -> ^( BODY ( var_decl )* ( instr )+ ) | ':' type '{' ( var_decl )* ( instr )+ '}' -> type ^( BODY ( var_decl )* ( instr )+ ) );
     public final ExprParser.m_return m() throws RecognitionException {
         ExprParser.m_return retval = new ExprParser.m_return();
         retval.start = input.LT(1);
@@ -1159,19 +1159,19 @@ public class ExprParser extends DebugParser {
         Object char_literal28_tree=null;
         Object char_literal30_tree=null;
         Object char_literal33_tree=null;
-        RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
-        RewriteRuleTokenStream stream_40=new RewriteRuleTokenStream(adaptor,"token 40");
         RewriteRuleTokenStream stream_41=new RewriteRuleTokenStream(adaptor,"token 41");
-        RewriteRuleSubtreeStream stream_instr=new RewriteRuleSubtreeStream(adaptor,"rule instr");
-        RewriteRuleSubtreeStream stream_var_decl=new RewriteRuleSubtreeStream(adaptor,"rule var_decl");
+        RewriteRuleTokenStream stream_40=new RewriteRuleTokenStream(adaptor,"token 40");
+        RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
+        RewriteRuleSubtreeStream stream_var_decl=new RewriteRuleSubtreeStream(adaptor,"rule var_decl");
+        RewriteRuleSubtreeStream stream_instr=new RewriteRuleSubtreeStream(adaptor,"rule instr");
         try { dbg.enterRule(getGrammarFileName(), "m");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
         dbg.location(55, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:55:4: ( '{' ( var_decl )* ( instr )+ '}' -> ^( BODY ( var_decl )* ( instr )+ ) | ':' type '{' ( var_decl )* ( instr )+ '}' -> type ^( BODY ( var_decl )* ( instr )+ ) )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:55:4: ( '{' ( var_decl )* ( instr )+ '}' -> ^( BODY ( var_decl )* ( instr )+ ) | ':' type '{' ( var_decl )* ( instr )+ '}' -> type ^( BODY ( var_decl )* ( instr )+ ) )
             int alt12=2;
             try { dbg.enterDecision(12);
 
@@ -1196,14 +1196,14 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:56:2: '{' ( var_decl )* ( instr )+ '}'
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:56:2: '{' ( var_decl )* ( instr )+ '}'
                     {
                     dbg.location(56,2);
                     char_literal24=(Token)match(input,40,FOLLOW_40_in_m293);  
                     stream_40.add(char_literal24);
 
                     dbg.location(56,6);
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:56:6: ( var_decl )*
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:56:6: ( var_decl )*
                     try { dbg.enterSubRule(8);
 
                     loop8:
@@ -1224,7 +1224,7 @@ public class ExprParser extends DebugParser {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:56:6: var_decl
+                    	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:56:6: var_decl
                     	    {
                     	    dbg.location(56,6);
                     	    pushFollow(FOLLOW_var_decl_in_m295);
@@ -1244,7 +1244,7 @@ public class ExprParser extends DebugParser {
                     } finally {dbg.exitSubRule(8);}
 
                     dbg.location(56,16);
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:56:16: ( instr )+
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:56:16: ( instr )+
                     int cnt9=0;
                     try { dbg.enterSubRule(9);
 
@@ -1266,7 +1266,7 @@ public class ExprParser extends DebugParser {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:56:16: instr
+                    	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:56:16: instr
                     	    {
                     	    dbg.location(56,16);
                     	    pushFollow(FOLLOW_instr_in_m298);
@@ -1311,14 +1311,14 @@ public class ExprParser extends DebugParser {
                     // 56:27: -> ^( BODY ( var_decl )* ( instr )+ )
                     {
                         dbg.location(56,29);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:56:29: ^( BODY ( var_decl )* ( instr )+ )
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:56:29: ^( BODY ( var_decl )* ( instr )+ )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(56,31);
                         root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(BODY, "BODY"), root_1);
 
                         dbg.location(56,37);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:56:37: ( var_decl )*
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:56:37: ( var_decl )*
                         while ( stream_var_decl.hasNext() ) {
                             dbg.location(56,37);
                             adaptor.addChild(root_1, stream_var_decl.nextTree());
@@ -1347,7 +1347,7 @@ public class ExprParser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:57:4: ':' type '{' ( var_decl )* ( instr )+ '}'
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:57:4: ':' type '{' ( var_decl )* ( instr )+ '}'
                     {
                     dbg.location(57,4);
                     char_literal28=(Token)match(input,35,FOLLOW_35_in_m319);  
@@ -1365,7 +1365,7 @@ public class ExprParser extends DebugParser {
                     stream_40.add(char_literal30);
 
                     dbg.location(57,17);
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:57:17: ( var_decl )*
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:57:17: ( var_decl )*
                     try { dbg.enterSubRule(10);
 
                     loop10:
@@ -1386,7 +1386,7 @@ public class ExprParser extends DebugParser {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:57:17: var_decl
+                    	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:57:17: var_decl
                     	    {
                     	    dbg.location(57,17);
                     	    pushFollow(FOLLOW_var_decl_in_m325);
@@ -1406,7 +1406,7 @@ public class ExprParser extends DebugParser {
                     } finally {dbg.exitSubRule(10);}
 
                     dbg.location(57,27);
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:57:27: ( instr )+
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:57:27: ( instr )+
                     int cnt11=0;
                     try { dbg.enterSubRule(11);
 
@@ -1428,7 +1428,7 @@ public class ExprParser extends DebugParser {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:57:27: instr
+                    	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:57:27: instr
                     	    {
                     	    dbg.location(57,27);
                     	    pushFollow(FOLLOW_instr_in_m328);
@@ -1475,14 +1475,14 @@ public class ExprParser extends DebugParser {
                         dbg.location(57,41);
                         adaptor.addChild(root_0, stream_type.nextTree());
                         dbg.location(57,46);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:57:46: ^( BODY ( var_decl )* ( instr )+ )
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:57:46: ^( BODY ( var_decl )* ( instr )+ )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(57,48);
                         root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(BODY, "BODY"), root_1);
 
                         dbg.location(57,54);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:57:54: ( var_decl )*
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:57:54: ( var_decl )*
                         while ( stream_var_decl.hasNext() ) {
                             dbg.location(57,54);
                             adaptor.addChild(root_1, stream_var_decl.nextTree());
@@ -1543,7 +1543,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "method_params"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:61:1: method_params : params -> ^( PARAMS params ) ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:61:1: method_params : params -> ^( PARAMS params ) ;
     public final ExprParser.method_params_return method_params() throws RecognitionException {
         ExprParser.method_params_return retval = new ExprParser.method_params_return();
         retval.start = input.LT(1);
@@ -1560,10 +1560,10 @@ public class ExprParser extends DebugParser {
         dbg.location(61, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:61:15: ( params -> ^( PARAMS params ) )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:61:15: ( params -> ^( PARAMS params ) )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:62:2: params
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:62:2: params
             {
             dbg.location(62,2);
             pushFollow(FOLLOW_params_in_method_params360);
@@ -1588,7 +1588,7 @@ public class ExprParser extends DebugParser {
             // 62:9: -> ^( PARAMS params )
             {
                 dbg.location(62,12);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:62:12: ^( PARAMS params )
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:62:12: ^( PARAMS params )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(62,14);
@@ -1638,7 +1638,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "params"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:65:1: params : ID_OTHERS ':' type ( ',' ID_OTHERS ':' type )* -> ( ^( PARAM ID_OTHERS type ) )* ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:65:1: params : ID_OTHERS ':' type ( ',' ID_OTHERS ':' type )* -> ( ^( PARAM ID_OTHERS type ) )* ;
     public final ExprParser.params_return params() throws RecognitionException {
         ExprParser.params_return retval = new ExprParser.params_return();
         retval.start = input.LT(1);
@@ -1660,9 +1660,9 @@ public class ExprParser extends DebugParser {
         Object char_literal38_tree=null;
         Object ID_OTHERS39_tree=null;
         Object char_literal40_tree=null;
-        RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
-        RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
         RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
+        RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
+        RewriteRuleTokenStream stream_35=new RewriteRuleTokenStream(adaptor,"token 35");
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try { dbg.enterRule(getGrammarFileName(), "params");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -1670,10 +1670,10 @@ public class ExprParser extends DebugParser {
         dbg.location(65, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:65:8: ( ID_OTHERS ':' type ( ',' ID_OTHERS ':' type )* -> ( ^( PARAM ID_OTHERS type ) )* )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:65:8: ( ID_OTHERS ':' type ( ',' ID_OTHERS ':' type )* -> ( ^( PARAM ID_OTHERS type ) )* )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:66:2: ID_OTHERS ':' type ( ',' ID_OTHERS ':' type )*
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:66:2: ID_OTHERS ':' type ( ',' ID_OTHERS ':' type )*
             {
             dbg.location(66,2);
             ID_OTHERS35=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_params380);  
@@ -1691,7 +1691,7 @@ public class ExprParser extends DebugParser {
 
             stream_type.add(type37.getTree());
             dbg.location(66,22);
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:66:22: ( ',' ID_OTHERS ':' type )*
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:66:22: ( ',' ID_OTHERS ':' type )*
             try { dbg.enterSubRule(13);
 
             loop13:
@@ -1712,7 +1712,7 @@ public class ExprParser extends DebugParser {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:66:23: ',' ID_OTHERS ':' type
+            	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:66:23: ',' ID_OTHERS ':' type
             	    {
             	    dbg.location(66,23);
             	    char_literal38=(Token)match(input,42,FOLLOW_42_in_params388);  
@@ -1746,7 +1746,7 @@ public class ExprParser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: type, ID_OTHERS
+            // elements: ID_OTHERS, type
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1759,10 +1759,10 @@ public class ExprParser extends DebugParser {
             // 66:48: -> ( ^( PARAM ID_OTHERS type ) )*
             {
                 dbg.location(66,51);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:66:51: ( ^( PARAM ID_OTHERS type ) )*
-                while ( stream_type.hasNext()||stream_ID_OTHERS.hasNext() ) {
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:66:51: ( ^( PARAM ID_OTHERS type ) )*
+                while ( stream_ID_OTHERS.hasNext()||stream_type.hasNext() ) {
                     dbg.location(66,51);
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:66:51: ^( PARAM ID_OTHERS type )
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:66:51: ^( PARAM ID_OTHERS type )
                     {
                     Object root_1 = (Object)adaptor.nil();
                     dbg.location(66,53);
@@ -1777,8 +1777,8 @@ public class ExprParser extends DebugParser {
                     }
 
                 }
-                stream_type.reset();
                 stream_ID_OTHERS.reset();
+                stream_type.reset();
 
             }
 
@@ -1818,7 +1818,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "instr"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:70:1: instr : ( ID_OTHERS ':=' i -> ^( AFFECT ID_OTHERS i ) | 'if' expr 'then' instr ( 'else' instr )? 'fi' -> ^( IF expr instr ( instr )? ) | 'for' ID_OTHERS 'in' boundaries 'do' ( instr )+ 'end' -> ^( FOR ID_OTHERS boundaries ( instr )+ ) | '{' ( var_decl )* ( instr )+ '}' -> ^( BLOC ( var_decl )* ( instr )+ ) | 'do' expr ';' -> ^( 'do' expr ) | print | read | retourne );
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:70:1: instr : ( ID_OTHERS ':=' i -> ^( AFFECT ID_OTHERS i ) | 'if' expr 'then' instr ( 'else' instr )? 'fi' -> ^( IF expr instr ( instr )? ) | 'for' ID_OTHERS 'in' boundaries 'do' ( instr )+ 'end' -> ^( FOR ID_OTHERS boundaries ( instr )+ ) | '{' ( var_decl )* ( instr )+ '}' -> ^( BLOC ( var_decl )* ( instr )+ ) | 'do' expr ';' -> ^( 'do' expr ) | print | read | retourne );
     public final ExprParser.instr_return instr() throws RecognitionException {
         ExprParser.instr_return retval = new ExprParser.instr_return();
         retval.start = input.LT(1);
@@ -1880,31 +1880,31 @@ public class ExprParser extends DebugParser {
         Object char_literal62_tree=null;
         Object string_literal63_tree=null;
         Object char_literal65_tree=null;
-        RewriteRuleTokenStream stream_44=new RewriteRuleTokenStream(adaptor,"token 44");
-        RewriteRuleTokenStream stream_45=new RewriteRuleTokenStream(adaptor,"token 45");
-        RewriteRuleTokenStream stream_46=new RewriteRuleTokenStream(adaptor,"token 46");
-        RewriteRuleTokenStream stream_47=new RewriteRuleTokenStream(adaptor,"token 47");
-        RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
-        RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
         RewriteRuleTokenStream stream_49=new RewriteRuleTokenStream(adaptor,"token 49");
-        RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
-        RewriteRuleTokenStream stream_50=new RewriteRuleTokenStream(adaptor,"token 50");
-        RewriteRuleTokenStream stream_51=new RewriteRuleTokenStream(adaptor,"token 51");
-        RewriteRuleTokenStream stream_40=new RewriteRuleTokenStream(adaptor,"token 40");
-        RewriteRuleTokenStream stream_41=new RewriteRuleTokenStream(adaptor,"token 41");
+        RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
+        RewriteRuleTokenStream stream_45=new RewriteRuleTokenStream(adaptor,"token 45");
         RewriteRuleTokenStream stream_43=new RewriteRuleTokenStream(adaptor,"token 43");
-        RewriteRuleSubtreeStream stream_instr=new RewriteRuleSubtreeStream(adaptor,"rule instr");
-        RewriteRuleSubtreeStream stream_i=new RewriteRuleSubtreeStream(adaptor,"rule i");
+        RewriteRuleTokenStream stream_44=new RewriteRuleTokenStream(adaptor,"token 44");
+        RewriteRuleTokenStream stream_41=new RewriteRuleTokenStream(adaptor,"token 41");
+        RewriteRuleTokenStream stream_47=new RewriteRuleTokenStream(adaptor,"token 47");
+        RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
+        RewriteRuleTokenStream stream_40=new RewriteRuleTokenStream(adaptor,"token 40");
+        RewriteRuleTokenStream stream_46=new RewriteRuleTokenStream(adaptor,"token 46");
+        RewriteRuleTokenStream stream_51=new RewriteRuleTokenStream(adaptor,"token 51");
+        RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
+        RewriteRuleTokenStream stream_50=new RewriteRuleTokenStream(adaptor,"token 50");
         RewriteRuleSubtreeStream stream_boundaries=new RewriteRuleSubtreeStream(adaptor,"rule boundaries");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         RewriteRuleSubtreeStream stream_var_decl=new RewriteRuleSubtreeStream(adaptor,"rule var_decl");
+        RewriteRuleSubtreeStream stream_instr=new RewriteRuleSubtreeStream(adaptor,"rule instr");
+        RewriteRuleSubtreeStream stream_i=new RewriteRuleSubtreeStream(adaptor,"rule i");
         try { dbg.enterRule(getGrammarFileName(), "instr");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
         dbg.location(70, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:70:7: ( ID_OTHERS ':=' i -> ^( AFFECT ID_OTHERS i ) | 'if' expr 'then' instr ( 'else' instr )? 'fi' -> ^( IF expr instr ( instr )? ) | 'for' ID_OTHERS 'in' boundaries 'do' ( instr )+ 'end' -> ^( FOR ID_OTHERS boundaries ( instr )+ ) | '{' ( var_decl )* ( instr )+ '}' -> ^( BLOC ( var_decl )* ( instr )+ ) | 'do' expr ';' -> ^( 'do' expr ) | print | read | retourne )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:70:7: ( ID_OTHERS ':=' i -> ^( AFFECT ID_OTHERS i ) | 'if' expr 'then' instr ( 'else' instr )? 'fi' -> ^( IF expr instr ( instr )? ) | 'for' ID_OTHERS 'in' boundaries 'do' ( instr )+ 'end' -> ^( FOR ID_OTHERS boundaries ( instr )+ ) | '{' ( var_decl )* ( instr )+ '}' -> ^( BLOC ( var_decl )* ( instr )+ ) | 'do' expr ';' -> ^( 'do' expr ) | print | read | retourne )
             int alt18=8;
             try { dbg.enterDecision(18);
 
@@ -1963,7 +1963,7 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:71:2: ID_OTHERS ':=' i
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:71:2: ID_OTHERS ':=' i
                     {
                     dbg.location(71,2);
                     ID_OTHERS42=(Token)match(input,ID_OTHERS,FOLLOW_ID_OTHERS_in_instr422);  
@@ -1996,7 +1996,7 @@ public class ExprParser extends DebugParser {
                     // 71:19: -> ^( AFFECT ID_OTHERS i )
                     {
                         dbg.location(71,22);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:71:22: ^( AFFECT ID_OTHERS i )
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:71:22: ^( AFFECT ID_OTHERS i )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(71,24);
@@ -2018,7 +2018,7 @@ public class ExprParser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:72:3: 'if' expr 'then' instr ( 'else' instr )? 'fi'
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:72:3: 'if' expr 'then' instr ( 'else' instr )? 'fi'
                     {
                     dbg.location(72,3);
                     string_literal45=(Token)match(input,44,FOLLOW_44_in_instr440);  
@@ -2043,7 +2043,7 @@ public class ExprParser extends DebugParser {
 
                     stream_instr.add(instr48.getTree());
                     dbg.location(72,26);
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:72:26: ( 'else' instr )?
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:72:26: ( 'else' instr )?
                     int alt14=2;
                     try { dbg.enterSubRule(14);
                     try { dbg.enterDecision(14);
@@ -2059,7 +2059,7 @@ public class ExprParser extends DebugParser {
                         case 1 :
                             dbg.enterAlt(1);
 
-                            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:72:27: 'else' instr
+                            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:72:27: 'else' instr
                             {
                             dbg.location(72,27);
                             string_literal49=(Token)match(input,46,FOLLOW_46_in_instr449);  
@@ -2099,7 +2099,7 @@ public class ExprParser extends DebugParser {
                     // 72:48: -> ^( IF expr instr ( instr )? )
                     {
                         dbg.location(72,51);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:72:51: ^( IF expr instr ( instr )? )
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:72:51: ^( IF expr instr ( instr )? )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(72,53);
@@ -2110,7 +2110,7 @@ public class ExprParser extends DebugParser {
                         dbg.location(72,61);
                         adaptor.addChild(root_1, stream_instr.nextTree());
                         dbg.location(72,67);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:72:67: ( instr )?
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:72:67: ( instr )?
                         if ( stream_instr.hasNext() ) {
                             dbg.location(72,67);
                             adaptor.addChild(root_1, stream_instr.nextTree());
@@ -2129,7 +2129,7 @@ public class ExprParser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:73:3: 'for' ID_OTHERS 'in' boundaries 'do' ( instr )+ 'end'
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:73:3: 'for' ID_OTHERS 'in' boundaries 'do' ( instr )+ 'end'
                     {
                     dbg.location(73,3);
                     string_literal52=(Token)match(input,48,FOLLOW_48_in_instr473);  
@@ -2155,7 +2155,7 @@ public class ExprParser extends DebugParser {
                     stream_50.add(string_literal56);
 
                     dbg.location(73,40);
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:73:40: ( instr )+
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:73:40: ( instr )+
                     int cnt15=0;
                     try { dbg.enterSubRule(15);
 
@@ -2177,7 +2177,7 @@ public class ExprParser extends DebugParser {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:73:40: instr
+                    	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:73:40: instr
                     	    {
                     	    dbg.location(73,40);
                     	    pushFollow(FOLLOW_instr_in_instr483);
@@ -2209,7 +2209,7 @@ public class ExprParser extends DebugParser {
 
 
                     // AST REWRITE
-                    // elements: boundaries, ID_OTHERS, instr
+                    // elements: instr, boundaries, ID_OTHERS
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2222,7 +2222,7 @@ public class ExprParser extends DebugParser {
                     // 73:53: -> ^( FOR ID_OTHERS boundaries ( instr )+ )
                     {
                         dbg.location(73,56);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:73:56: ^( FOR ID_OTHERS boundaries ( instr )+ )
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:73:56: ^( FOR ID_OTHERS boundaries ( instr )+ )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(73,58);
@@ -2254,14 +2254,14 @@ public class ExprParser extends DebugParser {
                 case 4 :
                     dbg.enterAlt(4);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:74:3: '{' ( var_decl )* ( instr )+ '}'
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:74:3: '{' ( var_decl )* ( instr )+ '}'
                     {
                     dbg.location(74,3);
                     char_literal59=(Token)match(input,40,FOLLOW_40_in_instr503);  
                     stream_40.add(char_literal59);
 
                     dbg.location(74,7);
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:74:7: ( var_decl )*
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:74:7: ( var_decl )*
                     try { dbg.enterSubRule(16);
 
                     loop16:
@@ -2282,7 +2282,7 @@ public class ExprParser extends DebugParser {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:74:7: var_decl
+                    	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:74:7: var_decl
                     	    {
                     	    dbg.location(74,7);
                     	    pushFollow(FOLLOW_var_decl_in_instr505);
@@ -2302,7 +2302,7 @@ public class ExprParser extends DebugParser {
                     } finally {dbg.exitSubRule(16);}
 
                     dbg.location(74,17);
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:74:17: ( instr )+
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:74:17: ( instr )+
                     int cnt17=0;
                     try { dbg.enterSubRule(17);
 
@@ -2324,7 +2324,7 @@ public class ExprParser extends DebugParser {
                     	case 1 :
                     	    dbg.enterAlt(1);
 
-                    	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:74:17: instr
+                    	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:74:17: instr
                     	    {
                     	    dbg.location(74,17);
                     	    pushFollow(FOLLOW_instr_in_instr508);
@@ -2356,7 +2356,7 @@ public class ExprParser extends DebugParser {
 
 
                     // AST REWRITE
-                    // elements: instr, var_decl
+                    // elements: var_decl, instr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2369,14 +2369,14 @@ public class ExprParser extends DebugParser {
                     // 74:28: -> ^( BLOC ( var_decl )* ( instr )+ )
                     {
                         dbg.location(74,30);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:74:30: ^( BLOC ( var_decl )* ( instr )+ )
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:74:30: ^( BLOC ( var_decl )* ( instr )+ )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(74,32);
                         root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(BLOC, "BLOC"), root_1);
 
                         dbg.location(74,38);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:74:38: ( var_decl )*
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:74:38: ( var_decl )*
                         while ( stream_var_decl.hasNext() ) {
                             dbg.location(74,38);
                             adaptor.addChild(root_1, stream_var_decl.nextTree());
@@ -2405,7 +2405,7 @@ public class ExprParser extends DebugParser {
                 case 5 :
                     dbg.enterAlt(5);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:75:3: 'do' expr ';'
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:75:3: 'do' expr ';'
                     {
                     dbg.location(75,3);
                     string_literal63=(Token)match(input,50,FOLLOW_50_in_instr528);  
@@ -2425,7 +2425,7 @@ public class ExprParser extends DebugParser {
 
 
                     // AST REWRITE
-                    // elements: expr, 50
+                    // elements: 50, expr
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -2438,7 +2438,7 @@ public class ExprParser extends DebugParser {
                     // 75:18: -> ^( 'do' expr )
                     {
                         dbg.location(75,21);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:75:21: ^( 'do' expr )
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:75:21: ^( 'do' expr )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(75,23);
@@ -2458,7 +2458,7 @@ public class ExprParser extends DebugParser {
                 case 6 :
                     dbg.enterAlt(6);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:76:3: print
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:76:3: print
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -2475,7 +2475,7 @@ public class ExprParser extends DebugParser {
                 case 7 :
                     dbg.enterAlt(7);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:77:3: read
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:77:3: read
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -2492,7 +2492,7 @@ public class ExprParser extends DebugParser {
                 case 8 :
                     dbg.enterAlt(8);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:78:3: retourne
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:78:3: retourne
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -2541,7 +2541,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "boundaries"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:81:1: boundaries : a= expr '..' b= expr -> ^( '..' $a $b) ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:81:1: boundaries : a= expr '..' b= expr -> ^( '..' $a $b) ;
     public final ExprParser.boundaries_return boundaries() throws RecognitionException {
         ExprParser.boundaries_return retval = new ExprParser.boundaries_return();
         retval.start = input.LT(1);
@@ -2563,10 +2563,10 @@ public class ExprParser extends DebugParser {
         dbg.location(81, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:81:12: (a= expr '..' b= expr -> ^( '..' $a $b) )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:81:12: (a= expr '..' b= expr -> ^( '..' $a $b) )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:82:3: a= expr '..' b= expr
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:82:3: a= expr '..' b= expr
             {
             dbg.location(82,4);
             pushFollow(FOLLOW_expr_in_boundaries572);
@@ -2589,22 +2589,22 @@ public class ExprParser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: 52, b, a
+            // elements: a, b, 52
             // token labels: 
-            // rule labels: a, b, retval
+            // rule labels: retval, b, a
             // token list labels: 
             // rule list labels: 
             // wildcard labels: 
             retval.tree = root_0;
-            RewriteRuleSubtreeStream stream_a=new RewriteRuleSubtreeStream(adaptor,"rule a",a!=null?a.tree:null);
-            RewriteRuleSubtreeStream stream_b=new RewriteRuleSubtreeStream(adaptor,"rule b",b!=null?b.tree:null);
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
+            RewriteRuleSubtreeStream stream_b=new RewriteRuleSubtreeStream(adaptor,"rule b",b!=null?b.tree:null);
+            RewriteRuleSubtreeStream stream_a=new RewriteRuleSubtreeStream(adaptor,"rule a",a!=null?a.tree:null);
 
             root_0 = (Object)adaptor.nil();
             // 82:23: -> ^( '..' $a $b)
             {
                 dbg.location(82,26);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:82:26: ^( '..' $a $b)
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:82:26: ^( '..' $a $b)
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(82,28);
@@ -2656,7 +2656,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "i"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:85:1: i : ( expr ';' -> expr | 'nil' ';' -> 'nil' );
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:85:1: i : ( expr ';' -> expr | 'nil' ';' -> 'nil' );
     public final ExprParser.i_return i() throws RecognitionException {
         ExprParser.i_return retval = new ExprParser.i_return();
         retval.start = input.LT(1);
@@ -2681,7 +2681,7 @@ public class ExprParser extends DebugParser {
         dbg.location(85, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:85:3: ( expr ';' -> expr | 'nil' ';' -> 'nil' )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:85:3: ( expr ';' -> expr | 'nil' ';' -> 'nil' )
             int alt19=2;
             try { dbg.enterDecision(19);
 
@@ -2706,7 +2706,7 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:86:2: expr ';'
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:86:2: expr ';'
                     {
                     dbg.location(86,2);
                     pushFollow(FOLLOW_expr_in_i604);
@@ -2745,7 +2745,7 @@ public class ExprParser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:87:4: 'nil' ';'
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:87:4: 'nil' ';'
                     {
                     dbg.location(87,4);
                     string_literal72=(Token)match(input,53,FOLLOW_53_in_i615);  
@@ -2813,7 +2813,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "print"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:90:1: print : 'write' expr ';' -> ^( 'write' expr ) ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:90:1: print : 'write' expr ';' -> ^( 'write' expr ) ;
     public final ExprParser.print_return print() throws RecognitionException {
         ExprParser.print_return retval = new ExprParser.print_return();
         retval.start = input.LT(1);
@@ -2836,10 +2836,10 @@ public class ExprParser extends DebugParser {
         dbg.location(90, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:90:7: ( 'write' expr ';' -> ^( 'write' expr ) )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:90:7: ( 'write' expr ';' -> ^( 'write' expr ) )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:91:3: 'write' expr ';'
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:91:3: 'write' expr ';'
             {
             dbg.location(91,3);
             string_literal74=(Token)match(input,54,FOLLOW_54_in_print634);  
@@ -2859,7 +2859,7 @@ public class ExprParser extends DebugParser {
 
 
             // AST REWRITE
-            // elements: 54, expr
+            // elements: expr, 54
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2872,7 +2872,7 @@ public class ExprParser extends DebugParser {
             // 91:20: -> ^( 'write' expr )
             {
                 dbg.location(91,23);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:91:23: ^( 'write' expr )
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:91:23: ^( 'write' expr )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(91,25);
@@ -2922,7 +2922,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "read"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:94:1: read : 'read' ID_OTHERS ';' -> ^( 'read' ID_OTHERS ) ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:94:1: read : 'read' ID_OTHERS ';' -> ^( 'read' ID_OTHERS ) ;
     public final ExprParser.read_return read() throws RecognitionException {
         ExprParser.read_return retval = new ExprParser.read_return();
         retval.start = input.LT(1);
@@ -2936,9 +2936,9 @@ public class ExprParser extends DebugParser {
         Object string_literal77_tree=null;
         Object ID_OTHERS78_tree=null;
         Object char_literal79_tree=null;
+        RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
         RewriteRuleTokenStream stream_55=new RewriteRuleTokenStream(adaptor,"token 55");
         RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
-        RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
 
         try { dbg.enterRule(getGrammarFileName(), "read");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -2946,10 +2946,10 @@ public class ExprParser extends DebugParser {
         dbg.location(94, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:94:6: ( 'read' ID_OTHERS ';' -> ^( 'read' ID_OTHERS ) )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:94:6: ( 'read' ID_OTHERS ';' -> ^( 'read' ID_OTHERS ) )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:95:2: 'read' ID_OTHERS ';'
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:95:2: 'read' ID_OTHERS ';'
             {
             dbg.location(95,2);
             string_literal77=(Token)match(input,55,FOLLOW_55_in_read660);  
@@ -2979,7 +2979,7 @@ public class ExprParser extends DebugParser {
             // 95:23: -> ^( 'read' ID_OTHERS )
             {
                 dbg.location(95,26);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:95:26: ^( 'read' ID_OTHERS )
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:95:26: ^( 'read' ID_OTHERS )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(95,28);
@@ -3029,7 +3029,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "retourne"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:98:1: retourne : 'return' '(' expr ')' ';' -> ^( RETURN expr ) ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:98:1: retourne : 'return' '(' expr ')' ';' -> ^( RETURN expr ) ;
     public final ExprParser.retourne_return retourne() throws RecognitionException {
         ExprParser.retourne_return retval = new ExprParser.retourne_return();
         retval.start = input.LT(1);
@@ -3047,10 +3047,10 @@ public class ExprParser extends DebugParser {
         Object char_literal81_tree=null;
         Object char_literal83_tree=null;
         Object char_literal84_tree=null;
-        RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
+        RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
         RewriteRuleTokenStream stream_56=new RewriteRuleTokenStream(adaptor,"token 56");
         RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
-        RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
+        RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try { dbg.enterRule(getGrammarFileName(), "retourne");
         if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -3058,10 +3058,10 @@ public class ExprParser extends DebugParser {
         dbg.location(98, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:98:10: ( 'return' '(' expr ')' ';' -> ^( RETURN expr ) )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:98:10: ( 'return' '(' expr ')' ';' -> ^( RETURN expr ) )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:99:2: 'return' '(' expr ')' ';'
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:99:2: 'return' '(' expr ')' ';'
             {
             dbg.location(99,2);
             string_literal80=(Token)match(input,56,FOLLOW_56_in_retourne683);  
@@ -3102,7 +3102,7 @@ public class ExprParser extends DebugParser {
             // 99:27: -> ^( RETURN expr )
             {
                 dbg.location(99,30);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:99:30: ^( RETURN expr )
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:99:30: ^( RETURN expr )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(99,32);
@@ -3152,7 +3152,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "expr"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:102:1: expr : ( exprplus e | 'this' e | 'super' e | 'new' ID_CLASS e -> ^( NEW ID_CLASS ( e )? ) );
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:102:1: expr : ( exprplus e | 'this' e | 'super' e | 'new' ID_CLASS e -> ^( NEW ID_CLASS ( e )? ) );
     public final ExprParser.expr_return expr() throws RecognitionException {
         ExprParser.expr_return retval = new ExprParser.expr_return();
         retval.start = input.LT(1);
@@ -3187,7 +3187,7 @@ public class ExprParser extends DebugParser {
         dbg.location(102, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:102:5: ( exprplus e | 'this' e | 'super' e | 'new' ID_CLASS e -> ^( NEW ID_CLASS ( e )? ) )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:102:5: ( exprplus e | 'this' e | 'super' e | 'new' ID_CLASS e -> ^( NEW ID_CLASS ( e )? ) )
             int alt20=4;
             try { dbg.enterDecision(20);
 
@@ -3230,7 +3230,7 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:103:3: exprplus e
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:103:3: exprplus e
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3254,7 +3254,7 @@ public class ExprParser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:104:4: 'this' e
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:104:4: 'this' e
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3276,7 +3276,7 @@ public class ExprParser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:105:4: 'super' e
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:105:4: 'super' e
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3298,7 +3298,7 @@ public class ExprParser extends DebugParser {
                 case 4 :
                     dbg.enterAlt(4);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:107:4: 'new' ID_CLASS e
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:107:4: 'new' ID_CLASS e
                     {
                     dbg.location(107,4);
                     string_literal91=(Token)match(input,59,FOLLOW_59_in_expr734);  
@@ -3331,7 +3331,7 @@ public class ExprParser extends DebugParser {
                     // 107:21: -> ^( NEW ID_CLASS ( e )? )
                     {
                         dbg.location(107,24);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:107:24: ^( NEW ID_CLASS ( e )? )
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:107:24: ^( NEW ID_CLASS ( e )? )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(107,26);
@@ -3340,7 +3340,7 @@ public class ExprParser extends DebugParser {
                         dbg.location(107,30);
                         adaptor.addChild(root_1, stream_ID_CLASS.nextNode());
                         dbg.location(107,39);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:107:39: ( e )?
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:107:39: ( e )?
                         if ( stream_e.hasNext() ) {
                             dbg.location(107,39);
                             adaptor.addChild(root_1, stream_e.nextTree());
@@ -3391,7 +3391,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "e"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:109:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | );
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:109:1: e : ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | );
     public final ExprParser.e_return e() throws RecognitionException {
         ExprParser.e_return retval = new ExprParser.e_return();
         retval.start = input.LT(1);
@@ -3411,19 +3411,19 @@ public class ExprParser extends DebugParser {
         Object ID_OTHERS95_tree=null;
         Object char_literal96_tree=null;
         Object char_literal98_tree=null;
-        RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
-        RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
-        RewriteRuleTokenStream stream_60=new RewriteRuleTokenStream(adaptor,"token 60");
         RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
-        RewriteRuleSubtreeStream stream_e=new RewriteRuleSubtreeStream(adaptor,"rule e");
+        RewriteRuleTokenStream stream_ID_OTHERS=new RewriteRuleTokenStream(adaptor,"token ID_OTHERS");
+        RewriteRuleTokenStream stream_33=new RewriteRuleTokenStream(adaptor,"token 33");
+        RewriteRuleTokenStream stream_60=new RewriteRuleTokenStream(adaptor,"token 60");
         RewriteRuleSubtreeStream stream_f=new RewriteRuleSubtreeStream(adaptor,"rule f");
+        RewriteRuleSubtreeStream stream_e=new RewriteRuleSubtreeStream(adaptor,"rule e");
         try { dbg.enterRule(getGrammarFileName(), "e");
         if ( getRuleLevel()==0 ) {dbg.commence();}
         incRuleLevel();
         dbg.location(109, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:109:3: ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:109:3: ( '.' ID_OTHERS '(' ( f )? ')' e -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? ) | )
             int alt22=2;
             try { dbg.enterDecision(22);
 
@@ -3448,7 +3448,7 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:110:2: '.' ID_OTHERS '(' ( f )? ')' e
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:110:2: '.' ID_OTHERS '(' ( f )? ')' e
                     {
                     dbg.location(110,2);
                     char_literal94=(Token)match(input,60,FOLLOW_60_in_e759);  
@@ -3463,7 +3463,7 @@ public class ExprParser extends DebugParser {
                     stream_32.add(char_literal96);
 
                     dbg.location(110,20);
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:110:20: ( f )?
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:110:20: ( f )?
                     int alt21=2;
                     try { dbg.enterSubRule(21);
                     try { dbg.enterDecision(21);
@@ -3479,7 +3479,7 @@ public class ExprParser extends DebugParser {
                         case 1 :
                             dbg.enterAlt(1);
 
-                            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:110:20: f
+                            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:110:20: f
                             {
                             dbg.location(110,20);
                             pushFollow(FOLLOW_f_in_e765);
@@ -3522,7 +3522,7 @@ public class ExprParser extends DebugParser {
                     // 110:29: -> ^( APPELMETHODE ID_OTHERS ( f )? ( e )? )
                     {
                         dbg.location(110,32);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:110:32: ^( APPELMETHODE ID_OTHERS ( f )? ( e )? )
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:110:32: ^( APPELMETHODE ID_OTHERS ( f )? ( e )? )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(110,34);
@@ -3531,7 +3531,7 @@ public class ExprParser extends DebugParser {
                         dbg.location(110,47);
                         adaptor.addChild(root_1, stream_ID_OTHERS.nextNode());
                         dbg.location(110,57);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:110:57: ( f )?
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:110:57: ( f )?
                         if ( stream_f.hasNext() ) {
                             dbg.location(110,57);
                             adaptor.addChild(root_1, stream_f.nextTree());
@@ -3539,7 +3539,7 @@ public class ExprParser extends DebugParser {
                         }
                         stream_f.reset();
                         dbg.location(110,60);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:110:60: ( e )?
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:110:60: ( e )?
                         if ( stream_e.hasNext() ) {
                             dbg.location(110,60);
                             adaptor.addChild(root_1, stream_e.nextTree());
@@ -3558,7 +3558,7 @@ public class ExprParser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:112:2: 
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:112:2: 
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3599,7 +3599,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "f"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:114:1: f : expr ( ',' expr )* -> ^( ARGS ( expr )* ) ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:114:1: f : expr ( ',' expr )* -> ^( ARGS ( expr )* ) ;
     public final ExprParser.f_return f() throws RecognitionException {
         ExprParser.f_return retval = new ExprParser.f_return();
         retval.start = input.LT(1);
@@ -3621,10 +3621,10 @@ public class ExprParser extends DebugParser {
         dbg.location(114, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:114:5: ( expr ( ',' expr )* -> ^( ARGS ( expr )* ) )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:114:5: ( expr ( ',' expr )* -> ^( ARGS ( expr )* ) )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:114:8: expr ( ',' expr )*
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:114:8: expr ( ',' expr )*
             {
             dbg.location(114,8);
             pushFollow(FOLLOW_expr_in_f801);
@@ -3634,7 +3634,7 @@ public class ExprParser extends DebugParser {
 
             stream_expr.add(expr100.getTree());
             dbg.location(114,13);
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:114:13: ( ',' expr )*
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:114:13: ( ',' expr )*
             try { dbg.enterSubRule(23);
 
             loop23:
@@ -3655,7 +3655,7 @@ public class ExprParser extends DebugParser {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:114:14: ',' expr
+            	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:114:14: ',' expr
             	    {
             	    dbg.location(114,14);
             	    char_literal101=(Token)match(input,42,FOLLOW_42_in_f804);  
@@ -3694,14 +3694,14 @@ public class ExprParser extends DebugParser {
             // 114:26: -> ^( ARGS ( expr )* )
             {
                 dbg.location(114,29);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:114:29: ^( ARGS ( expr )* )
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:114:29: ^( ARGS ( expr )* )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 dbg.location(114,31);
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(ARGS, "ARGS"), root_1);
 
                 dbg.location(114,36);
-                // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:114:36: ( expr )*
+                // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:114:36: ( expr )*
                 while ( stream_expr.hasNext() ) {
                     dbg.location(114,36);
                     adaptor.addChild(root_1, stream_expr.nextTree());
@@ -3750,7 +3750,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "exprplus"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:118:1: exprplus : exprmult ( ( '+' | '-' ) exprmult )* ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:118:1: exprplus : exprmult ( ( '+' | '-' ) exprmult )* ;
     public final ExprParser.exprplus_return exprplus() throws RecognitionException {
         ExprParser.exprplus_return retval = new ExprParser.exprplus_return();
         retval.start = input.LT(1);
@@ -3773,10 +3773,10 @@ public class ExprParser extends DebugParser {
         dbg.location(118, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:118:9: ( exprmult ( ( '+' | '-' ) exprmult )* )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:118:9: ( exprmult ( ( '+' | '-' ) exprmult )* )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:119:2: exprmult ( ( '+' | '-' ) exprmult )*
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:119:2: exprmult ( ( '+' | '-' ) exprmult )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3788,7 +3788,7 @@ public class ExprParser extends DebugParser {
 
             adaptor.addChild(root_0, exprmult103.getTree());
             dbg.location(119,11);
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:119:11: ( ( '+' | '-' ) exprmult )*
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:119:11: ( ( '+' | '-' ) exprmult )*
             try { dbg.enterSubRule(25);
 
             loop25:
@@ -3809,10 +3809,10 @@ public class ExprParser extends DebugParser {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:119:13: ( '+' | '-' ) exprmult
+            	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:119:13: ( '+' | '-' ) exprmult
             	    {
             	    dbg.location(119,13);
-            	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:119:13: ( '+' | '-' )
+            	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:119:13: ( '+' | '-' )
             	    int alt24=2;
             	    try { dbg.enterSubRule(24);
             	    try { dbg.enterDecision(24);
@@ -3838,7 +3838,7 @@ public class ExprParser extends DebugParser {
             	        case 1 :
             	            dbg.enterAlt(1);
 
-            	            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:119:14: '+'
+            	            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:119:14: '+'
             	            {
             	            dbg.location(119,17);
             	            char_literal104=(Token)match(input,61,FOLLOW_61_in_exprplus835); 
@@ -3851,7 +3851,7 @@ public class ExprParser extends DebugParser {
             	        case 2 :
             	            dbg.enterAlt(2);
 
-            	            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:119:19: '-'
+            	            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:119:19: '-'
             	            {
             	            dbg.location(119,22);
             	            char_literal105=(Token)match(input,62,FOLLOW_62_in_exprplus838); 
@@ -3918,7 +3918,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "exprmult"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:123:1: exprmult : oper ( '*' oper )? ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:123:1: exprmult : oper ( '*' oper )? ;
     public final ExprParser.exprmult_return exprmult() throws RecognitionException {
         ExprParser.exprmult_return retval = new ExprParser.exprmult_return();
         retval.start = input.LT(1);
@@ -3939,10 +3939,10 @@ public class ExprParser extends DebugParser {
         dbg.location(123, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:123:9: ( oper ( '*' oper )? )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:123:9: ( oper ( '*' oper )? )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:124:3: oper ( '*' oper )?
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:124:3: oper ( '*' oper )?
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3954,7 +3954,7 @@ public class ExprParser extends DebugParser {
 
             adaptor.addChild(root_0, oper107.getTree());
             dbg.location(124,7);
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:124:7: ( '*' oper )?
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:124:7: ( '*' oper )?
             int alt26=2;
             try { dbg.enterSubRule(26);
             try { dbg.enterDecision(26);
@@ -3970,7 +3970,7 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:124:9: '*' oper
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:124:9: '*' oper
                     {
                     dbg.location(124,12);
                     char_literal108=(Token)match(input,63,FOLLOW_63_in_exprmult859); 
@@ -4027,7 +4027,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "oper"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:127:1: oper : moinsunaire ( OPERCONDITION moinsunaire )* ;
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:127:1: oper : moinsunaire ( OPERCONDITION moinsunaire )* ;
     public final ExprParser.oper_return oper() throws RecognitionException {
         ExprParser.oper_return retval = new ExprParser.oper_return();
         retval.start = input.LT(1);
@@ -4048,10 +4048,10 @@ public class ExprParser extends DebugParser {
         dbg.location(127, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:127:5: ( moinsunaire ( OPERCONDITION moinsunaire )* )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:127:5: ( moinsunaire ( OPERCONDITION moinsunaire )* )
             dbg.enterAlt(1);
 
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:128:2: moinsunaire ( OPERCONDITION moinsunaire )*
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:128:2: moinsunaire ( OPERCONDITION moinsunaire )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -4063,7 +4063,7 @@ public class ExprParser extends DebugParser {
 
             adaptor.addChild(root_0, moinsunaire110.getTree());
             dbg.location(128,14);
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:128:14: ( OPERCONDITION moinsunaire )*
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:128:14: ( OPERCONDITION moinsunaire )*
             try { dbg.enterSubRule(27);
 
             loop27:
@@ -4084,7 +4084,7 @@ public class ExprParser extends DebugParser {
             	case 1 :
             	    dbg.enterAlt(1);
 
-            	    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:128:15: OPERCONDITION moinsunaire
+            	    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:128:15: OPERCONDITION moinsunaire
             	    {
             	    dbg.location(128,28);
             	    OPERCONDITION111=(Token)match(input,OPERCONDITION,FOLLOW_OPERCONDITION_in_oper878); 
@@ -4144,7 +4144,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "moinsunaire"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:131:1: moinsunaire : ( '-' atom -> ^( OPPOSE atom ) | atom );
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:131:1: moinsunaire : ( '-' atom -> ^( OPPOSE atom ) | atom );
     public final ExprParser.moinsunaire_return moinsunaire() throws RecognitionException {
         ExprParser.moinsunaire_return retval = new ExprParser.moinsunaire_return();
         retval.start = input.LT(1);
@@ -4166,7 +4166,7 @@ public class ExprParser extends DebugParser {
         dbg.location(131, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:131:12: ( '-' atom -> ^( OPPOSE atom ) | atom )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:131:12: ( '-' atom -> ^( OPPOSE atom ) | atom )
             int alt28=2;
             try { dbg.enterDecision(28);
 
@@ -4191,7 +4191,7 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:132:2: '-' atom
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:132:2: '-' atom
                     {
                     dbg.location(132,2);
                     char_literal113=(Token)match(input,62,FOLLOW_62_in_moinsunaire894);  
@@ -4220,7 +4220,7 @@ public class ExprParser extends DebugParser {
                     // 132:11: -> ^( OPPOSE atom )
                     {
                         dbg.location(132,14);
-                        // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:132:14: ^( OPPOSE atom )
+                        // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:132:14: ^( OPPOSE atom )
                         {
                         Object root_1 = (Object)adaptor.nil();
                         dbg.location(132,16);
@@ -4240,7 +4240,7 @@ public class ExprParser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:133:4: atom
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:133:4: atom
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -4289,7 +4289,7 @@ public class ExprParser extends DebugParser {
     };
 
     // $ANTLR start "atom"
-    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:135:1: atom : ( ID_OTHERS | STRING | INT | '(' expr ')' );
+    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:135:1: atom : ( ID_OTHERS | STRING | INT | '(' expr ')' );
     public final ExprParser.atom_return atom() throws RecognitionException {
         ExprParser.atom_return retval = new ExprParser.atom_return();
         retval.start = input.LT(1);
@@ -4316,7 +4316,7 @@ public class ExprParser extends DebugParser {
         dbg.location(135, 1);
 
         try {
-            // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:135:5: ( ID_OTHERS | STRING | INT | '(' expr ')' )
+            // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:135:5: ( ID_OTHERS | STRING | INT | '(' expr ')' )
             int alt29=4;
             try { dbg.enterDecision(29);
 
@@ -4355,7 +4355,7 @@ public class ExprParser extends DebugParser {
                 case 1 :
                     dbg.enterAlt(1);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:136:3: ID_OTHERS
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:136:3: ID_OTHERS
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -4370,7 +4370,7 @@ public class ExprParser extends DebugParser {
                 case 2 :
                     dbg.enterAlt(2);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:137:4: STRING
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:137:4: STRING
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -4385,7 +4385,7 @@ public class ExprParser extends DebugParser {
                 case 3 :
                     dbg.enterAlt(3);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:138:5: INT
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:138:5: INT
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -4400,7 +4400,7 @@ public class ExprParser extends DebugParser {
                 case 4 :
                     dbg.enterAlt(4);
 
-                    // /home/clement/workspace/Compil_MACA/Fichiers/Expr.g:139:4: '(' expr ')'
+                    // /home/etudiants/farizon1u/Bureau/Workspace/Compil_MACA/Fichiers/Expr.g:139:4: '(' expr ')'
                     {
                     root_0 = (Object)adaptor.nil();
 

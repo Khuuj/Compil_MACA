@@ -1,18 +1,8 @@
 var n : int ;
+var var : int;
 var total : int ;
 var i : int ;
-var x : string;
-n := -10;
-total := 0 ;
-for i in 0 .. n
-do
-total := total + i ;
-end
-write total ;
-{
-var a : int;
-a:=a+1;}
-
-x:= "a";
-x:=x+x;
-write x;
+{n := total + i.whoami();
+do a.setName();
+j := j* u+;
+};
