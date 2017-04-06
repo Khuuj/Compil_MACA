@@ -23,6 +23,7 @@ APPELMETHODE;
 PARAM;
 NEW;
 BODY_CLASS;
+VOID;
 }
 
 prog :  	
@@ -100,11 +101,17 @@ retourne :
  	;
 
 expr:
+<<<<<<< HEAD
 	// exprplus e
 	exprplus e
 	| 'this' e
 	| 'super' e
 	//| STRING
+=======
+	exprplus
+	| 'this' e -> ^('this' e)
+	| 'super' e -> ^('super' e)
+>>>>>>> d473f6e3e42d404edc44d145c7baadfa2f0fe16b
 	| 'new' ID_CLASS  -> ^(NEW ID_CLASS )
 	;
 e :
@@ -117,7 +124,11 @@ f  	:  expr (',' expr )* -> ^(ARGS expr*)
 
 
 exprplus: 
+<<<<<<< HEAD
 	exprmult  ( ('+'^|'-'^) exprmult )*
+=======
+	exprmult ( ('+'^|'-'^) exprmult)*
+>>>>>>> d473f6e3e42d404edc44d145c7baadfa2f0fe16b
 	;
 
 
@@ -134,7 +145,11 @@ moinsunaire:
 	| atom
 	;
 atom: 
+<<<<<<< HEAD
 	 ID_OTHERS
+=======
+	 ID_OTHERS e  -> ^(ID_OTHERS e?)
+>>>>>>> d473f6e3e42d404edc44d145c7baadfa2f0fe16b
 	| STRING
 	|  INT 
 	| '('expr')'

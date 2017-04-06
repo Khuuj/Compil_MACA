@@ -11,15 +11,17 @@ import tableInstancesVar.*;
 
 public class TypeTester {
 
-		String type ;
+		private String type ;
 		
-		public TypeTester(Tree node){
+		public TypeTester(Tree leaf){
 			
-			//Sa clé dans la TDS locale.
-			int key = Table.hash(node.getText());
+			boolean found =false;
+			
+			//La clé dans une TDS du noeud actuel.
+			int key = Table.hash(leaf.getText());
 			//Le sommet de la pile des TDS d'instances qui correspond aussi à la portée de la variable.
 			int scope = BrowseTree.INSTANCE_TDS.size()-1 ;
-			boolean found =false;
+			
 
 			while (scope >= 0 && !found){
 				
@@ -30,11 +32,11 @@ public class TypeTester {
 					
 					while (it.hasNext()){
 						Element el = it.next();
-						if (el.id.equals(node.getText())){
+						if (el.id.equals(leaf.getText()))
+						{
 							type = ((Var)el).type;
 							found = true;
 						}
-						//System.out.println("Element : " + el.id + "\t type : " +type );
 					}
 						
 				}

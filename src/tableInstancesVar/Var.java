@@ -1,5 +1,7 @@
 package tableInstancesVar;
 
+import org.antlr.runtime.tree.Tree;
+
 import tableInstances.Element;
 
 /**
@@ -34,5 +36,6 @@ public abstract class Var extends Element {
 	public Var(String id) {
 		super(id);
 	}
+
 
 }

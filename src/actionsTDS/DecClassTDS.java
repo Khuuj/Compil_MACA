@@ -19,7 +19,8 @@ public class DecClassTDS {
 			classType = new ClassType(id);
 		}
 		// le second fils est: le nom de la classe mère si elle exist, le corp de la classe sinon
-		else if(node.getChildCount() == 2){
+		else if(node.getChildCount() == 2)
+		{
 			String next = node.getChild(1).getText();
 			
 			if(!node.getChild(1).getText().equals("BODY_CLASS")){

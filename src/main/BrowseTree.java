@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.tree.Tree;
-
 import actionsTDS.AffectTDS;
 import actionsTDS.BlockTDS;
 import actionsTDS.DecClassTDS;
