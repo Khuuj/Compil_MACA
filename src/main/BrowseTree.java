@@ -9,18 +9,15 @@ import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.tree.Tree;
 
-import actions.ActionRead;
-import actions.ActionWrite;
 import actionsTDS.AffectTDS;
 import actionsTDS.DecClassTDS;
 import actionsTDS.DecVarTDS;
 import actionsTDS.RootTDS;
-import analyseSem.AffectSem;
-import analyseSem.DecClassSem;
-import analyseSem.DecVarSem;
+import analyseSemFor.ForSem;
 import actionsTDS.*;
 import analyseSem.*;
-
+import analyseSemDecClass.DecClassSem;
+import analyseSemDecVar.DecVarSem;
 import expr.*;
 import tableInstances.Table;
 import tableTypes.TableClass;
@@ -119,7 +116,7 @@ public class BrowseTree {
 	 * 
 	 * @param node : le noeud traité.
 	 */
-	private static void action(Tree node) 
+	public static void action(Tree node) 
 	{
 		switch (node.getText())
 		{
@@ -146,10 +143,10 @@ public class BrowseTree {
 				new AffectTDS(node);
 				break;
 			
-			/*case "FOR":
+			case "FOR":
 				new ForSem(node);
 				new ForTDS(node);
-				break;*/
+				break;
 				
 			case "write":
 				new WriteSem(node);

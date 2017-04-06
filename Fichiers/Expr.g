@@ -101,7 +101,7 @@ retourne :
 
 expr:
 	// exprplus e
-	exprplus
+	exprplus e
 	| 'this' e
 	| 'super' e
 	//| STRING
@@ -117,7 +117,7 @@ f  	:  expr (',' expr )* -> ^(ARGS expr*)
 
 
 exprplus: 
-	exprmult e ( ('+'^|'-'^) exprmult e)*
+	exprmult  ( ('+'^|'-'^) exprmult )*
 	;
 
 
@@ -134,7 +134,7 @@ moinsunaire:
 	| atom
 	;
 atom: 
-	 ID_OTHERS e
+	 ID_OTHERS
 	| STRING
 	|  INT 
 	| '('expr')'

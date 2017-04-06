@@ -1,4 +1,4 @@
-package analyseSem;
+package analyseSemDecVar;
 
 import java.util.Iterator;
 

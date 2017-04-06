@@ -2,7 +2,7 @@ package actionsTDS;
 
 import org.antlr.runtime.tree.Tree;
 
-import analyseSem.DecClassSemInheritExist;
+import analyseSemDecClass.DecClassSemInheritExist;
 import main.BrowseTree;
 import tableTypes.ClassType;
 
