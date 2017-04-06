@@ -16,14 +16,16 @@ import actionsTDS.DecVarTDS;
 import actionsTDS.ForTDS;
 import actionsTDS.IfTDS;
 import actionsTDS.RootTDS;
-import analyseSem.AffectSem;
-import analyseSem.BlockSem;
 import analyseSem.IfSem;
-import analyseSem.ReadSem;
-import analyseSem.WriteSem;
+import analyseSemAffect.AffectSem;
 import analyseSemDecClass.DecClassSem;
 import analyseSemDecVar.DecVarSem;
 import analyseSemFor.ForSem;
+import analyseSemTODO.BlockSem;
+import analyseSemTODO.DoSem;
+import analyseSemTODO.ReadSem;
+import analyseSemTODO.ReturnSem;
+import analyseSemTODO.WriteSem;
 import expr.ExprLexer;
 import expr.ExprParser;
 import tableInstances.Table;
@@ -166,7 +168,7 @@ public class BrowseTree {
 				break;
 			
 			case "do":
-				//to do avec expr
+				new DoSem(node);
 				break;
 				
 			case "write":
@@ -175,6 +177,10 @@ public class BrowseTree {
 			
 			case "read":
 				new ReadSem(node);
+				break;
+				
+			case "RETURN":
+				new ReturnSem(node);
 				break;
 				
 			default:

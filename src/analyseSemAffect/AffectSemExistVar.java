@@ -1,4 +1,4 @@
-package analyseSem;
+package analyseSemAffect;
 
 import java.util.Iterator;
 

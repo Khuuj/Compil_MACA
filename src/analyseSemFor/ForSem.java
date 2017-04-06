@@ -2,7 +2,7 @@ package analyseSemFor;
 
 import org.antlr.runtime.tree.Tree;
 
-import analyseSem.AffectSemExistVar;
+import analyseSemAffect.AffectSemExistVar;
 
 public class ForSem {
 

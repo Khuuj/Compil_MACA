@@ -1,66 +1,11 @@
-<<<<<<< HEAD
 var n : int ;
 var total : int ;
 var i : int ;
 n := 10;
 total := 0 ;
+
 for i in 0 .. n
 do
-total := total  ;
+	total := total + 5 ;
+	a := 4;
 end
-=======
-
-class Animal =
-(
-	var name : string;
-
-	method setName (n : string)
-	{
-		name := n;
-	}
-
-	method whoami()
-	{
-		write "My name is ";
-		write name;
-	}
-)
-class Animal =
-(
-	var name : string;
-
-	
-)
-class Dog inherit Animal =
-(
-	method whoami()
-	{
-		write "My name is ";
-		write name;
-		write ". And I am a dog .";
-	}
-)
-class Cat inherit MAmouth =
-(
-	method whoami()
-	{
-		do super.whoami();
-		write ". And I am a cat .";
-	}
-	
-var n : int;
-var txt : string;
-var total : int;
-var total :int;
-
-n := 1;
-a := 4;
-
-n := txt + (n + 3) *9;
-
-n := total + n.whoami();
-)
-
-
-
->>>>>>> dfa2957a6e8378dcedd6a283a431ff1415ed069d
