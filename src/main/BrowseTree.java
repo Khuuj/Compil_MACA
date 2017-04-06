@@ -9,6 +9,8 @@ import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.tree.Tree;
 
+import actions.ActionRead;
+import actions.ActionWrite;
 import actionsTDS.AffectTDS;
 import actionsTDS.DecClassTDS;
 import actionsTDS.DecVarTDS;
@@ -145,6 +147,13 @@ public class BrowseTree {
 				new ForSem(node);
 				new ForTDS(node);
 				break;*/
+				
+			case "write":
+				new ActionWrite(node);
+				break;
+			
+			case "read":
+				new ActionRead(node);
 			default:
 				break;
 			
