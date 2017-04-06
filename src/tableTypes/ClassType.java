@@ -2,7 +2,8 @@ package tableTypes;
 
 import java.util.ArrayList;
 
-import tableInstances.Var;
+import tableInstancesVar.Var;
+import tableTypesClassItems.ClassItem;
 
 public class ClassType {
 	

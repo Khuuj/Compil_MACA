@@ -22,9 +22,9 @@ public class DoubleDecTest
 		boolean alreadyExists = false;
 		
 		//L'identifiant de la variable.
-		String id = node.getChild(0).getText();
+		String name = node.getChild(0).getText();
 		//Sa clé potentielle dans la TDS locale.
-		int key = Table.hash(id);
+		int key = Table.hash(name);
 		//Le sommet de la pile des TDS d'instances qui correspond aussi à la portée de la variable.
 		int scope = BrowseTree.INSTANCE_TDS.size() - 1;
 		
@@ -34,12 +34,13 @@ public class DoubleDecTest
 			Iterator<Element> it = BrowseTree.INSTANCE_TDS.get(scope).get(key).iterator();
 			
 			while (it.hasNext())
-				alreadyExists = alreadyExists || it.next().id.equals(id);
+				alreadyExists = alreadyExists || it.next().id.equals(name);
+				
 		}
 		
 		//Affiche une erreur si la variable existe déjà dans la TDS locale.
 		if (alreadyExists)
-			System.err.println("Erreur : la variable "+id+" est déjà définie !");
+			System.err.println("Erreur : la variable "+name+" est déjà définie !");
 		
 	}
 	

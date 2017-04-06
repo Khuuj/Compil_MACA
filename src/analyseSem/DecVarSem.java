@@ -2,7 +2,7 @@ package analyseSem;
 
 import org.antlr.runtime.tree.Tree;
 
-import analyseTDS.DecVarTDS;
+import actionsTDS.DecVarTDS;
 
 /**
  * Classe centralisant les actions sur la TDS et les analyses sémantiques 
@@ -14,10 +14,8 @@ public class DecVarSem {
 	public DecVarSem(Tree node)
 	{
 		
-
 		//Teste si la variable existe déjà dans la TDS locale
 		new DoubleDecTest(node);
-		
 		
 		
 		

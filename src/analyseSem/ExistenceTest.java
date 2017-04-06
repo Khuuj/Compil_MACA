@@ -20,7 +20,7 @@ public class ExistenceTest {
 		int key = Table.hash(id);
 		//Le sommet de la pile des TDS d'instances.
 		int scope = BrowseTree.INSTANCE_TDS.size() -1;
-		
+
 		while (scope >= 0)
 		{
 			//Si aucune entrée de la TDS ne correspond à cette clé, alors la variable n'existe pas.
@@ -28,12 +28,13 @@ public class ExistenceTest {
 			{
 				Iterator<Element> it = BrowseTree.INSTANCE_TDS.get(scope).get(key).iterator();
 				
-				while (it.hasNext())
+				while (it.hasNext()) {
 					exists = exists || it.next().id.equals(id);
+				}
 				
 			}
 			scope--;
-		}
+		} 
 		
 		
 		//Affiche une erreur si la variable n'existe pas dans les TDS

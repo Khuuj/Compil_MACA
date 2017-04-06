@@ -1,8 +1,12 @@
+
 var n : int;
-n := 1;
-var txt : String;
+var txt : string;
 var total : int;
-a := 3;
+var total :int;
 
-total := total + n*a;
+n := 1;
+a := 4;
 
+n := txt + n;
+
+n := total + total*i;

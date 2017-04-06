@@ -10,7 +10,7 @@ import tableInstances.Element;
  *
  */
 @SuppressWarnings("serial")
-public class TableClass extends HashMap<Integer,ArrayList<ClassType>>{
+public class TableClass extends HashMap<Integer,ClassType>{
 	
 		/**
 		 * Ajoute un élément et retourne si l'ajout a bien pu être fait ou non.
@@ -20,7 +20,7 @@ public class TableClass extends HashMap<Integer,ArrayList<ClassType>>{
 		public void addClassType(ClassType classType)
 		{
 			int clé = hash(classType);
-			this.get(clé).add(classType);
+			this.put(clé, classType);
 		}
 		
 		//Fonction qui calcule la clé d'un élément en fonction de son id
