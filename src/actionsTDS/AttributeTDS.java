@@ -12,7 +12,7 @@ public class AttributeTDS {
 		String id = node.getChild(0).getText();
 		String type = node.getChild(1).getText();
 		int offset = BrowseTree.CLASS_TDS.size()-1;// ????????
-		attribute = new Attribute(id,type,offset);	
+		attribute = new Attribute(id,type);	
 	}
 	public Attribute getAttribute(){
 		return attribute;
