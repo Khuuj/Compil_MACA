@@ -22,11 +22,15 @@ public class DecClassSem {
 		//Sa clé potentielle dans la TDS locale.
 		int key = Table.hash(id);
 		
-		for(Entry<Integer,ClassType> entry : BrowseTree.CLASS_TDS.entrySet()) {
+		for(Entry<Integer,ArrayList<ClassType>> entry : BrowseTree.CLASS_TDS.entrySet()) {
 		    Integer cle = entry.getKey();
-		   // ClassType classType = entry.getValue();
+		    ArrayList<ClassType> list = entry.getValue();
 		    if(cle==key){
-		    	alreadyExists = true;
+		    	for(ClassType c : list){
+		    		//if
+		    		//alreadyExists = true;
+		    	}
+		    	
 		    }
 		}
 		

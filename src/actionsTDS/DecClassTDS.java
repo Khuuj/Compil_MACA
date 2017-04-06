@@ -13,7 +13,7 @@ public class DecClassTDS {
 	public DecClassTDS(Tree node)
 	{
 		String id = node.getChild(0).getText();
-		
+		System.out.println("aaa2:"+id);
 		// le 1er fils est le nom de la class
 		if(node.getChildCount() == 1){
 			classType = new ClassType(id);

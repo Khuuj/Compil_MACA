@@ -17,7 +17,7 @@ public class ExistExtendsSem {
 		
 		//L'identifiant de la variable.
 		String id = node.getText();
-		
+		System.out.println("aaa:"+id);
 		//Sa clé potentielle dans la TDS locale.
 		int key = Table.hash(id);
 		
