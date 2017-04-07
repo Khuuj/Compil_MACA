@@ -1,4 +1,4 @@
-package analyseSem;
+package analyseSemFor;
 
 import java.util.Iterator;
 
@@ -7,17 +7,19 @@ import org.antlr.runtime.tree.Tree;
 import main.BrowseTree;
 import tableInstances.Element;
 import tableInstances.Table;
+import tableInstancesVar.Int;
 
-public class AffectSemExistVar {
+public class ForSemIncIsInt {
 
-	public AffectSemExistVar(Tree node) {
-		
-		boolean exists = false;
+	public ForSemIncIsInt(Tree node) {
+		boolean isInt = false;
 		
 		//L'identifiant de la variable.
 		String id = node.getText();
+		
 		//Sa clé potentielle dans la TDS locale.
 		int key = Table.hash(id);
+		
 		//Le sommet de la pile des TDS d'instances.
 		int scope = BrowseTree.INSTANCE_TDS.size() -1;
 
@@ -28,8 +30,11 @@ public class AffectSemExistVar {
 			{
 				Iterator<Element> it = BrowseTree.INSTANCE_TDS.get(scope).get(key).iterator();
 				
-				while (it.hasNext() && !exists) {
-						exists= it.next().id.equals(id);
+				while (it.hasNext() && !isInt) {
+					Element e = it.next();
+					if(e.id.equals(id)){
+						isInt = e instanceof Int;
+					}
 				}
 				
 			}
@@ -38,9 +43,8 @@ public class AffectSemExistVar {
 		
 		
 		//Affiche une erreur si la variable n'existe pas dans les TDS
-		if (!exists)
-			System.err.println("Erreur : la variable "+id+" n'est pas définie !\n");
+		if (!isInt)
+			System.err.println("Erreur : la variable "+id+" n'est pas de type Int !");
 	}
 
-	
 }

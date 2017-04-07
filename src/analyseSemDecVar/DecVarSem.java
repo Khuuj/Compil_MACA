@@ -1,4 +1,4 @@
-package analyseSem;
+package analyseSemDecVar;
 
 import org.antlr.runtime.tree.Tree;
 

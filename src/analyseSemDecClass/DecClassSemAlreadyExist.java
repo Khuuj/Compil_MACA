@@ -1,4 +1,4 @@
-package analyseSem;
+package analyseSemDecClass;
 
 import java.util.ArrayList;
 import java.util.Map.Entry;

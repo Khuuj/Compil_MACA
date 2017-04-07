@@ -9,38 +9,57 @@ import tableInstances.Element;
 import tableInstances.Table;
 import tableInstancesVar.*;
 
+/**
+ * 
+ * Classe qui renvoie le type du terminal entré en argument dans son champ "field".
+ *
+ */
 public class TypeTester {
 
-		private String type ;
+		private String type;
 		
 		public TypeTester(Tree leaf){
 			
-			boolean found =false;
-			
-			//La clé dans une TDS du noeud actuel.
-			int key = Table.hash(leaf.getText());
-			//Le sommet de la pile des TDS d'instances qui correspond aussi à la portée de la variable.
-			int scope = BrowseTree.INSTANCE_TDS.size()-1 ;
-			
-
-			while (scope >= 0 && !found){
+			//nombre
+			if (leaf.getText().matches("\\d+"))
+			{
+				type = "int";
+			}
+			//string
+			else if (leaf.getText().matches("\".*"))
+			{
+				type = "string";
+			}
+			//variable
+			else 
+			{
+				boolean found =false;
 				
-				if (BrowseTree.INSTANCE_TDS.get(scope).containsKey(key))
-				{
-
-					Iterator<Element> it = BrowseTree.INSTANCE_TDS.get(scope).get(key).iterator();
+				//La clé dans une TDS du noeud actuel.
+				int key = Table.hash(leaf.getText());
+				//Le sommet de la pile des TDS d'instances qui correspond aussi à la portée de la variable.
+				int scope = BrowseTree.INSTANCE_TDS.size()-1 ;
+				
+	
+				while (scope >= 0 && !found){
 					
-					while (it.hasNext()){
-						Element el = it.next();
-						if (el.id.equals(leaf.getText()))
-						{
-							type = ((Var)el).type;
-							found = true;
-						}
-					}
+					if (BrowseTree.INSTANCE_TDS.get(scope).containsKey(key))
+					{
+	
+						Iterator<Element> it = BrowseTree.INSTANCE_TDS.get(scope).get(key).iterator();
 						
+						while (it.hasNext()){
+							Element el = it.next();
+							if (el.id.equals(leaf.getText()))
+							{
+								type = ((Var)el).type;
+								found = true;
+							}
+						}
+							
+					}
+					scope --;
 				}
-				scope --;
 			}
 		}
 		

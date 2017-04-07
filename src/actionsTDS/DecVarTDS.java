@@ -9,12 +9,13 @@ import tableInstancesVar.SString;
 import tableInstancesVar.Var;
 
 public class DecVarTDS {
+	Var var;
 	
 	public DecVarTDS(Tree node)
 	{
 		String id = node.getChild(0).getText();
 		String type = node.getChild(1).getText();
-		Var var;
+		
 		
 		switch(type)
 		{
@@ -38,4 +39,5 @@ public class DecVarTDS {
 		BrowseTree.INSTANCE_TDS.get(scope).addElement(var);
 		
 	}
+
 }

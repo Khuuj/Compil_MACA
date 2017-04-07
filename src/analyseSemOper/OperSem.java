@@ -1,10 +1,10 @@
-package analyseSem;
+package analyseSemOper;
 
 import org.antlr.runtime.tree.Tree;
 
-public class ExprSem {
+public class OperSem {
 	
-	public ExprSem(Tree node){ // Le node dans le constructeur coorespond à un noeud +, - ou *
+	public OperSem(Tree node){ // Le node dans le constructeur coorespond à un noeud +, - ou *
 		
 		
 	

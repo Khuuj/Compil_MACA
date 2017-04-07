@@ -1,14 +1,9 @@
-var n : int;
-var total : int;
-var i : int;
+var n : int ;
+var total : int ;
+var i : int ;
+var x : string;
 
-n := 10;
-
-total    := 0 ;
-
-for i in 0 .. n
-do 
- total := total + i * i ;
-end
-
-write total;
+if -5
+then
+	x:=4;
+fi

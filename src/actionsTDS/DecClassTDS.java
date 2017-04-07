@@ -1,9 +1,12 @@
 package actionsTDS;
 
+import java.util.ArrayList;
+
 import org.antlr.runtime.tree.Tree;
 
-import analyseSem.DecClassSemInheritExist;
+import analyseSemDecClass.DecClassSemInheritExist;
 import main.BrowseTree;
+import tableInstances.Table;
 import tableTypes.ClassType;
 
 public class DecClassTDS {
@@ -40,6 +43,7 @@ public class DecClassTDS {
 		}
 	
 		BrowseTree.CLASS_TDS.addClassType(classType);
+		BrowseTree.INSTANCE_TDS = new ArrayList<Table>();
 	}
 }
 

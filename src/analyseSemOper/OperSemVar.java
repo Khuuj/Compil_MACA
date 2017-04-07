@@ -1,4 +1,4 @@
-package analyseSem;
+package analyseSemOper;
 
 import org.antlr.runtime.tree.Tree;
 
@@ -13,6 +13,7 @@ public class OperSemVar {
 		
 		//On teste s'il est déjà défini
 		new ExistenceTest(node);
+		
 		//On teste son type
 		String type = (new TypeTester(node)).getType();
 		System.out.println("L'opérande : " + operande + " est de type " + type);

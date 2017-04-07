@@ -10,14 +10,22 @@ import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.tree.Tree;
 import actionsTDS.AffectTDS;
+import actionsTDS.BlockTDS;
 import actionsTDS.DecClassTDS;
 import actionsTDS.DecVarTDS;
+import actionsTDS.ForTDS;
+import actionsTDS.IfTDS;
 import actionsTDS.RootTDS;
-import analyseSem.AffectSem;
-import analyseSem.DecClassSem;
-import analyseSem.DecVarSem;
-import analyseSem.ReadSem;
-import analyseSem.WriteSem;
+import analyseSem.IfSem;
+import analyseSemAffect.AffectSem;
+import analyseSemDecClass.DecClassSem;
+import analyseSemDecVar.DecVarSem;
+import analyseSemFor.ForSem;
+import analyseSemTODO.BlockSem;
+import analyseSemTODO.DoSem;
+import analyseSemTODO.ReadSem;
+import analyseSemTODO.ReturnSem;
+import analyseSemTODO.WriteSem;
 import expr.ExprLexer;
 import expr.ExprParser;
 import tableInstances.Table;
@@ -117,7 +125,7 @@ public class BrowseTree {
 	 * 
 	 * @param node : le noeud traité.
 	 */
-	private static void action(Tree node) 
+	public static void action(Tree node) 
 	{
 		switch (node.getText())
 		{
@@ -144,10 +152,24 @@ public class BrowseTree {
 				new AffectTDS(node);
 				break;
 			
-			/*case "FOR":
+			case "FOR":
 				new ForSem(node);
 				new ForTDS(node);
-				break;*/
+				break;
+			
+			case "IF":
+				new IfSem(node);
+				new IfTDS(node);
+				break;
+				
+			case "BLOC":
+				new BlockSem(node);
+				new BlockTDS(node);
+				break;
+			
+			case "do":
+				new DoSem(node);
+				break;
 				
 			case "write":
 				new WriteSem(node);
@@ -155,7 +177,12 @@ public class BrowseTree {
 			
 			case "read":
 				new ReadSem(node);
-
+				break;
+				
+			case "RETURN":
+				new ReturnSem(node);
+				break;
+				
 			default:
 				break;
 			
