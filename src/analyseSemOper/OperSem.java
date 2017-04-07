@@ -45,13 +45,10 @@ public class OperSem {
 			//variable
 			//PROBLEME SI LE FRÈRE DE LA VARIABLE EST UN APPELMETHODE
 			//PROBLEME ENLEVER LES MOTS CLÉS 
-			System.out.println(" mainbis " + node.getText() + " type à égaler " + type );
 			if ((int)(node.getText().charAt(0)) >= 97 && ((int)node.getText().charAt(0)) <= 122 ){
-				System.out.println("wesh " + node.getText() + " type à égaler " + type );
 
 				//On teste s'il est déjà défini
 				new AffectSemExistVar(node);
-				System.out.println("Sur le noeud " + node.getText() + " type à égaler " + type );
 				return ((new TypeTester(node)).getType()).equals(type);
 			}
 			
