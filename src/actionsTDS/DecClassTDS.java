@@ -44,6 +44,7 @@ public class DecClassTDS {
 	
 		BrowseTree.CLASS_TDS.addClassType(classType);
 		BrowseTree.INSTANCE_TDS = new ArrayList<Table>();
+		BrowseTree.INSTANCE_TDS.add(new Table());
 	}
 }
 

@@ -5,6 +5,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
 
 import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
@@ -28,8 +31,13 @@ import analyseSemTODO.ReturnSem;
 import analyseSemTODO.WriteSem;
 import expr.ExprLexer;
 import expr.ExprParser;
+import tableInstances.Element;
 import tableInstances.Table;
+import tableInstancesVar.Var;
+import tableTypes.ClassType;
 import tableTypes.TableClass;
+import tableTypesClassItems.ClassItem;
+import tableTypesClassItems.Method;
 
 /**
  * Cette classe comprends la fonction main du compilateur.
@@ -73,7 +81,89 @@ public class BrowseTree {
         printChildren(tree);
         
         
-        browse(tree);     
+        browse(tree);
+        
+        System.out.println("");
+        System.out.println("");
+        printTDSClass();
+        System.out.println("");
+        System.out.println("");
+        printsClass();
+        System.out.println("");
+        System.out.println("");
+        printMethods();
+        System.out.println("");
+        System.out.println("");
+        printInstance();
+	}
+	
+	public static void printTDSClass(){
+		int i = 0;
+		
+		System.out.println("hashmap des class");
+		System.out.println("");
+		System.out.println("Clé\t\tClassList");
+		for(Entry<Integer,ArrayList<ClassType>> entry : CLASS_TDS.entrySet()) {
+		    Integer cle = entry.getKey();
+		    ArrayList<ClassType> list = entry.getValue();
+		    System.out.println(cle+"\t\tliste "+ i);
+		    i++;
+		}
+	}
+	
+	public static void printsClass(){
+		System.out.println("liste des class");
+		System.out.println("");
+		System.out.println("idClass\t\tidClassSup\t\titems");
+		for(Entry<Integer,ArrayList<ClassType>> entry : CLASS_TDS.entrySet()) {
+		    Integer cle = entry.getKey();
+		    ArrayList<ClassType> list = entry.getValue();
+		    for(ClassType c : list){
+		    	System.out.print(c.id+" \t\t"+ c.supClassId + " \t\t ");
+		    	for(ClassItem i : c.items){
+		    		System.out.print("\t"+i.getClass().getSimpleName()+":"+i.id);
+		    	}
+		    	System.out.println("");	
+	    	}
+		}
+	}
+	
+	public static void printMethods(){
+		System.out.println("liste des methodes");
+		System.out.println("");
+		System.out.println("idClass\t\tmethode\t\ttype retour\t\tnb Params\t\tnom param\t\ttype param");
+		for(Entry<Integer,ArrayList<ClassType>> entry : CLASS_TDS.entrySet()) {
+		    Integer cle = entry.getKey();
+		    ArrayList<ClassType> list = entry.getValue();
+		    for(ClassType c : list){
+		    	for(ClassItem i : c.items){
+		    		if(i instanceof Method){
+		    			System.out.print(c.id+"\t\t"+i.id+"\t\t"+ ((Method)i).returnType + "\t\t\t"+ ((Method)i).paramsNb);
+		    			if(((Method)i).paramsNb != 0){
+		    				for(Element e : ((Method)i).paramsTypes){
+			    				System.out.print("\t\t\t"+ e.id + "\t\t\t"+ ((Var)e).type);
+			    			}
+		    			}
+		    			System.out.println("");
+		    		}	
+		    	}	
+	    	}
+		}
+	}
+	
+	public static void printInstance(){
+		System.out.println("liste instances");
+		System.out.println("");
+		System.out.println("idClass\t\tidClassSup\t\titems");
+		for(Table a : INSTANCE_TDS){
+		
+			for(Entry<Integer,ArrayList<Element>> entry : a) {
+			    Integer cle = entry.getKey();
+			    ArrayList<Element> list = entry.getValue();
+			    
+			}
+		}
+		
 	}
 	
 	/**

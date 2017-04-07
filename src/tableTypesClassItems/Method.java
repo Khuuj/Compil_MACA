@@ -6,38 +6,34 @@ import tableInstances.Element;
 
 //Méthode d'une classe
 public class Method extends ClassItem {
-	String returnType;
-	ArrayList<Element> paramsTypes;
-	int paramsNb;
-	ArrayList<Element> methodBody;
+	public String returnType;
+	public ArrayList<Element> paramsTypes;
+	public int paramsNb;
 	
-	public Method(String id,ArrayList<Element> methodBody) {
+	public Method(String id) {
 		super(id);
 		this.paramsNb = 0;
 		this.returnType = "void";
-		this.methodBody = methodBody;
 	}
 	
-	public Method(String id, String returnType,ArrayList<Element> methodBody) {
+	public Method(String id, String returnType) {
 		super(id);
 		this.paramsNb = 0;
 		this.returnType = returnType;
-		this.methodBody = methodBody;
 	}
 	
-	public Method(String id, ArrayList<Element> paramsTypes,ArrayList<Element> methodBody) {
-		super(id);
-		this.paramsTypes = paramsTypes;
-		this.returnType = "void";
-		this.methodBody = methodBody;
-	}
-	
-	public Method(String id, ArrayList<Element> paramsTypes, String returnType,ArrayList<Element> methodBody) {
+	public Method(String id, ArrayList<Element> paramsTypes) {
 		super(id);
 		this.paramsTypes = paramsTypes;
 		this.paramsNb = paramsTypes.size();
-		this.returnType = returnType;
-		this.methodBody = methodBody;
+		this.returnType = "void";
+	}
+	
+	public Method(String id, ArrayList<Element> paramsTypes, String returnType) {
+		super(id);
+		this.paramsTypes = paramsTypes;
+		this.paramsNb = paramsTypes.size();
+		this.returnType = returnType;;
 	}
 
 }

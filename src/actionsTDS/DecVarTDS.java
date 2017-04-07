@@ -16,7 +16,6 @@ public class DecVarTDS {
 		String id = node.getChild(0).getText();
 		String type = node.getChild(1).getText();
 		
-		
 		switch(type)
 		{
 			//Si la variable déclarée est un entier.
