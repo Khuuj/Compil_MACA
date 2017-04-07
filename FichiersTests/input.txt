@@ -1,11 +1,18 @@
 var n : int ;
 var total : int ;
 var i : int ;
-n := 10;
-total := 0 ;
+var s : string;
+n := 10 +3;
+total := 0 +"wesh";
+s = n+ "yo";
 
 for i in 0 .. n
 do
-	total := total + 5 ;
-	a := 4;
+
+	a := 4;	
 end
+
+{
+b := 10 +3;
+c := 4;	
+}
