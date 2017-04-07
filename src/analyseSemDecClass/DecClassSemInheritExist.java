@@ -38,7 +38,7 @@ public class DecClassSemInheritExist {
 		}
 		
 		if(!exists){
-			System.err.println("Erreur : la classe "+id_inherit+" n'est pas définie, vous ne pouvez pas l'etendre à la classe"+ id);
+			System.err.println("Erreur DecClassInheritExists ligne n°"+node.getLine()+": la classe "+id_inherit+" n'est pas définie, vous ne pouvez pas l'etendre à la classe"+ id);
 		}
 	}
 }

@@ -32,7 +32,7 @@ public class DecClassSemAlreadyExist {
 		}
 		
 		if(alreadyExists){
-			System.err.println("Erreur : la classe "+id+" est déjà définie !");
+			System.err.println("Erreur DecClassAlreadyExists ligne n°"+node.getLine()+" : la classe "+id+" est déjà définie !");
 		}
 	}
 }

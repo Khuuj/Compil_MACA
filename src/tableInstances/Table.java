@@ -3,6 +3,8 @@ package tableInstances;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import tableInstancesVar.Var;
+
 
 /**
  * Classe représentant une TDS d'éléments instanciés.
@@ -49,6 +51,26 @@ public class Table extends HashMap<Integer,ArrayList<Element>>{
 			key = key * hashNb + id.charAt(i);
 		}
 		return key;
+	}
+	
+	public String toString()
+	{
+		String output="";
+		int i = 1;
+		int j = 1;
+		for (ArrayList<Element> array : this.values())
+		{
+			output = output + "Array :"+i+"\n";
+			j=1;
+			for (Element elt : array)
+			{
+				output = output + "\tElement  : "+j+"\t id: "+elt.id+"\t type : "+((Var)elt).type+"\t scope :"+((Var)elt).scope+"\n";
+			}
+			i++;
+		}
+		
+		return output;
+		
 	}
 	
 }

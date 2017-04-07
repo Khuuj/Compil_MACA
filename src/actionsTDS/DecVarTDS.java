@@ -15,26 +15,26 @@ public class DecVarTDS {
 	{
 		String id = node.getChild(0).getText();
 		String type = node.getChild(1).getText();
-		
+
+		int scope = BrowseTree.INSTANCE_TDS.size()-1;
 		
 		switch(type)
 		{
 			//Si la variable déclarée est un entier.
 			case "int":
-				var = new Int(id);
+				var = new Int(id,scope);
 				break;
 			//Si la variable déclarée est une chaîne de caractères.
 			case "string":
-				var = new SString(id);
+				var = new SString(id,scope);
 				break;
 			//Si la variable déclarée est une instance de classe.
 			default:
-				var = new CClass(id,type);
+				var = new CClass(id,scope,type);
 				break;
 				
 		}
 		
-		int scope = BrowseTree.INSTANCE_TDS.size()-1;
 		
 		BrowseTree.INSTANCE_TDS.get(scope).addElement(var);
 		

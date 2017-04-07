@@ -2,7 +2,6 @@ package actionsTDS;
 
 import org.antlr.runtime.tree.Tree;
 
-import main.BrowseTree;
 import tableInstances.Element;
 import tableInstancesVar.CClass;
 import tableInstancesVar.Int;
@@ -12,24 +11,23 @@ import tableInstancesVar.Var;
 public class ParamTDS {
 private Var var;
 	
-	public ParamTDS(Tree node){
+	public ParamTDS(Tree node,int scope){
 		
 		String id = node.getChild(0).getText();
 		String type = node.getChild(1).getText();
-		
 		switch(type)
 		{
 			//Si la variable déclarée est un entier.
 			case "int":
-				var = new Int(id);
+				var = new Int(id,scope);
 				break;
 			//Si la variable déclarée est une chaîne de caractères.
 			case "string":
-				var = new SString(id);
+				var = new SString(id,scope);
 				break;
 			//Si la variable déclarée est une instance de classe.
 			default:
-				var = new CClass(id,type);
+				var = new CClass(id,scope,type);
 				break;	
 		}
 		

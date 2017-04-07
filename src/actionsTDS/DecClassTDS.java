@@ -6,6 +6,7 @@ import org.antlr.runtime.tree.Tree;
 
 import analyseSemDecClass.DecClassSemInheritExist;
 import main.BrowseTree;
+import main.TDSStack;
 import tableInstances.Table;
 import tableTypes.ClassType;
 
@@ -43,7 +44,6 @@ public class DecClassTDS {
 		}
 	
 		BrowseTree.CLASS_TDS.addClassType(classType);
-		BrowseTree.INSTANCE_TDS = new ArrayList<Table>();
 	}
 }
 

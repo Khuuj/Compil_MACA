@@ -2,9 +2,12 @@ package analyseSemTODO;
 
 import org.antlr.runtime.tree.Tree;
 
-public class OperSem {
+import analyseSemOper.TypeTester;
+
+public class ExprSem {
 	
-	public OperSem(Tree node){ // Le node dans le constructeur coorespond à un noeud +, - ou *
+	public ExprSem(Tree node)
+	{ // Le node dans le constructeur coorespond à un noeud +, - ou *
 		
 		
 	
@@ -42,8 +45,21 @@ public class OperSem {
 			
 			//variable
 			if ((int)(node.getText().charAt(0)) >= 97 && ((int)node.getText().charAt(0)) <= 122)
-				return ((new TypeTester(node)).getType()).equals(type);
+			{
+				String typeOfVar =  ((new TypeTester(node)).getType());
+				return (
+						(typeOfVar.equals(type) || (typeOfVar.equals("class") 
+													&& node.getChildCount() != 0
+													&& ((new TypeTester(node.getChild(0))).getType().equals(type)) 
+												   )
+						)
+					    );
+			}
 			
+			else if (node.getText().equals("APPELMETHODE"))
+				//Test de type de méthode à faire.
+				return true;
+						
 			//sinon (ce cas ne devrait jamais arriver si les règles syntaxiques sont bien écrites)
 			else return false;
 						

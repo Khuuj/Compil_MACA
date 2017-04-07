@@ -38,4 +38,6 @@ public class TableClass extends HashMap<Integer,ArrayList<ClassType>>{
 			}
 			return key;
 		}
+		
+		
 }

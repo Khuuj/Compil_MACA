@@ -101,9 +101,9 @@ retourne :
 
 expr:
 	// exprplus e
-	exprplus e
-	| 'this' e
-	| 'super' e
+	exprplus
+	| 'this' e -> ^('this' e?)
+	| 'super' e -> ^('super' e?)
 	//| STRING
 	| 'new' ID_CLASS  -> ^(NEW ID_CLASS )
 	;
@@ -134,7 +134,7 @@ moinsunaire:
 	| atom
 	;
 atom: 
-	 ID_OTHERS
+	 ID_OTHERS e -> ^(ID_OTHERS e?)
 	| STRING
 	|  INT 
 	| '('expr')'

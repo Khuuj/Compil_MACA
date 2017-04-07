@@ -22,7 +22,7 @@ public class ForSemBornes {
 		
 		if(isANumber(start)&&isANumber(stop)){
 			if(Integer.parseInt(start)>Integer.parseInt(stop)){
-				System.err.println("Erreur : la valeur de la borne de fin est inférieur à celle de la borne de debut de boucle !");
+				System.err.println("Erreur FORBornes ligne n°"+node.getLine()+" : la valeur de la borne de fin est inférieur à celle de la borne de debut de boucle !");
 			}
 		}
 	}

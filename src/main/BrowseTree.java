@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Map.Entry;
 
 import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
@@ -15,7 +16,6 @@ import actionsTDS.DecClassTDS;
 import actionsTDS.DecVarTDS;
 import actionsTDS.ForTDS;
 import actionsTDS.IfTDS;
-import actionsTDS.RootTDS;
 import analyseSem.IfSem;
 import analyseSemAffect.AffectSem;
 import analyseSemDecClass.DecClassSem;
@@ -28,8 +28,13 @@ import analyseSemTODO.ReturnSem;
 import analyseSemTODO.WriteSem;
 import expr.ExprLexer;
 import expr.ExprParser;
+import tableInstances.Element;
 import tableInstances.Table;
+import tableInstancesVar.Var;
+import tableTypes.ClassType;
 import tableTypes.TableClass;
+import tableTypesClassItems.ClassItem;
+import tableTypesClassItems.Method;
 
 /**
  * Cette classe comprends la fonction main du compilateur.
@@ -49,12 +54,14 @@ public class BrowseTree {
 	/**Contient les TDS des éléments instanciés.
 	 * Les TDS sont empilées en fonction de leur portées.
 	 */
-	public static ArrayList<Table> INSTANCE_TDS;
+	public static TDSStack INSTANCE_TDS;
 	
 	/*Est-ce qu'on a besoin d'une portée pour la définition de classes ? 
 	 * Il faudrait lire la grammaire pour s'en assurer!
 	 */
 	public static TableClass CLASS_TDS;
+	
+	public static String INSTANCE_TDS_PRINT;
 	
 	public static void main(String[] args) throws Exception 
 	{
@@ -67,13 +74,16 @@ public class BrowseTree {
         Tree tree =  (Tree) parser.prog().getTree();
         
         //Affiche l'arbre sous forme parenthésée
-        System.out.println(tree.toStringTree()+"\n");
+        //System.out.println(tree.toStringTree()+"\n");
         
         //Affiche l'arbre reçu sous une forme plus lisible
-        printChildren(tree);
+        //printChildren(tree);
         
         
-        browse(tree);     
+        browse(tree);
+        //printTDS2();
+        INSTANCE_TDS.remove(INSTANCE_TDS.size()-1);
+        //System.out.println(INSTANCE_TDS_PRINT);
 	}
 	
 	/**
@@ -113,6 +123,7 @@ public class BrowseTree {
 	{
 		int nbChildren = node.getChildCount();
 		action(node);
+		System.out.println(node.getText());
 		for (int i = 0 ; i < nbChildren ; i++)
 		{
 			action(node.getChild(i));
@@ -129,9 +140,11 @@ public class BrowseTree {
 	{
 		switch (node.getText())
 		{
-			//cas traité afin d'éventuellement ajouter des traitement plus tard
+			//début du programme
 			case "ROOT":
-				new RootTDS();
+				BrowseTree.INSTANCE_TDS = new TDSStack();
+				BrowseTree.INSTANCE_TDS.add(new Table());
+				BrowseTree.CLASS_TDS = new TableClass();
 				break;
 				
 			//cas de déclaration de classe.
@@ -163,7 +176,6 @@ public class BrowseTree {
 				break;
 				
 			case "BLOC":
-				new BlockSem(node);
 				new BlockTDS(node);
 				break;
 			
@@ -189,5 +201,70 @@ public class BrowseTree {
 		}
 	}
 	
+	public static void printTDS2()
+	{
+		System.out.println("");
+        System.out.println("");
+        printTDSClass();
+        System.out.println("");
+        System.out.println("");
+        printsClass();
+        System.out.println("");
+        System.out.println("");
+        printMethods();
+	}
+	public static void printTDSClass(){
+		int i = 0;
+		
+		System.out.println("hashmap des class");
+		System.out.println("");
+		System.out.println("Clé\t\tClassList");
+		for(Entry<Integer,ArrayList<ClassType>> entry : CLASS_TDS.entrySet()) {
+		    Integer cle = entry.getKey();
+		    ArrayList<ClassType> list = entry.getValue();
+		    System.out.println(cle+"\t\tliste "+ i);
+		    i++;
+		}
+	}
 	
+	public static void printsClass(){
+		System.out.println("liste des class");
+		System.out.println("");
+		System.out.println("idClass\t\tidClassSup\t\titems");
+		for(Entry<Integer,ArrayList<ClassType>> entry : CLASS_TDS.entrySet()) {
+		    Integer cle = entry.getKey();
+		    ArrayList<ClassType> list = entry.getValue();
+		    for(ClassType c : list){
+		    	System.out.print(c.id+" \t\t"+ c.supClassId + " \t\t ");
+		    	for(ClassItem i : c.items){
+		    		System.out.print("\t"+i.getClass().getSimpleName()+":"+i.id);
+		    	}
+		    	System.out.println("");	
+	    	}
+		}
+	}
+	
+	public static void printMethods(){
+		System.out.println("liste des methodes");
+		System.out.println("");
+		System.out.println("idClass\t\tmethode\t\ttype retour\t\tnb Params\t\tnom param\t\ttype param");
+		for(Entry<Integer,ArrayList<ClassType>> entry : CLASS_TDS.entrySet()) {
+		    Integer cle = entry.getKey();
+		    ArrayList<ClassType> list = entry.getValue();
+		    for(ClassType c : list){
+		    	for(ClassItem i : c.items){
+		    		if(i instanceof Method){
+		    			System.out.print(c.id+"\t\t"+i.id+"\t\t"+ ((Method)i).returnType + "\t\t\t"+ ((Method)i).paramsNb);
+		    			if(((Method)i).paramsNb != 0){
+		    				for(Element e : ((Method)i).paramsTypes){
+			    				System.out.print("\t\t\t"+ e.id + "\t\t\t"+ ((Var)e).type);
+			    			}
+		    			}
+		    			System.out.println("");
+		    		}	
+		    	}	
+	    	}
+		}
+	}
+
 }

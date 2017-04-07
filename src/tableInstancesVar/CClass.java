@@ -18,8 +18,8 @@ public class CClass extends Var
 	 * @param id : l'identificateur de l'instance de classe.
 	 * @param classId : l'identificateur de la classe.
 	 */
-	public CClass(String id, String classId) {
-		super(id);
+	public CClass(String id, int scope, String classId) {
+		super(id,scope);
 		this.type = "class";
 		this.classId = classId;
 	}

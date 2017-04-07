@@ -1,6 +1,114 @@
-var n : int ;
-var total : int ;
+class Animal =
+ (
+ 
+ 	var type : string;
+ 	var name : string;
+ 
+ 	method setName (n : string)
+ 	{
+ 		name := n;
+ 	}
+ 
+ 	method whoami()
+ 	{
+ 		write "My name is ";
+ 		write name;
+ 	}
+ 	
+ 	 method equaltype(animal : string)
+ 	{
+ 		if (animal==type)
+ 		then
+ 		{
+ 			write animal;
+ 			write "est de type";
+ 			write this.type();
+ 		}
+ 		fi
+ 	}
+ 
+ )
+ class Animal =
+ (
+ 	var name : string;
+ 
+ 	
+ )
+ class Dog inherit Animal =
+ (
+ 	var type : int;
+ 	
+ 	
+ 	method whoami()
+ 	{
+ 		write "My name is ";
+ 		write name;
+ 		write ". And I am a dog .";
+ 	}
+ )
+ class Cat inherit MAmouth =
+ (
+
+ 
+ 	method whoami()
+ 	{
+ 		do super.whoami();
+ 		write ". And I am a cat .";
+ 	}
+ )
+ 
+ class Bichon inherit Dog=
+ (
+
+	method frise()
+ 	{
+ 		var j:string;
+ 		for j in 5..12
+ 		do
+ 			if this.equaltype("bichon")
+ 			then
+ 			{
+ 				write "est frise";
+ 			}
+ 			fi
+ 		end
+ 	}
+ )
+ 
+ 
+ class Chiot inherit Dog=
+ (
+ 	method chiot()
+ 	{
+ 		var k:int;
+ 		var l:int;
+ 		for k in 12..2
+ 		do
+ 			read l;
+ 		end
+ 	}
+ )
+ 
+  
+ var n : int;
+ var txt : string;
+ var total : int;
+ var total :int;
+ var n : int ;
+var e : string;
 var i : int ;
+var d : Animal;
+d := new Dog;
+ n := 1;
+ a := 4;
+ 
+ n := txt + n;
+ 
+ n := total + total*i;
+ 
+
+
+e:=5;
 n := 10;
 total := 0 ;
 
@@ -9,3 +117,18 @@ do
 	total := total + 5 ;
 	a := 4;
 end
+
+if a + b
+then
+{
+	write "okok";
+}
+else
+	write "mouamouai";
+fi
+
+write "a" + "b";
+write "a" + 5;
+write d;
+read d;
+read txt;

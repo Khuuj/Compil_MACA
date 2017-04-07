@@ -6,9 +6,9 @@ import tableInstances.Element;
 
 //Méthode d'une classe
 public class Method extends ClassItem {
-	String returnType;
-	ArrayList<Element> paramsTypes;
-	int paramsNb;
+	public String returnType;
+	public ArrayList<Element> paramsTypes;
+	public int paramsNb;
 	ArrayList<Element> methodBody;
 	
 	public Method(String id,ArrayList<Element> methodBody) {

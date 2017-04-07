@@ -44,7 +44,7 @@ public class ForSemIncIsInt {
 		
 		//Affiche une erreur si la variable n'existe pas dans les TDS
 		if (!isInt)
-			System.err.println("Erreur : la variable "+id+" n'est pas de type Int !");
+			System.err.println("Erreur FORIncIsInt ligne n°"+node.getLine()+" : la variable "+id+" n'est pas de type Int !");
 	}
 
 }

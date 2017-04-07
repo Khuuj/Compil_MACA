@@ -12,13 +12,13 @@ public class OperSemVar {
 		String operande = node.getText();
 		
 		//On teste s'il est déjà défini
-		new ExistenceTest(node);
+		//new ExistenceTest(node);
 		
 		//On teste son type
 		String type = (new TypeTester(node)).getType();
 		System.out.println("L'opérande : " + operande + " est de type " + type);
 		if (!type.equals("int")){
-			System.err.println("Erreur : Les opérations ne supportent pas le type " + type + "! (utilisation de la variable " + operande + ")\n");
+			System.err.println("Erreur ligne n°+"+node.getLine()+" : Les opérations ne supportent pas le type " + type + "! (utilisation de la variable " + operande + ")\n");
 		}
 		
 	}

@@ -41,7 +41,7 @@ public class DecVarSemAlreadyExist
 		
 		//Affiche une erreur si la variable existe déjà dans la TDS locale.
 		if (alreadyExists)
-			System.err.println("Erreur : la variable "+name+" est déjà définie !");
+			System.err.println("Erreur DecVarAlreadyExists ligne n°"+node.getLine()+" : la variable "+name+" est déjà définie !");
 		
 	}
 	

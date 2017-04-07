@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import org.antlr.runtime.tree.Tree;
 
+import main.BrowseTree;
+import tableInstances.Table;
 import tableTypesClassItems.ClassItem;
 
 /**
@@ -17,6 +19,8 @@ public class BodyClassTDS {
 	
 	public BodyClassTDS(Tree node)
 	{
+		BrowseTree.INSTANCE_TDS.add(new Table());
+		
 		classItems = new ArrayList<ClassItem>();
 		
 		int nbChildren = node.getChildCount();
@@ -39,7 +43,9 @@ public class BodyClassTDS {
 				MethodTDS method = new MethodTDS(node.getChild(i));
 				classItems.add(method.getMethod());
 			}
-		}		
+		}
+		
+		BrowseTree.INSTANCE_TDS.remove(BrowseTree.INSTANCE_TDS.size()-1);
 	}
 	
 	public ArrayList<ClassItem> getClassItems(){

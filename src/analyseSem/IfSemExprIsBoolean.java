@@ -5,7 +5,7 @@ import org.antlr.runtime.tree.Tree;
 public class IfSemExprIsBoolean {
 	public IfSemExprIsBoolean(Tree node){
 		boolean bool = false;
-		
+		//AJouter si un entier : OK
 		String str = node.getChild(0).getText();
 		String[] symboles = {"<","<=",">",">=","==","!=","+","-","*","OPPOSE"};
 		for(String s : symboles){
@@ -15,7 +15,7 @@ public class IfSemExprIsBoolean {
 		}
 		
 		if(!bool){
-			System.err.println("Erreur : la condition de la structure if doit être un booléen !");
+			System.err.println("Erreur ligne n°"+node.getLine()+" : la condition de la structure if doit être un booléen !");
 		}
 	}
 }

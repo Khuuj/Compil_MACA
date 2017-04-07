@@ -1,6 +1,8 @@
 package analyseSemOper;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Map.Entry;
 
 import org.antlr.runtime.tree.Tree;
 
@@ -8,10 +10,13 @@ import main.BrowseTree;
 import tableInstances.Element;
 import tableInstances.Table;
 import tableInstancesVar.*;
+import tableTypes.ClassType;
+import tableTypesClassItems.ClassItem;
+import tableTypesClassItems.Method;
 
 public class TypeTester {
 
-		private String type ;
+		private String type = "void";
 		
 		public TypeTester(Tree leaf){
 			
@@ -44,6 +49,22 @@ public class TypeTester {
 			}
 		}
 		
+		public TypeTester(String classId,Tree methodId){
+			for(Entry<Integer,ArrayList<ClassType>> entry : BrowseTree.CLASS_TDS.entrySet()) {
+			    Integer cle = entry.getKey();
+			    ArrayList<ClassType> list = entry.getValue();
+			    for(ClassType c : list){
+			    	if(c.id.equals(classId))
+			    	{
+			    		for(ClassItem i : c.items){
+			    			if(i instanceof Method && i.id.equals(methodId)){
+			    				type = ((Method)i).returnType;
+			    			}	
+			    		}
+			    	}
+		    	}
+			}
+		}
 		public String getType(){
 			return type;
 		}

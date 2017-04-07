@@ -14,5 +14,7 @@ public class AffectSem {
 	{
 		//Teste si la variable affectée est bien définie
 		new AffectSemExistVar(node.getChild(0));
+		
+		new AffectSemType(node);
 	}
 }

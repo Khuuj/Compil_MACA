@@ -2,7 +2,7 @@ package actionsTDS;
 
 import org.antlr.runtime.tree.Tree;
 
-import main.BrowseTree;
+import analyseSemDecVar.DecVarSem;
 import tableTypesClassItems.Attribute;
 
 public class AttributeTDS {
@@ -11,8 +11,10 @@ public class AttributeTDS {
 	public AttributeTDS(Tree node){
 		String id = node.getChild(0).getText();
 		String type = node.getChild(1).getText();
-		int offset = BrowseTree.CLASS_TDS.size()-1;// ????????
-		attribute = new Attribute(id,type);	
+		attribute = new Attribute(id,type);
+		
+		new DecVarSem(node);
+		new DecVarTDS(node);
 	}
 	public Attribute getAttribute(){
 		return attribute;

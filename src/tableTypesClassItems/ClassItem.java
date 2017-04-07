@@ -5,7 +5,7 @@ package tableTypesClassItems;
 public abstract class ClassItem {
 
 	//identifiant de la méthode ou de l'attribut.
-	String id;
+	public String id;
 	
 	public ClassItem(String id) {
 		this.id = id;
