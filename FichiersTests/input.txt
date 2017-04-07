@@ -1,3 +1,4 @@
+
 class Animal =
 (
 	var name : string;
@@ -38,3 +39,22 @@ a2 := new Cat;
 do a2.setName("foo");
 do a1.whoami();
 do a2.whoami();
+
+var n : int ;
+var total : int ;
+var i : int ;
+var s : string;
+n := 10 +3;
+total := 0 +"wesh";
+s = n+ "yo";
+
+for i in 0 .. n
+do
+
+	a := 4;	
+end
+
+{
+b := 10 +3;
+c := 4;	
+}

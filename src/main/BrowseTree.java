@@ -92,9 +92,9 @@ public class BrowseTree {
         System.out.println("");
         System.out.println("");
         printMethods();
+        /*System.out.println("");
         System.out.println("");
-        System.out.println("");
-        printInstance();
+        printInstance();*/
 	}
 	
 	public static void printTDSClass(){
@@ -155,13 +155,13 @@ public class BrowseTree {
 		System.out.println("liste instances");
 		System.out.println("");
 		System.out.println("idClass\t\tidClassSup\t\titems");
-		for(Table a : INSTANCE_TDS){
-		
-			for(Entry<Integer,ArrayList<Element>> entry : a) {
+		for(Table t : INSTANCE_TDS){
+
+			/*for(Entry<Integer,ArrayList<Element>> entry : t) {
 			    Integer cle = entry.getKey();
 			    ArrayList<Element> list = entry.getValue();
 			    
-			}
+			}*/
 		}
 		
 	}

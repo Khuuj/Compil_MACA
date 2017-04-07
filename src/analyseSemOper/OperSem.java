@@ -2,12 +2,12 @@ package analyseSemOper;
 
 import org.antlr.runtime.tree.Tree;
 
+import analyseSemAffect.AffectSemExistVar;
+
 public class OperSem {
 	
 	public OperSem(Tree node){ // Le node dans le constructeur coorespond à un noeud +, - ou *
 		
-		
-	
 	}
 	
 	public static boolean rightType(Tree node, String type)
@@ -18,10 +18,10 @@ public class OperSem {
 		if (childrenNb == 0)
 		{
 			//Tester si c'est une parenthèse 
-			if (node.getText().matches("[(]"))
+			if (node.getText().equals("("))
 			{
 				//Si on a deux parenthèses d'affilées.
-				if (node.getParent().getChild(node.getChildIndex()+1).getText().matches("[)]"))
+				if (node.getParent().getChild(node.getChildIndex()+1).getText().equals(")"))
 				{
 					return false;
 				}
@@ -29,20 +29,31 @@ public class OperSem {
 			}
 			
 			//terminal string
-			if (node.getText().matches("\".*"))
-				return type.equals("string");
+			if (node.getText().matches("\".*")){
+				return "string".equals(type);
+			}
 			
 			//terminal entier
-			if (node.getText().matches("\\d+")) 
-				return type.equals("int");
+			if (node.getText().matches("\\d+")) {
+				return "int".equals(type);
+			}
 			
 			//OPPOSE (moins unaire)
 			if (node.getText().equals("OPPOSE"))
 				return rightType(node.getChild(0),type);
 			
 			//variable
-			if ((int)(node.getText().charAt(0)) >= 97 && ((int)node.getText().charAt(0)) <= 122)
+			//PROBLEME SI LE FRÈRE DE LA VARIABLE EST UN APPELMETHODE
+			//PROBLEME ENLEVER LES MOTS CLÉS 
+			System.out.println(" mainbis " + node.getText() + " type à égaler " + type );
+			if ((int)(node.getText().charAt(0)) >= 97 && ((int)node.getText().charAt(0)) <= 122 ){
+				System.out.println("wesh " + node.getText() + " type à égaler " + type );
+
+				//On teste s'il est déjà défini
+				new AffectSemExistVar(node);
+				System.out.println("Sur le noeud " + node.getText() + " type à égaler " + type );
 				return ((new TypeTester(node)).getType()).equals(type);
+			}
 			
 			//sinon (ce cas ne devrait jamais arriver si les règles syntaxiques sont bien écrites)
 			else return false;
