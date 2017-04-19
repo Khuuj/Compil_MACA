@@ -39,3 +39,5 @@ Les contrôles de typages doivent tenir compte de l'héritage.
 Lien pour la TDS : http://henri-garreta.developpez.com/tutoriels/techniques-outils-compilation/?page=page_4
 
 ...............................................................
+
+test
